@@ -68,3 +68,10 @@ width: 100%;
     top: 0;
     width: 100%;
   }
+
+  .btn{
+    @include button-size($btn-padding-y,
+    $btn-padding-x,
+    $btn-font-size,
+    $btn-border-radius);
+  }

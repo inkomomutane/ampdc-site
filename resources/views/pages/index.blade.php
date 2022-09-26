@@ -8,7 +8,7 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide h-100  bg-overlay-400  bg-dark d-flex align-items-center overflow-hidden">
-                        <img src="{{ asset('media/sumburero.png') }}">
+                        <img src="{{Vite::asset('resources/img/media/sumburero.png')}}">
                         <div class="bg-overlay"></div>
                         <div class="position-absolute  top-50 start-50 translate-middle container">
                             <div class="row h-100">
@@ -20,7 +20,7 @@
                                         class="lead fs-23 lh-sm mb-7 text-white animate animate__animated animate__bounce animate__delay-2s ">
                                     </p>
                                     <div class=""><a href="#"
-                                            class="btn btn-lg btn-outline-white rounded-pill">Ver mais</a></div>
+                                            class="btn btn-lg btn-outline-white rounded-pill p-2 px-4">Ver mais</a></div>
                                 </div>
                                 <!--/column -->
                             </div>
@@ -28,7 +28,7 @@
                         </div>
                     </li>
                     <li class="splide__slide h-100 bg-overlay-400  bg-dark d-flex align-items-center overflow-hidden">
-                        <img src="{{ asset('/media/actividades.jpg') }}">
+                        <img src="{{Vite::asset('resources/img/media/actividades.jpg')}}">
                         <div class="bg-overlay"></div>
                         <div class="position-absolute  top-50 start-50 translate-middle container">
                             <div class="row h-100">
@@ -75,8 +75,8 @@
                     <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1"
                         style="top: -2rem; right: -1.9rem;"></div>
                     <figure class="rounded">
-                        <a href="{{ asset('media/home.jpg') }}" data-glightbox data-gallery="g1">
-                            <img src="{{ asset('media/home.jpg') }}" srcset="{{ asset('media/home.jpg') }} 2x"
+                        <a href="{{ Vite::asset('resources/img/media/home.jpg') }}" data-glightbox data-gallery="g1">
+                            <img src="{{ Vite::asset('resources/img/media/home.jpg') }}"
                                 alt="">
                         </a>
                     </figure>
@@ -215,11 +215,6 @@
     </section>
     <!-- /section -->
 
-
-
-
-
-
     <!--Histórias de vida -->
     <section class="wrapper bg-gray">
         <div class="container py-14 py-md-16">
@@ -277,7 +272,7 @@
                     <!-- /.position-relative -->
                 </div>
                 <div class="text-center col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
-                    <a href="#" class="btn btn-outline-primary rounded-pill">Ver todas histórias de vida</a>
+                    <a href="#" class="btn btn-outline-primary rounded-pill p-2 px-6">Ver todas histórias de vida</a>
                 </div>
 
                 <!-- /column -->
@@ -307,7 +302,7 @@
 
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img
-                                                src="{{ asset('media/dicBi.png') }}" alt="" /></a>
+                                                src="{{ Vite::asset('resources/img/media/dicBi.png') }}" alt="" /></a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Ver mais</h5>
                                         </figcaption>
@@ -338,7 +333,7 @@
                             <div class="swiper-slide">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img
-                                                src="{{ asset('media/limpeza_naPraia.png') }}" alt="" /></a>
+                                                src="{{ Vite::asset('resources/img/media/limpeza_naPraia.png') }}" alt="" /></a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Ver mais</h5>
                                         </figcaption>
@@ -371,7 +366,7 @@
                 </div>
                 <!--/column -->
                 <div class="text-center col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
-                    <a href="#" class="btn btn-outline-primary rounded-pill mb-0">Ver todas actividades</a>
+                    <a href="#" class="btn btn-outline-primary rounded-pill mb-0 p-2 px-4">Ver todas actividades</a>
                 </div>
                 <!--/column -->
             </div>

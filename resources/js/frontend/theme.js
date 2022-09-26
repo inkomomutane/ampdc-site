@@ -23,7 +23,8 @@ import GLightbox from 'glightbox';
 import Rellax from 'rellax';
 import imagesLoaded from 'images-loaded';
 import iTooltip from 'itooltip';
-
+import feather from 'feather-icons';
+feather.replace();
 
 var theme = {
     /**
@@ -53,6 +54,9 @@ var theme = {
         theme.bsPopovers();
         theme.iTooltip();
         theme.bsModal();
+        theme.imagesRender();
+        theme.imagesRenderBackground();
+        theme.renderAncoraLink();
     },
     /**
      * Sticky Header
@@ -655,5 +659,42 @@ var theme = {
           positionY: 'bottom'
         })
       },
+
+      imagesRender : function(){
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const links = document.querySelectorAll('.media_data_image');
+
+                links.forEach(element => {
+                    let method = element.getAttribute('data-image');
+                    element.src = new URL (`../../img/${method}`, import.meta.url).href;
+                    console.log(element.src);
+                });
+            });
+      },
+
+      renderAncoraLink: function(){
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.inject_link_js');
+
+            links.forEach(element => {
+                let method = element.getAttribute('data-render-link');
+                element.href = new URL (`../../${method}`, import.meta.url).href;
+                console.log(element.href);
+            });
+        });
+      },
+
+      imagesRenderBackground : function(){
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.media_data_image_background');
+
+            links.forEach(element => {
+                let method = element.getAttribute('data-image');
+                element.style.backgroundImage = `url(${ new URL (`../../img/${method}`, import.meta.url).href})`;
+                console.log(element.src);
+            });
+        });
+      }
 }
 theme.init();

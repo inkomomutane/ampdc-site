@@ -24,10 +24,10 @@
                 <div class="widget text-center text-sm-start ">
                     <h4 class="widget-title text-inverse mb-3">Navegação</h4>
                     <ul class="list-unstyled text-reset mb-0">
-                        <li><a href="{{ url('/') }}">Início</a></li>
-                        <li><a href="{{ url('/') }}">Actividades recentes</a></li>
-                        <li><a href="{{ url('/') }}">Sobre - nos</a></li>
-                        <li><a href="{{ url('/') }}">Contacto</a></li>
+
+                        @foreach (Statamic::query('entries')->where('collection', 'pages')->get() as $page)
+                        <li><a href="{{ url($page->url) }}">{{$page->title}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <!-- /.widget -->

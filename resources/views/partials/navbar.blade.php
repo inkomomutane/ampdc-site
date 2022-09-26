@@ -7,7 +7,7 @@
                         class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
                         <div class="navbar-brand w-100">
                             <a href="{{ url('/') }}">
-                                <img src="./img/logo-dark.png" class="img-logo" alt="Sumburero logo" />
+                                <img src="" data-image='logo-dark.png'   class="img-logo media_data_image" alt="Sumburero logo" />
                             </a>
                         </div>
                         <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">

@@ -2,12 +2,16 @@
 import feather from 'feather-icons';
 feather.replace();
 function getImageUrl(name) {
-    return new URL(`../img/svg/${name}`, import.meta.url).href
+    return new URL(`../img/${name}`, import.meta.url).href
   }
 document.addEventListener('DOMContentLoaded', function () {
-    const link = document.querySelector('#svg_error_image');
-    let method = link.getAttribute('data-image');
-    link.src = getImageUrl(method);
-    console.log(link.src);
+    const links = document.querySelectorAll('.media_data_image');
+
+    links.forEach(element => {
+        let method = element.getAttribute('data-image');
+        element.src = getImageUrl(method);
+         console.log(link.src);
+    });
+
 });
 

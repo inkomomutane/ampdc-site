@@ -10,7 +10,7 @@
 </head>
 <body>
     <section>
-        <img src="" alt="Erro @yield('code') @yield('message')" id="svg_error_image" data-image="@yield('image')">
+        <img class="media_data_image" src="" alt="Erro @yield('code') @yield('message')"  data-image="svg/@yield('image')">
         <div class="message">
             <h1> Erro @yield('code') | @yield('message')</h1>
         </div>

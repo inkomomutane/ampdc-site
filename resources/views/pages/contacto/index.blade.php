@@ -1,7 +1,7 @@
 @section('title', 'Contacto')
 @extends('layout')
 @section('content')
-<section class="wrapper bg-soft-primary" style='background-image: url("{{asset('img/bg3.jpg')}}");"'>
+<section class="wrapper bg-soft-primary media_data_image_background" data-image="bg3.jpg">
     <div class="container pb-19 pt-8 py-md-16  text-center">
         <div class="row">
             <div class="col-md-7 col-lg-6 col-xl-5 mx-auto mb-4 mb-md-12 ">
@@ -127,7 +127,7 @@
                             </div>
                             <!-- /column -->
                             <div class="col-12 text-center">
-                                <input type="submit" class="btn btn-primary rounded-pill btn-send mb-3"
+                                <input type="submit" class="btn btn-primary rounded-pill btn-send mb-3 p-2 px-6"
                                     value="Enviar mensagem">
                             </div>
                             <!-- /column -->

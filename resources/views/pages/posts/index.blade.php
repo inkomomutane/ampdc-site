@@ -1,7 +1,7 @@
 @section('title', 'Actividades')
 @extends('layout')
 @section('content')
-    <section class="wrapper bg-soft-primary" style='background-image: url("./img/bg3.jpg");"'>
+    <section class="wrapper bg-soft-primary media_data_image_background" data-image="bg3.jpg" >
         <div class="container py-12 py-md-16 text-center">
             <div class="row">
                 <div class="col-md-7 col-lg-6 col-xl-5 mx-auto text-white">
