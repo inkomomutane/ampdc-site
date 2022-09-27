@@ -664,7 +664,6 @@ var theme = {
 
             document.addEventListener('DOMContentLoaded', function () {
                 const links = document.querySelectorAll('.media_data_image');
-
                 links.forEach(element => {
                     let method = element.getAttribute('data-image');
                     element.src = new URL (`../../img/${method}`, import.meta.url).href;

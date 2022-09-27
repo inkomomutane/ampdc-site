@@ -1,12 +1,11 @@
-<footer class="bg-dark text-inverse" >
+ <footer class="bg-dark text-inverse" >
     <div class="container py-13 py-md-15" >
         <div class="row gy-6 gy-lg-0">
             <div class="col-md-4 col-lg-4">
                 <div class="widget text-center text-sm-start ">
-                    <h2 class="text-inverse">Sumburero</h2>
-                    {{-- <img class="mb-4 img-logo" src="./assets/img/logo-dark.png" alt="Sumburero logo" /> --}}
-                    <p class="mb-4">
-                        Grupo Técnico de Protecção Social<br /></p>
+                    <h2 class="text-inverse">  {{ 	page_footer:page_footer_heading }} </h2>
+
+                    <p class="mb-4">{{ page_footer:page_footer_description }}<br /></p>
 
                     <nav class="nav social justify-content-center justify-content-sm-start">
                         <a href="https://facebook.com/sumburero/"><i class="uil uil-facebook-f"></i></a>
@@ -24,10 +23,9 @@
                 <div class="widget text-center text-sm-start ">
                     <h4 class="widget-title text-inverse mb-3">Navegação</h4>
                     <ul class="list-unstyled text-reset mb-0">
-
-                        @foreach (Statamic::query('entries')->where('collection', 'pages')->get() as $page)
-                        <li><a href="{{ url($page->url) }}">{{$page->title}}</a></li>
-                        @endforeach
+                        {{ nav:collection:pages include_home="true"}}
+                        <li><a href="{{ url }}">{{ title }}</a></li>
+                        {{ /nav:collection:pages}}
                     </ul>
                 </div>
                 <!-- /.widget -->
@@ -36,13 +34,11 @@
             <div class="col-md-4 col-lg-4">
                 <div class="widget text-center text-sm-start ">
                     <h4 class="widget-title  mb-3 text-inverse">Localização e contactos</h4>
-                    <address class="">Rua Condestável 1,783
-                        Cidade da Beira, Sofala
-                        Moçambique
-                    </address>
-                   <strong>Email: </strong> <a href="mailto:#" class="link-body">Geral.sumburero@gmail.com</a><br />
-                   <strong>Telefone 1: </strong> <a href="mailto:+258845950861 " class="link-body">+258 (84) 595 0861</a><br />
-                   <strong>Telefone 2: </strong> <a href="mailto:+258845820730 " class="link-body">+258 (84) 582 0730</a><br />
+                    <address class="">{{ page_footer:page_footer_localizacao }}</address>
+                   <strong>Email: </strong> <a href="mailto:{{ page_footer:page_footer_email }}" class="link-body">
+                    {{ page_footer:page_footer_email }}</a><br />
+                   <strong>Telefone 1: </strong> <a href="mailto:{{ page_footer:telefone_1 }} " class="link-body">{{ page_footer:telefone_1 }}</a><br />
+                   <strong>Telefone 2: </strong> <a href="mailto:{{ page_footer:telefone_2  }} " class="link-body">{{ page_footer:telefone_2 }}</a><br />
 
                 </div>
                 <!-- /.widget -->
@@ -52,6 +48,6 @@
         </div>
         <!--/.row -->
     </div>
-    <p class="text-center text-small bg-black p-1 m-0">© Copyright Sumburero {{ now()->year }}. Todos direitos reservados.</p>
+    <p class="text-center text-small bg-black p-1 m-0">{{ page_footer:copyright }}</p>
     <!-- /.container -->
 </footer>

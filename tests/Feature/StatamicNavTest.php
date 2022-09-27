@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Statamic\Eloquent\Entries\Entry;
+use Statamic\Eloquent\Globals\GlobalSet;
 use Statamic\Statamic;
 use Tests\TestCase;
 
@@ -18,7 +19,7 @@ class StatamicNavTest extends TestCase
     public function test_example()
     {
          $response = $this->get('/');
-        //  dd(Statamic::query('entries'));
+         dd(GlobalSet::findByHandle('page_footer'));
         foreach (Statamic::query('entries')
         ->where('collection', 'pages')->get()
         as  $value) {

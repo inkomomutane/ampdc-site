@@ -1,10 +1,12 @@
+{{ section:content }}
     <!--Herro Website -->
     <section class="wrapper bg-gray position-relative">
         <div class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide h-100  bg-overlay-400  bg-dark d-flex align-items-center overflow-hidden">
-                        <img src="{{Vite::asset('resources/img/media/sumburero.png')}}">
+
+                        {{ responsive:page_hero_one ratio="16/5" }}
                         <div class="bg-overlay"></div>
                         <div class="position-absolute  top-50 start-50 translate-middle container">
                             <div class="row h-100">
@@ -16,28 +18,8 @@
                                         class="lead fs-23 lh-sm mb-7 text-white animate animate__animated animate__bounce animate__delay-2s ">
                                     </p>
                                     <div class=""><a href="#"
-                                            class="btn btn-lg btn-outline-white rounded-pill p-2 px-4">Ver mais</a></div>
-                                </div>
-                                <!--/column -->
-                            </div>
-                            <!--/.row -->
-                        </div>
-                    </li>
-                    <li class="splide__slide h-100 bg-overlay-400  bg-dark d-flex align-items-center overflow-hidden">
-                        <img src="{{Vite::asset('resources/img/media/actividades.jpg')}}">
-                        <div class="bg-overlay"></div>
-                        <div class="position-absolute  top-50 start-50 translate-middle container">
-                            <div class="row h-100">
-                                <div
-                                    class="col-md-10 offset-md-1 col-lg-7 offset-lg-0 col-xl-6 col-xxl-5 text-center text-lg-start justify-content-center align-self-center align-items-start">
-                                    <h2 class="display-1 fs-56 mb-4 text-white ">
-                                        Sessões temáticas.</h2>
-                                    <p
-                                        class="lead fs-23 lh-sm mb-7 text-white animate animate__animated animate__bounce animate__delay-2s ">
-
-                                    </p>
-                                    <div class=""><a href="#"
-                                            class="btn btn-lg btn-outline-white rounded-pill">Ver mais</a></div>
+                                            class="btn btn-lg btn-outline-white rounded-pill p-2 px-4">Ver mais</a>
+                                    </div>
                                 </div>
                                 <!--/column -->
                             </div>
@@ -71,9 +53,8 @@
                     <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1"
                         style="top: -2rem; right: -1.9rem;"></div>
                     <figure class="rounded">
-                        <a href="{{ Vite::asset('resources/img/media/home.jpg') }}" data-glightbox data-gallery="g1">
-                            <img src="{{ Vite::asset('resources/img/media/home.jpg') }}"
-                                alt="">
+                        <a href="{{ vite src='resources/img/media/home.jpg' }}" data-glightbox data-gallery="g1">
+                            <img src="{{ Vite::asset('resources/img/media/home.jpg') }}" alt="">
                         </a>
                     </figure>
                 </div>
@@ -82,10 +63,13 @@
                     <h2 class="display-4 mb-3">Quem somos?</h2>
                     <p class="lead fs-lg"></p>
                     <p class="mb-6">Somos uma organização sem fins lucrativos que tem suas actividades baseadas na
-                        experiência e aprendizado de varias Organizações da Sociedade Civil como ESSOR, CCM, OASIS, PNDH,
+                        experiência e aprendizado de varias Organizações da Sociedade Civil como ESSOR, CCM, OASIS,
+                        PNDH,
                         Universidade Zambeze desde vários anos actuando na província de Sofala, Moçambique; assim como
-                        através da avaliação do contexto da Protecção Social da Criança realizada através de uma pesquisa em
-                        8 Distritos em 2017 e tendo em conta as prioridades de acção do Governo no que respeita a Protecção
+                        através da avaliação do contexto da Protecção Social da Criança realizada através de uma
+                        pesquisa em
+                        8 Distritos em 2017 e tendo em conta as prioridades de acção do Governo no que respeita a
+                        Protecção
                         Social.</p>
 
                     <!--/.row -->
@@ -196,11 +180,14 @@
                 </div>
                 <!--/column -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="icon btn btn-block btn-lg btn-soft-blue disabled mb-5"> <i class="uil uil-chart-line"></i>
+                    <div class="icon btn btn-block btn-lg btn-soft-blue disabled mb-5"> <i
+                            class="uil uil-chart-line"></i>
                     </div>
                     <h4>Apoio Institucional</h4>
-                    <p class="mb-3">Realização de estudos que ajudem a orientar as estrategias de intervenção comunitária
-                        das OCB's. realização de formações em desenvolvimento institucional, elaboração de micro projectos e
+                    <p class="mb-3">Realização de estudos que ajudem a orientar as estrategias de intervenção
+                        comunitária
+                        das OCB's. realização de formações em desenvolvimento institucional, elaboração de micro
+                        projectos e
                         gestão financeira.</p>
                 </div>
                 <!--/column -->
@@ -242,10 +229,7 @@
                                                             começar a obter a sua pensão pelo falecimento do seu
                                                             esposo.”</p>
                                                         <div class="blockquote-details">
-                                                            <img class="rounded-circle w-12"
-                                                                src=""
-                                                                srcset=""
-                                                                alt="" />
+                                                            <img class="rounded-circle w-12" src="" srcset="" alt="" />
                                                             <div class="info">
                                                                 <h5 class="mb-1">Amélia</h5>
                                                             </div>
@@ -278,10 +262,6 @@
         <!-- /.container -->
     </section>
     <!-- /section -->
-
-
-
-
 
     <!-- Post's recentes-->
     <section class="wrapper bg-light wrapper-border">
@@ -316,8 +296,8 @@
                                         <ul class="post-meta text-primary">
                                             <li class="post-date"><i class="uil uil-calendar-alt"></i><span>14 Apr
                                                     2022</span></li>
-                                            <li class="post-comments"><a href="#"><i
-                                                        class="uil uil-comment"></i></a></li>
+                                            <li class="post-comments"><a href="#"><i class="uil uil-comment"></i></a>
+                                            </li>
                                         </ul>
                                         <!-- /.post-meta text-primary -->
                                     </div>
@@ -329,7 +309,8 @@
                             <div class="swiper-slide">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img
-                                                src="{{ Vite::asset('resources/img/media/limpeza_naPraia.png') }}" alt="" /></a>
+                                                src="{{ Vite::asset('resources/img/media/limpeza_naPraia.png') }}"
+                                                alt="" /></a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Ver mais</h5>
                                         </figcaption>
@@ -372,3 +353,4 @@
     <!-- /section -->
 
     <!-- Receber Notificações-->
+{{ /section:content }}
