@@ -1,31 +1,36 @@
+{{ section:title }}
+    Início
+{{ /section:title }}
+
+
 {{ section:content }}
     <!--Herro Website -->
     <section class="wrapper bg-gray position-relative">
         <div class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide h-100  bg-overlay-400  bg-dark d-flex align-items-center overflow-hidden">
-
-                        {{ responsive:page_hero_one ratio="16/5" }}
-                        <div class="bg-overlay"></div>
-                        <div class="position-absolute  top-50 start-50 translate-middle container">
-                            <div class="row h-100">
-                                <div
-                                    class="col-md-10 offset-md-1 col-lg-7 offset-lg-0 col-xl-6 col-xxl-5 text-center text-lg-start justify-content-center align-self-center align-items-start">
-                                    <h2 class="display-1 fs-56 mb-4 text-white ">
-                                        Proteção social.</h2>
-                                    <p
-                                        class="lead fs-23 lh-sm mb-7 text-white animate animate__animated animate__bounce animate__delay-2s ">
-                                    </p>
-                                    <div class=""><a href="#"
-                                            class="btn btn-lg btn-outline-white rounded-pill p-2 px-4">Ver mais</a>
-                                    </div>
+                   {{ hero }}
+                   <li class="splide__slide h-100  bg-overlay-400  bg-dark d-flex align-items-center overflow-hidden">
+                    {{ responsive:image ratio="16/5" alt="{alt}" }}
+                    <div class="bg-overlay"></div>
+                    <div class="position-absolute  top-50 start-50 translate-middle container">
+                        <div class="row h-100">
+                            <div
+                                class="col-md-10 offset-md-1 col-lg-7 offset-lg-0 col-xl-6 col-xxl-5 text-center text-lg-start justify-content-center align-self-center align-items-start">
+                                <h2 class="display-1 fs-56 mb-4 text-white ">{{ alt }}</h2>
+                                <p
+                                    class="lead fs-23 lh-sm mb-7 text-white animate animate__animated animate__bounce animate__delay-2s ">
+                                </p>
+                                <div class=""><a href="/actividades"
+                                        class="btn btn-lg btn-outline-white rounded-pill p-2 px-4">Ver nossas actividades</a>
                                 </div>
-                                <!--/column -->
                             </div>
-                            <!--/.row -->
+                            <!--/column -->
                         </div>
-                    </li>
+                        <!--/.row -->
+                    </div>
+                </li>
+                   {{ /hero }}
                 </ul>
             </div>
             <div class="splide__progress">
@@ -35,7 +40,7 @@
             <div class="splide__arrows splide__arrows--ltr">
                 <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide"
                     aria-controls="splide01-track">
-                     {{ component:fluentui-arrow-right-16 }}
+                    {{ component:fluentui-arrow-right-16 }}
                 </button>
                 <button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide"
                     aria-controls="splide02-track">
@@ -49,32 +54,30 @@
     <section class="wrapper bg-light">
         <div class="container py-4 py-md-16">
             <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                {{ sections }}
+
                 <div class="col-md-8 col-lg-6 col-xl-5 order-lg-2 position-relative">
                     <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1"
                         style="top: -2rem; right: -1.9rem;"></div>
+
                     <figure class="rounded">
-                        <a href="{{ Vite::asset('resources/img/media/home.jpg') }}" data-glightbox data-gallery="g1">
-                            <img src="{{ Vite::asset('resources/img/media/home.jpg') }}" alt="">
-                        </a>
+                        <a href="{{ glide :src="image" }}" data-glightbox data-gallery="g1">
+                       {{ responsive:image }}
+                    </a>
+
                     </figure>
                 </div>
                 <!--/column -->
                 <div class="col-lg-6">
-                    <h2 class="display-4 mb-3">Quem somos?</h2>
+                    <h2 class="display-4 mb-3">{{title}}</h2>
                     <p class="lead fs-lg"></p>
-                    <p class="mb-6">Somos uma organização sem fins lucrativos que tem suas actividades baseadas na
-                        experiência e aprendizado de varias Organizações da Sociedade Civil como ESSOR, CCM, OASIS,
-                        PNDH,
-                        Universidade Zambeze desde vários anos actuando na província de Sofala, Moçambique; assim como
-                        através da avaliação do contexto da Protecção Social da Criança realizada através de uma
-                        pesquisa em
-                        8 Distritos em 2017 e tendo em conta as prioridades de acção do Governo no que respeita a
-                        Protecção
-                        Social.</p>
+                    <p class="mb-6">{{content}}</p>
+
 
                     <!--/.row -->
                 </div>
                 <!--/column -->
+                {{ /sections }}
             </div>
             <!--/.row -->
         </div>
@@ -114,7 +117,7 @@
                     <div class="col-md-6">
                         <div class="card shadow-lg">
                             <div class="card-body">
-                                {{ component:fluentui-eye-12 class='icon-svg icon-svg-md text-red mb-3'}}
+                                {{ component:fluentui-eye-12 class='icon-svg icon-svg-md text-red mb-3' }}
                                 <h4>Nossa Visão</h4>
                                 <p class="mb-2">É de uma sociedade que zela pelos seus direitos, das crianças em
                                     situação de vulnerabilidade, garantido o acesso a educação básica, saúde, proteçào,
@@ -219,29 +222,29 @@
                         <div class="swiper-container dots-closer mb-6">
                             <div class="swiper">
                                 <div class="tiny-single-item">
-                                   {{ collection:life_histories }}
-                                   <div class="swiper-slide">
-                                    <div class="item-inner">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <blockquote class="icon mb-0">
-                                                    {{content}}
-                                                    <div class="blockquote-details">
-                                                        {{ responsive:image class="rounded-circle w-12" }}
-                                                        {{# <img class="" src="" srcset="" alt="" /> #}}
-                                                        <div class="info">
-                                                            <h5 class="mb-1">{{title}}</h5>
-                                                        </div>
+                                    {{ collection:life_histories }}
+                                        <div class="swiper-slide">
+                                            <div class="item-inner">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <blockquote class="icon mb-0">
+                                                            {{ content }}
+                                                            <div class="blockquote-details">
+                                                                {{ responsive:image class="rounded-circle w-12" }}
+                                                                {{# <img class="" src="" srcset="" alt="" /> #}}
+                                                                <div class="info">
+                                                                    <h5 class="mb-1">{{ title }}</h5>
+                                                                </div>
+                                                            </div>
+                                                        </blockquote>
                                                     </div>
-                                                </blockquote>
+                                                    <!--/.card-body -->
+                                                </div>
+                                                <!-- /.card -->
                                             </div>
-                                            <!--/.card-body -->
+                                            <!-- /.item-inner -->
                                         </div>
-                                        <!-- /.card -->
-                                    </div>
-                                    <!-- /.item-inner -->
-                                </div>
-                                   {{ /collection:life_histories}}
+                                    {{ /collection:life_histories }}
                                 </div>
                                 <!--/.swiper-wrapper -->
                             </div>
@@ -251,9 +254,11 @@
                     </div>
                     <!-- /.position-relative -->
                 </div>
-                {{# <div class="text-center col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
+                {{#
+                    <div class="text-center col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
                     <a href="/histories" class="btn btn-outline-primary rounded-pill p-2 px-6">Ver todas histórias de vida</a>
-                </div> #}}
+                    </div>
+                #}}
 
                 <!-- /column -->
             </div>
@@ -275,38 +280,40 @@
                         <div class="tiny-three-item">
 
                             {{ collection:actividades }}
-                                 <!--/.swiper-slide -->
-                            <div class="swiper-slide">
-                                <article>
-                                    <figure class="overlay overlay-1 hover-scale rounded mb-5">
-                                        <a href="{{ url }}">
-                                            {{responsive:cover}}
-                                        </a>
-                                        <figcaption>
-                                            <h5 class="from-top mb-0">Ver mais</h5>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="post-header">
-                                        <div class="post-category text-line">
-                                            <a href="{{ url }}" class="hover" rel="category">{{title}}</a>
+                                <!--/.swiper-slide -->
+                                <div class="swiper-slide">
+                                    <article>
+                                        <figure class="overlay overlay-1 hover-scale rounded mb-5">
+                                            <a href="{{ url }}">
+                                                {{ responsive:cover }}
+                                            </a>
+                                            <figcaption>
+                                                <h5 class="from-top mb-0">Ver mais</h5>
+                                            </figcaption>
+                                        </figure>
+                                        <div class="post-header">
+                                            <div class="post-category text-line">
+                                                <a href="{{ url }}" class="hover" rel="category">{{ title }}</a>
+                                            </div>
+                                            <!-- /.post-category -->
+                                            <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark"
+                                                    href="{{ url }}">{{ subtitle }}</a></h2>
                                         </div>
-                                        <!-- /.post-category -->
-                                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark"
-                                                href="{{url}}">{{subtitle}}</a></h2>
-                                    </div>
-                                    <!-- /.post-header -->
-                                    <div class="post-footer">
-                                        <ul class="post-meta text-primary">
-                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{date}}</span></li>
+                                        <!-- /.post-header -->
+                                        <div class="post-footer">
+                                            <ul class="post-meta text-primary">
+                                                <li class="post-date"><i
+                                                        class="uil uil-calendar-alt"></i><span>{{ date }}</span>
+                                                </li>
 
-                                        </ul>
-                                        <!-- /.post-meta text-primary -->
-                                    </div>
-                                    <!-- /.post-footer -->
-                                </article>
-                                <!-- /article -->
-                            </div>
-                            <!--/.swiper-slide -->
+                                            </ul>
+                                            <!-- /.post-meta text-primary -->
+                                        </div>
+                                        <!-- /.post-footer -->
+                                    </article>
+                                    <!-- /article -->
+                                </div>
+                                <!--/.swiper-slide -->
                             {{ /collection:actividades }}
 
                         </div>
@@ -315,7 +322,8 @@
                 </div>
                 <!--/column -->
                 <div class="text-center col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
-                    <a href="/actividades" class="btn btn-outline-primary rounded-pill mb-0 p-2 px-4">Ver todas actividades</a>
+                    <a href="/actividades" class="btn btn-outline-primary rounded-pill mb-0 p-2 px-4">Ver todas
+                        actividades</a>
                 </div>
                 <!--/column -->
             </div>
