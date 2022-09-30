@@ -79,12 +79,12 @@
 
             {{ form:create in="contactos" }}
                 {{ if success }}
-                    <div class="bg-green-300 text-white p-2">
+                    <div class="alert alert-success bg-success text-white p-2">
                         {{ success }}
                     </div>
                 {{ else }}
                     {{ if errors }}
-                        <div class="alert alert-danger">
+                        <div class="alert alert-danger p-2 bg-danger ">
                             {{ errors }}
                                 {{ value }}<br>
                             {{ /errors }}
