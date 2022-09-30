@@ -35,11 +35,11 @@
             <div class="splide__arrows splide__arrows--ltr">
                 <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide"
                     aria-controls="splide01-track">
-                    <x-fluentui-arrow-right-16 />
+                     {{ component:fluentui-arrow-right-16 }}
                 </button>
                 <button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide"
                     aria-controls="splide02-track">
-                    <x-fluentui-arrow-right-16 />
+                    {{ component:fluentui-arrow-right-16 }}
                 </button>
             </div>
         </div>
@@ -53,7 +53,7 @@
                     <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1"
                         style="top: -2rem; right: -1.9rem;"></div>
                     <figure class="rounded">
-                        <a href="{{ vite src='resources/img/media/home.jpg' }}" data-glightbox data-gallery="g1">
+                        <a href="{{ Vite::asset('resources/img/media/home.jpg') }}" data-glightbox data-gallery="g1">
                             <img src="{{ Vite::asset('resources/img/media/home.jpg') }}" alt="">
                         </a>
                     </figure>
@@ -98,7 +98,7 @@
                     <div class="col-md-6">
                         <div class="card shadow-lg">
                             <div class="card-body">
-                                @svg('fluentui-pin-12', 'icon-svg icon-svg-md text-blue mb-3')
+                                {{ component:fluentui-pin-12 class='icon-svg icon-svg-md text-blue mb-3' }}
                                 <!--  -->
                                 <h4>Nossa Missão</h4>
                                 <p class="mb-2">É de promover o desenvolvimento sustentável através de pesquisas,
@@ -114,7 +114,7 @@
                     <div class="col-md-6">
                         <div class="card shadow-lg">
                             <div class="card-body">
-                                @svg('fluentui-eye-12', 'icon-svg icon-svg-md text-red mb-3')
+                                {{ component:fluentui-eye-12 class='icon-svg icon-svg-md text-red mb-3'}}
                                 <h4>Nossa Visão</h4>
                                 <p class="mb-2">É de uma sociedade que zela pelos seus direitos, das crianças em
                                     situação de vulnerabilidade, garantido o acesso a educação básica, saúde, proteçào,
@@ -219,29 +219,29 @@
                         <div class="swiper-container dots-closer mb-6">
                             <div class="swiper">
                                 <div class="tiny-single-item">
-                                    <div class="swiper-slide">
-                                        <div class="item-inner">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <blockquote class="icon mb-0">
-                                                        <p>“A Senhora Amélia conseguiu obter o seu registo de
-                                                            nascimento-adultos e conseguiu aproximar ao INSS para
-                                                            começar a obter a sua pensão pelo falecimento do seu
-                                                            esposo.”</p>
-                                                        <div class="blockquote-details">
-                                                            <img class="rounded-circle w-12" src="" srcset="" alt="" />
-                                                            <div class="info">
-                                                                <h5 class="mb-1">Amélia</h5>
-                                                            </div>
+                                   {{ collection:life_histories }}
+                                   <div class="swiper-slide">
+                                    <div class="item-inner">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <blockquote class="icon mb-0">
+                                                    {{content}}
+                                                    <div class="blockquote-details">
+                                                        {{ responsive:image class="rounded-circle w-12" }}
+                                                        {{# <img class="" src="" srcset="" alt="" /> #}}
+                                                        <div class="info">
+                                                            <h5 class="mb-1">{{title}}</h5>
                                                         </div>
-                                                    </blockquote>
-                                                </div>
-                                                <!--/.card-body -->
+                                                    </div>
+                                                </blockquote>
                                             </div>
-                                            <!-- /.card -->
+                                            <!--/.card-body -->
                                         </div>
-                                        <!-- /.item-inner -->
+                                        <!-- /.card -->
                                     </div>
+                                    <!-- /.item-inner -->
+                                </div>
+                                   {{ /collection:life_histories}}
                                 </div>
                                 <!--/.swiper-wrapper -->
                             </div>
@@ -251,9 +251,9 @@
                     </div>
                     <!-- /.position-relative -->
                 </div>
-                <div class="text-center col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
-                    <a href="#" class="btn btn-outline-primary rounded-pill p-2 px-6">Ver todas histórias de vida</a>
-                </div>
+                {{# <div class="text-center col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
+                    <a href="/histories" class="btn btn-outline-primary rounded-pill p-2 px-6">Ver todas histórias de vida</a>
+                </div> #}}
 
                 <!-- /column -->
             </div>
@@ -273,61 +273,31 @@
 
                     <div class="swiper">
                         <div class="tiny-three-item">
+
+                            {{ collection:actividades }}
+                                 <!--/.swiper-slide -->
                             <div class="swiper-slide">
-
-
                                 <article>
-                                    <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img
-                                                src="{{ Vite::asset('resources/img/media/dicBi.png') }}" alt="" /></a>
+                                    <figure class="overlay overlay-1 hover-scale rounded mb-5">
+                                        <a href="{{ url }}">
+                                            {{responsive:cover}}
+                                        </a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Ver mais</h5>
                                         </figcaption>
                                     </figure>
                                     <div class="post-header">
                                         <div class="post-category text-line">
-                                            <a href="#" class="hover" rel="category">DIC</a>
+                                            <a href="{{ url }}" class="hover" rel="category">{{title}}</a>
                                         </div>
                                         <!-- /.post-category -->
                                         <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark"
-                                                href="./blog-post.html">Emissão de Bi em Mananga</a></h2>
+                                                href="{{url}}">{{subtitle}}</a></h2>
                                     </div>
                                     <!-- /.post-header -->
                                     <div class="post-footer">
                                         <ul class="post-meta text-primary">
-                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>14 Apr
-                                                    2022</span></li>
-                                            <li class="post-comments"><a href="#"><i class="uil uil-comment"></i></a>
-                                            </li>
-                                        </ul>
-                                        <!-- /.post-meta text-primary -->
-                                    </div>
-                                    <!-- /.post-footer -->
-                                </article>
-                                <!-- /article -->
-                            </div>
-                            <!--/.swiper-slide -->
-                            <div class="swiper-slide">
-                                <article>
-                                    <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img
-                                                src="{{ Vite::asset('resources/img/media/limpeza_naPraia.png') }}"
-                                                alt="" /></a>
-                                        <figcaption>
-                                            <h5 class="from-top mb-0">Ver mais</h5>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="post-header">
-                                        <div class="post-category text-line">
-                                            <a href="#" class="hover" rel="category">Sensibilização</a>
-                                        </div>
-                                        <!-- /.post-category -->
-                                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark"
-                                                href="./blog-post.html">Preservação do meio ambiente</a></h2>
-                                    </div>
-                                    <!-- /.post-header -->
-                                    <div class="post-footer">
-                                        <ul class="post-meta text-primary">
-                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>29 Mar
-                                                    2021</span></li>
+                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{date}}</span></li>
 
                                         </ul>
                                         <!-- /.post-meta text-primary -->
@@ -337,13 +307,15 @@
                                 <!-- /article -->
                             </div>
                             <!--/.swiper-slide -->
+                            {{ /collection:actividades }}
+
                         </div>
                         <!--/.swiper-wrapper -->
                     </div>
                 </div>
                 <!--/column -->
                 <div class="text-center col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
-                    <a href="#" class="btn btn-outline-primary rounded-pill mb-0 p-2 px-4">Ver todas actividades</a>
+                    <a href="/actividades" class="btn btn-outline-primary rounded-pill mb-0 p-2 px-4">Ver todas actividades</a>
                 </div>
                 <!--/column -->
             </div>

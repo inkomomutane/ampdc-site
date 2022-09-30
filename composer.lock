@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2c439674800f4b478e5d66fa8fe850a",
+    "content-hash": "63cdd054ef949481b7cd0c72885076a0",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4436,6 +4436,75 @@
                 }
             ],
             "time": "2022-08-01T11:03:24+00:00"
+        },
+        {
+            "name": "octoper/statamic-blade-components",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/octoper/statamic-blade-components.git",
+                "reference": "157d215398b7f8ec17c36f8fb63010042e29c4b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/octoper/statamic-blade-components/zipball/157d215398b7f8ec17c36f8fb63010042e29c4b6",
+                "reference": "157d215398b7f8ec17c36f8fb63010042e29c4b6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.0 || ^9.0",
+                "illuminate/view": "^8.0 || ^9.0",
+                "php": "^8.0",
+                "statamic/cms": "^3.3"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^6.2",
+                "orchestra/testbench": "^7.4",
+                "pestphp/pest": "^1.21",
+                "phpstan/phpstan": "^1.6.4"
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "statamic": {
+                    "name": "Blade Components",
+                    "description": "Use Blade components inside Statamic's Antler template engine"
+                },
+                "laravel": {
+                    "providers": [
+                        "Octoper\\BladeComponents\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Octoper\\BladeComponents\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Vaggelis Yfantis",
+                    "email": "me@octoper.me",
+                    "homepage": "https://octoper.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Use Blade components inside Statamic's Antler template engine",
+            "keywords": [
+                "octoper",
+                "statamic-blade-components"
+            ],
+            "support": {
+                "issues": "https://github.com/octoper/statamic-blade-components/issues",
+                "source": "https://github.com/octoper/statamic-blade-components/tree/2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/octoper",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-05-03T07:44:06+00:00"
         },
         {
             "name": "orangehill/iseed",
