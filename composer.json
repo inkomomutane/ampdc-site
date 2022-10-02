@@ -53,7 +53,8 @@
             "@php artisan package:discover --ansi",
             "@php artisan statamic:install --ansi",
             "@php artisan statamic:search:update --all --ansi",
-            "@php artisan statamic:static:clear --ansi"
+            "@php artisan statamic:static:clear --ansi",
+            "@php artisan optimize"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
