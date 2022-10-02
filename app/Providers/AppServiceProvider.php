@@ -14,11 +14,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
-        if (env('SHARED_HOSTING_PUBLIC_PATH')) {
-            $this->app->bind('path.public', function () {
-                return base_path() . env('SHARED_HOSTING_PUBLIC_PATH');
-            });
+        if($this->app->environment('production')){
+            $this->app->bind('path.public', function() {
+            return base_path(). env('SHARED_HOSTING_PUBLIC_PATH'); });
         }
     }
 
@@ -30,5 +28,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+
     }
 }
