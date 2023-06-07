@@ -4,8 +4,8 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/sass/frontend/style.scss',
-                'resources/js/frontend/theme.js',
+                'resources/css/app.css',
+                'resources/js/app.js',
                 'resources/sass/errors.scss',
                 'resources/js/errors.js'
             ],

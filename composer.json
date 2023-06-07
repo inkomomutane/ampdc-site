@@ -11,17 +11,15 @@
         "blade-ui-kit/blade-ui-kit": "^0.3.4",
         "codeat3/blade-fluentui-system-icons": "^1.31",
         "doctrine/dbal": "2.x",
-        "doublethreedigital/runway": "^2.5",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^4.0",
-        "octoper/statamic-blade-components": "^2.0",
         "orangehill/iseed": "^3.0",
-        "spatie/statamic-responsive-images": "^2.14",
-        "statamic/cms": "3.3.48",
-        "statamic/eloquent-driver": "^1.0"
+        "spatie/statamic-responsive-images": "^4.0",
+        "statamic/cms": "^4.0",
+        "statamic/eloquent-driver": "^2.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
