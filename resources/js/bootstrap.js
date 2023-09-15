@@ -3,7 +3,16 @@
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
+import "flowbite";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
+window.addEventListener("load", () => {
+    AOS.init({
+        offset: 0,
+        duration: 1000,
+    });
+});
 import axios from 'axios';
 window.axios = axios;
 
