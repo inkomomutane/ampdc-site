@@ -15,6 +15,7 @@ export default {
     fontFamily: {
         'body': [
       'Montserrat',
+      'Poppins',
       'ui-sans-serif',
       'system-ui',
       '-apple-system',
@@ -32,6 +33,7 @@ export default {
     ],
         'sans': [
       'Montserrat',
+      'Poppins',
       'ui-sans-serif',
       'system-ui',
       '-apple-system',

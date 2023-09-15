@@ -1,4 +1,4 @@
-<section class="bg-gradient-to-b from-amber-50 to-zinc-100 dark:bg-gray-900">
+<section class="bg-gradient-to-b from-white  via-amber-50 to-zinc-100 dark:bg-gray-900">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:px-32  lg:grid-cols-12">
         <div class="mr-auto place-self-center lg:col-span-6 tracking-tight p-8">
             <h1 class="max-w-2xl mb-4 text-gray-600 text-sm font-extrabold tracking-tight leading-none

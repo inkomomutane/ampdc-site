@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\NewsPageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomePageController::class)->name('welcome');
+Route::get('/news', NewsPageController::class)->name('news');
