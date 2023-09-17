@@ -1,17 +1,16 @@
-<footer class="p-8 bg-gradient-to-b from-white to-amber-50 sm:p-8 lg:pt-24 lg:pb-16 dark:bg-gray-800">
-    <div class="mx-auto max-w-screen-xl">
+<footer class="p-8 bg-gradient-to-b from-white to-amber-50 sm:p-8 lg:pt-20 lg:pb-16 dark:bg-gray-800">
+    <div class="mx-auto max-w-screen-xl md:px-32">
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="/" class="flex items-center">
-                    <img src="https://sumburero.org/build/assets/logo-dark.41d8480a.png" class="mr-3 h-16"
-                        alt="Sumburero Logo" />
+                    <img src="{{ Vite::asset('/resources/images/logo.png') }}" class="mr-3 h-16" alt="Sumburero Logo" />
                 </a>
                 <div class="">
 
                     <h2 class="font-semibold py-4 text-gray-600">
                         Grupo Técnico de Protecção Social
                     </h2>
-                    <address class="text-sm">
+                    <address class="text-sm not-italic">
                         Rua Condestável 1,783, Cidade da Beira, Sofala Moçambique
                     </address>
                     <a href="mailto:Geral@sumburero.org" class="text-sm">
@@ -27,7 +26,7 @@
                             <a href="/" class="hover:underline">Sobre-nós</a>
                         </li>
                         <li>
-                            <a href="/" class="hover:underline">
+                            <a href="{{ route('contact') }}" class="hover:underline">
                                 Contacte-nos
                             </a>
                         </li>
@@ -40,7 +39,7 @@
                             <a href="{{ route('news') }}" class="hover:underline ">Actividades</a>
                         </li>
                         <li>
-                            <a href="/" class="hover:underline">Eventos</a>
+                            <a href="/#events" class="hover:underline">Eventos</a>
                         </li>
                     </ul>
                 </div>
