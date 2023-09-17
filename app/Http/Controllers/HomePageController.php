@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\helpers\ArticleEntries;
 use App\helpers\EventEntries;
+use App\helpers\SuccessHistoriesEntries;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Statamic\Eloquent\Entries\Entry;
@@ -23,7 +24,7 @@ class HomePageController extends Controller
                 'articles' => ArticleEntries::articles()
                     ->sortByDesc('post_date')
                     ->take(10),
-                   
+                'histories' => SuccessHistoriesEntries::successHistories()
             ]
         );
     }

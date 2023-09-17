@@ -39,4 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         interventionAreas.mount();
     }
+
+    if (document.getElementById("histories")) {
+        const histories = new Splide("#histories", {
+            autoplay: true,
+            type: "loop",
+            pagination: true,
+            arrows: false,
+            perPage: 1,
+            gap: 10,
+        });
+        histories.mount();
+    }
 });

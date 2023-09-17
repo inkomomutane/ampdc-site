@@ -49,9 +49,9 @@
                 </ul>
             </div>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-end">
             <a data-aos="fade-up" href="{{ route('news') }}"
-                class="inline-flex place-self-center items-center justify-center py-3 text-sm font-medium text-center text-white  rounded-full px-5 bg-primary-500 hover:bg-primary-600  focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700
+                class="inline-flex place-self-center items-center justify-center py-3 text-sm font-medium text-center text-gray-900   px-5 bg-primary-100 hover:bg-primary-200  focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700
      dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                 Ver todas actividades
                 <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"

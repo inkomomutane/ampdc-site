@@ -25,3 +25,4 @@ Route::get('/news/{slug}', NewsPageController::class)->name('news.page');
 Route::get('/event/{slug}', EventController::class)->name('event');
 Route::get('/contact', ContactController::class)->name('contact');
 Route::post('/contact/message', ContactMessageController::class)->name('contact.message');
+Route::get('/about-us',fn() => view('about-us'))->name('about.us');

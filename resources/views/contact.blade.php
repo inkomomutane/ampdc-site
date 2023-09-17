@@ -5,7 +5,7 @@
 @section('seo')
   {!! seo($seoData)!!}
 @endsection --}}
-
+@section('title', 'Contacte-nos')
 @section('content')
     <div class="h-96 ml-0">
         <iframe class="w-screen ml-0 h-full z-40"

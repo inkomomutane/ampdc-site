@@ -32,6 +32,7 @@ Inspiring::quote();
 //     $finalEntry['published'] = $entry->published;
 //     return (object) $finalEntry;
 // })->where('published', true)->where('day', '>=', now()->day);
-Entry::query()->whereCollection('articles')->get()->map(function (EntriesEntry $entry) {
-    return $entry->fileData();
-});
+// Entry::query()->whereCollection('articles')->get()->map(function (EntriesEntry $entry) {
+//     return $entry->fileData();
+// });
+

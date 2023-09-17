@@ -30,10 +30,8 @@
                         aria-current="page">Início</a>
                 </li>
                 <li>
-                    <a href="{{  request()->routeIs('news.page') ? '' : route('news') }}"
-
-
-                        class="block py-2 pl-3 pr-4  @if (request()->routeIs('news') ||  request()->routeIs('news.page')  ) text-white bg-blue-700  md:bg-transparent md:text-blue-700 md:p-0
+                    <a href="{{ request()->routeIs('news.page') ? '' : route('news') }}"
+                        class="block py-2 pl-3 pr-4  @if (request()->routeIs('news') || request()->routeIs('news.page')) text-white bg-blue-700  md:bg-transparent md:text-blue-700 md:p-0
 @else
 text-gray-600  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 @endif">Actividades</a>
                 </li>
@@ -49,8 +47,8 @@ text-gray-600  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 
 
 
                 <li>
-                    <a href="#"
-                        class="block py-2 pl-3 pr-4  @if (request()->routeIs('welcome')) text-white bg-blue-700  md:bg-transparent md:text-blue-700 md:p-0
+                    <a href="{{ route('about.us') }}"
+                        class="block py-2 pl-3 pr-4  @if (request()->routeIs('about.us')) text-white bg-blue-700  md:bg-transparent md:text-blue-700 md:p-0
 @else
 text-gray-600  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 @endif">Sobre-nós</a>
                 </li>

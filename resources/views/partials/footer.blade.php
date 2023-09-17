@@ -23,7 +23,7 @@
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Informação</h2>
                     <ul class="text-gray-600 dark:text-gray-400 text-sm">
                         <li class="mb-4">
-                            <a href="/" class="hover:underline">Sobre-nós</a>
+                            <a href="{{ route('about.us') }}" class="hover:underline">Sobre-nós</a>
                         </li>
                         <li>
                             <a href="{{ route('contact') }}" class="hover:underline">
@@ -60,6 +60,9 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">Copyright © {{ now()->year }} <a
                     href="/" class="hover:underline">Sumburero</a>. All Rights Reserved.
+            </span>
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">Desenvolvido por:  <a
+                    href="{{ session()->get('developerSite'); }}" target="_blank" class="hover:underline">{{ session()->get('developer'); }}</a>
             </span>
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                 <a href="https://facebook.com/sumburero/"
