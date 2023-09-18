@@ -1,9 +1,8 @@
 import.meta.glob([
-    '../images/**',
-    '../errors/**',
-  ]);
+    "../images/**",
+    "../images/partiners/**",
+    "../errors/**",
+    "../errors/svgs/**",
+]);
 
 import "./bootstrap";
-
-
-

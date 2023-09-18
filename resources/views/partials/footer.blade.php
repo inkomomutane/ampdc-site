@@ -3,7 +3,7 @@
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="/" class="flex items-center">
-                    <img src="{{ Vite::asset('/resources/images/logo.png') }}" class="mr-3 h-16" alt="Sumburero Logo" />
+                    <img src="{{ Vite::asset('resources/images/logo.png') }}" class="mr-3 h-16" alt="Sumburero Logo" />
                 </a>
                 <div class="">
 

@@ -8,12 +8,14 @@
 @section('title', 'Contacte-nos')
 @section('content')
     <div class="h-96 ml-0">
+
         <iframe class="w-screen ml-0 h-full z-40"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3753.0770386572435!2d34.836501!3d-19.836693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1f2a6b28c102d913%3A0xa02e05127dc570d!2zTWltw7N2ZWw!5e0!3m2!1spt-PT!2smz!4v1684070751499!5m2!1spt-PT!2smz"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2502.6800779306527!2d34.848408201747645!3d-19.830637859956976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1f2a4148c3c9083b%3A0xd99f8fc7ab1f4b2c!2sSumburero%20Mo%C3%A7ambique!5e0!3m2!1sen!2smz!4v1695076814627!5m2!1sen!2smz"
             style="border: 0" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
     </div>
     <section class="w-full grid grid-cols-10">
-        <div class="hidden  relative col-span-10 md:col-span-4 md:grid transition-transform  p-20 text-white font-semibold ">
+        <div
+            class="hidden  relative col-span-10 md:col-span-4 md:grid transition-transform  p-20 text-white font-semibold ">
             <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/hero.jpg') }}"
                 alt="mockup">
             <div class="absolute   inset-0 bg-black opacity-80"></div>

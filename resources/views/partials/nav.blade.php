@@ -1,7 +1,7 @@
 <nav class=" border-gray-200 dark:bg-gray-900 text-sm">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" class="flex items-center">
-            <img src="{{ Vite::asset('/resources/images/logo.png') }}" class="h-10 mr-3" alt="Sumburero Logo" />
+            <img src="{{ Vite::asset('resources/images/logo.png') }}" class="h-10 mr-3" alt="Sumburero Logo" />
         </a>
         <div class="flex md:order-2">
             <button data-collapse-toggle="navbar-cta" type="button"

@@ -12,7 +12,7 @@
             preloader?.classList.add('hidden');
         });
     </script>
-    @vite('resources/js/splide')
+    @vite('resources/js/splide.js')
 </head>
 
 <body class="text-gray-800">
