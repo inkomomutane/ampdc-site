@@ -38,6 +38,7 @@ Route::get('/about-us', fn () => view('about-us', [
         site_name: 'Sobre nós',
         section: 'Grupo técnico de protecção social.',
         type: 'article',
+        image: Vite::asset('resources/images/logo.webp'),
         schema: SchemaCollection::initialize()->addArticle(),
     ),
 ]))->name('about.us');
