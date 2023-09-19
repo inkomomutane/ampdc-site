@@ -113,7 +113,7 @@
                 @csrf
                 <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-2 justify-items-stretch">
                     <div class="mb-2">
-                        <label for="nome">Teu nome <strong class="-order-2 text-red-500">*</strong></label>
+                        <label for="nome">Nome <strong class="-order-2 text-red-500">*</strong></label>
                         <input type="text" name="nome" id="nome"
                             class="h-10 border mt-1 focus:ring-1
                focus:ring-primary-700 border-zinc-700 focus:border-primary-600 rounded-sm p-6
@@ -124,13 +124,13 @@
 
 
                "
-                            value="{{ old('nome') }}" placeholder="Teu nome" />
+                            value="{{ old('nome') }}" placeholder="Nome" />
                         @error('nome')
                             <span class="text-red-500 text-sm font-normal ">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="mb-2">
-                        <label for="email">Teu email</label>
+                        <label for="email">E-mail</label>
                         <input type="text" name="email" id="email"
                             class="h-10 border mt-1
                rounded-sm p-6 px-4 w-full bg-primary-50 focus:ring-1
