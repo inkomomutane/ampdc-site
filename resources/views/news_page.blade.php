@@ -120,7 +120,7 @@
         </div>
     </section>
     <section class="relative ">
-        <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/hero.jpg') }}"
+        <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/hero.webp') }}"
             alt="mockup">
         <div class="absolute   inset-0 bg-black/90"></div>
         <div class="max-w-screen-xl px-8 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:px-20">

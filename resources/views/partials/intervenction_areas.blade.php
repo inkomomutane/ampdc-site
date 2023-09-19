@@ -1,5 +1,5 @@
 <section class="relative bg-gradient-to-b to-amber-100 from-white dark:bg-gray-900">
-    <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/hero.jpg') }}"
+    <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/hero.webp') }}"
         alt="mockup">
     <div class="absolute   inset-0 bg-black opacity-80"></div>
     <div class="relative py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-32 ">

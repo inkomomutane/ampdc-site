@@ -36,12 +36,12 @@
         <div class="flex lg:mt-0 md:col-span-5">
             <div class="grid  grid-cols-3 gap-2">
                 <img class="col-span-2 row-span-2  h-full object-cover object-top rounded md:rounded-tl-[3rem] "
-                    src="{{ Vite::asset('resources/images/hero.jpg') }}" alt="mockup" data-aos="fade-up">
+                    src="{{ Vite::asset('resources/images/hero.webp') }}" alt="mockup" data-aos="fade-up">
                 <img class="h-full object-cover object-left  rounded"
-                    src="{{ Vite::asset('resources/images/hero.jpg') }}" alt="mockup" data-aos="fade-up">
+                    src="{{ Vite::asset('resources/images/hero.webp') }}" alt="mockup" data-aos="fade-up">
 
                 <img class="h-full object-cover object-left rounded md:rounded-br-[3rem] border-primary-100"
-                    src="{{ Vite::asset('resources/images/hero.jpg') }}" alt="mockup" data-aos="fade-up">
+                    src="{{ Vite::asset('resources/images/hero.webp') }}" alt="mockup" data-aos="fade-up">
 
             </div>
 

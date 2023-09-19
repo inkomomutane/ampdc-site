@@ -20,10 +20,10 @@
         </div>
         <div class="hidden lg:mt-0 lg:col-span-6 lg:flex">
             <div class="grid  grid-cols-3 gap-2">
-                <img class="col-span-2 row-span-2  h-full object-cover object-top rounded" src="{{ Vite::asset('resources/images/hero.jpg')}}" alt="mockup" data-aos="fade-left" >
-                <img class="h-full object-cover object-left rounded " src="{{ Vite::asset('resources/images/hero.jpg')}}" alt="mockup" data-aos="fade-left" >
+                <img class="col-span-2 row-span-2  h-full object-cover object-top rounded" src="{{ Vite::asset('resources/images/hero.webp')}}" alt="mockup" data-aos="fade-left" >
+                <img class="h-full object-cover object-left rounded " src="{{ Vite::asset('resources/images/hero.webp')}}" alt="mockup" data-aos="fade-left" >
 
-                <img class="h-full object-cover object-left rounded  border-primary-100" src="{{ Vite::asset('resources/images/hero.jpg')}}" alt="mockup" data-aos="fade-left" >
+                <img class="h-full object-cover object-left rounded  border-primary-100" src="{{ Vite::asset('resources/images/hero.webp')}}" alt="mockup" data-aos="fade-left" >
 
             </div>
 

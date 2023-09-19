@@ -2,7 +2,7 @@
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:px-32  sm:grid-cols-12">
         <div class="flex lg:mt-0 sm:col-span-5">
             <img class="col-span-2 row-span-2  h-full object-cover object-top rounded md:rounded-tr-[3rem] md:rounded-bl-[3rem]"
-                src="{{ Vite::asset('resources/images/hero.jpg') }}" alt="mockup" data-aos="fade-up"
+                src="{{ Vite::asset('resources/images/hero.webp') }}" alt="mockup" data-aos="fade-up"
                >
 
         </div>

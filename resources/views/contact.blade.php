@@ -16,7 +16,7 @@
     <section class="w-full grid grid-cols-10">
         <div
             class="hidden  relative col-span-10 md:col-span-4 md:grid transition-transform  p-20 text-white font-semibold ">
-            <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/hero.jpg') }}"
+            <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/hero.webp') }}"
                 alt="mockup">
             <div class="absolute   inset-0 bg-black opacity-80"></div>
 
