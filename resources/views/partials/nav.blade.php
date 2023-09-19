@@ -1,7 +1,7 @@
 <nav class=" border-gray-200 dark:bg-gray-900 text-sm">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" class="flex items-center">
-            <img src="{{ Vite::asset('resources/images/logo.webp') }}" class="h-10 mr-3" alt="Sumburero Logo" />
+            <img src="{{ Vite::asset('resources/images/logo.webp') }}" class="h-10 mr-3" alt="Sumburero Logo" width="94" height="40" />
         </a>
         <div class="flex md:order-4 mr-8 !w-44">
             <div id="google_translate_element" class="!text-gray-600 !font-semibold "></div>

@@ -1,5 +1,9 @@
 @extends('layouts/base')
 @section('title','Sumburero - Grupo técnico de proteção social')
+@section('seo')
+{!! seo($SEOData) !!}
+@endsection
+
 @section('content')
     @include('partials/hero')
     @include('partials/intervenction_areas')

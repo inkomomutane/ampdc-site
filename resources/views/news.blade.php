@@ -1,5 +1,7 @@
 @extends('layouts/base')
-@section('title', 'Actividades')
+@section('seo')
+    {!! seo($SEOData) !!}
+@endsection
 @section('content')
     <section class="bg-gradient-to-b from-amber-100 via-white to-zinc-50">
         <div class=" max-w-screen-xl md:px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:px-20">
@@ -111,12 +113,12 @@
                             — Redes sociais
                         </h1>
 
-                            <div class="fb-page !max-w-full" data-href="https://www.facebook.com/sumburero" data-tabs="" data-width=""
-                                data-height="" data-small-header="false" data-adapt-container-width="true"
-                                data-hide-cover="false" data-show-facepile="true">
-                                <blockquote cite="https://www.facebook.com/sumburero" class="fb-xfbml-parse-ignore"><a
-                                        href="https://www.facebook.com/sumburero">Sumburero</a></blockquote>
-                            </div>
+                        <div class="fb-page !max-w-full" data-href="https://www.facebook.com/sumburero" data-tabs=""
+                            data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
+                            data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/sumburero" class="fb-xfbml-parse-ignore"><a
+                                    href="https://www.facebook.com/sumburero">Sumburero</a></blockquote>
+                        </div>
 
                         <a href="https://api.whatsapp.com/send?l=pt-BR&phone=+258845950861&text=Ol%C3%A1%20Sumburero!"
                             target="_blank">

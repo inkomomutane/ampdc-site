@@ -1,11 +1,8 @@
 @extends('layouts/base')
-{{-- @section('header')
-    <x-website-header solidBg="true" />
-@endsection
+
 @section('seo')
   {!! seo($seoData)!!}
-@endsection --}}
-@section('title', 'Contacte-nos')
+@endsection 
 @section('content')
     <div class="h-96 ml-0">
 

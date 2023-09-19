@@ -1,6 +1,8 @@
 @extends('layouts/base')
 
-@section('title', 'Actividade — ' . $article?->title ?? '')
+@section('seo')
+{!! seo($SEOData) !!}
+@endsection
 @section('content')
     <section class="bg-gradient-to-b from-amber-100 via-white bg-gray-50">
         <div class=" max-w-screen-xl md:px-4 pt-8 mx-auto lg:gap-8 xl:gap-0 lg:pt-16 lg:px-20">
