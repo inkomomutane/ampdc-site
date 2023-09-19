@@ -29,7 +29,7 @@
                 <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Formação e Inserção
                     profissional
                 </h3>
-                <a href="#"
+                <a href="{{ route('about.us') }}"
                     class="inline-flex self-start items-center justify-start  font-bold text-center text-xs ">
                     Ler mais
                     <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
@@ -52,7 +52,7 @@
                 </div>
                 <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Proteção social
                 </h3>
-                <a href="#"
+                <a href="{{ route('about.us') }}"
                     class="inline-flex self-start items-center justify-start  font-bold text-center text-xs ">
                     Ler mais
                     <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
@@ -86,7 +86,7 @@
                 </div>
                 <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Monitoria e Avaliação
                 </h3>
-                <a href="#"
+                <a href="{{ route('about.us') }}"
                     class="inline-flex self-start items-center justify-start  font-bold text-center text-xs ">
                     Ler mais
                     <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
@@ -118,7 +118,7 @@
                 </div>
                 <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Apoio Institucional
                 </h3>
-                <a href="#"
+                <a href="{{ route('about.us') }}"
                     class="inline-flex self-start items-center justify-start  font-bold text-center text-xs ">
                     Ler mais
                     <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
