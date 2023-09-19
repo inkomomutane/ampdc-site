@@ -35,7 +35,7 @@ class SitemapGeneratorCommand extends Command
 
         try {
             Sitemap::create(config('app.url'))
-                ->add(Url::create(route('welcome'))->addImage(Vite::asset('/resources/images/logo.webp')))
+                ->add(Url::create(route('welcome'))->addImage(Vite::asset('resources/images/logo.webp')))
                 ->add(Url::create(route('contact'))->addImage(Vite::asset('resources/images/logo.webp')))
                 ->add(Url::create(route('about.us'))->addImage(Vite::asset('resources/images/logo.webp')))
                 ->add(ArticleEntries::articles()->map(function ($entry) {
