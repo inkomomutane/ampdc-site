@@ -18,6 +18,7 @@ class ArticleEntries
             $finalEntry['month'] = $startDate->shortMonthName;
             $finalEntry['year'] = $startDate->year;
             $finalEntry['slug'] = $entry->slug;
+            $finalEntry['sections'] = $entry->sections;
             $finalEntry['published'] = $entry->published;
             return (object) $finalEntry;
         })->where('published', true)
@@ -26,6 +27,9 @@ class ArticleEntries
         return $event;
     }
 
+    /**
+     *@return Collection<EntriesEntry>
+     */
     public static function articles(): Collection
     {
         return  Entry::query()->whereCollection('articles')->get()->map(function (EntriesEntry $entry) {
@@ -36,6 +40,7 @@ class ArticleEntries
             $finalEntry['year'] = $startDate->year;
             $finalEntry['slug'] = $entry->slug;
             $finalEntry['post_date'] =  $startDate;
+            $finalEntry['sections'] = $entry->sections;
             $finalEntry['published'] = $entry->published;
             return (object) $finalEntry;
         })->where('published', true);

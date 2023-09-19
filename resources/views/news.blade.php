@@ -65,9 +65,9 @@
                         @endif
                     </div>
                 </div>
-                <div class="grid sm:grid-cols-3 gap-4 w-full ">
-                    <div class="col-span-2 md:grid h-fit md:gap-2 relative">
-                        <h1 class="max-w-2xl mt-8 mb-4 text-gray-600 text-sm font-extrabold tracking-tight leading-none  dark:text-white capitalize "
+                <div class="grid md:grid-cols-3 w-full ">
+                    <div class="col-span-2 md:grid h-fit md:gap-2 w-full">
+                        <h1 class="w-full mt-8 mb-4 text-gray-600 text-sm font-extrabold tracking-tight leading-none  dark:text-white capitalize "
                             data-aos="fade-up"> — Actividades recentes</h1>
                         @foreach ($articles as $articleItem)
                             <a
@@ -82,7 +82,7 @@
                                             alt="{{ $articleItem->title ?? 'Sumburero' }}">
                                         <div class="absolute   inset-0 bg-gradient-to-t from-black/60 to-black/10"></div>
                                     </div>
-                                    <div class="sm:col-span-2 grid content-center space-y-2 p-6 sm:px-2 sm:mr-4">
+                                    <div class="sm:col-span-2 grid content-center space-y-2 p-6 sm:px-2">
                                         <h2
                                             class=" mb-2 text-lg font-bold  tracking-tight text-gray-900 capitalize line-clamp-2 ">
                                             {{ $articleItem->title }}
@@ -99,8 +99,9 @@
                                 </article>
                             </a>
                         @endforeach
+                        {{ $articles->onEachSide(0)->links() }}
                     </div>
-                    <div class="col-span-1 hidden sm:grid h-fit md:gap-2 md:sticky md:top-0">
+                    <div class="col-span-1 hidden md:grid h-fit">
                         <h1
                             class="max-w-2xl mt-8 mb-4 text-gray-600 text-sm font-extrabold tracking-tight leading-none  dark:text-white capitalize ">
                             — Redes sociais

@@ -60,7 +60,7 @@
                         </div>
                     </div>
 
-                    @if (is_array($article?->sections))
+                    @if (!is_null($article?->sections) && is_array($article?->sections))
                         @foreach ($article?->sections as $section)
                             <div class="grid sm:grid-cols-12 pb-8 sm:pb-16 ">
                                 @if (($loop->index + 1) % 2 == 0)
@@ -68,11 +68,11 @@
                                         class="mr-auto place-self-center sm:col-span-7 col-start-1 tracking-tight p-8 pb-0 ">
                                         <h1 class="max-w-2xl mb-4 text-gray-600 text-sm font-extrabold tracking-tight leading-none
                              dark:text-white capitalize "
-                                            data-aos="fade-up" >— {{ $section['title'] }}</h1>
+                                            data-aos="fade-up">— {{ $section['title'] }}</h1>
 
                                         <div class=" grid  gap-2">
 
-                                            <div class="" data-aos="fade-up" >
+                                            <div class="" data-aos="fade-up">
                                                 <div class=" max-w-2xl   font-light text-gray-800 lg:mb-2 text-base ">
                                                     {!! $section['content'] !!}
                                                 </div>
@@ -83,25 +83,25 @@
                                     <div class="flex lg:mt-0 sm:col-span-5 col-start-7">
                                         <img class="col-span-2 row-span-2  h-full object-cover object-top rounded md:rounded-tr-[3rem] md:rounded-bl-[3rem]"
                                             src="{{ asset('storage') }}/{{ $section['image'] }}"
-                                            alt="{{ $section['title'] }}" data-aos="fade-up" >
+                                            alt="{{ $section['title'] }}" data-aos="fade-up">
 
                                     </div>
                                 @else
                                     <div class="flex lg:mt-0 sm:col-span-5 col-start-7">
                                         <img class="col-span-2 row-span-2  h-full object-cover object-top rounded md:rounded-tr-[3rem] md:rounded-bl-[3rem]"
                                             src="{{ asset('storage') }}/{{ $section['image'] }}" alt="mockup"
-                                            data-aos="fade-up" >
+                                            data-aos="fade-up">
 
                                     </div>
                                     <div
                                         class="mr-auto place-self-center sm:col-span-7 col-start-1 tracking-tight p-8 pb-0 ">
                                         <h1 class="max-w-2xl mb-4 text-gray-600 text-sm font-extrabold tracking-tight leading-none
                              dark:text-white capitalize "
-                                            data-aos="fade-up" >— {{ $section['title'] }}</h1>
+                                            data-aos="fade-up">— {{ $section['title'] }}</h1>
 
                                         <div class=" grid  gap-2">
 
-                                            <div class="" data-aos="fade-up" >
+                                            <div class="" data-aos="fade-up">
                                                 <div class=" max-w-2xl   font-light text-gray-800 lg:mb-2 text-base ">
                                                     {!! $section['content'] !!}
                                                 </div>
@@ -133,8 +133,8 @@
 
                         @foreach ($article?->gallery as $image)
                             <img class="w-full h-full  object-cover object-top rounded"
-                                src="{{ asset('storage') }}/{{ $image }}" alt="{{ $section['title'] }}"
-                                data-aos="fade-up" >
+                                src="{{ asset('storage') }}/{{ $image }}"
+                                alt="{{ $article?->title ?? '' }} - galleria" data-aos="fade-up">
                         @endforeach
                     </div>
                 </div>

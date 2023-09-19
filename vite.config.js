@@ -16,7 +16,7 @@ export default defineConfig({
     ],
     server: {
         watch: {
-            ignored: ["**/storage/**", "**/vendor/**"],
+            ignored: ["**/storage/**"],
         },
     },
     resolve: {

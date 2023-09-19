@@ -10,14 +10,17 @@ class NewsController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function __invoke()
     {
+        $articles  = ArticleEntries::articles()
+            ->sortByDesc('post_date');
+        $article = $articles->first();
         return view('news', [
-            'articles' =>
-            ArticleEntries::articles()
-                ->sortByDesc('post_date'),
-            'article' => ArticleEntries::articles()
-                ->sortByDesc('post_date')?->first() ?? null
+            'articles' => $articles->reject(function ($entry) use ($article) {
+                return  $entry->id == $article?->id;
+            })->paginate(1),
+
+            'article' =>  $article ?? null
         ]);
     }
 }
