@@ -99,38 +99,26 @@
                                 </article>
                             </a>
                         @endforeach
-                        {{ $articles->onEachSide(0)->links() }}
+                        <div class="!w-full col-span-1">
+                            {{ $articles->onEachSide(0)->links() }}
+                        </div>
+
                     </div>
-                    <div class="col-span-1 hidden md:grid h-fit">
+
+                    <div class="col-span-1 hidden md:grid h-fit px-4 sticky top-0">
                         <h1
                             class="max-w-2xl mt-8 mb-4 text-gray-600 text-sm font-extrabold tracking-tight leading-none  dark:text-white capitalize ">
                             — Redes sociais
                         </h1>
-                        <a href="https://facebook.com/sumburero" target="_blank">
-                            <div
-                                class="flex gap-1 flex-row  items-center justify-between border-b py-3  hover:cursor-pointer sm:bg-transparent hover:sm:text-primary-500">
-                                <div class="flex  items-center ">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                    <div class=" text-xs font-semibold  tracking-tightcapitalize line-clamp-2 mx-4">
-                                        Facebook
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <svg class="w-5 h-5 right-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                        fill="currentColor">
-                                        <g>
-                                            <path fill="none" d="M0 0h24v24H0z"></path>
-                                            <path d="M14 12l-4 4V8z"></path>
-                                        </g>
-                                    </svg>
-                                </div>
+                        @production
+                            <div class="fb-page" data-href="https://www.facebook.com/sumburero" data-tabs="" data-width=""
+                                data-height="" data-small-header="false" data-adapt-container-width="true"
+                                data-hide-cover="false" data-show-facepile="true">
+                                <blockquote cite="https://www.facebook.com/sumburero" class="fb-xfbml-parse-ignore"><a
+                                        href="https://www.facebook.com/sumburero">Sumburero</a></blockquote>
                             </div>
-                        </a>
+                        @endproduction
+
                         <a href="https://api.whatsapp.com/send?l=pt-BR&phone=+258845950861&text=Ol%C3%A1%20Sumburero!"
                             target="_blank">
                             <div

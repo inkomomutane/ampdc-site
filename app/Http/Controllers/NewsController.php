@@ -18,7 +18,7 @@ class NewsController extends Controller
         return view('news', [
             'articles' => $articles->reject(function ($entry) use ($article) {
                 return  $entry->id == $article?->id;
-            })->paginate(1),
+            })->paginate(5),
 
             'article' =>  $article ?? null
         ]);

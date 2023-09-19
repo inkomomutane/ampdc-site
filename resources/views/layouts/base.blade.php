@@ -12,7 +12,7 @@
             preloader?.classList.add('hidden');
         });
     </script>
-    @vite(['resources/js/splide.js','resources/css/gtranslator.css'])
+    @vite(['resources/js/splide.js', 'resources/css/gtranslator.css'])
 </head>
 
 <body class="text-gray-800">
@@ -25,7 +25,6 @@
         addEventListener('load', function() {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
-                    // e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);
                     const targetElement = document.getElementById(targetId);
                     if (targetElement) {
@@ -52,6 +51,12 @@
 
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     </script>
+
+    @production
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"
+            nonce="k7U0J6Iw"></script>
+    @endproduction
 
 </body>
 
