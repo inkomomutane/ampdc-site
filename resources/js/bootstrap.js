@@ -10,13 +10,14 @@ import "aos/dist/aos.css";
 window.addEventListener("load", () => {
     AOS.init({
         offset: 0,
-        duration: 1000,
+        duration: 700,
+        delay: 0,
     });
 });
-import axios from 'axios';
+import axios from "axios";
 window.axios = axios;
 
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

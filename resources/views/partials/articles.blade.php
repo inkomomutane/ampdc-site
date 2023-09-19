@@ -4,10 +4,10 @@
             <div class="splide__track">
                 <h1 class="max-w-2xl mb-4 text-gray-600 text-sm font-extrabold tracking-tight leading-none
                 dark:text-white capitalize "
-                    data-aos="fade-up" data-aos-delay="5">— Post's</h1>
+                    data-aos="fade-up" >— Post's</h1>
                 <h2 class="max-w-2xl mb-2 text-2xl font-semibold  tracking-tight leading-none
                  capitalize"
-                    data-aos="fade-up" data-aos-delay="10">Actividades recentes.</h2>
+                    data-aos="fade-up" >Actividades recentes.</h2>
                 <ul class="splide__list ">
 
                     @foreach ($articles as $article)
@@ -17,7 +17,7 @@
                                     'slug' => $article->slug,
                                 ]) }}">
                                 <article class="group bg-white flex flex-col justify-start rounded-t" data-aos="fade-up"
-                                    data-aos-delay="15">
+                                    >
                                     <img class=" !min-h-[10rem] object-cover mb-2 rounded-t"
                                         src="{{ asset('storage') }}/{{ $article->cover }}" alt="mockup">
                                     <header class="text-gray-600 px-4 ">

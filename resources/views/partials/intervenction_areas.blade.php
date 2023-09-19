@@ -5,14 +5,13 @@
     <div class="relative py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-32 ">
         <div class="max-w-screen-md mb-8">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white dark:text-white text-start"
-                data-aos="fade-up" data-aos-delay="100">
+                data-aos="fade-up">
                 — Oque fazemos?</h2>
-            <p class="text-white sm:text-sm dark:text-gray-400 text-start" data-aos="fade-up" data-aos-delay="100">
-                Here at Flowbite we focus on markets where
-                technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+            <p class="text-white sm:text-sm dark:text-gray-400 text-start" data-aos="fade-up">
+                Areas de intervenção que o sumburero actua em prol do deenvolvimento comunitário</p>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4  gap-4 md:space-y-0">
-            <div data-aos="fade-up" data-aos-delay="100"
+            <div data-aos="fade-up"
                 class="flex flex-col justify-center items-center bg-gradient-to-b from-white/80 to-white shadow-xl p-4 rounded">
                 <div class="flex justify-center items-center mb-4 w-24 h-24">
                     <svg class="w-20 h-20 " viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +26,7 @@
                         </path>
                     </svg>
                 </div>
-                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-2">Formação e Inserção
+                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Formação e Inserção
                     profissional
                 </h3>
                 <a href="#"
@@ -41,7 +40,7 @@
                     </svg>
                 </a>
             </div>
-            <div data-aos="fade-up" data-aos-delay="100"
+            <div data-aos="fade-up"
                 class="flex flex-col justify-center items-center bg-gradient-to-b from-white/80 to-white shadow-xl p-4 rounded">
                 <div class="flex justify-center items-center mb-4 w-24 h-24">
                     <svg class="w-20 h-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"
@@ -51,7 +50,7 @@
                         </path>
                     </svg>
                 </div>
-                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-2">Proteção social
+                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Proteção social
                 </h3>
                 <a href="#"
                     class="inline-flex self-start items-center justify-start  font-bold text-center text-xs ">
@@ -64,7 +63,7 @@
                     </svg>
                 </a>
             </div>
-            <div data-aos="fade-up" data-aos-delay="100"
+            <div data-aos="fade-up"
                 class="flex flex-col justify-center items-center bg-gradient-to-b from-white/80 to-white shadow-xl p-4 rounded">
                 <div class="flex justify-center items-center mb-4 w-24 h-24">
                     <svg class="w-20 h-20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +84,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </div>
-                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-2">Monitoria e Avaliação
+                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Monitoria e Avaliação
                 </h3>
                 <a href="#"
                     class="inline-flex self-start items-center justify-start  font-bold text-center text-xs ">
@@ -98,7 +97,7 @@
                     </svg>
                 </a>
             </div>
-            <div data-aos="fade-up" data-aos-delay="100"
+            <div data-aos="fade-up"
                 class="flex flex-col justify-center items-center bg-gradient-to-b from-white/80 to-white shadow-xl p-4 rounded">
                 <div class="flex justify-center items-center mb-4 w-24 h-24">
                     <svg class="w-20 h-20" xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +116,7 @@
                         <rect x="0" y="0" width="36" height="36" fill-opacity="0"></rect>
                     </svg>
                 </div>
-                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-2">Apoio Institucional
+                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Apoio Institucional
                 </h3>
                 <a href="#"
                     class="inline-flex self-start items-center justify-start  font-bold text-center text-xs ">

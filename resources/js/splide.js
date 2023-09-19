@@ -1,4 +1,5 @@
 import Splide from "@splidejs/splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/css";
 document.addEventListener("DOMContentLoaded", function () {
     if (document.getElementById("news")) {
@@ -50,5 +51,27 @@ document.addEventListener("DOMContentLoaded", function () {
             gap: 10,
         });
         histories.mount();
+    }
+    if (document.getElementById("partiners")) {
+        const partiners = new Splide("#partiners", {
+            type   : 'loop',
+            drag   : 'free',
+            focus  : 'center',
+            arrows : false,
+            perPage : 5,
+            pagination:false,
+            autoScroll: {
+                speed: 1,
+            },
+            breakpoints: {
+                640: {
+                    perPage: 3,
+                },
+                768: {
+                    perPage: 5,
+                },
+            },
+        });
+        partiners.mount({ AutoScroll });
     }
 });

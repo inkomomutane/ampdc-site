@@ -15,7 +15,7 @@
                 </svg>
             </button>
         </div>
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 " id="navbar-cta">
             <ul
                 class="flex flex-col bg-white md:bg-transparent font-semibold tracking-tigher p-4 md:p-0 mt-4  md:flex-row md:space-x-8 md:mt-0 md:border-0">
                 <li>

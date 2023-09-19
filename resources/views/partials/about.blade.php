@@ -4,13 +4,13 @@
         <div class="mr-auto place-self-center md:col-span-7 tracking-tight p-8 pb-0 ">
             <h1 class="max-w-2xl mb-4 text-gray-600 text-sm font-extrabold tracking-tight leading-none
              dark:text-white capitalize "
-                data-aos="fade-up" data-aos-delay="5">— Sobre nós</h1>
+                data-aos="fade-up" >— Sobre nós</h1>
             <h2 class="max-w-2xl mb-2 text-2xl font-semibold  tracking-tight leading-none
               capitalize"
-                data-aos="fade-up" data-aos-delay="10">Grupo Técnico de protecção Social</h2>
+                data-aos="fade-up" >Grupo Técnico de protecção Social</h2>
 
             <div class=" grid  gap-2">
-                <div class="" data-aos="fade-up" data-aos-delay="15">
+                <div class="" data-aos="fade-up" >
                     <p class=" max-w-2xl   font-light text-gray-700 lg:my-4 text-base ">
                         Somos uma organização sem fins lucrativos com 4 anos de existência, comprometida em promover a
                         protecção social da criança na província de Sofala, Moçambique. Nossas actividades são baseadas
@@ -20,7 +20,7 @@
 
                 </div>
             </div>
-            <a data-aos="fade-up" data-aos-delay="15" href="/"
+            <a data-aos="fade-up"  href="{{ route('about.us') }}"
                 class="inline-flex items-center justify-center py-3 my-4 text-sm font-medium text-center text-gray-900  px-5 bg-primary-100 hover:bg-primary-200  focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                 Ler mais
                 <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"

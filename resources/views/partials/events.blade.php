@@ -3,10 +3,10 @@
 
         <div class="flex flex-col mr-auto place-self-center  tracking-tight p-8 pb-0 text-gray-600 w-full">
             <h1 class="mb-4  text-sm font-extrabold tracking-tight leading-none capitalize " data-aos="fade-up"
-                data-aos-delay="5">— Eventos</h1>
+               >— Eventos</h1>
             <h2 class=" mb-2 text-2xl font-semibold  tracking-tight leading-none
             " data-aos="fade-up"
-                data-aos-delay="10">Próximos eventos.</h2>
+               >Próximos eventos.</h2>
 
             @if ($events->count() > 0)
                 <div class=" grid  gap-4 py-6 w-full">
@@ -80,7 +80,7 @@
                     @endforeach
                 </div>
             @else
-                <span class="text-xs p-4 bg-amber-50/5 " >
+                <span class="text-xs p-4 bg-amber-50/5 " data-aos="fade-up">
                     — Sem eventos por mostrar
                 </span>
             @endif
