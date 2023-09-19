@@ -6,9 +6,11 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\NewsPageController;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Route;
 use RalphJSmit\Laravel\SEO\Support\SEOData;
 use RalphJSmit\Laravel\SEO\SchemaCollection;
+use Vite;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,5 +42,7 @@ Route::get('/about-us', fn () => view('about-us', [
         type: 'article',
         image: Vite::asset('resources/images/logo.webp'),
         schema: SchemaCollection::initialize()->addArticle(),
+        published_time: Carbon::createFromDate(2023, 9, 20),
+        modified_time: Carbon::createFromDate(2023, 9, 20),
     ),
 ]))->name('about.us');
