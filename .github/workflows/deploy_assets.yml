@@ -2,7 +2,7 @@ name: 🚀 Install composer dependeces and migrate changes
 on:
   push:
     branches:
-    - main
+      - main
 
 env:
   FIRST_NAME: Sumburero
@@ -17,8 +17,9 @@ jobs:
             cd website_sumburero
             ${{ secrets.FUN_GIT_PULL }}
             php composer.phar install
+            php artisan statamic:install
           host: ${{ secrets.SSH_SERVER }}
           user: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-#          pass: ${{ secrets.SSH_PASS_KEY }}
+          #          pass: ${{ secrets.SSH_PASS_KEY }}
           args: "-tt -vvv"
