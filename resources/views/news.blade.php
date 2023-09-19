@@ -110,14 +110,13 @@
                             class="max-w-2xl mt-8 mb-4 text-gray-600 text-sm font-extrabold tracking-tight leading-none  dark:text-white capitalize ">
                             — Redes sociais
                         </h1>
-                        @production
-                            <div class="fb-page" data-href="https://www.facebook.com/sumburero" data-tabs="" data-width=""
+
+                            <div class="fb-page !max-w-full" data-href="https://www.facebook.com/sumburero" data-tabs="" data-width=""
                                 data-height="" data-small-header="false" data-adapt-container-width="true"
                                 data-hide-cover="false" data-show-facepile="true">
                                 <blockquote cite="https://www.facebook.com/sumburero" class="fb-xfbml-parse-ignore"><a
                                         href="https://www.facebook.com/sumburero">Sumburero</a></blockquote>
                             </div>
-                        @endproduction
 
                         <a href="https://api.whatsapp.com/send?l=pt-BR&phone=+258845950861&text=Ol%C3%A1%20Sumburero!"
                             target="_blank">

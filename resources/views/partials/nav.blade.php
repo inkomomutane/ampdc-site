@@ -3,7 +3,11 @@
         <a href="/" class="flex items-center">
             <img src="{{ Vite::asset('resources/images/logo.png') }}" class="h-10 mr-3" alt="Sumburero Logo" />
         </a>
-        <div id="google_translate_element" class="!text-gray-600 !font-semibold flex md:order-4"></div>
+        <div class="flex md:order-4 mr-8 !w-44">
+            <div id="google_translate_element" class="!text-gray-600 !font-semibold "></div>
+
+        </div>
+
         <div class="flex md:order-3 self-start">
             <button data-collapse-toggle="navbar-cta" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"

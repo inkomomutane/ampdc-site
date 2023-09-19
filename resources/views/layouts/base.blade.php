@@ -16,6 +16,11 @@
 </head>
 
 <body class="text-gray-800">
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"
+        nonce="k7U0J6Iw"></script>
+
     <x-preloader />
 
     @include('partials/nav')
@@ -52,11 +57,9 @@
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     </script>
 
-    @production
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"
-            nonce="k7U0J6Iw"></script>
-    @endproduction
+
+
+
 
 </body>
 
