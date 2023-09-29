@@ -18,7 +18,7 @@ return [
                  * The list of directories and files that will be included in the backup.
                  */
                 'include' => [
-                    storage_path('app/public'),
+                    base_path(),
                 ],
 
                 /*
@@ -29,6 +29,7 @@ return [
                 'exclude' => [
                     base_path('vendor'),
                     base_path('.git'),
+                    base_path('.env'),
                     base_path('node_modules'),
                 ],
 
