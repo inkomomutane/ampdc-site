@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\GoogleEmptyTrashCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -15,7 +16,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\IseedForce::class,
-        Commands\SitemapGeneratorCommand::class
+        Commands\SitemapGeneratorCommand::class,
+        GoogleEmptyTrashCommand::class
     ];
 
 
