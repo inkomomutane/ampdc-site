@@ -14,7 +14,7 @@
                         Rua Condestável 1,783, Cidade da Beira, Sofala Moçambique
                     </address>
                     <a href="mailto:Geral@sumburero.org" class="text-sm">
-                        Email: Geral@sumburero.org
+                        Email: geral@sumburero.org
                     </a>
                 </div>
             </div>
