@@ -1,13 +1,13 @@
 <section class="relative bg-gradient-to-b to-amber-100 from-white dark:bg-gray-900">
-    <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/hero.webp') }}"
+    <!-- <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/hero.webp') }}"
         alt="mockup">
-    <div class="absolute   inset-0 bg-black opacity-80"></div>
+    <div class="absolute   inset-0 bg-black opacity-80"></div> -->
     <div class="relative py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-32 ">
         <div class="max-w-screen-md mb-8">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white dark:text-white text-start"
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-black dark:text-white text-start"
                 data-aos="fade-up">
                 — Oque fazemos?</h2>
-            <p class="text-white sm:text-sm dark:text-gray-400 text-start" data-aos="fade-up">
+            <p class="text-black sm:text-sm dark:text-gray-400 text-start" data-aos="fade-up">
                 Areas de intervenção que o sumburero actua em prol do deenvolvimento comunitário</p>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4  gap-4 md:space-y-0">

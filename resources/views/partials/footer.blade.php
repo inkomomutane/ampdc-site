@@ -13,7 +13,7 @@
                     <address class="text-sm not-italic">
                         Rua Condestável 1,783, Cidade da Beira, Sofala Moçambique
                     </address>
-                    <a href="mailto:Geral@sumburero.org" class="text-sm">
+                    <a href="mailto:geral@sumburero.org" class="text-sm">
                         Email: geral@sumburero.org
                     </a>
                 </div>
@@ -65,7 +65,7 @@
                     href="{{ session()->get('developerSite'); }}" target="_blank" class="hover:underline">{{ session()->get('developer'); }}</a>
             </span>
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-                <a href="https://facebook.com/sumburero/"
+                <a href="https://facebook.com/sumburero/" target="_blank"
                     class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd"
@@ -73,7 +73,7 @@
                             clip-rule="evenodd" />
                     </svg>
                 </a>
-                <a href="https://instagram.com/sumburerosofala/"
+                <a href="https://instagram.com/sumburerosofala/" target="_blank"
                     class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd"
@@ -81,7 +81,7 @@
                             clip-rule="evenodd" />
                     </svg>
                 </a>
-                <a href="https://api.whatsapp.com/send?l=pt-BR&phone=+258845950861&text=Ol%C3%A1%20Sumburero!"
+                <a href="https://api.whatsapp.com/send?l=pt-BR&phone=+258845950861&text=Ol%C3%A1%20Sumburero!" target="_blank"
                     class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none"
                         viewBox="0 0 24 24">
