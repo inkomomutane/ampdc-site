@@ -49,7 +49,7 @@
         text-white first-letter:uppercase " data-aos="fade-down">— Grupo técnico de proteção social </h1>
 
                 <p class="max-w-2xl  mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 text-justify" data-aos="fade-down">
-                    Promovendo o desenvolvimento sustentável nas comunidades, garantindo o acesso aos direitos fundamentais da criança...</p>
+                    Promovendo o desenvolvimento sustentável nas comunidades, garantindo o acesso aos direitos fundamentais das pessoas em situação vulneravel, com principal foco na criança,...</p>
                 <a href="{{ route('about.us') }}" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-sm font-medium text-center text-white
         bg-primary-600 hover:bg-blue-400 focus:ring-4 focus:ring-primary-300
          " data-aos="fade-down">
