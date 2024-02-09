@@ -34,7 +34,7 @@
                     </li>
                     <li class="splide__slide">
                         <a href="https://www.facebook.com/profile.php?id=100081471333524" class="flex justify-center items-center">
-                            <img class="!h-12 w-max" src="{{ Vite::asset('resources/images/partiners/') }}" alt="AMACO">
+                            <img class="!h-12 w-max" src="{{ Vite::asset('resources/images/partiners/amaco.webp') }}" alt="AMACO">
                         </a>
                     </li>
                 </ul>

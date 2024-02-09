@@ -34,11 +34,11 @@
 </section> -->
 
 <section class="relative bg-gradient-to-b to-amber-100 from-white dark:bg-gray-900">
-    <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/bg.webp') }}" alt="mockup">
+    <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/bg-3.webp') }}" alt="mockup">
     <div class="absolute   inset-0 bg-black opacity-20"></div>
-    <div class="relative py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-32 ">
+    <div class="relative py-8 px-4 mx-auto max-w-screen-xxl sm:py-16 lg:px-32 ">
 
-        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:px-8  lg:grid-cols-12">
+        <div class="grid max-w-screen-xxl px-4 py-8 mx-auto lg:gap-8 xxl:gap-0 lg:py-16 lg:px-8  lg:grid-cols-12">
 
 
             <div class="mr-auto place-self-center lg:col-span-6 tracking-tight p-8">
