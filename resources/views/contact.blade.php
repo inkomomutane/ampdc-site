@@ -43,7 +43,7 @@
                 <div class="text-body-color font-medium">
                     <ul>
                         <li>+258 (84) 595 0861</li>
-                        <li>+258 (84) 595 0861</li>
+                        <li>+258 (84) 485 6857</li>
                     </ul>
                 </div>
             </div>
