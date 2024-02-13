@@ -76,7 +76,7 @@ Route::get('/economic-strengthening', fn () => view('economic_strengthening', [
         site_name: 'Fortalecimento Econômico',
         section: 'Grupo técnico de protecção social.',
         type: 'article',
-        image: Vite::asset('resources/images/logo.webp'),
+        image: Vite::asset('resources/images/intervections/economic-strengthening.webp'),
         schema: SchemaCollection::initialize()->addArticle(),
         published_time: Carbon::createFromDate(2023, 9, 20),
         modified_time: Carbon::createFromDate(2023, 9, 20),
@@ -100,7 +100,7 @@ Route::get('/humanitarian-actions', fn () => view('humanitarian_actions', [
         modified_time: Carbon::createFromDate(2023, 9, 20),
     ),
 ]))->name('humanitarian.actions');
-Route::get('/technical-suport', fn () => view('tecnical_suport', [
+Route::get('/technical-support', fn () => view('technical_support', [
     'SEOData' => new SEOData(
         title: 'Apoio ao Desenvolvimento Tecnico e Institucional ',
         description: 'Somos uma organização sem fins lucrativos com 4 anos de existência,
@@ -117,4 +117,4 @@ Route::get('/technical-suport', fn () => view('tecnical_suport', [
         published_time: Carbon::createFromDate(2023, 9, 20),
         modified_time: Carbon::createFromDate(2023, 9, 20),
     ),
-]))->name('tecnical.suport');
+]))->name('technical.support');
