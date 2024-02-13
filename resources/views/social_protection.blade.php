@@ -30,7 +30,7 @@
                                     </h2>
                                     <ul class="inline-flex -space-x-px text-sm">
                                         <li>
-                                            <a href="{{ route('welcome') }}" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 rounded-s-lg hover:text-gray-700  ">Voltar</a>
+                                            <a href="{{ route('welcome') }}" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-white rounded-s-lg hover:text-gray-700  ">Voltar</a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0)" class="flex items-center justify-center px-3 h-8 leading-tight text-blue-500 hover:text-white   "> Proteção social </a>
@@ -41,8 +41,16 @@
                         </div>
                     </article>
                     <div class="text-base my-6 p-6  text-justify bg-white  tracking-normal space-y-4">
-                      
-
+                        <strong>Protecção Social</strong><br>
+                        <p>
+                            Facilitar os serviços Sociais Públicos
+                            Básicos a famílias em situação de
+                            vulnerabilidade, Promoção de atividades
+                            de cidadania, direitos humanos e VBG,
+                            nas comunidades, de forma a contribuir
+                            para o bem-estar das famílias
+                            vulneráveis.
+                        </p>
 
 
                     </div>

@@ -61,8 +61,8 @@
             </div>
             <div class="hidden lg:mt-0 lg:col-span-6 lg:flex">
                 <div class="grid gap-2">
-                <img class="block w-full h-auto object-cover object-top rounded mt-12" src="{{ Vite::asset('resources/images/logo.webp')}}" alt="mockup" data-aos="fade-left">
-                 <!-- <p class="text-justify">Your justified text goes here.</p>   <img class="col-span-2 row-span-2  h-full object-cover object-top rounded" src="{{ Vite::asset('resources/images/logo.webp')}}" alt="mockup" data-aos="fade-left"> -->
+                    <img class="block w-full h-auto object-cover object-top rounded mt-12" src="{{ Vite::asset('resources/images/logo.webp')}}" alt="mockup" data-aos="fade-left">
+                    <!-- <p class="text-justify">Your justified text goes here.</p>   <img class="col-span-2 row-span-2  h-full object-cover object-top rounded" src="{{ Vite::asset('resources/images/logo.webp')}}" alt="mockup" data-aos="fade-left"> -->
                     <!-- <img class="h-full object-cover object-left rounded " src="{{ Vite::asset('resources/images/hero.webp')}}" alt="mockup" data-aos="fade-left"> -->
 
                     <!-- <img class="h-full object-cover object-left rounded  border-primary-100" src="{{ Vite::asset('resources/images/hero.webp')}}" alt="mockup" data-aos="fade-left"> -->

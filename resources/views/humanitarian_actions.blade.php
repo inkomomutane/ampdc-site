@@ -30,7 +30,7 @@
                                     </h2>
                                     <ul class="inline-flex -space-x-px text-sm">
                                         <li>
-                                            <a href="{{ route('welcome') }}" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 rounded-s-lg hover:text-gray-700  ">Voltar</a>
+                                            <a href="{{ route('welcome') }}" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-white rounded-s-lg hover:text-gray-700  ">Voltar</a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0)" class="flex items-center justify-center px-3 h-8 leading-tight text-blue-500 hover:text-white   "> Acções Humanitarias </a>
@@ -41,9 +41,12 @@
                         </div>
                     </article>
                     <div class="text-base my-6 p-6  text-justify bg-white  tracking-normal space-y-4">
-                      
-
-
+                        <strong>Acções Humanitarias </strong> <br>
+                        <p>Realização de acções de intervenção
+                            Humanitária em comunidades vítimas de
+                            desastres Naturais. Desenho de
+                            Estratégias de Intervenção em grupos
+                            expostos as mudanças climáticas.</p>
 
                     </div>
                 </div>
