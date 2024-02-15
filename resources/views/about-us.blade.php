@@ -104,6 +104,7 @@
                                         <li class="py-2">Inovação e aprendizado contínuo</li>
                                         <li class="py-2">Empoderamento das comunidades</li>
                                         <li class="py-2">Impacto e sustentabilidade</li>
+                                        <li class="py-2">Valorização da pessoa humana</li>
                                     </ul>
                                     </p>
                                 </div>
