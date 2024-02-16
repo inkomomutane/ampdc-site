@@ -51,13 +51,16 @@
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contactos</h2>
                     <ul class="text-gray-600 dark:text-gray-400 text-sm">
                         <li class="mb-4">
-                            <a href="tel:+258845950861" class="hover:underline">+258 (84) 595 0861</a>
+                            <a href="tel:+258845950861" class="hover:underline">+258 (84) 595 0861</a> <br><small>Administração</small>
                         </li>
                         <li class="mb-4">
-                            <a href="tel:+258845820730" class="hover:underline">+258 (84) 582 0730</a>
+                            <a href="tel:+258845820730" class="hover:underline">+258 (84) 582 0730</a> <br> <small>Técnico</small>
                         </li>
                         <li>
-                            <a href="tel:+258844856857" class="hover:underline">+258 (84) 485 6857</a>
+                            <a href="tel:+258844856857" class="hover:underline">+258 (84) 485 6857</a> <br> <small>Técnico</small>
+                        </li>
+                        <li>
+                            <a href="tel:+258872392468" class="hover:underline">+258 (87) 239 2468</a> <br> <small>Monitoria e Avaliação</small>
                         </li>
                     </ul>
                 </div>
