@@ -42,8 +42,10 @@
                 </h4>
                 <div class="text-body-color font-medium">
                     <ul>
-                        <li>+258 (84) 595 0861</li>
-                        <li>+258 (84) 485 6857</li>
+                        <li>+258 (84) 595 0861 <br> <small>Administração</small> </li>
+                        <li>+258 (84) 582 0730 <br> <small>Técnico</small> </li>
+                        <li>+258 (84) 485 6857 <br> <small>Técnico</small> </li>
+                        <li>+258 (87) 239 2468 <br> <small>Monitoria e Avaliação</small> </li>
                     </ul>
                 </div>
             </div>
