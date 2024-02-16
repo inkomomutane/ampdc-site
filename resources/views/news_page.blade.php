@@ -91,7 +91,7 @@
                                 @else
                                     <div class="flex lg:mt-0 sm:col-span-5 col-start-7">
                                         <img class="col-span-2 row-span-2  h-full object-cover object-top rounded md:rounded-tr-[3rem] md:rounded-bl-[3rem]"
-                                            src="{{ $section['image'] }}" alt="mockup"
+                                            src="{{ asset('storage') }}/{{ $section['image'] }}" alt="mockup"
                                             data-aos="fade-up">
 
                                     </div>
