@@ -29,7 +29,7 @@
                     </li>
                     <li class="splide__slide">
                         <a href="" class="flex justify-center items-center">
-                            <img class="!h-12 w-max" src="{{ Vite::asset('resources/images/partiners/') }}" alt="AGS">
+                            <img class="!h-12 w-max" src="{{ Vite::asset('resources/images/partiners/ags.webp') }}" alt="AGS">
                         </a>
                     </li>
                     <li class="splide__slide">
