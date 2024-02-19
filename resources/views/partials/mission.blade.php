@@ -13,7 +13,6 @@
             <h2 class="max-w-2xl mb-2 text-2xl font-semibold  tracking-tight leading-none
               capitalize"
                 data-aos="fade-up" >1. Missão</h2>
-
             <div class=" grid  gap-2">
                 <div class="" data-aos="fade-up">
                     <p class=" max-w-2xl   font-light text-gray-700 lg:mb-2 text-sm ">
@@ -26,6 +25,18 @@
                 <h2 class="max-w-2xl mb-2 text-2xl font-semibold tracking-tight leading-none
              capitalize"
                 data-aos="fade-up" >2. Visão</h2>
+                <div class="" data-aos="fade-up" >
+                    <p class=" max-w-2xl   font-light text-gray-800 lg:mb-2 text-sm ">
+                        Criar uma sociedade dedicada a zelar pêlos direitos das crianças em situação de vulnerabilidade,
+                        garantindo acesso a direitos fundamentais, como educação básica de qualidade, cuidados de saúde
+                        adequados, protecção contra abusos e exploração, alimentação adequada e oportunidades para um
+                        desenvolvimento psicossocial saudável.
+                    </p>
+
+                </div>
+                   <h2 class="max-w-2xl mb-2 text-2xl font-semibold tracking-tight leading-none
+             capitalize"
+                data-aos="fade-up" >3. Valores</h2>
                 <div class="" data-aos="fade-up" >
                     <p class=" max-w-2xl   font-light text-gray-800 lg:mb-2 text-sm ">
                         Criar uma sociedade dedicada a zelar pêlos direitos das crianças em situação de vulnerabilidade,

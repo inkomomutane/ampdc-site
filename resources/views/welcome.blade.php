@@ -7,8 +7,9 @@
 @section('content')
     @include('partials/hero')
     @include('partials/intervenction_areas')
-    @include('partials/mission')
-    @include('partials/about')
+    <!-- hide -->
+    <!-- @include('partials/mission') -->
+    <!-- @include('partials/about') -->
     @include('partials/articles')
     @include('partials/events')
     @include('partials/success_stories')

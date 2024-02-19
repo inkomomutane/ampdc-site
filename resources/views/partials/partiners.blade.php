@@ -6,38 +6,36 @@
         </h1>
         <div class="splide" id="partiners">
             <div class="splide__track">
-                <ul
-                    class="splide__list mt-2">
+                <ul class="splide__list mt-2">
                     <li class="splide__slide">
                         <a href="https://www.essor-ong.org" class="flex justify-center items-center">
-                            <img class="!h-12" src="{{ Vite::asset('resources/images/partiners/essor.webp') }}"
-                                alt="Essor">
+                            <img class="!h-12" src="{{ Vite::asset('resources/images/partiners/essor.webp') }}" alt="Essor">
                         </a>
                     </li>
                     <li class="splide__slide">
                         <a href="https://ampdcmz.org" class="flex justify-center items-center">
-                            <img class="!h-12 w-20" src="{{ Vite::asset('resources/images/partiners/ampdc.webp') }}"
-                                alt="Ampdc">
+                            <img class="!h-12 w-20" src="{{ Vite::asset('resources/images/partiners/ampdc.webp') }}" alt="Ampdc">
                         </a>
                     </li>
                     <li class="splide__slide">
-                        <a href="https://www.facebook.com/people/Conselho-Crist%C3%A3o-de-Mo%C3%A7ambique/100070147580398/?paipv=0&eav=AfbQlM2ZoslpsQjm8zYW2CK1sPUX5ZmxLbUEmucBT_3Q6PFW56SIA1tUzd06K3HWIQo&_rdr"
-                            class="flex justify-center items-center">
-                            <img class="!h-12 w-max" src="{{ Vite::asset('resources/images/partiners/ccm.webp') }}"
-                                alt="CCM">
+                        <a href="https://www.facebook.com/people/Conselho-Crist%C3%A3o-de-Mo%C3%A7ambique/100070147580398/?paipv=0&eav=AfbQlM2ZoslpsQjm8zYW2CK1sPUX5ZmxLbUEmucBT_3Q6PFW56SIA1tUzd06K3HWIQo&_rdr" class="flex justify-center items-center">
+                            <img class="!h-12 w-max" src="" alt="CUPA">
                         </a>
                     </li>
                     <li class="splide__slide">
                         <a href="https://unizambeze.ac.mz" class="flex justify-center items-center">
-                            <img class="!h-12 w-max" src="{{ Vite::asset('resources/images/partiners/uz.webp') }}"
-                                alt="CCM">
+                            <img class="!h-12 w-max" src="{{ Vite::asset('resources/images/partiners/uz.webp') }}" alt="Unizambeze">
                         </a>
                     </li>
                     <li class="splide__slide">
-                    <a href="https://www.cpmz.co.mz" class="flex justify-center items-center">
-                        <img class="!h-12 w-max" src="{{ Vite::asset('resources/images/partiners/cpmz.webp') }}"
-                            alt="CCM">
-                    </a>
+                        <a href="" class="flex justify-center items-center">
+                            <img class="!h-12 w-max" src="{{ Vite::asset('resources/images/partiners/ags.webp') }}" alt="AGS">
+                        </a>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="https://www.facebook.com/profile.php?id=100081471333524" class="flex justify-center items-center">
+                            <img class="!h-12 w-max" src="{{ Vite::asset('resources/images/partiners/amaco.webp') }}" alt="AMACO">
+                        </a>
                     </li>
                 </ul>
                 </ul>
