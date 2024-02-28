@@ -18,8 +18,8 @@
                         </a>
                     </li>
                     <li class="splide__slide">
-                        <a href="https://www.facebook.com/people/Conselho-Crist%C3%A3o-de-Mo%C3%A7ambique/100070147580398/?paipv=0&eav=AfbQlM2ZoslpsQjm8zYW2CK1sPUX5ZmxLbUEmucBT_3Q6PFW56SIA1tUzd06K3HWIQo&_rdr" class="flex justify-center items-center">
-                            <img class="!h-12 w-max" src="" alt="CUPA">
+                        <a href="#" class="flex justify-center items-center">
+                            <img class="!h-12 w-max" src="{{ Vite::asset('resources/images/partiners/kupa.webp') }}" alt="KUPA">
                         </a>
                     </li>
                     <li class="splide__slide">

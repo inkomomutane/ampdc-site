@@ -50,8 +50,7 @@
 
                 <p class="max-w-2xl  mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 text-justify" data-aos="fade-down">
                     Promovendo o desenvolvimento sustentável nas comunidades, garantindo o acesso aos direitos fundamentais das pessoas em situação vulneravel, com principal foco na criança,...</p>
-                <a href="{{ route('about.us') }}" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-sm font-medium text-center text-white
-        bg-primary-600 hover:bg-blue-400 focus:ring-4 focus:ring-primary-300
+                <a href="{{ route('about.us') }}" class="bg-gradient-to-r from-blue-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-blue-400 focus:ring-4 focus:ring-primary-300 
          " data-aos="fade-down">
                     Ler mais
                     <svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

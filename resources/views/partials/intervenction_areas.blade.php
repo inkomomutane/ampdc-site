@@ -17,7 +17,7 @@
                 </div>
                 <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Proteção social
                 </h3>
-                <a href="{{ route('social.protection') }}" class="inline-flex self-start items-center justify-start  font-bold text-center text-xs ">
+                <a href="{{ route('social.protection') }}" class="bg-gradient-to-r from-blue-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-blue-400 focus:ring-4 focus:ring-primary-300">
                     Ler mais
                     <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -30,7 +30,7 @@
                 </div>
                 <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Fortalecimento Económico
                 </h3>
-                <a href="{{ route('economic.strengthening') }}" class="inline-flex self-start items-center justify-start  font-bold text-center text-xs ">
+                <a href="{{ route('economic.strengthening') }}" class="bg-gradient-to-r from-blue-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-blue-400 focus:ring-4 focus:ring-primary-300 ">
                     Ler mais
                     <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -44,7 +44,7 @@
                 </div>
                 <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Apoio ao Desenvolvimento Técnico e Institucional
                 </h3>
-                <a href="{{ route('technical.support') }}" class="inline-flex self-start items-center justify-start  font-bold text-center text-xs ">
+                <a href="{{ route('technical.support') }}" class="bg-gradient-to-r from-blue-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-blue-400 focus:ring-4 focus:ring-primary-300 ">
                     Ler mais
                     <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -57,7 +57,7 @@
                 </div>
                 <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Acções Humanitarias
                 </h3>
-                <a href="{{ route('humanitarian.actions') }}" class="inline-flex self-start items-center justify-start  font-bold text-center text-xs ">
+                <a href="{{ route('humanitarian.actions') }}" class="bg-gradient-to-r from-blue-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-blue-400 focus:ring-4 focus:ring-primary-300 ">
                     Ler mais
                     <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
