@@ -1,12 +1,15 @@
-<section class="bg-gradient-to-b from-white to-amber-50 dark:bg-gray-900">
+<section class="relative bg-gradient-to-b from-white to-amber-50 dark:bg-gray-900 ">
+<img class="absolute inset-0 object-cover h-full w-full" src="{{ Vite::asset('resources/images/group.webp') }}"
+        alt="mockup">
+    <div class="absolute   inset-0 bg-black opacity-70"></div>
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:px-32">
         <div class="splide" id="news">
             <div class="splide__track">
-                <h1 class="max-w-2xl mb-4 text-gray-600 text-sm font-extrabold tracking-tight leading-none
+                <h1 class="max-w-2xl mb-4 text-white text-sm font-extrabold tracking-tight leading-none
                 dark:text-white capitalize "
                     data-aos="fade-up" >— Post's</h1>
                 <h2 class="max-w-2xl mb-2 text-2xl font-semibold  tracking-tight leading-none
-                 capitalize"
+                 capitalize text-white"
                     data-aos="fade-up" >Actividades recentes.</h2>
                 <ul class="splide__list ">
 
