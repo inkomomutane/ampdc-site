@@ -21,7 +21,7 @@
                                 ]) }}">
                                 <article class="group bg-white flex flex-col justify-start rounded-t" data-aos="fade-up"
                                     >
-                                    <img class=" !min-h-[10rem] object-cover mb-2 rounded-t"
+                                    <img class=" !h-[14rem] !sm:h-[12rem] object-cover mb-2 rounded-t"
                                         src="{{ asset('storage') }}/{{ $article->cover }}" alt="mockup">
                                     <header class="text-gray-600 px-4 ">
 
