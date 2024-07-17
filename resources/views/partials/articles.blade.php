@@ -19,7 +19,7 @@
                                 href="{{ route('news.page', [
                                     'slug' => $article->slug,
                                 ]) }}">
-                                <article class="group bg-white flex flex-col justify-start rounded-t" data-aos="fade-up"
+                                <article class="group bg-white flex h-full flex-col justify-start rounded-t" data-aos="fade-up"
                                     >
                                     <img class=" !h-[14rem] !sm:h-[12rem] object-cover mb-2 rounded-t"
                                         src="{{ asset('storage') }}/{{ $article->cover }}" alt="mockup">
