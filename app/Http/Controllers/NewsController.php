@@ -26,17 +26,17 @@ class NewsController extends Controller
 
             'article' =>  $article ?? null,
             'SEOData' => new SEOData(
-                title: 'Sumburero - Actividades realizadas',
-                description: 'Todas actividades realizadas pelo sumburero desde a sua existência assim como os eventos nos
-                teve o prazer de participar.',
+                title: 'AMPDC - Actividades realizadas',
+                description: 'Todas actividades realizadas pelo AMPDC desde a sua existência assim como os eventos nos
+               quais teve o prazer de participar.',
                 author: 'Nelson Alexandre Mutane',
-                site_name: 'Sumburero - Actividades realizadas',
-                section: 'Sumburero - Actividades realizadas',
-                type: 'website',
-                schema: SchemaCollection::initialize()->addArticle(),
+                image: Vite::asset('resources/images/logo.webp'),
                 published_time: Carbon::createFromDate(2023, 9, 20),
                 modified_time: Carbon::createFromDate(2023, 9, 20),
-                image: Vite::asset('resources/images/logo.webp')
+                section: 'AMPDC - Actividades realizadas',
+                schema: SchemaCollection::initialize()->addArticle(),
+                type: 'website',
+                site_name: 'AMPDC - Actividades realizadas'
             )
         ]);
     }

@@ -24,13 +24,13 @@ class EventController extends Controller
                 title: 'Evento - ' .  $event?->title ?? '',
                 description: $event?->event_description ?? '',
                 author: 'Nelson Alexandre Mutane',
-                site_name: 'Evento - ' .  $event?->title ?? '',
-                section: 'Evento - ' .  $event?->title ?? '',
-                type: 'article',
-                schema: SchemaCollection::initialize()->addArticle(),
+                image: public_path(). '/storage/' . $event?->cover ?? '',
                 published_time: Carbon::createFromDate(2023, 9, 20),
                 modified_time: Carbon::createFromDate(2023, 9, 20),
-                image: public_path(). '/storage/' . $event?->cover ?? ''
+                section: 'Evento - ' .  $event?->title ?? '',
+                schema: SchemaCollection::initialize()->addArticle(),
+                type: 'article',
+                site_name: 'Evento - ' .  $event?->title ?? ''
             )
         ]);
     }

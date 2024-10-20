@@ -1,5 +1,4 @@
 @extends('layouts/base')
-
 @section('seo')
 {!! seo($SEOData) !!}
 @endsection
@@ -12,7 +11,7 @@
                         <article class="relative min-h-[280px] sm:min-h-[350px] lg:min-h-[420px] flex  items-end text-white">
                             <img class="absolute inset-0 w-full h-full object-cover object-top"
                                 src="{{ asset('storage') }}/{{ $article->cover ?? '' }}"
-                                alt="{{ $article->title ?? 'Sumburero event' }}">
+                                alt="{{ $article->title ?? 'AMPDC event' }}">
                             <div class="absolute   inset-0 bg-gradient-to-t from-black/90 to-black/10"></div>
                             <div class="relative  p-6 w-full">
                                 <div class="group flex flex-row justify-start rounded-t w-full
@@ -51,7 +50,7 @@
                                         </div>
                                         <div
                                             class="flex justify-between w-fit bg-amber-400 p-1 px-2 capitalize text-xs text-gray-900 font-semibold">
-                                            <span>{{ $article->category }}</span>
+                                            <span>{{ $article?->category ?? '' }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -84,14 +83,14 @@
                                     </div>
                                     <div class="flex lg:mt-0 sm:col-span-5 col-start-7">
                                         <img class="col-span-2 row-span-2  h-full object-cover object-top rounded md:rounded-tr-[3rem] md:rounded-bl-[3rem]"
-                                            src="{{ asset('storage') }}/{{ $section['image'] }}"
+                                            src="{{ $section['image'] }}"
                                             alt="{{ $section['title'] }}" data-aos="fade-up">
 
                                     </div>
                                 @else
                                     <div class="flex lg:mt-0 sm:col-span-5 col-start-7">
                                         <img class="col-span-2 row-span-2  h-full object-cover object-top rounded md:rounded-tr-[3rem] md:rounded-bl-[3rem]"
-                                            src="{{ asset('storage') }}/{{ $section['image'] }}" alt="mockup"
+                                            src="{{ $section['image'] }}" alt="mockup"
                                             data-aos="fade-up">
 
                                     </div>

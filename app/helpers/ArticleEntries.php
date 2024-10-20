@@ -43,6 +43,7 @@ class ArticleEntries
             $finalEntry['sections'] = $entry->sections;
             $finalEntry['published'] = $entry->published;
             return (object) $finalEntry;
-        })->where('published', true);
+        })->where('published', true)
+            ->sortByDesc('post_date');
     }
 }

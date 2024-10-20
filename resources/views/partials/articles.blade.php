@@ -1,5 +1,5 @@
 <section class="relative bg-gradient-to-b from-white to-amber-50 dark:bg-gray-900 ">
-<img class="absolute inset-0 object-cover h-full w-full" src="{{ Vite::asset('resources/images/group.webp') }}"
+<img class="absolute inset-0 object-cover object-top h-full w-full" src="{{ Vite::asset('resources/images/ampdc.jpg') }}"
         alt="mockup">
     <div class="absolute   inset-0 bg-black opacity-70"></div>
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:px-32">
@@ -23,9 +23,9 @@
                                     >
                                     <img class=" !h-[14rem] !sm:h-[12rem] object-cover mb-2 rounded-t"
                                         src="{{ asset('storage') }}/{{ $article->cover }}" alt="mockup">
-                                    <header class="text-gray-600 px-4 ">
+                                    <header class="text-white px-4 ">
 
-                                        <div class="text-xs font-bold capitalize bg-amber-400 p-1 px-2 mb-2 w-fit">
+                                        <div class="text-xs font-bold capitalize bg-primary-500 p-1 px-2 mb-2 w-fit">
                                             {{ $article->day }} {{ $article->month }},
                                             {{ $article->year }} </div>
                                         <h2 class="line-clamp-1 text-sm font-bold tracking-wide">

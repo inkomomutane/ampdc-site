@@ -1,20 +1,20 @@
-name: 🚀 Install composer dependeces and migrate changes
+name: 🚀 Install composer dependencies and migrate changes
 on:
   push:
     branches:
       - main
 
 env:
-  FIRST_NAME: Sumburero
+  FIRST_NAME: AMPDC
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Pull changes and install dependeces via composer.phar
+      - name: Pull changes and install dependencies via composer.phar
         uses: fifsky/ssh-action@master
         with:
           command: |
-            cd website_sumburero
+            cd website_AMPDC
             ${{ secrets.FUN_GIT_PULL }}
             php composer.phar install
             php artisan statamic:install

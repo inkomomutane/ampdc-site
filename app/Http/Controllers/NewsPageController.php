@@ -23,13 +23,13 @@ class NewsPageController extends Controller
                 title: 'Actividade - ' .  $article?->title ?? '',
                 description: $article?->short_description ?? '',
                 author: 'Nelson Alexandre Mutane',
-                site_name: 'Actividade - ' .  $article?->title ?? '',
+                image: public_path(). '/storage/' . $article?->cover ?? '',
+                published_time: Carbon::createFromDate($article->year, 9, $article->day),
+                modified_time: Carbon::createFromDate($article->year, 9, $article->day),
                 section: 'Actividade - ' .  $article?->title ?? '',
-                type: 'article',
                 schema: SchemaCollection::initialize()->addArticle(),
-                published_time: Carbon::createFromDate(2023, 9, 20),
-                modified_time: Carbon::createFromDate(2023, 9, 20),
-                image: public_path(). '/storage/' . $article?->cover ?? ''
+                type: 'article',
+                site_name: 'Actividade - ' .  $article?->title ?? ''
             )
         ]);
     }

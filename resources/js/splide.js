@@ -2,6 +2,19 @@ import Splide from "@splidejs/splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/css";
 document.addEventListener("DOMContentLoaded", function () {
+
+    if(document.getElementById("events-top-slider")){
+        const eventsTopSlider = new Splide("#events-top-slider", {
+            type       : 'loop',
+            pauseOnHover: true,
+            gap        : 90,
+            autoWidth  : true,
+            pagination : false,
+            arrows     : false,
+        });
+        eventsTopSlider.mount({AutoScroll});
+    }
+
     if (document.getElementById("news")) {
         const news = new Splide("#news", {
             autoplay: true,
@@ -73,5 +86,19 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
         partiners.mount({ AutoScroll });
+    }
+
+    if(document.getElementById("hero-slider")){
+        const gallery = new Splide("#hero-slider", {
+            type: "loop",
+            autoplay: true,
+            pagination: false,
+            arrows: true,
+            perPage: 1,
+            autoScroll: {
+                speed: 1,
+            },
+        });
+        gallery.mount();
     }
 });

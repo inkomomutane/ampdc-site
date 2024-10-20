@@ -28,9 +28,9 @@ jobs:
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
-          name: sumburero-production-files
+          name: AMPDC-production-files
           path: ./public/build
-      - name: Upload Build to FTP SERVER Sumburero
+      - name: Upload Build to FTP SERVER AMPDC
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -48,5 +48,5 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          name: sumburero-production-files
+          name: AMPDC-production-files
           path: ./public/build

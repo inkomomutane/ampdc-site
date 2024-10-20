@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\helpers\EventEntries;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Storage;
@@ -46,5 +48,7 @@ class AppServiceProvider extends ServiceProvider
         } catch (\Exception $e) {
             throw $e;
         }
+
+        View::share('events',EventEntries::events(),);
     }
 }

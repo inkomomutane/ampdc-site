@@ -1,69 +1,32 @@
-<section class="relative bg-gradient-to-b to-amber-100 from-white dark:bg-gray-900">
-    <!-- <img class="absolute inset-0 w-full h-full object-cover" src="{{ Vite::asset('resources/images/group.webp') }}"
-        alt="mockup">
-    <div class="absolute   inset-0 bg-black opacity-0"></div> -->
+<section class="relative bg-white dark:bg-gray-900">
     <div class="relative py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-32 ">
         <div class="max-w-screen-md mb-8">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-black dark:text-white text-start" data-aos="fade-up">
-                — Oque fazemos?</h2>
+                — Areas de intervenção</h2>
             <p class="text-black sm:text-sm dark:text-gray-400 text-start" data-aos="fade-up">
-                Áreas de intervenção que o sumburero actua em prol do desenvolvimento comunitário</p>
+                Áreas de intervenção que o AMPDC actua em prol do desenvolvimento comunitário</p>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-4  gap-4 md:space-y-0">
-
-            <div data-aos="fade-up" class="flex flex-col justify-center items-center bg-gradient-to-b from-white/80 to-white shadow-xl p-4 rounded">
-                <div class="flex justify-center items-center mb-4">
-                    <img class="h-full object-cover object-left rounded  border-primary-100" src="{{ Vite::asset('resources/images/hero.webp')}}" alt="mockup" data-aos="fade-left">
+        <div class="grid  md:grid-cols-2  gap-4 md:space-y-0">
+            @foreach($interventions as $area)
+                <div class="sm:flex" data-aos="fade-up">
+                    <img class="w-full md:basis-1/3 md:max-h-48 rounded-lg sm:rounded-none object-cover object-top" src="{{ asset('storage') }}/{{ $area->image }}" alt="{{ $area->title }}">
+                    <div class="md:basis-2/3 p-5 md:py-0 flex flex-col">
+                        <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            <a href="#">{{ $area->title ?? ''  }}</a>
+                        </h3>
+                        <p class="mt-3 mb-4 flex-grow font-light text-gray-500 dark:text-gray-400 line-clamp-4 ">
+                            {{ $area->description ?? '' }}
+                        </p>
+                        <a href="{{ route('area.single',['slug' => $area->slug]) }}" class="inline-flex w-fit items-center justify-center px-5 py-2.5 mr-3 text-sm font-medium text-center border border-primary-600 text-primary-600
+                                hover:bg-primary-100 focus:ring-4 focus:ring-primary-300 transition-transform transform-gpu duration-300 ease-in-out aos-init aos-animate">
+                            Ver mais
+                            <svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Proteção social
-                </h3>
-                <a href="{{ route('social.protection') }}" class="bg-gradient-to-r from-blue-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-blue-400 focus:ring-4 focus:ring-primary-300">
-                    Ler mais
-                    <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-            </div>
-            <div data-aos="fade-up" class="flex flex-col justify-center items-center bg-gradient-to-b from-white/80 to-white shadow-xl p-4 rounded">
-                <div class="flex justify-center items-center mb-4">
-                    <img class="h-full object-cover object-left rounded  border-primary-100" src="{{ Vite::asset('resources/images/intervections/economic-strengthening.webp')}}" alt="mockup" data-aos="fade-left">
-                </div>
-                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Fortalecimento Económico
-                </h3>
-                <a href="{{ route('economic.strengthening') }}" class="bg-gradient-to-r from-blue-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-blue-400 focus:ring-4 focus:ring-primary-300 ">
-                    Ler mais
-                    <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-            </div>
-
-            <div data-aos="fade-up" class="flex flex-col justify-center items-center bg-gradient-to-b from-white/80 to-white shadow-xl p-4 rounded">
-                <div class="flex justify-center items-center mb-4 ">
-                    <img class="h-full object-cover object-left rounded  border-primary-100" src="{{ Vite::asset('resources/images/intervections/technical-support.webp')}}" alt="mockup" data-aos="fade-left">
-                </div>
-                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Apoio ao Desenvolvimento Técnico e Institucional
-                </h3>
-                <a href="{{ route('technical.support') }}" class="bg-gradient-to-r from-blue-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-blue-400 focus:ring-4 focus:ring-primary-300 ">
-                    Ler mais
-                    <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-            </div>
-            <div data-aos="fade-up" class="flex flex-col justify-center items-center bg-gradient-to-b from-white/80 to-white shadow-xl p-4 rounded">
-                <div class="flex justify-center items-center mb-4 ">
-                    <img class="h-full object-cover object-left rounded  border-primary-100" src="{{ Vite::asset('resources/images/intervections/actions.webp')}}" alt="mockup" data-aos="fade-left">
-                </div>
-                <h3 class="mb-4 text-sm font-bold dark:text-white text-center h-12 line-clamp-3">Acções Humanitarias
-                </h3>
-                <a href="{{ route('humanitarian.actions') }}" class="bg-gradient-to-r from-blue-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-primary-600 hover:bg-blue-400 focus:ring-4 focus:ring-primary-300 ">
-                    Ler mais
-                    <svg class="w-3 h-3 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

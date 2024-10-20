@@ -19,7 +19,7 @@
                            "
                                 data-aos="fade-up">
                                 <div
-                                    class="w-fit  p-4 px-6 bg-amber-400 flex flex-col text-black justify-center items-center ">
+                                    class="w-fit  p-4 px-6 bg-primary-400 flex flex-col text-black justify-center items-center ">
                                     <span class="text-sm font-bold capitalize">
 
                                         {{ $event->month }}
@@ -32,10 +32,10 @@
                                     </span>
 
                                 </div>
-                                <div class="grid content-center mx-3 w-full">
+                                <div class="grid content-center px-3 w-full bg-slate-800 text-zinc-100">
                                     <div class="inline-flex align-middle ">
                                         <span class="inline-flex flex-row align-middle ">
-                                            <span class="inline-block align-middle mr-2">
+                                            <span class="inline-block align-middle">
                                                 <svg class="w-4 h-4 fill-amber-400" xmlns="http://www.w3.org/2000/svg"
                                                     fill="currentColor" viewBox="0 0 16 16">
                                                     <path fill-rule="evenodd"
@@ -44,7 +44,7 @@
                                                 </svg>
                                             </span>
                                             <span
-                                                class="inline-flex flex-row align-middle text-sm  first-letter:uppercase">Começa
+                                                class="inline-flex flex-row align-middle text-sm  first-letter:uppercase">&nbsp; Começa
                                                 {{ $event->start_date_info }}</span>
                                         </span>
                                         <span class="inline-flex flex-row align-middle ">

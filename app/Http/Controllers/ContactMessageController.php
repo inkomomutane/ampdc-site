@@ -18,7 +18,7 @@ class ContactMessageController extends Controller
             $form->makeSubmission()->data($data)->save();
             return back()->with('success', 'A sua mensagem foi enviada com sucesso');
         } catch (\Throwable $th) {
-            throw $th;
+            #throw $th;
             return back()->with('error', 'Erro ao envia sua mensagem, Tente mais tarde!');
         }
     }

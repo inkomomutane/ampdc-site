@@ -14,23 +14,23 @@ class TaxonomyTermsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('taxonomy_terms')->delete();
-        
+
         \DB::table('taxonomy_terms')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'site' => 'default',
                 'slug' => 'evento',
                 'uri' => '/categories/evento',
                 'taxonomy' => 'categories',
-                'data' => '{"title": "Evento", "content": "Actividade relacionada a um evento realizado ou que sumburero participou.", "blueprint": "category", "updated_at": 1694954639, "updated_by": 1}',
+                'data' => '{"title": "Evento", "content": "Actividade relacionada a um evento realizado ou que AMPDC participou.", "blueprint": "category", "updated_at": 1694954639, "updated_by": 1}',
                 'created_at' => '2023-09-17 12:43:59',
                 'updated_at' => '2023-09-17 12:43:59',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'site' => 'default',
@@ -42,7 +42,7 @@ class TaxonomyTermsTableSeeder extends Seeder
                 'updated_at' => '2023-09-17 12:44:15',
             ),
         ));
-        
-        
+
+
     }
 }
