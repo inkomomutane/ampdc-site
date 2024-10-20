@@ -14,8 +14,9 @@
                     class="grid sm:grid-cols-1 gap-4 w-full"
                     data-aos="fade-up"
                 >
-                    <div class="sm:col-span-1 min-h-[280px] sm:min-h-[350px] lg:min-h-[420px]  grid w-full  relative">
+
                         @if ($article)
+                        <div class="sm:col-span-1 min-h-[280px] sm:min-h-[350px] lg:min-h-[420px]  grid w-full  relative">
                             <a
                                 href="{{ route("news.page", ["slug" => $article->slug]) }}"
                             >
@@ -93,8 +94,9 @@
                                     </div>
                                 </article>
                             </a>
+                        </div>
                         @endif
-                    </div>
+
                 </div>
                 <div class="grid md:grid-cols-3 gap-x-4 w-full">
                     <div class="col-span-2 grid h-fit w-full">
