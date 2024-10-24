@@ -1,961 +1,734 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
+-- MySQL dump 10.13  Distrib 8.0.39, for Linux (x86_64)
 --
--- Host: localhost:3306
--- Generation Time: Aug 13, 2024 at 10:11 AM
--- Server version: 8.0.39-cll-lve
--- PHP Version: 8.3.8
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
+-- Host: 127.0.0.1    Database: web
+-- ------------------------------------------------------
+-- Server version	8.0.39-0ubuntu0.24.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `sumburer_site`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `assets_meta`
---
-
-CREATE TABLE `assets_meta` (
-  `id` bigint UNSIGNED NOT NULL,
-  `handle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `data` json DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `assets_meta`
---
-
-INSERT INTO `assets_meta` (`id`, `handle`, `data`, `created_at`, `updated_at`) VALUES
-(7, 'assets::./.meta/avatar.png.yaml', '{\"data\": [], \"size\": 8637389, \"width\": 2511, \"height\": 2511, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1694988328}', '2023-09-17 22:05:28', '2023-09-17 22:05:28'),
-(20, 'assets::./.meta/pt---lm-semestrielle-ps-juillet-decembre-23.pdf.yaml', '{\"data\": [], \"size\": 4305191, \"width\": null, \"height\": null, \"duration\": null, \"mime_type\": \"application/pdf\", \"last_modified\": 1708431495}', '2024-02-20 12:18:15', '2024-02-20 12:18:15'),
-(21, 'assets::./.meta/imagem.PNG.yaml', '{\"data\": {\"alt\": \"Relatório Semestral (Julho - Dezembro 2023)  - PROJETO PARTICIP’ACTION – INOVAÇÃO\"}, \"size\": 297866, \"width\": 802, \"height\": 603, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1708431917}', '2024-02-20 12:25:17', '2024-02-20 12:39:59'),
-(22, 'assets::./.meta/pt---lm-semestrielle-ps-juillet-decembre-23-1708432726.pdf.yaml', '{\"data\": [], \"size\": 4305191, \"width\": null, \"height\": null, \"duration\": null, \"mime_type\": \"application/pdf\", \"last_modified\": 1708432726}', '2024-02-20 12:38:46', '2024-02-20 12:38:46'),
-(23, 'assets::./.meta/imagem-1708432739.PNG.yaml', '{\"data\": {\"alt\": \"Relatório Semestral (Julho - Dezembro 2023)  - PROJETO PARTICIP’ACTION – INOVAÇÃO\"}, \"size\": 297866, \"width\": 802, \"height\": 603, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1708432739}', '2024-02-20 12:38:59', '2024-02-20 12:39:37'),
-(24, 'assets::./.meta/banner-do-canal-youtube(4).png.yaml', '{\"data\": [], \"size\": 2679420, \"width\": 2560, \"height\": 1440, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1709196739}', '2024-02-29 08:52:19', '2024-02-29 08:52:19'),
-(25, 'assets::./.meta/whatsapp-image-2024-03-01-at-12.04.18.jpeg.yaml', '{\"data\": [], \"size\": 114790, \"width\": 1600, \"height\": 1200, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1709291167}', '2024-03-01 11:06:07', '2024-03-01 11:06:07'),
-(26, 'assets::./.meta/whatsapp-image-2024-03-01-at-12.04.22-(1).jpeg.yaml', '{\"data\": [], \"size\": 133891, \"width\": 1600, \"height\": 1200, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1709291168}', '2024-03-01 11:06:08', '2024-03-01 11:06:08'),
-(27, 'assets::./.meta/logo-canal-without-bg-(3).png.yaml', '{\"data\": [], \"size\": 85336, \"width\": 400, \"height\": 258, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1709293822}', '2024-03-01 11:50:22', '2024-03-01 11:50:22'),
-(28, 'assets::./.meta/podcast-1-final-thumbnail.jpg.yaml', '{\"data\": [], \"size\": 213317, \"width\": 1920, \"height\": 1080, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1712664721}', '2024-04-09 12:12:01', '2024-04-09 12:12:01'),
-(29, 'assets::./.meta/micro-projectos.png.yaml', '{\"data\": [], \"size\": 4479366, \"width\": 2000, \"height\": 1600, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1715934045}', '2024-05-17 06:20:45', '2024-05-17 06:20:45'),
-(30, 'assets::./.meta/familia-muave-thumbnail.jpg.yaml', '{\"data\": [], \"size\": 278081, \"width\": 1920, \"height\": 1080, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1716903716}', '2024-05-28 11:41:56', '2024-05-28 11:41:56'),
-(31, 'assets::./.meta/design-sem-nome-(2).png.yaml', '{\"data\": [], \"size\": 14992303, \"width\": 6912, \"height\": 3456, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1718803686}', '2024-06-19 11:28:06', '2024-06-19 11:28:06'),
-(32, 'assets::./.meta/2-podcast---baymoz-thumbnail.jpg.yaml', '{\"data\": [], \"size\": 222133, \"width\": 1920, \"height\": 1080, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1718981657}', '2024-06-21 12:54:17', '2024-06-21 12:54:17'),
-(33, 'assets::./.meta/2-podcast---baymoz-thumbnail-1718981736.jpg.yaml', '{\"data\": [], \"size\": 222133, \"width\": 1920, \"height\": 1080, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1718981736}', '2024-06-21 12:55:36', '2024-06-21 12:55:36');
-
--- --------------------------------------------------------
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
 -- Table structure for table `asset_containers`
 --
 
+DROP TABLE IF EXISTS `asset_containers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `asset_containers` (
-  `id` bigint UNSIGNED NOT NULL,
-  `handle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `disk` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `handle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `disk` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `settings` json DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `asset_containers_handle_unique` (`handle`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `asset_containers`
 --
 
-INSERT INTO `asset_containers` (`id`, `handle`, `title`, `disk`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 'assets', 'Assets', 'public', '{\"allow_moving\": true, \"search_index\": null, \"warm_presets\": null, \"allow_uploads\": true, \"source_preset\": null, \"allow_renaming\": true, \"create_folders\": true, \"allow_downloading\": true}', '2023-09-17 07:13:20', '2023-09-17 07:13:20');
+LOCK TABLES `asset_containers` WRITE;
+/*!40000 ALTER TABLE `asset_containers` DISABLE KEYS */;
+INSERT INTO `asset_containers` VALUES (1,'assets','Assets','public','{\"allow_moving\": true, \"search_index\": null, \"warm_presets\": null, \"allow_uploads\": true, \"source_preset\": null, \"allow_renaming\": true, \"create_folders\": true, \"allow_downloading\": true}','2023-09-17 07:13:20','2023-09-17 07:13:20');
+/*!40000 ALTER TABLE `asset_containers` ENABLE KEYS */;
+UNLOCK TABLES;
 
--- --------------------------------------------------------
+--
+-- Table structure for table `assets_meta`
+--
+
+DROP TABLE IF EXISTS `assets_meta`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `assets_meta` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `handle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `data` json DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `assets_meta_handle_index` (`handle`)
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `assets_meta`
+--
+
+LOCK TABLES `assets_meta` WRITE;
+/*!40000 ALTER TABLE `assets_meta` DISABLE KEYS */;
+INSERT INTO `assets_meta` VALUES (7,'assets::./.meta/avatar.png.yaml','{\"data\": [], \"size\": 8637389, \"width\": 2511, \"height\": 2511, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1694988328}','2023-09-17 22:05:28','2023-09-17 22:05:28'),(20,'assets::./.meta/pt---lm-semestrielle-ps-juillet-decembre-23.pdf.yaml','{\"data\": [], \"size\": 4305191, \"width\": null, \"height\": null, \"duration\": null, \"mime_type\": \"application/pdf\", \"last_modified\": 1708431495}','2024-02-20 12:18:15','2024-02-20 12:18:15'),(21,'assets::./.meta/imagem.PNG.yaml','{\"data\": {\"alt\": \"Relatório Semestral (Julho - Dezembro 2023)  - PROJETO PARTICIP’ACTION – INOVAÇÃO\"}, \"size\": 297866, \"width\": 802, \"height\": 603, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1708431917}','2024-02-20 12:25:17','2024-02-20 12:39:59'),(22,'assets::./.meta/pt---lm-semestrielle-ps-juillet-decembre-23-1708432726.pdf.yaml','{\"data\": [], \"size\": 4305191, \"width\": null, \"height\": null, \"duration\": null, \"mime_type\": \"application/pdf\", \"last_modified\": 1708432726}','2024-02-20 12:38:46','2024-02-20 12:38:46'),(23,'assets::./.meta/imagem-1708432739.PNG.yaml','{\"data\": {\"alt\": \"Relatório Semestral (Julho - Dezembro 2023)  - PROJETO PARTICIP’ACTION – INOVAÇÃO\"}, \"size\": 297866, \"width\": 802, \"height\": 603, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1708432739}','2024-02-20 12:38:59','2024-02-20 12:39:37'),(24,'assets::./.meta/banner-do-canal-youtube(4).png.yaml','{\"data\": [], \"size\": 2679420, \"width\": 2560, \"height\": 1440, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1709196739}','2024-02-29 08:52:19','2024-02-29 08:52:19'),(25,'assets::./.meta/whatsapp-image-2024-03-01-at-12.04.18.jpeg.yaml','{\"data\": [], \"size\": 114790, \"width\": 1600, \"height\": 1200, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1709291167}','2024-03-01 11:06:07','2024-03-01 11:06:07'),(26,'assets::./.meta/whatsapp-image-2024-03-01-at-12.04.22-(1).jpeg.yaml','{\"data\": [], \"size\": 133891, \"width\": 1600, \"height\": 1200, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1709291168}','2024-03-01 11:06:08','2024-03-01 11:06:08'),(27,'assets::./.meta/logo-canal-without-bg-(3).png.yaml','{\"data\": [], \"size\": 85336, \"width\": 400, \"height\": 258, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1709293822}','2024-03-01 11:50:22','2024-03-01 11:50:22'),(28,'assets::./.meta/podcast-1-final-thumbnail.jpg.yaml','{\"data\": [], \"size\": 213317, \"width\": 1920, \"height\": 1080, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1712664721}','2024-04-09 12:12:01','2024-04-09 12:12:01'),(29,'assets::./.meta/micro-projectos.png.yaml','{\"data\": [], \"size\": 4479366, \"width\": 2000, \"height\": 1600, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1715934045}','2024-05-17 06:20:45','2024-05-17 06:20:45'),(30,'assets::./.meta/familia-muave-thumbnail.jpg.yaml','{\"data\": [], \"size\": 278081, \"width\": 1920, \"height\": 1080, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1716903716}','2024-05-28 11:41:56','2024-05-28 11:41:56'),(31,'assets::./.meta/design-sem-nome-(2).png.yaml','{\"data\": [], \"size\": 14992303, \"width\": 6912, \"height\": 3456, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1718803686}','2024-06-19 11:28:06','2024-06-19 11:28:06'),(32,'assets::./.meta/2-podcast---baymoz-thumbnail.jpg.yaml','{\"data\": [], \"size\": 222133, \"width\": 1920, \"height\": 1080, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1718981657}','2024-06-21 12:54:17','2024-06-21 12:54:17'),(33,'assets::./.meta/2-podcast---baymoz-thumbnail-1718981736.jpg.yaml','{\"data\": [], \"size\": 222133, \"width\": 1920, \"height\": 1080, \"duration\": null, \"mime_type\": \"image/jpeg\", \"last_modified\": 1718981736}','2024-06-21 12:55:36','2024-06-21 12:55:36'),(34,'assets::./.meta/screenshot-from-2024-10-16-09-36-58.png.yaml','{\"data\": [], \"size\": 399659, \"width\": 699, \"height\": 568, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1729417456}','2024-10-20 07:44:16','2024-10-20 07:44:16'),(35,'assets::./.meta/screenshot-from-2024-10-16-09-36-58-1729417472.png.yaml','{\"data\": [], \"size\": 399659, \"width\": 699, \"height\": 568, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1729417472}','2024-10-20 07:44:32','2024-10-20 07:44:32'),(36,'assets::./.meta/screenshot-from-2024-10-16-16-47-36.png.yaml','{\"data\": [], \"size\": 433165, \"width\": 931, \"height\": 796, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1729428081}','2024-10-20 10:41:21','2024-10-20 10:41:21'),(37,'assets::./.meta/screenshot-from-2024-10-13-17-13-41.png.yaml','{\"data\": [], \"size\": 580480, \"width\": 838, \"height\": 664, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1729442374}','2024-10-20 14:39:34','2024-10-20 14:39:34'),(38,'assets::./.meta/screenshot-from-2024-10-16-09-36-58-1729443018.png.yaml','{\"data\": [], \"size\": 399659, \"width\": 699, \"height\": 568, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1729443018}','2024-10-20 14:50:18','2024-10-20 14:50:18'),(39,'assets::./.meta/screenshot-from-2024-10-13-17-13-41-1729443333.png.yaml','{\"data\": [], \"size\": 580480, \"width\": 838, \"height\": 664, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1729443333}','2024-10-20 14:55:33','2024-10-20 14:55:33'),(40,'assets::./.meta/screenshot-from-2024-10-16-16-47-59.png.yaml','{\"data\": [], \"size\": 809676, \"width\": 907, \"height\": 993, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1729446474}','2024-10-20 15:47:54','2024-10-20 15:47:54'),(41,'assets::./.meta/screenshot-from-2024-10-13-13-32-19.png.yaml','{\"data\": [], \"size\": 51490, \"width\": 1092, \"height\": 653, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1729446486}','2024-10-20 15:48:06','2024-10-20 15:48:06'),(42,'assets::./.meta/screenshot-from-2024-10-12-21-54-45.png.yaml','{\"data\": [], \"size\": 860145, \"width\": 1836, \"height\": 852, \"duration\": null, \"mime_type\": \"image/png\", \"last_modified\": 1729446496}','2024-10-20 15:48:16','2024-10-20 15:48:16');
+/*!40000 ALTER TABLE `assets_meta` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `blueprints`
 --
 
+DROP TABLE IF EXISTS `blueprints`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `blueprints` (
-  `id` bigint UNSIGNED NOT NULL,
-  `namespace` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `handle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `namespace` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `handle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `data` json NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `blueprints_handle_namespace_unique` (`handle`,`namespace`),
+  KEY `blueprints_namespace_index` (`namespace`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `blueprints`
 --
 
-INSERT INTO `blueprints` (`id`, `namespace`, `handle`, `data`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'default', '{\"fields\": [{\"field\": {\"type\": \"markdown\", \"display\": \"Content\", \"localizable\": true}, \"handle\": \"content\"}]}', '2023-09-14 21:02:34', NULL),
-(2, 'collections.events', 'event', '{\"tabs\": {\"main\": {\"__count\": 0, \"display\": \"Main\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\", \"required\": true, \"validate\": [\"required\"]}, \"handle\": \"title\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Cover\", \"listable\": \"hidden\", \"restrict\": false, \"validate\": [\"image\"], \"container\": \"assets\", \"max_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"cover\"}, {\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"Location\", \"listable\": \"hidden\", \"input_type\": \"text\", \"visibility\": \"visible\", \"placeholder\": \"Location\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"location\"}, {\"field\": {\"icon\": \"bard\", \"type\": \"bard\", \"inline\": false, \"antlers\": false, \"buttons\": [\"h2\", \"h3\", \"bold\", \"italic\", \"unorderedlist\", \"orderedlist\", \"removeformat\", \"quote\", \"anchor\", \"image\", \"table\"], \"display\": \"Event Description\", \"collapse\": false, \"listable\": \"hidden\", \"previews\": true, \"validate\": [\"required\"], \"save_html\": true, \"fullscreen\": true, \"visibility\": \"visible\", \"word_count\": true, \"placeholder\": \"Event description\", \"allow_source\": true, \"hide_display\": false, \"reading_time\": true, \"target_blank\": true, \"toolbar_mode\": \"fixed\", \"link_noopener\": false, \"link_noreferrer\": false, \"smart_typography\": false, \"enable_input_rules\": true, \"enable_paste_rules\": true, \"remove_empty_nodes\": false, \"instructions_position\": \"above\", \"always_show_set_button\": false}, \"handle\": \"event_description\"}, {\"field\": {\"icon\": \"date\", \"mode\": \"single\", \"rows\": 1, \"type\": \"date\", \"inline\": false, \"columns\": 1, \"display\": \"Start date\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"full_width\": false, \"visibility\": \"visible\", \"hide_display\": false, \"time_enabled\": true, \"time_seconds_enabled\": false, \"instructions_position\": \"above\"}, \"handle\": \"start_date\"}, {\"field\": {\"icon\": \"date\", \"mode\": \"single\", \"rows\": 1, \"type\": \"date\", \"inline\": false, \"columns\": 1, \"display\": \"End date\", \"listable\": \"hidden\", \"validate\": [\"required\", \"after:start_date\"], \"full_width\": false, \"visibility\": \"visible\", \"hide_display\": false, \"time_enabled\": true, \"time_seconds_enabled\": false, \"instructions_position\": \"above\"}, \"handle\": \"end_date\"}], \"__count\": 0}]}, \"sidebar\": {\"__count\": 1, \"display\": \"Sidebar\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"slug\", \"localizable\": true}, \"handle\": \"slug\"}], \"__count\": 0}]}}, \"title\": \"Event\"}', '2023-09-17 07:12:31', '2023-09-17 11:58:20'),
-(3, 'collections.articles', 'article', '{\"tabs\": {\"main\": {\"__count\": 0, \"display\": \"Principal\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\", \"required\": true, \"validate\": [\"required\"]}, \"handle\": \"title\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Cover\", \"listable\": \"hidden\", \"restrict\": false, \"validate\": [\"required\"], \"container\": \"assets\", \"max_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"cover\"}, {\"field\": {\"icon\": \"textarea\", \"type\": \"textarea\", \"antlers\": false, \"display\": \"Short description\", \"listable\": \"hidden\", \"visibility\": \"visible\", \"placeholder\": \"Breve descrição da actividade\", \"hide_display\": false, \"instructions\": \"Breve resumo da actividade\", \"character_limit\": \"5000\", \"instructions_position\": \"above\"}, \"handle\": \"short_description\"}, {\"field\": {\"icon\": \"video\", \"type\": \"video\", \"display\": \"Vídeo\", \"listable\": true, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Video em formato de arquivo ou URL\", \"instructions_position\": \"above\"}, \"handle\": \"video_field\"}, {\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"Location\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"placeholder\": \"Local onde realizou-se a actividade\", \"hide_display\": false, \"instructions\": \"Local onde realizou-se a actividade\", \"instructions_position\": \"above\"}, \"handle\": \"location\"}, {\"field\": {\"icon\": \"link\", \"type\": \"link\", \"display\": \"Files\", \"listable\": true, \"container\": \"assets\", \"visibility\": \"visible\", \"collections\": [\"articles\"], \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"files\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Gallery\", \"listable\": \"hidden\", \"restrict\": false, \"container\": \"assets\", \"max_files\": 10, \"min_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"gallery\"}, {\"field\": {\"icon\": \"replicator\", \"sets\": {\"new_set_group\": {\"icon\": null, \"sets\": {\"section\": {\"icon\": \"media-news-paper\", \"fields\": [{\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"title\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"placeholder\": \"Títolo\", \"hide_display\": false, \"instructions\": \"Títolo\", \"instructions_position\": \"above\"}, \"handle\": \"title\"}, {\"field\": {\"icon\": \"textarea\", \"type\": \"textarea\", \"antlers\": false, \"display\": \"Content\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"visibility\": \"visible\", \"placeholder\": \"Conteúdo da secção\", \"hide_display\": false, \"instructions\": \"Conteúdo da secção\", \"character_limit\": \"5000\", \"instructions_position\": \"above\"}, \"handle\": \"content\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Image\", \"listable\": \"hidden\", \"restrict\": false, \"validate\": [\"required\"], \"container\": \"assets\", \"max_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Foto da secção\", \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"image\"}], \"display\": \"Section\", \"instructions\": null}}, \"display\": \"New Set Group\", \"instructions\": null}}, \"type\": \"replicator\", \"display\": \"Sections\", \"collapse\": false, \"listable\": \"hidden\", \"max_sets\": 10, \"previews\": true, \"fullscreen\": true, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Secções da actividade ou paragrafos relacionados a actividade.\", \"instructions_position\": \"above\"}, \"handle\": \"sections\"}, {\"field\": {\"icon\": \"date\", \"mode\": \"single\", \"rows\": 1, \"type\": \"date\", \"inline\": false, \"columns\": 1, \"display\": \"Post date\", \"listable\": \"hidden\", \"full_width\": false, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Data da postagem\", \"time_enabled\": false, \"time_seconds_enabled\": false, \"instructions_position\": \"above\"}, \"handle\": \"post_date\"}], \"__count\": 0}]}, \"sidebar\": {\"__count\": 1, \"display\": \"Sidebar\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"slug\", \"localizable\": true}, \"handle\": \"slug\"}, {\"field\": {\"icon\": \"taxonomy\", \"mode\": \"default\", \"type\": \"terms\", \"create\": true, \"display\": \"Category\", \"listable\": true, \"max_items\": 1, \"taxonomies\": [\"categories\"], \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Tipo de actividade a postar, como por exemplo fotos de um evento na qual o AMPDC participou.\", \"instructions_position\": \"above\"}, \"handle\": \"category\"}], \"__count\": 0}]}}, \"title\": \"Article\"}', '2023-09-17 12:34:36', '2024-03-01 11:52:38'),
-(4, 'forms', 'contact_us', '{\"tabs\": {\"main\": {\"__count\": 0, \"display\": \"Principal\", \"sections\": [{\"fields\": [{\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"Nome\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"placeholder\": \"Nome\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"nome\"}, {\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"Email\", \"listable\": \"hidden\", \"validate\": [\"nullable\", \"email\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"email\"}, {\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"Contacto\", \"listable\": \"hidden\", \"validate\": [\"nullable\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"contacto\"}, {\"field\": {\"icon\": \"textarea\", \"type\": \"textarea\", \"antlers\": false, \"display\": \"Mensagem\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"visibility\": \"visible\", \"placeholder\": \"Mensagem\", \"hide_display\": false, \"instructions\": \"Mensagem\", \"instructions_position\": \"above\"}, \"handle\": \"mensagem\"}], \"__count\": 0}]}}}', '2023-09-17 21:52:20', '2023-09-17 21:52:25'),
-(5, 'collections.success_histories', 'success_history', '{\"tabs\": {\"main\": {\"__count\": 0, \"display\": \"Principal\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\", \"antlers\": false, \"display\": \"Name\", \"listable\": \"hidden\", \"required\": true, \"validate\": [\"required\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"placeholder\": \"Nome\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"title\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Image\", \"listable\": \"hidden\", \"restrict\": false, \"validate\": [\"image\"], \"container\": \"assets\", \"max_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"image\"}, {\"field\": {\"icon\": \"bard\", \"type\": \"bard\", \"inline\": false, \"antlers\": false, \"buttons\": [\"h2\", \"h3\", \"bold\", \"italic\", \"unorderedlist\", \"orderedlist\", \"removeformat\", \"quote\", \"anchor\", \"image\", \"table\"], \"display\": \"Content\", \"collapse\": false, \"listable\": \"hidden\", \"previews\": true, \"validate\": [\"required\"], \"save_html\": true, \"fullscreen\": true, \"visibility\": \"visible\", \"word_count\": true, \"allow_source\": true, \"hide_display\": false, \"reading_time\": false, \"target_blank\": false, \"toolbar_mode\": \"fixed\", \"link_noopener\": false, \"link_noreferrer\": false, \"smart_typography\": false, \"enable_input_rules\": true, \"enable_paste_rules\": true, \"remove_empty_nodes\": false, \"instructions_position\": \"above\", \"always_show_set_button\": false}, \"handle\": \"content\"}, {\"field\": {\"icon\": \"date\", \"mode\": \"single\", \"rows\": 1, \"type\": \"date\", \"inline\": false, \"columns\": 1, \"display\": \"History date\", \"listable\": \"hidden\", \"full_width\": false, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Data da publicação da história de vida\", \"time_enabled\": false, \"time_seconds_enabled\": false, \"instructions_position\": \"above\"}, \"handle\": \"history_date\"}], \"__count\": 0}]}, \"sidebar\": {\"__count\": 1, \"display\": \"Sidebar\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"slug\", \"localizable\": true}, \"handle\": \"slug\"}], \"__count\": 0}]}}, \"title\": \"Success History\"}', '2023-09-17 22:05:04', '2023-09-17 22:26:56'),
-(6, 'collections.articles', 'link', '{\"tabs\": {\"main\": {\"__count\": 0, \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\"}, \"handle\": \"title\"}, {\"field\": {\"type\": \"link\", \"required\": true}, \"handle\": \"redirect\"}], \"__count\": 0}]}}, \"title\": \"Link\"}', '2024-02-20 13:06:55', '2024-02-20 13:06:55'),
-(8, 'collections.articles', 'video', '{\"tabs\": {\"main\": {\"__count\": 0, \"display\": \"Principal\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\", \"required\": true, \"validate\": [\"required\"]}, \"handle\": \"title\"}, {\"field\": {\"icon\": \"textarea\", \"type\": \"textarea\", \"antlers\": false, \"display\": \"Short description\", \"listable\": \"hidden\", \"visibility\": \"visible\", \"placeholder\": \"Breve descrição\", \"hide_display\": false, \"instructions\": \"Breve descrição\", \"instructions_position\": \"above\"}, \"handle\": \"short_description\"}, {\"field\": {\"icon\": \"video\", \"type\": \"video\", \"display\": \"Video\", \"listable\": \"hidden\", \"visibility\": \"visible\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"video\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"grid\", \"type\": \"assets\", \"display\": \"Gallery\", \"listable\": \"hidden\", \"restrict\": false, \"container\": \"assets\", \"max_files\": 10, \"min_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"gallery\"}, {\"field\": {\"icon\": \"date\", \"mode\": \"single\", \"rows\": 1, \"type\": \"date\", \"inline\": false, \"columns\": 1, \"display\": \"Post date\", \"listable\": \"hidden\", \"full_width\": false, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Data da postagem\", \"time_enabled\": false, \"time_seconds_enabled\": false, \"instructions_position\": \"above\"}, \"handle\": \"post_date\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Caver\", \"listable\": \"hidden\", \"restrict\": false, \"container\": \"assets\", \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"caver\"}], \"__count\": 0}]}, \"sidebar\": {\"__count\": 1, \"display\": \"Sidebar\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"slug\", \"localizable\": true}, \"handle\": \"slug\"}, {\"field\": {\"icon\": \"taxonomy\", \"mode\": \"default\", \"type\": \"terms\", \"create\": true, \"display\": \"Category\", \"listable\": true, \"max_items\": 1, \"taxonomies\": [\"categories\"], \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Tipo de actividade a postar, como por exemplo fotos de um evento na qual o AMPDC participou.\", \"instructions_position\": \"above\"}, \"handle\": \"category\"}], \"__count\": 0}]}}, \"title\": \"Vídeo\"}', '2024-03-01 12:01:00', '2024-03-01 12:18:13');
-
--- --------------------------------------------------------
+LOCK TABLES `blueprints` WRITE;
+/*!40000 ALTER TABLE `blueprints` DISABLE KEYS */;
+INSERT INTO `blueprints` VALUES (1,NULL,'default','{\"fields\": [{\"field\": {\"type\": \"markdown\", \"display\": \"Content\", \"localizable\": true}, \"handle\": \"content\"}]}','2023-09-14 21:02:34',NULL),(2,'collections.events','event','{\"tabs\": {\"main\": {\"__count\": 0, \"display\": \"Main\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\", \"required\": true, \"validate\": [\"required\"]}, \"handle\": \"title\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Cover\", \"listable\": \"hidden\", \"restrict\": false, \"validate\": [\"image\"], \"container\": \"assets\", \"max_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"cover\"}, {\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"Location\", \"listable\": \"hidden\", \"input_type\": \"text\", \"visibility\": \"visible\", \"placeholder\": \"Location\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"location\"}, {\"field\": {\"icon\": \"bard\", \"type\": \"bard\", \"inline\": false, \"antlers\": false, \"buttons\": [\"h2\", \"h3\", \"bold\", \"italic\", \"unorderedlist\", \"orderedlist\", \"removeformat\", \"quote\", \"anchor\", \"image\", \"table\"], \"display\": \"Event Description\", \"collapse\": false, \"listable\": \"hidden\", \"previews\": true, \"validate\": [\"required\"], \"save_html\": true, \"fullscreen\": true, \"visibility\": \"visible\", \"word_count\": true, \"placeholder\": \"Event description\", \"allow_source\": true, \"hide_display\": false, \"reading_time\": true, \"target_blank\": true, \"toolbar_mode\": \"fixed\", \"link_noopener\": false, \"link_noreferrer\": false, \"smart_typography\": false, \"enable_input_rules\": true, \"enable_paste_rules\": true, \"remove_empty_nodes\": false, \"instructions_position\": \"above\", \"always_show_set_button\": false}, \"handle\": \"event_description\"}, {\"field\": {\"icon\": \"date\", \"mode\": \"single\", \"rows\": 1, \"type\": \"date\", \"inline\": false, \"columns\": 1, \"display\": \"Start date\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"full_width\": false, \"visibility\": \"visible\", \"hide_display\": false, \"time_enabled\": true, \"time_seconds_enabled\": false, \"instructions_position\": \"above\"}, \"handle\": \"start_date\"}, {\"field\": {\"icon\": \"date\", \"mode\": \"single\", \"rows\": 1, \"type\": \"date\", \"inline\": false, \"columns\": 1, \"display\": \"End date\", \"listable\": \"hidden\", \"validate\": [\"required\", \"after:start_date\"], \"full_width\": false, \"visibility\": \"visible\", \"hide_display\": false, \"time_enabled\": true, \"time_seconds_enabled\": false, \"instructions_position\": \"above\"}, \"handle\": \"end_date\"}], \"__count\": 0}]}, \"sidebar\": {\"__count\": 1, \"display\": \"Sidebar\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"slug\", \"localizable\": true}, \"handle\": \"slug\"}], \"__count\": 0}]}}, \"title\": \"Event\"}','2023-09-17 07:12:31','2023-09-17 11:58:20'),(3,'collections.articles','article','{\"tabs\": {\"main\": {\"__count\": 0, \"display\": \"Principal\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\", \"required\": true, \"validate\": [\"required\"]}, \"handle\": \"title\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Cover\", \"listable\": \"hidden\", \"restrict\": false, \"validate\": [\"required\"], \"container\": \"assets\", \"max_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"cover\"}, {\"field\": {\"icon\": \"textarea\", \"type\": \"textarea\", \"antlers\": false, \"display\": \"Short description\", \"listable\": \"hidden\", \"visibility\": \"visible\", \"placeholder\": \"Breve descrição da actividade\", \"hide_display\": false, \"instructions\": \"Breve resumo da actividade\", \"character_limit\": \"5000\", \"instructions_position\": \"above\"}, \"handle\": \"short_description\"}, {\"field\": {\"icon\": \"video\", \"type\": \"video\", \"display\": \"Vídeo\", \"listable\": true, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Video em formato de arquivo ou URL\", \"instructions_position\": \"above\"}, \"handle\": \"video_field\"}, {\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"Location\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"placeholder\": \"Local onde realizou-se a actividade\", \"hide_display\": false, \"instructions\": \"Local onde realizou-se a actividade\", \"instructions_position\": \"above\"}, \"handle\": \"location\"}, {\"field\": {\"icon\": \"link\", \"type\": \"link\", \"display\": \"Files\", \"listable\": true, \"container\": \"assets\", \"visibility\": \"visible\", \"collections\": [\"articles\"], \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"files\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Gallery\", \"listable\": \"hidden\", \"restrict\": false, \"container\": \"assets\", \"max_files\": 10, \"min_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"gallery\"}, {\"field\": {\"icon\": \"replicator\", \"sets\": {\"new_set_group\": {\"icon\": null, \"sets\": {\"section\": {\"icon\": \"media-news-paper\", \"fields\": [{\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"title\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"placeholder\": \"Títolo\", \"hide_display\": false, \"instructions\": \"Títolo\", \"instructions_position\": \"above\"}, \"handle\": \"title\"}, {\"field\": {\"icon\": \"textarea\", \"type\": \"textarea\", \"antlers\": false, \"display\": \"Content\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"visibility\": \"visible\", \"placeholder\": \"Conteúdo da secção\", \"hide_display\": false, \"instructions\": \"Conteúdo da secção\", \"character_limit\": \"5000\", \"instructions_position\": \"above\"}, \"handle\": \"content\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Image\", \"listable\": \"hidden\", \"restrict\": false, \"validate\": [\"required\"], \"container\": \"assets\", \"max_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Foto da secção\", \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"image\"}], \"display\": \"Section\", \"instructions\": null}}, \"display\": \"New Set Group\", \"instructions\": null}}, \"type\": \"replicator\", \"display\": \"Sections\", \"collapse\": false, \"listable\": \"hidden\", \"max_sets\": 10, \"previews\": true, \"fullscreen\": true, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Secções da actividade ou paragrafos relacionados a actividade.\", \"instructions_position\": \"above\"}, \"handle\": \"sections\"}, {\"field\": {\"icon\": \"date\", \"mode\": \"single\", \"rows\": 1, \"type\": \"date\", \"inline\": false, \"columns\": 1, \"display\": \"Post date\", \"listable\": \"hidden\", \"full_width\": false, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Data da postagem\", \"time_enabled\": false, \"time_seconds_enabled\": false, \"instructions_position\": \"above\"}, \"handle\": \"post_date\"}], \"__count\": 0}]}, \"sidebar\": {\"__count\": 1, \"display\": \"Sidebar\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"slug\", \"localizable\": true}, \"handle\": \"slug\"}, {\"field\": {\"icon\": \"taxonomy\", \"mode\": \"default\", \"type\": \"terms\", \"create\": true, \"display\": \"Category\", \"listable\": true, \"max_items\": 1, \"taxonomies\": [\"categories\"], \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Tipo de actividade a postar, como por exemplo fotos de um evento na qual o sumburero participou.\", \"instructions_position\": \"above\"}, \"handle\": \"category\"}], \"__count\": 0}]}}, \"title\": \"Article\"}','2023-09-17 12:34:36','2024-03-01 11:52:38'),(4,'forms','contact_us','{\"tabs\": {\"main\": {\"__count\": 0, \"display\": \"Principal\", \"sections\": [{\"fields\": [{\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"Nome\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"placeholder\": \"Nome\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"nome\"}, {\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"Email\", \"listable\": \"hidden\", \"validate\": [\"nullable\", \"email\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"email\"}, {\"field\": {\"icon\": \"text\", \"type\": \"text\", \"antlers\": false, \"display\": \"Contacto\", \"listable\": \"hidden\", \"validate\": [\"nullable\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"contacto\"}, {\"field\": {\"icon\": \"textarea\", \"type\": \"textarea\", \"antlers\": false, \"display\": \"Mensagem\", \"listable\": \"hidden\", \"validate\": [\"required\"], \"visibility\": \"visible\", \"placeholder\": \"Mensagem\", \"hide_display\": false, \"instructions\": \"Mensagem\", \"instructions_position\": \"above\"}, \"handle\": \"mensagem\"}], \"__count\": 0}]}}}','2023-09-17 21:52:20','2023-09-17 21:52:25'),(5,'collections.success_histories','success_history','{\"tabs\": {\"main\": {\"__count\": 0, \"display\": \"Principal\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\", \"antlers\": false, \"display\": \"Name\", \"listable\": \"hidden\", \"required\": true, \"validate\": [\"required\"], \"input_type\": \"text\", \"visibility\": \"visible\", \"placeholder\": \"Nome\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"title\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Image\", \"listable\": \"hidden\", \"restrict\": false, \"validate\": [\"image\"], \"container\": \"assets\", \"max_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"image\"}, {\"field\": {\"icon\": \"bard\", \"type\": \"bard\", \"inline\": false, \"antlers\": false, \"buttons\": [\"h2\", \"h3\", \"bold\", \"italic\", \"unorderedlist\", \"orderedlist\", \"removeformat\", \"quote\", \"anchor\", \"image\", \"table\"], \"display\": \"Content\", \"collapse\": false, \"listable\": \"hidden\", \"previews\": true, \"validate\": [\"required\"], \"save_html\": true, \"fullscreen\": true, \"visibility\": \"visible\", \"word_count\": true, \"allow_source\": true, \"hide_display\": false, \"reading_time\": false, \"target_blank\": false, \"toolbar_mode\": \"fixed\", \"link_noopener\": false, \"link_noreferrer\": false, \"smart_typography\": false, \"enable_input_rules\": true, \"enable_paste_rules\": true, \"remove_empty_nodes\": false, \"instructions_position\": \"above\", \"always_show_set_button\": false}, \"handle\": \"content\"}, {\"field\": {\"icon\": \"date\", \"mode\": \"single\", \"rows\": 1, \"type\": \"date\", \"inline\": false, \"columns\": 1, \"display\": \"History date\", \"listable\": \"hidden\", \"full_width\": false, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Data da publicação da história de vida\", \"time_enabled\": false, \"time_seconds_enabled\": false, \"instructions_position\": \"above\"}, \"handle\": \"history_date\"}], \"__count\": 0}]}, \"sidebar\": {\"__count\": 1, \"display\": \"Sidebar\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"slug\", \"localizable\": true}, \"handle\": \"slug\"}], \"__count\": 0}]}}, \"title\": \"Success History\"}','2023-09-17 22:05:04','2023-09-17 22:26:56'),(6,'collections.articles','link','{\"tabs\": {\"main\": {\"__count\": 0, \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\"}, \"handle\": \"title\"}, {\"field\": {\"type\": \"link\", \"required\": true}, \"handle\": \"redirect\"}], \"__count\": 0}]}}, \"title\": \"Link\"}','2024-02-20 13:06:55','2024-02-20 13:06:55'),(8,'collections.articles','video','{\"tabs\": {\"main\": {\"__count\": 0, \"display\": \"Principal\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\", \"required\": true, \"validate\": [\"required\"]}, \"handle\": \"title\"}, {\"field\": {\"icon\": \"textarea\", \"type\": \"textarea\", \"antlers\": false, \"display\": \"Short description\", \"listable\": \"hidden\", \"visibility\": \"visible\", \"placeholder\": \"Breve descrição\", \"hide_display\": false, \"instructions\": \"Breve descrição\", \"instructions_position\": \"above\"}, \"handle\": \"short_description\"}, {\"field\": {\"icon\": \"video\", \"type\": \"video\", \"display\": \"Video\", \"listable\": \"hidden\", \"visibility\": \"visible\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"video\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"grid\", \"type\": \"assets\", \"display\": \"Gallery\", \"listable\": \"hidden\", \"restrict\": false, \"container\": \"assets\", \"max_files\": 10, \"min_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"gallery\"}, {\"field\": {\"icon\": \"date\", \"mode\": \"single\", \"rows\": 1, \"type\": \"date\", \"inline\": false, \"columns\": 1, \"display\": \"Post date\", \"listable\": \"hidden\", \"full_width\": false, \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Data da postagem\", \"time_enabled\": false, \"time_seconds_enabled\": false, \"instructions_position\": \"above\"}, \"handle\": \"post_date\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"Caver\", \"listable\": \"hidden\", \"restrict\": false, \"container\": \"assets\", \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"caver\"}], \"__count\": 0}]}, \"sidebar\": {\"__count\": 1, \"display\": \"Sidebar\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"slug\", \"localizable\": true}, \"handle\": \"slug\"}, {\"field\": {\"icon\": \"taxonomy\", \"mode\": \"default\", \"type\": \"terms\", \"create\": true, \"display\": \"Category\", \"listable\": true, \"max_items\": 1, \"taxonomies\": [\"categories\"], \"visibility\": \"visible\", \"hide_display\": false, \"instructions\": \"Tipo de actividade a postar, como por exemplo fotos de um evento na qual o sumburero participou.\", \"instructions_position\": \"above\"}, \"handle\": \"category\"}], \"__count\": 0}]}}, \"title\": \"Vídeo\"}','2024-03-01 12:01:00','2024-03-01 12:18:13'),(9,'collections.intervention','intervention','{\"tabs\": {\"main\": {\"__count\": 0, \"display\": \"Principal\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\", \"required\": true, \"validate\": [\"required\"]}, \"handle\": \"title\"}, {\"field\": {\"icon\": \"assets\", \"mode\": \"list\", \"type\": \"assets\", \"display\": \"image\", \"listable\": \"hidden\", \"restrict\": false, \"container\": \"assets\", \"max_files\": 1, \"min_files\": 1, \"visibility\": \"visible\", \"hide_display\": false, \"show_set_alt\": true, \"allow_uploads\": true, \"show_filename\": true, \"instructions_position\": \"above\"}, \"handle\": \"image\"}, {\"field\": {\"icon\": \"textarea\", \"type\": \"textarea\", \"antlers\": false, \"display\": \"Description\", \"listable\": \"hidden\", \"visibility\": \"visible\", \"hide_display\": false, \"instructions_position\": \"above\"}, \"handle\": \"description\"}, {\"field\": {\"icon\": \"bard\", \"type\": \"bard\", \"inline\": false, \"antlers\": false, \"buttons\": [\"h2\", \"h3\", \"bold\", \"italic\", \"unorderedlist\", \"orderedlist\", \"removeformat\", \"quote\", \"anchor\", \"image\", \"table\"], \"display\": \"Content\", \"collapse\": false, \"listable\": \"hidden\", \"previews\": true, \"save_html\": true, \"fullscreen\": true, \"visibility\": \"visible\", \"word_count\": false, \"allow_source\": true, \"hide_display\": false, \"reading_time\": false, \"target_blank\": false, \"toolbar_mode\": \"fixed\", \"link_noopener\": false, \"link_noreferrer\": false, \"smart_typography\": false, \"enable_input_rules\": true, \"enable_paste_rules\": true, \"remove_empty_nodes\": false, \"instructions_position\": \"above\", \"always_show_set_button\": false}, \"handle\": \"content\"}], \"__count\": 0}]}, \"sidebar\": {\"__count\": 1, \"display\": \"Sidebar\", \"sections\": [{\"fields\": [{\"field\": {\"type\": \"slug\", \"localizable\": true}, \"handle\": \"slug\"}], \"__count\": 0}]}}, \"title\": \"Intervention\"}','2024-10-20 14:28:00','2024-10-20 15:31:15'),(10,'collections.intervention','link','{\"tabs\": {\"main\": {\"__count\": 0, \"sections\": [{\"fields\": [{\"field\": {\"type\": \"text\"}, \"handle\": \"title\"}, {\"field\": {\"type\": \"link\", \"required\": true}, \"handle\": \"redirect\"}], \"__count\": 0}]}}, \"title\": \"Link\"}','2024-10-20 14:36:48','2024-10-20 14:36:48');
+/*!40000 ALTER TABLE `blueprints` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `collections`
 --
 
+DROP TABLE IF EXISTS `collections`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `collections` (
-  `id` bigint UNSIGNED NOT NULL,
-  `handle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `handle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `settings` json DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `collections_handle_unique` (`handle`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `collections`
 --
 
-INSERT INTO `collections` (`id`, `handle`, `title`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 'events', 'Events', '{\"dated\": false, \"mount\": null, \"sites\": null, \"slugs\": true, \"inject\": [], \"layout\": null, \"routes\": [], \"sort_dir\": null, \"template\": null, \"propagate\": false, \"revisions\": false, \"structure\": null, \"sort_field\": null, \"taxonomies\": [], \"search_index\": null, \"title_formats\": [], \"default_status\": true, \"origin_behavior\": \"select\", \"preview_targets\": [{\"label\": \"Entry\", \"format\": \"{permalink}\", \"refresh\": true}], \"past_date_behavior\": \"public\", \"future_date_behavior\": \"private\"}', '2023-09-17 07:06:59', '2023-09-17 07:06:59'),
-(2, 'articles', 'Articles', '{\"dated\": false, \"mount\": null, \"sites\": null, \"slugs\": true, \"inject\": [], \"layout\": \"layout\", \"routes\": null, \"sort_dir\": \"asc\", \"template\": \"articles/show\", \"propagate\": false, \"revisions\": false, \"structure\": null, \"sort_field\": null, \"taxonomies\": [], \"search_index\": null, \"title_formats\": [], \"default_status\": true, \"origin_behavior\": \"select\", \"preview_targets\": [{\"id\": \"8gbgsC0z\", \"label\": \"Entry\", \"format\": \"{permalink}\", \"refresh\": true}], \"past_date_behavior\": \"public\", \"future_date_behavior\": \"private\"}', '2023-09-17 12:02:47', '2024-02-20 13:39:50'),
-(3, 'success_histories', 'Success Histories', '{\"dated\": false, \"mount\": null, \"sites\": null, \"slugs\": true, \"inject\": [], \"layout\": null, \"routes\": [], \"sort_dir\": null, \"template\": null, \"propagate\": false, \"revisions\": false, \"structure\": null, \"sort_field\": null, \"taxonomies\": [], \"search_index\": null, \"title_formats\": [], \"default_status\": true, \"origin_behavior\": \"select\", \"preview_targets\": [{\"label\": \"Entry\", \"format\": \"{permalink}\", \"refresh\": true}], \"past_date_behavior\": \"public\", \"future_date_behavior\": \"private\"}', '2023-09-17 22:01:54', '2023-09-17 22:01:54');
-
--- --------------------------------------------------------
+LOCK TABLES `collections` WRITE;
+/*!40000 ALTER TABLE `collections` DISABLE KEYS */;
+INSERT INTO `collections` VALUES (1,'events','Events','{\"dated\": false, \"mount\": null, \"sites\": null, \"slugs\": true, \"inject\": [], \"layout\": null, \"routes\": [], \"sort_dir\": null, \"template\": null, \"propagate\": false, \"revisions\": false, \"structure\": null, \"sort_field\": null, \"taxonomies\": [], \"search_index\": null, \"title_formats\": [], \"default_status\": true, \"origin_behavior\": \"select\", \"preview_targets\": [{\"label\": \"Entry\", \"format\": \"{permalink}\", \"refresh\": true}], \"past_date_behavior\": \"public\", \"future_date_behavior\": \"private\"}','2023-09-17 07:06:59','2023-09-17 07:06:59'),(2,'articles','Articles','{\"dated\": false, \"mount\": null, \"sites\": null, \"slugs\": true, \"inject\": [], \"layout\": \"layout\", \"routes\": null, \"sort_dir\": \"asc\", \"template\": \"articles/show\", \"propagate\": false, \"revisions\": false, \"structure\": null, \"sort_field\": null, \"taxonomies\": [], \"search_index\": null, \"title_formats\": [], \"default_status\": true, \"origin_behavior\": \"select\", \"preview_targets\": [{\"id\": \"8gbgsC0z\", \"label\": \"Entry\", \"format\": \"{permalink}\", \"refresh\": true}], \"past_date_behavior\": \"public\", \"future_date_behavior\": \"private\"}','2023-09-17 12:02:47','2024-02-20 13:39:50'),(3,'success_histories','Success Histories','{\"dated\": false, \"mount\": null, \"sites\": null, \"slugs\": true, \"inject\": [], \"layout\": null, \"routes\": [], \"sort_dir\": null, \"template\": null, \"propagate\": false, \"revisions\": false, \"structure\": null, \"sort_field\": null, \"taxonomies\": [], \"search_index\": null, \"title_formats\": [], \"default_status\": true, \"origin_behavior\": \"select\", \"preview_targets\": [{\"label\": \"Entry\", \"format\": \"{permalink}\", \"refresh\": true}], \"past_date_behavior\": \"public\", \"future_date_behavior\": \"private\"}','2023-09-17 22:01:54','2023-09-17 22:01:54'),(4,'intervention','Interventions','{\"dated\": false, \"mount\": null, \"sites\": null, \"slugs\": true, \"inject\": [], \"layout\": \"layout\", \"routes\": null, \"sort_dir\": \"asc\", \"template\": \"interventions/show\", \"propagate\": false, \"revisions\": false, \"structure\": null, \"sort_field\": null, \"taxonomies\": [], \"search_index\": null, \"title_formats\": [], \"default_status\": true, \"origin_behavior\": \"select\", \"preview_targets\": [{\"id\": \"UHQiSOeV\", \"label\": \"Entry\", \"format\": \"{permalink}\", \"refresh\": true}], \"past_date_behavior\": \"public\", \"future_date_behavior\": \"private\"}','2024-10-20 14:26:09','2024-10-20 14:36:48');
+/*!40000 ALTER TABLE `collections` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `entries`
 --
 
+DROP TABLE IF EXISTS `entries`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `entries` (
-  `id` bigint UNSIGNED NOT NULL,
-  `site` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `origin_id` bigint UNSIGNED DEFAULT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `site` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `origin_id` bigint unsigned DEFAULT NULL,
   `published` tinyint(1) NOT NULL DEFAULT '1',
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `uri` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `uri` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `order` int DEFAULT NULL,
-  `collection` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `blueprint` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `collection` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `blueprint` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `data` json NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `entries_site_index` (`site`),
+  KEY `entries_origin_id_index` (`origin_id`),
+  KEY `entries_uri_index` (`uri`),
+  KEY `entries_order_index` (`order`),
+  KEY `entries_collection_index` (`collection`),
+  KEY `entries_blueprint_index` (`blueprint`)
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `entries`
 --
 
-INSERT INTO `entries` (`id`, `site`, `origin_id`, `published`, `status`, `slug`, `uri`, `date`, `order`, `collection`, `blueprint`, `data`, `created_at`, `updated_at`) VALUES
-(14, 'default', NULL, 1, 'published', 'relatorio-semestral-julho-dezembro-2023-projeto-participaction-inovacao', NULL, NULL, NULL, 'articles', 'article', '{\"cover\": \"imagem-1708432739.PNG\", \"files\": null, \"title\": \"Relatório Semestral (Julho - Dezembro 2023)  - PROJETO PARTICIP’ACTION – INOVAÇÃO\", \"gallery\": [\"imagem.PNG\", \"pt---lm-semestrielle-ps-juillet-decembre-23-1708432726.pdf\"], \"category\": \"actividade\", \"location\": \"Sofala-Beira\", \"sections\": [], \"post_date\": \"2024-02-20\", \"documentos\": \"asset::assets::pt---lm-semestrielle-ps-juillet-decembre-23-1708432726.pdf\", \"updated_by\": 1, \"texto_field\": \"5y45ewyeyreyeyeyeyr\", \"short_description\": \"O relatório faz mensão das actividades que foram realizadas no âmbito do projecto Participação Inovação (2023), implementado pela Essor em parceria com o AMPDC.\"}', '2024-02-20 12:28:46', '2024-02-20 13:37:16'),
-(17, 'default', NULL, 1, 'published', 'lancamento-do-canal-youtube-comunidade-em-foco', NULL, NULL, NULL, 'articles', 'article', '{\"cover\": \"logo-canal-without-bg-(3).png\", \"files\": \"https://www.youtube.com/channel/UC8m_J8gXBe9HFIcagXcTYVw\", \"title\": \"Lançamento do canal Youtube Comunidade em Foco\", \"gallery\": [\"banner-do-canal-youtube(4).png\", \"whatsapp-image-2024-03-01-at-12.04.18.jpeg\", \"whatsapp-image-2024-03-01-at-12.04.22-(1).jpeg\"], \"category\": \"actividade\", \"location\": \"Sofala, Beira\", \"sections\": [], \"post_date\": \"2024-03-01\", \"updated_by\": 1, \"video_field\": \"https://www.youtube.com/watch?v=r_Hh8UEwb3c\", \"short_description\": \"🎉🎊🍾🗓Hoje dia 01.03.2024, pela manhã o lancamento do canal Youtube #Comunidade em Foco, desenvolvido pelo #AMPDC uma Organização\\nMoçambicana sem fins Lucrativos, Baseado na Cidade da Beira, que trabalha na área de #Proteção Social, #Desenvolvimento Comunitário, #Apoio_ao_Desenvolvimento_Institucional e #Pesquisa.\\nEste canal tem como Objectivos melhorar o nosso conhecimento sobre as necessidades das comunidades locais, dando-lhes voz, a fim de orientar as acções das instituições públicas e privadas na resposta as necessidades das comunidades. Portanto, este canal permitirá trocas directas entre os cidadãos e os representantes de diversas instituições através de entrevistas, podcastes e comunicação em linha aberta.\\n\\nApelamos a todos a se inscreverem no canal e partilhar com as demais pessoas.\\nObrigado.\\n\\nLink do canal\\nhttps://www.youtube.com/channel/UC8m_J8gXBe9HFIcagXcTYVw\\n\\n<iframe width=\\\"560\\\" height=\\\"315\\\" src=\\\"https://www.youtube.com/embed/r_Hh8UEwb3c?si=i5-cdqY0k6jdlMa1\\\" title=\\\"YouTube video player\\\" frameborder=\\\"0\\\" allow=\\\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\\\" referrerpolicy=\\\"strict-origin-when-cross-origin\\\" allowfullscreen></iframe>\"}', '2024-03-01 11:50:48', '2024-05-29 05:25:52'),
-(20, 'default', NULL, 1, 'published', 'apresentacao-de-micro-projectos', NULL, NULL, NULL, 'events', 'event', '{\"cover\": \"micro-projectos.png\", \"title\": \"Apresentação de Micro Projectos\", \"end_date\": \"2024-05-24 15:00\", \"location\": \"Beira\", \"start_date\": \"2024-05-11 09:00\", \"updated_by\": 1, \"event_description\": \"<p><strong>Micro projectos</strong></p><p>08 e 09 de maio de 2024, decorreu no AMPDC a apresentação dos micro projectos das OCB&#039;s beneficiárias do apoio institucional. A ocasião contou com a presença de um comité de avaliação composto pelos seguíntes membros:</p><ul><li><p>Direcção Provincial de Género, Criança e Acção Social</p></li><li><p>ESSOR</p></li><li><p>AMPDC</p></li><li><p>Universidade Zambeze</p></li><li><p>AMPDC</p></li></ul>\"}', '2024-05-17 06:53:33', '2024-07-09 09:41:02'),
-(21, 'default', NULL, 1, 'published', 'apoio-institucional-apresentacao-de-micro-projectos', NULL, NULL, NULL, 'articles', 'article', '{\"cover\": \"micro-projectos.png\", \"files\": \"asset::assets::micro-projectos.png\", \"title\": \"Apoio Institucional - Apresentação de Micro Projectos\", \"gallery\": [\"micro-projectos.png\"], \"category\": \"actividade\", \"location\": \"Beira\", \"sections\": [], \"post_date\": \"2024-05-17\", \"updated_by\": 1, \"video_field\": null, \"short_description\": \"Micro projectos\\n\\n08 e 09 de maio de 2024, decorreu no AMPDC a apresentação dos micro projectos das OCB\'s beneficiárias do apoio institucional. A ocasião contou com a presença de um comité de avaliação composto pelos seguíntes membros:\\n\\n* Direcção Provincial de Género, Criança e Acção Social\\n\\n* ESSOR\\n\\n* AMPDC\\n\\n* Universidade Zambeze\\n\\n* AMPDC\"}', '2024-05-17 06:57:00', '2024-05-17 06:57:00'),
-(22, 'default', NULL, 1, 'published', 'video-sobre-a-condicao-da-crianca-no-acesso-a-educacao-em-mocambique', NULL, NULL, NULL, 'articles', 'article', '{\"cover\": \"familia-muave-thumbnail.jpg\", \"files\": \"https://youtu.be/pmGMrnXReWc\", \"title\": \"Vídeo Sobre a Condição da Criança no Acesso a Educação em Moçambique - Canal Comunidade em Foco\", \"gallery\": [\"familia-muave-thumbnail.jpg\"], \"category\": \"actividade\", \"location\": \"Beira\", \"sections\": [], \"post_date\": \"2024-05-28\", \"updated_by\": 1, \"video_field\": \"https://youtu.be/pmGMrnXReWc\", \"short_description\": \"Canal Youtube - Comunidade em Foco\\n\\nEste vídeo reporta a situação das condições das famílias Moçambicanas que convivem com crianças com deficiência. Nesta reportagem ilustramos como esta família lida com a criança portadora de deficiência perante ao acesso ao ensino e também no cotediano.\\n<br>\\nLink:      https://youtu.be/pmGMrnXReWc\\n<br>\\n<iframe class=\\\"mt-5 w-full\\\" height=\\\"450\\\" src=\\\"https://www.youtube.com/embed/pmGMrnXReWc?si=6lEEpEkI2J4sNYsT\\\" title=\\\"YouTube video player\\\" frameborder=\\\"0\\\" allow=\\\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\\\" referrerpolicy=\\\"strict-origin-when-cross-origin\\\" allowfullscreen></iframe>\"}', '2024-05-28 11:45:32', '2024-07-04 17:21:30'),
-(24, 'default', NULL, 1, 'published', 'plataforma-de-formacao-profissional-online-e-gratis-baymoz-e2', NULL, NULL, NULL, 'articles', 'article', '{\"cover\": \"2-podcast---baymoz-thumbnail-1718981736.jpg\", \"files\": null, \"title\": \"Plataforma de formação profissional online e grátis - BAYMOZ\", \"gallery\": [\"2-podcast---baymoz-thumbnail.jpg\"], \"category\": \"actividade\", \"location\": \"Beira\", \"sections\": [], \"post_date\": \"2024-06-21\", \"updated_by\": 1, \"video_field\": \"https://youtu.be/lH_qcb_Ha30\", \"short_description\": \"No âmbito da parceria entre a Essor, AMPDC e Baymoz, com vista a complementar e \\ndinamizar os biosps+ bem como contribuição no desenvolvimento social.\\nO AMPDC através do canal comunidade em foco apresenta a Baymoz que é uma \\nplataforma de capacitação técnico profissional que oferece oportunidades de formação \\nprofissional para jovens, com várias áreas. De forma geral a plataforma oferece: cursos online, totalmente gratuitos, com a \\npossibilidade de fazer vários cursos em simultâneo a qualquer lugar e momento através \\ndo seu celular, tablet ou computador.   partilhe deixe o seu like, comente e ajude-nos a crescer e a transformar vidas.\\nhttps://youtu.be/lH_qcb_Ha30\"}', '2024-06-21 12:55:45', '2024-06-21 12:55:45');
-
--- --------------------------------------------------------
+LOCK TABLES `entries` WRITE;
+/*!40000 ALTER TABLE `entries` DISABLE KEYS */;
+INSERT INTO `entries` VALUES (49,'default',NULL,1,'published','feminicidio',NULL,NULL,NULL,'intervention','intervention','{\"image\": \"screenshot-from-2024-10-13-17-13-41-1729443333.png\", \"title\": \"Feminicídio\", \"content\": \"<p>Direiros humanos das mulheres</p>\", \"updated_by\": 1, \"description\": \"Direiros humanos das mulheres\"}','2024-10-21 06:27:37','2024-10-21 06:27:37'),(50,'default',NULL,1,'published','feminicidio-em-mocambique-uma-realidade-alarmante-e-persistente',NULL,NULL,NULL,'articles','article','{\"cover\": \"screenshot-from-2024-10-13-17-13-41.png\", \"files\": null, \"title\": \"Feminicídio em Moçambique: Uma Realidade Alarmante e Persistente\", \"gallery\": [\"screenshot-from-2024-10-13-17-13-41-1729443333.png\", \"screenshot-from-2024-10-13-17-13-41.png\"], \"category\": null, \"location\": \"Esturo\", \"sections\": [], \"post_date\": \"2024-10-01\", \"updated_by\": 1, \"video_field\": null, \"short_description\": \"O feminicídio em Moçambique representa uma grave violação dos direitos humanos, afetando milhares de mulheres e refletindo uma cultura enraizada de violência de gênero. Este artigo explora a realidade desse crime, suas causas e as medidas necessárias para combatê-lo.\"}','2024-10-21 06:31:53','2024-10-21 06:31:53'),(51,'default',NULL,1,'published','apresentacao-de-actividades-sobre-o-estudo-de-feminicidio',NULL,NULL,NULL,'events','event','{\"cover\": \"screenshot-from-2024-10-13-17-13-41.png\", \"title\": \"Apresentação de actividades sobre o estudo de feminicídio\", \"end_date\": \"2024-10-29 15:30\", \"location\": \"Beira Terrace\", \"start_date\": \"2024-10-29 08:30\", \"updated_by\": 1, \"event_description\": \"<p>Apresentção do estudo que sera efectuado pelas duas instituições do ensino superior...</p>\"}','2024-10-21 06:36:28','2024-10-21 06:36:28'),(52,'default',NULL,1,'published','helto',NULL,NULL,NULL,'success_histories','success_history','{\"image\": \"screenshot-from-2024-10-13-17-13-41.png\", \"title\": \"Helton\", \"content\": \"<p><strong>Short Description:</strong><br>O feminicídio em Moçambique representa uma grave violação dos direitos humanos, afetando milhares de mulheres e refletindo uma cultura enraizada de violência de gênero. Este artigo explora a realidade desse crime, suas causas e as medidas necessárias para combatê-lo.</p>\", \"updated_by\": 1, \"history_date\": \"2024-10-21\"}','2024-10-21 06:38:02','2024-10-21 06:38:02');
+/*!40000 ALTER TABLE `entries` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `failed_jobs`
 --
 
+DROP TABLE IF EXISTS `failed_jobs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `failed_jobs` (
-  `id` bigint UNSIGNED NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `uuid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `failed_jobs`
+--
+
+LOCK TABLES `failed_jobs` WRITE;
+/*!40000 ALTER TABLE `failed_jobs` DISABLE KEYS */;
+/*!40000 ALTER TABLE `failed_jobs` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `fieldsets`
 --
 
+DROP TABLE IF EXISTS `fieldsets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `fieldsets` (
-  `id` bigint UNSIGNED NOT NULL,
-  `handle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `handle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `data` json NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `fieldsets_handle_unique` (`handle`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `forms`
---
-
-CREATE TABLE `forms` (
-  `id` bigint UNSIGNED NOT NULL,
-  `handle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `settings` json DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `forms`
+-- Dumping data for table `fieldsets`
 --
 
-INSERT INTO `forms` (`id`, `handle`, `title`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 'contact_us', 'Contact us', '{\"email\": [], \"store\": true, \"honeypot\": \"honeypot\"}', '2023-09-17 21:49:42', '2023-09-17 21:49:54');
-
--- --------------------------------------------------------
+LOCK TABLES `fieldsets` WRITE;
+/*!40000 ALTER TABLE `fieldsets` DISABLE KEYS */;
+/*!40000 ALTER TABLE `fieldsets` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `form_submissions`
 --
 
+DROP TABLE IF EXISTS `form_submissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `form_submissions` (
-  `id` bigint UNSIGNED NOT NULL,
-  `form_id` bigint UNSIGNED NOT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `form_id` bigint unsigned NOT NULL,
   `data` json DEFAULT NULL,
   `created_at` timestamp(6) NULL DEFAULT NULL,
-  `updated_at` timestamp(6) NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp(6) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `form_submissions_form_id_created_at_unique` (`form_id`,`created_at`),
+  KEY `form_submissions_form_id_index` (`form_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=466 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `form_submissions`
 --
 
-INSERT INTO `form_submissions` (`id`, `form_id`, `data`, `created_at`, `updated_at`) VALUES
-(263, 1, '{\"date\": \"2024-03-11T13:02:41.113843Z\", \"nome\": \"Vania Maria Mário Zibia\", \"email\": \"vaniazibia2@gmail.com\", \"_token\": \"npvumJ4Wply34TM0N8XwAT2rs6syVAqEh0ht2qBC\", \"contacto\": \"877716908\", \"mensagem\": \"Boa tarde! \\r\\nEspero que estejam todos bem.\\r\\nConheci a vossa instituição a pouco tempo e gostei do trabalho que fazem.\\r\\nVenho através desta, mostrar o meu interesse em fazer parte desse família, dispondo-me a participar de trabalhos voluntário e outras actividades que possam decorrer nesta instituição.\\r\\nCumprimentos, Vânia zibia.\\r\\nAté breve\"}', '2024-03-11 13:02:41.113843', '2024-03-11 13:02:41.114884'),
-(316, 1, '{\"date\": \"2024-04-30T17:07:04.480783Z\", \"nome\": \"Norma\", \"email\": \"admin@charterunionfin.com\", \"_token\": \"oywOdzry7QrScEUTnANbPEKJMXqc716M4sDDlfTO\", \"contacto\": null, \"mensagem\": \"Do not stay out of business, or close down due to lack of Funding and finance. Your projects, businesses and financial needs is completely possible.\\r\\n\\r\\nYou can now fund your projects, businesses without worries of repayment as you can have ample amount of time to execute your projects and businesses and build up, grow financially, to achieve your complete set goals.\\r\\n\\r\\nAre you also a broker/consultant? Make life easy for various of your clients globlly to help provide funding for their various Businesses and Projects, edging them towards a better buiness and financial goals.\\r\\n\\r\\nChu Yeung\\r\\nCustomer Care Department\\r\\ninfo@charterunionfin.com\\r\\n+852 8199 9324\"}', '2024-04-30 17:07:04.480783', '2024-04-30 17:07:04.481733'),
-(317, 1, '{\"date\": \"2024-05-02T09:01:50.502071Z\", \"nome\": \"Mike Morrison\", \"email\": \"petervemUselt@gmail.com\", \"_token\": \"uGEGKqF5hY6v6JAc3mR61oj1N6fDCwPeIIV7qmVa\", \"submit\": null, \"contacto\": \"petervemUselt@gmail.com\", \"mensagem\": \"Hi there \\r\\n \\r\\nAre you tired of spending money on advertising that doesn’t work? \\r\\nWe have the right strategy for you, to meet the right audience within your City boundaries. \\r\\n \\r\\nB2B Local City Marketing that works: \\r\\nhttps://www.onlinelocalmarketing.org/product/local-research-advertising/ \\r\\n \\r\\nWith our innovative marketing approach, you will receive calls, leads, and website interactions within a week. \\r\\n \\r\\nRegards \\r\\nMike Morrison\\r\\n https://www.onlinelocalmarketing.org\"}', '2024-05-02 09:01:50.502071', '2024-05-02 09:01:50.506781'),
-(318, 1, '{\"date\": \"2024-05-03T20:45:51.116725Z\", \"nome\": \"Mike Campbell\", \"email\": \"mikeChoobe@gmail.com\", \"_token\": \"xlsVbGf1cW72XCinqO4865XrMZfb97R0JSOsnLQm\", \"submit\": null, \"contacto\": \"mikeChoobe@gmail.com\", \"mensagem\": \"Hi there \\r\\n \\r\\nJust checked your AMPDC.org baclink profile, I noticed a moderate percentage of toxic links pointing to your website \\r\\n \\r\\nWe will investigate each link for its toxicity and perform a professional clean up for you free of charge. \\r\\n \\r\\nStart recovering your ranks today: \\r\\nhttps://www.hilkom-digital.de/professional-linksprofile-clean-up-service/ \\r\\n \\r\\nRegards \\r\\nMike Campbell\\r\\nHilkom Digital SEO Experts \\r\\nhttps://www.hilkom-digital.de/\"}', '2024-05-03 20:45:51.116725', '2024-05-03 20:45:51.117754'),
-(319, 1, '{\"date\": \"2024-05-03T22:05:43.523870Z\", \"nome\": \"Theresa\", \"email\": \"battaglia.summer@gmail.com\", \"_token\": \"uniairAAjaD1Zo6nrMMuhXpOVYyzhycCdurq95fc\", \"contacto\": null, \"mensagem\": \"Hello,\\r\\n\\r\\nI wanted to ask if you ever struggled with the choice of working out OR putting in more time at the office. Well, we have the perfect solution for you - EleBands!  \\r\\n \\r\\nEleBands offers ultra-thin, fashionable all day wearable body weight bands that seamlessly integrate into your daily routine. Burn up to 1,500 calories a day by simply wearing our bands on your wrist, ankle, and waist while you go about your normal day. \\r\\n \\r\\nThe best part is we have full body weight sets ranging from 3lbs – 30lbs to ensure optimal results no matter what your fitness goals are.  \\r\\n \\r\\nELEVATE YOUR FITNESS NOW: \\r\\n \\r\\n- No Gym \\r\\n- No Diet\\r\\n- No Excercise \\r\\n- Nothing To Take... \\r\\n \\r\\nJUST GO ABOUT YOUR DAY AND, \\r\\n \\r\\n- Get Toned \\r\\n- Burn Calories \\r\\n- Lose Weight Effortlesly \\r\\n \\r\\nYou have to see our bands, there is nothing else like them on the planet. Take a look NOW! https://bit.ly/elebands-news\\r\\n \\r\\nPlus! We have bands for sports, casual, and formal occasions that you can wear with any outfit, ensuring you stay stylish while achieving your fitness goals. \\r\\n \\r\\nMany of our clients are losing 2-3 pounds per week while experiencing significant health improvements.  \\r\\n \\r\\nCheck out our stylish and powerful bands now: https://bit.ly/elebands-news\\r\\n\\r\\nTheresa Smith\\r\\nBrand Ambassador\\r\\nElebands USA\\r\\n\\r\\nP.S. Many people choose to sacrifice their health to build their career or make more money, with EleBands you can handle your health and your career at the same time. This is a game changer you must see now, check us out: https://bit.ly/elebands-news\"}', '2024-05-03 22:05:43.523870', '2024-05-03 22:05:43.524886'),
-(320, 1, '{\"date\": \"2024-05-04T08:22:53.418451Z\", \"nome\": \"Masonexili\", \"email\": \"kaenquirynicholls@gmail.com\", \"_token\": \"ONEM4GHoJfKqEcT9ciQJHZwDdXzwo8U5YBSjfBFo\", \"submit\": null, \"contacto\": \"kaenquirynicholls@gmail.com\", \"mensagem\": \"Ciao, volevo sapere il tuo prezzo.\"}', '2024-05-04 08:22:53.418451', '2024-05-04 08:22:53.419975'),
-(321, 1, '{\"date\": \"2024-05-06T21:37:34.407667Z\", \"nome\": \"Kattie\", \"email\": \"johan@pcxresponder.com\", \"_token\": \"X0BEJbm69ZnBmyjN1YTiwnPVnVTFNkf8yApqyYsy\", \"contacto\": null, \"mensagem\": \"Hi,\\r\\n\\r\\nWe are a provider of premium databases for companies.\\r\\n\\r\\nI want to know if you need any sort of data for your business?\\r\\n\\r\\nPlease respond to this email and let us know what you are looking for.\\r\\n\\r\\nRegards\\r\\nJohan\"}', '2024-05-06 21:37:34.407667', '2024-05-06 21:37:34.408839'),
-(322, 1, '{\"date\": \"2024-05-07T12:41:39.880280Z\", \"nome\": \"Masonexili\", \"email\": \"kaenquirynicholls@gmail.com\", \"_token\": \"zJeYx0uuE3BLkawHukLaLYOtXX7bpDLUrHcTApKQ\", \"submit\": null, \"contacto\": \"kaenquirynicholls@gmail.com\", \"mensagem\": \"Hola, volia saber el seu preu.\"}', '2024-05-07 12:41:39.880280', '2024-05-07 12:41:39.881481'),
-(323, 1, '{\"date\": \"2024-05-08T02:42:44.597923Z\", \"nome\": \"Mike Bradshaw\", \"email\": \"petervemUselt@gmail.com\", \"_token\": \"DGYjpVvcVzB9ic7jY2IemuKiVTtZ27r69zDVSbh4\", \"submit\": null, \"contacto\": \"petervemUselt@gmail.com\", \"mensagem\": \"Greetings \\r\\n \\r\\nI have just took an in depth look on your  AMPDC.org for the ranking keywords and saw that your website could use a push. \\r\\n \\r\\nWe will increase your ranks organically and safely, using only state of the art AI and whitehat methods, while providing monthly reports and outstanding support. \\r\\n \\r\\nMore info: \\r\\nhttps://www.digital-x-press.com/unbeatable-seo/ \\r\\n \\r\\n \\r\\nRegards \\r\\nMike Bradshaw\\r\\n \\r\\nDigital X SEO Experts\"}', '2024-05-08 02:42:44.597923', '2024-05-08 02:42:44.599222'),
-(324, 1, '{\"date\": \"2024-05-08T03:18:29.022616Z\", \"nome\": \"Elsa\", \"email\": \"elsa@AMPDC.org\", \"_token\": \"hzT0FVv0okmA3JnMOjIHzyXR1IJ7cA4AS2QuKnwo\", \"contacto\": null, \"mensagem\": \"Hey there, \\r\\n\\r\\nI hope you\'re doing well. I wanted to let you know about our new BANGE backpacks and sling bags that just released.\\r\\n\\r\\nBange is perfect for students, professionals and travelers. The backpacks and sling bags feature a built-in USB charging port, making it easy to charge your devices on the go.  Also they are waterproof and anti-theft design, making it ideal for carrying your valuables.\\r\\n\\r\\nBoth bags are made of durable and high-quality materials, and are perfect for everyday use or travel.\\r\\n\\r\\nOrder yours now at 50% OFF with FREE Shipping: http://bangeshop.com\\r\\n\\r\\nBest regards,\\r\\n\\r\\nElsa\"}', '2024-05-08 03:18:29.022616', '2024-05-08 03:18:29.023449'),
-(325, 1, '{\"date\": \"2024-05-08T06:49:46.971302Z\", \"nome\": \"Phil\", \"email\": \"noreplyhere@aol.com\", \"_token\": \"qgPfYC3CKWCbJL6uTwRkhFL9YYwX3topUsnMZ3no\", \"contacto\": null, \"mensagem\": \"Want Your Ad Everywhere? Reach Millions Instantly! For less than $100 I can blast your message to website contact forms globally. Contact me via skype or email below for info\\r\\n\\r\\nP. Stewart\\r\\nEmail: 98b4xy@submitmaster.xyz\\r\\nSkype: form-blasting\"}', '2024-05-08 06:49:46.971302', '2024-05-08 06:49:46.972339'),
-(326, 1, '{\"date\": \"2024-05-08T23:20:01.385720Z\", \"nome\": \"Carloslit\", \"email\": \"inet4747@outlook.com\", \"_token\": \"BWaXDbdlO43zamANgBy15XpUoMmzad5ir7mh1uxo\", \"submit\": null, \"contacto\": \"inet4747@outlook.com\", \"mensagem\": \"<a href=https://pint77.com>In Etsy, Shopify Pinterest+SEO + artificial intelligence give high sales results</a>\"}', '2024-05-08 23:20:01.385720', '2024-05-08 23:20:01.387513'),
-(327, 1, '{\"date\": \"2024-05-09T10:18:00.624701Z\", \"nome\": \"Kieran\", \"email\": \"kieran.tibbs@outlook.com\", \"_token\": \"QNzVYYfot1W1CJJKaZs67zqGmAq7B2pKvyYaudUm\", \"contacto\": null, \"mensagem\": \"Dear Sir/Madam,\\r\\n\\r\\nDo you want to take your online marketing to the next level and sustainably increase traffic to your website? With ContentBooster, you can harness the power of artificial intelligence to create personalized, targeted marketing campaigns. Our platform allows you to generate tailor-made content and deliver it precisely to your target audience—all automatically and without any extra effort on your part!\\r\\n\\r\\nClick here to learn more: [ContentBooster](https://contentbooster.instantaibiz.vip/)\\r\\n\\r\\nIf you do not wish to receive further messages, please reply with \'Stop\'.\\r\\n\\r\\nBest regards,\\r\\nYour ContentBooster Team\"}', '2024-05-09 10:18:00.624701', '2024-05-09 10:18:00.625905'),
-(328, 1, '{\"date\": \"2024-05-12T07:10:32.668224Z\", \"nome\": \"Georgina\", \"email\": \"georginahaynes620@gmail.com\", \"_token\": \"Eextqvtwt0aTakxUQtJBGMVhhQo1SEpETavtgd5q\", \"contacto\": null, \"mensagem\": \"Hi,\\r\\n\\r\\nI just visited AMPDC.org and wondered if you\'d ever thought about having an engaging video to explain what you do?\\r\\n\\r\\nOur prices start from just $195.\\r\\n\\r\\nLet me know if you\'re interested in seeing samples of our previous work.\\r\\n\\r\\nRegards,\\r\\nGeorgina\\r\\n\\r\\nUnsubscribe: https://removeme.click/ev/unsubscribe.php?d=AMPDC.org\"}', '2024-05-12 07:10:32.668224', '2024-05-12 07:10:32.669584'),
-(329, 1, '{\"date\": \"2024-05-13T06:14:45.209575Z\", \"nome\": \"Tobiastrofs\", \"email\": \"no.reply.ThijsKarlsen@gmail.com\", \"_token\": \"DXD7tmtlNUFqBOp1gr71DcfmbPraQ99cWEnKt005\", \"submit\": null, \"contacto\": \"no.reply.ThijsKarlsen@gmail.com\", \"mensagem\": \"Hey there! AMPDC.org \\r\\n \\r\\nDid you know that it is possible to send business offers totally legitimately? We offer a legal and innovative method of sending business offers through contact forms. \\r\\nBy using Communication Forms, messages sent are less likely to be flagged as spam, as they are considered significant. \\r\\nTry out our service – no cost involved! \\r\\nOur service lets you send up to 50,000 messages. \\r\\n \\r\\nThe cost of sending one million messages is $59. \\r\\n \\r\\nThis letter is automatically generated. \\r\\nPlease use the contact details below to get in touch with us. \\r\\n \\r\\nContact us. \\r\\nTelegram - https://t.me/FeedbackFormEU \\r\\nSkype  live:feedbackform2019 \\r\\nWhatsApp  +375259112693 \\r\\nWhatsApp  https://wa.me/+375259112693 \\r\\n \\r\\nWe only use chat for communication.\"}', '2024-05-13 06:14:45.209575', '2024-05-13 06:14:45.210782'),
-(330, 1, '{\"date\": \"2024-05-13T06:57:55.293321Z\", \"nome\": \"Mike Hardman\", \"email\": \"mikeChoobe@gmail.com\", \"_token\": \"hbcAzW35HipTpc5Q7dCwmWd4KepWXh7BRgeIaCsG\", \"submit\": null, \"contacto\": \"mikeChoobe@gmail.com\", \"mensagem\": \"Hello \\r\\n \\r\\nThis is Mike Hardman\\r\\n \\r\\nLet me present you our latest research results from our constant SEO feedbacks that we have from our plans: \\r\\n \\r\\nhttps://www.strictlydigital.net/product/semrush-backlinks/ \\r\\n \\r\\nThe new Semrush Backlinks, which will make your AMPDC.org SEO trend have an immediate push. \\r\\nThe method is actually very simple, we are building links from domains that have a high number of keywords ranking for them.  \\r\\n \\r\\nForget about the SEO metrics or any other factors that so many tools try to teach you that is good. The most valuable link is the one that comes from a website that has a healthy trend and lots of ranking keywords. \\r\\nWe thought about that, so we have built this plan for you \\r\\n \\r\\nCheck in detail here: \\r\\nhttps://www.strictlydigital.net/product/semrush-backlinks/ \\r\\n \\r\\nCheap and effective \\r\\n \\r\\nTry it anytime soon \\r\\n \\r\\nRegards \\r\\nMike Hardman\\r\\n \\r\\nmike@strictlydigital.net\"}', '2024-05-13 06:57:55.293321', '2024-05-13 06:57:55.294201'),
-(331, 1, '{\"date\": \"2024-05-14T19:54:35.916383Z\", \"nome\": \"Mike Thornton\", \"email\": \"mikevemUselt@gmail.com\", \"_token\": \"5cMUTAUNgbXmikc6j3SyigOuHVjiXxAu0VlC7FGC\", \"submit\": null, \"contacto\": \"mikevemUselt@gmail.com\", \"mensagem\": \"Hi there, \\r\\n \\r\\nMy name is Mike from Monkey Digital, \\r\\n \\r\\nAllow me to present to you a lifetime revenue opportunity of 35% \\r\\nThat\'s right, you can earn 35% of every order made by your affiliate for life. \\r\\n \\r\\nSimply register with us, generate your affiliate links, and incorporate them on your website, and you are done. It takes only 5 minutes to set up everything, and the payouts are sent each month. \\r\\n \\r\\nClick here to enroll with us today: \\r\\nhttps://www.monkeydigital.org/affiliate-dashboard/ \\r\\n \\r\\nThink about it, \\r\\nEvery website owner requires the use of search engine optimization (SEO) for their website. This endeavor holds significant potential for both parties involved. \\r\\n \\r\\nThanks and regards \\r\\nMike Thornton\\r\\n \\r\\nMonkey Digital\"}', '2024-05-14 19:54:35.916383', '2024-05-14 19:54:35.917662'),
-(332, 1, '{\"date\": \"2024-05-15T10:50:22.656808Z\", \"nome\": \"Robertgrogy\", \"email\": \"inet4747@outlook.com\", \"_token\": \"19lUmAA7SY05r84aRjCFDHGebDQnnlmiq9adcGFL\", \"submit\": null, \"contacto\": \"inet4747@outlook.com\", \"mensagem\": \"In Etsy, Amazon, eBay, Shopify https://pint77.com Pinterest+SEO +II =  high sales results\"}', '2024-05-15 08:50:22.656808', '2024-05-15 08:50:22.657803'),
-(333, 1, '{\"date\": \"2024-05-15T21:58:59.128493Z\", \"nome\": \"Masonexili\", \"email\": \"kaenquirynicholls@gmail.com\", \"_token\": \"lWgNN8Zt4vlVfNPA7VYjaPmPmEBSPjmtBM28mqvo\", \"submit\": null, \"contacto\": \"kaenquirynicholls@gmail.com\", \"mensagem\": \"Hai, saya ingin tahu harga Anda.\"}', '2024-05-15 19:58:59.128493', '2024-05-15 19:58:59.129839'),
-(334, 1, '{\"date\": \"2024-05-19T18:56:53.005861Z\", \"nome\": \"Masonexili\", \"email\": \"kaenquirynicholls@gmail.com\", \"_token\": \"i4F225OEDg5dnwzUN1FH2KEFhFvnJQThZeLNXEiX\", \"submit\": null, \"contacto\": \"kaenquirynicholls@gmail.com\", \"mensagem\": \"Dia duit, theastaigh uaim do phraghas a fháil.\"}', '2024-05-19 16:56:53.005861', '2024-05-19 16:56:53.007672'),
-(335, 1, '{\"date\": \"2024-05-19T22:43:12.613531Z\", \"nome\": \"Jerrod\", \"email\": \"zavala.jerrod18@yahoo.com\", \"_token\": \"WhPLxOcU3HF2wphvYa4aa1QLDJeqxCxPQKv77uNp\", \"contacto\": null, \"mensagem\": \"Hey there,\\r\\n\\r\\nAre you tired of spending countless hours on repetitive marketing tasks?\\r\\n\\r\\nImagine having a personal AI assistant that can handle everything from writing high-converting copy to creating stunning websites and videos – all within your WordPress dashboard.\\r\\n\\r\\nThis revolutionary AI tool can complete hundreds of marketing tasks in seconds, saving you time and money.\\r\\n\\r\\n1. Write captivating content: Articles, landing pages, emails, ebooks, and more – all crafted by AI to perfection.\\r\\n2. Design stunning visuals: Create professional-looking logos, graphics, and websites in seconds.\\r\\n3. Automate marketing tasks: Build high-converting funnels, manage social media, and generate leads on autopilot.\\r\\n4. Develop mobile apps: No coding skills needed! WP Genie can build apps you can sell for thousands.\\r\\n\\r\\nAnd so much more!\\r\\n\\r\\nLearn more: https://furtherinfo.org/genie\\r\\n\\r\\nPlus, WP Genie is:\\r\\n\\r\\n- 16x faster than ChatGPT\\r\\n- Always available: No outages like with other AI tools.\\r\\n- Easy to use: No technical skills required.\\r\\n\\r\\nFor a limited time, get our plugin for a one-time price of just $17 (normally $30/month).\\r\\n\\r\\nThis offer won\'t last long, so don\'t miss out.\\r\\n\\r\\nClick here to learn more and unlock the power of AI for your WordPress site: https://furtherinfo.org/genie\\r\\n\\r\\nSincerely,\\r\\nJerrod\"}', '2024-05-19 20:43:12.613531', '2024-05-19 20:43:12.614599'),
-(336, 1, '{\"date\": \"2024-05-20T12:35:47.099763Z\", \"nome\": \"Theresa\", \"email\": \"dawna.morin@gmail.com\", \"_token\": \"jEcoAXw7dmaLsuSauEGLZxO8SzRqtVId0w6Cp6cM\", \"contacto\": null, \"mensagem\": \"Hello,\\r\\n\\r\\nDo you struggle with the choice of chilling out, working more hours, or going to the gym?\\r\\n\\r\\nNo need to choose anymore, we have the perfect solution for you - EleBands! \\r\\n\\r\\nEleBands offers ultra-thin, fashionable all day wearable body weight bands that seamlessly integrate into your daily routine. Burn up to 1,500 calories a day by simply wearing our bands on your wrist, ankle, and waist while you go about your normal day. \\r\\n\\r\\nThis week, we are giving 20% off to the first 20 customers. \\r\\n\\r\\n Lose Weight \\r\\n Build Strength\\r\\n Tone Body\\r\\n Look And Feel Great\\r\\n\\r\\nTHEY LOOK HOT!! SEE FOR YOURSELF: https://bit.ly/elebands-news\\r\\n \\r\\n***Get 20% OFF with this coupon code: 20%OFF\\r\\n\\r\\nImagine achieving your dream body by just going about your day. With EleBands, it\'s possible.\\r\\n\\r\\nMany of our clients are losing 2-3 pounds per week while experiencing significant health improvements. Plus, our clients tell us they receive compliments all the time when they wear thier EleBands. \\r\\n\\r\\nPeople from all walks of life, including top athletes, celebrites and fitness enthusiast love our bands and we are confident you will love them to.  \\r\\n\\r\\nBeautiful Bands To Choose From: \\r\\n\\r\\n We have multiple colors and 10 styles to choose from. \\r\\n We have sets from 3lb to 30lbs to meet a range of fitness goals.\\r\\n\\r\\nTHEY LOOK SO GOOD!! SEE FOR YOURSELF: https://bit.ly/elebands-news\\r\\n\\r\\n***Get 20% OFF with this coupon code: 20%OFF\\r\\n\\r\\nTheresa Smith\"}', '2024-05-20 10:35:47.099763', '2024-05-20 10:35:47.101423'),
-(337, 1, '{\"date\": \"2024-05-20T12:38:20.057929Z\", \"nome\": \"Robertexili\", \"email\": \"lucido.leinteract@gmail.com\", \"_token\": \"rLCXjBNffyMpZYCOUkhvHslsRwS6lgoWrxcNGkwl\", \"submit\": null, \"contacto\": \"lucido.leinteract@gmail.com\", \"mensagem\": \"Ciao, volevo sapere il tuo prezzo.\"}', '2024-05-20 10:38:20.057929', '2024-05-20 10:38:20.058910'),
-(338, 1, '{\"date\": \"2024-05-20T20:04:58.584175Z\", \"nome\": \"Mike Mackenzie\", \"email\": \"mikeInhewly@gmail.com\", \"_token\": \"WdTmhdrKJuwfsCvRHW1kcfaAN65uo0Sak4LmLD9S\", \"submit\": null, \"contacto\": \"mikeInhewly@gmail.com\", \"mensagem\": \"Hi there, \\r\\n \\r\\nI have reviewed your domain in MOZ and have observed that you may benefit from an increase in authority. \\r\\n \\r\\nOur solution guarantees you a high-quality domain authority score within a period of three months. This will increase your organic visibility and strengthen your website authority, thus making it stronger against Google updates. \\r\\n \\r\\nCheck out our deals for more details. \\r\\nhttps://www.monkeydigital.co/domain-authority-plan/ \\r\\n \\r\\nNEW: Ahrefs Domain Rating \\r\\nhttps://www.monkeydigital.co/ahrefs-seo/ \\r\\n \\r\\n \\r\\nThanks and regards \\r\\nMike Mackenzie\"}', '2024-05-20 18:04:58.584175', '2024-05-20 18:04:58.585217'),
-(339, 1, '{\"date\": \"2024-05-22T05:44:01.644677Z\", \"nome\": \"Mike Brooks\", \"email\": \"mikevemUselt@gmail.com\", \"_token\": \"F3tRjMHONWLK25AGmtUDIZfXoFJgkjzeGJBvhesL\", \"submit\": null, \"contacto\": \"mikevemUselt@gmail.com\", \"mensagem\": \"This service is perfect for boosting your local business\' visibility on the map in a specific location. \\r\\n \\r\\nWe provide Google Maps listing management, optimization, and promotion services that cover everything needed to rank in the Google 3-Pack. \\r\\n \\r\\nMore info: \\r\\nhttps://www.speed-seo.net/ranking-in-the-maps-means-sales/ \\r\\n \\r\\n \\r\\nThanks and Regards \\r\\nMike Brooks\\r\\n \\r\\n \\r\\nPS: Want a ONE-TIME comprehensive local plan that covers everything? \\r\\nhttps://www.speed-seo.net/product/local-seo-bundle/\"}', '2024-05-22 03:44:01.644677', '2024-05-22 03:44:01.646140'),
-(340, 1, '{\"date\": \"2024-05-23T21:20:37.155762Z\", \"nome\": \"Masonexili\", \"email\": \"kaenquirynicholls@gmail.com\", \"_token\": \"zI5KMHG05ah3IEUHZOx7tea1uFPjCwzTFQdnC9wG\", \"submit\": null, \"contacto\": \"kaenquirynicholls@gmail.com\", \"mensagem\": \"Прывітанне, я хацеў даведацца Ваш прайс.\"}', '2024-05-23 19:20:37.155762', '2024-05-23 19:20:37.156994'),
-(341, 1, '{\"date\": \"2024-05-24T10:14:01.963881Z\", \"nome\": \"Amelia\", \"email\": \"amelia@nobles.podiatristusa.sale\", \"_token\": \"K5fii58B9PYyRERtiBocsS9SChk60VCLmNkNMBxX\", \"contacto\": null, \"mensagem\": \"Hello there,\\r\\n\\r\\nIf you are one of the sufferers of the common problems nails have, then you are in luck! Our Toenail Clippers is here to help. It has a specially designed clip that can help those with troubles with winding nails, hard nails, two nails, nail cracks, deep nails, and thickened nails.\\r\\n\\r\\nWe are confident that our Toenail Clippers will provide you with the results you are looking for.\\r\\n\\r\\nGet yours today with 60% OFF: https://podiatristusa.sale\\r\\n\\r\\nBest Wishes,\\r\\n\\r\\nAmelia\"}', '2024-05-24 08:14:01.963881', '2024-05-24 08:14:01.965152'),
-(342, 1, '{\"date\": \"2024-05-27T05:39:06.367754Z\", \"nome\": \"Timothy\", \"email\": \"riddick.timothy@gmail.com\", \"_token\": \"vQVLYuGvadUagAaTuOgDGDe1jL1L2ONJ8bABQqZc\", \"contacto\": null, \"mensagem\": \"Hey there,\\r\\n\\r\\nAre you tired of paying monthly website hosting fees for AMPDC.org?\\r\\n\\r\\nWe offer a revolutionary solution: host unlimited websites, files, and videos for a single, low one-time fee. No more monthly payments.\\r\\n\\r\\nEnjoy fast speeds, secure storage, and user-friendly tools. Plus, get a 365-day money-back guarantee.\\r\\n\\r\\nClick here to learn more: https://furtherinfo.org/5h3n\\r\\n\\r\\nThank you for your time,\\r\\nTimothy\"}', '2024-05-27 03:39:06.367754', '2024-05-27 03:39:06.369310'),
-(343, 1, '{\"date\": \"2024-05-27T15:02:43.054230Z\", \"nome\": \"Masonexili\", \"email\": \"kaenquirynicholls@gmail.com\", \"_token\": \"smN5cfzp7IljlWSsdy44Byj23bUK6xCA7txPagIf\", \"submit\": null, \"contacto\": \"kaenquirynicholls@gmail.com\", \"mensagem\": \"Γεια σου, ήθελα να μάθω την τιμή σας.\"}', '2024-05-27 13:02:43.054230', '2024-05-27 13:02:43.055320'),
-(344, 1, '{\"date\": \"2024-05-27T15:04:36.045509Z\", \"nome\": \"Daisy\", \"email\": \"bergin.daisy@hotmail.com\", \"_token\": \"Wz8LiqnCbcHaUYgjD7F2ACALeRqukV7v59lKNHWC\", \"contacto\": null, \"mensagem\": \"Hi there,\\r\\n\\r\\nI recently came across your website on AMPDC.org and found it very interesting. I was curious, have you ever considered creating an eBook out of your website content?\\r\\n\\r\\nThere are tools available, that allow you to easily convert website content into a well-designed eBook. This could be a great way to repurpose your existing content and potentially reach a new audience.\\r\\n\\r\\nOf course, I understand this might not be something you\'re interested in, but I just wanted to share the possibility!\\r\\n\\r\\nAnyway, here is the tool I had in mind. It\'s only $16.95 so worth checking out: \\r\\nhttps://furtherinfo.org/lgb7\\r\\n\\r\\nBest regards,\\r\\nDaisy\\r\\n\\r\\nUnsubscribe: https://removeme.click/wp/unsubscribe.php?d=AMPDC.org\"}', '2024-05-27 13:04:36.045509', '2024-05-27 13:04:36.046466'),
-(345, 1, '{\"date\": \"2024-05-28T12:07:39.506919Z\", \"nome\": \"Mike Jerome\", \"email\": \"mikeChoobe@gmail.com\", \"_token\": \"HYsbe8BhtqpPdJiWZx6xkM9ykoYWLMhEMQ8G32t3\", \"submit\": null, \"contacto\": \"mikeChoobe@gmail.com\", \"mensagem\": \"Hi there \\r\\n \\r\\nJust checked your AMPDC.org baclink profile, I noticed a moderate percentage of toxic links pointing to your website \\r\\n \\r\\nWe will investigate each link for its toxicity and perform a professional clean up for you free of charge. \\r\\n \\r\\nStart recovering your ranks today: \\r\\nhttps://www.hilkom-digital.de/professional-linksprofile-clean-up-service/ \\r\\n \\r\\nRegards \\r\\nMike Jerome\\r\\nHilkom Digital SEO Experts \\r\\nhttps://www.hilkom-digital.de/\"}', '2024-05-28 10:07:39.506919', '2024-05-28 10:07:39.508028'),
-(346, 1, '{\"date\": \"2024-05-30T04:14:08.752165Z\", \"nome\": \"Davidexili\", \"email\": \"lucido.leinteract@gmail.com\", \"_token\": \"nCYBlqcTIs0zCeUwKemQvXiP9P5s3TxKRtQRUgRo\", \"submit\": null, \"contacto\": \"lucido.leinteract@gmail.com\", \"mensagem\": \"Hai, saya ingin tahu harga Anda.\"}', '2024-05-30 02:14:08.752165', '2024-05-30 02:14:08.753385'),
-(347, 1, '{\"date\": \"2024-06-01T00:12:51.873217Z\", \"nome\": \"Robertgrogy\", \"email\": \"inet4747@outlook.com\", \"_token\": \"bDtBB76DJaxMvnhf78vR35TmEaP4yqD710VVkMzK\", \"submit\": null, \"contacto\": \"inet4747@outlook.com\", \"mensagem\": \"In Etsy, Amazon, eBay, Shopify https://pint77.com Pinterest+SEO +II =  high sales results\"}', '2024-05-31 22:12:51.873217', '2024-05-31 22:12:51.874503'),
-(348, 1, '{\"date\": \"2024-06-01T19:09:03.027827Z\", \"nome\": \"Davidexili\", \"email\": \"algebraically.pawlo@gmail.com\", \"_token\": \"cP5FfcYzPoWLetI63SmcAMGOg0elgRz1Q3NjwlbF\", \"submit\": null, \"contacto\": \"algebraically.pawlo@gmail.com\", \"mensagem\": \"Aloha, makemake wau eʻike i kāu kumukūʻai.\"}', '2024-06-01 17:09:03.027827', '2024-06-01 17:09:03.028931'),
-(349, 1, '{\"date\": \"2024-06-01T21:06:17.479930Z\", \"nome\": \"Okeygorandom https://AMPDC.org  6579526\", \"email\": \"phypoveava@list.ru\", \"_token\": \"rO3bNTjsyaJEip6TBZVLAk6jqrRCNvjsu5m1Ft0v\", \"submit\": null, \"contacto\": \"phypoveava@list.ru\", \"mensagem\": \"Alias iRacing Team\"}', '2024-06-01 19:06:17.479930', '2024-06-01 19:06:17.480962'),
-(350, 1, '{\"date\": \"2024-06-02T17:03:25.579435Z\", \"nome\": \"Pillsvieda\", \"email\": \"iunskiygipertonik@gmail.com\", \"_token\": \"hwxVErfJGMB8rQniX5w7k1q9J93hYpFDvwRdxnI1\", \"submit\": null, \"contacto\": \"iunskiygipertonik@gmail.com\", \"mensagem\": \"Erectile dysfunction treatments available online from TruePills. \\r\\nDiscreet, next day delivery and lowest price guarantee. \\r\\n \\r\\nViagra is a well-known, branded and common erectile dysfunction (ED) treatment for men. \\r\\nIt\'s available through our Online TruePills service. \\r\\n \\r\\nTrial ED Pack consists of the following ED drugs: \\r\\n \\r\\nViagra Active Ingredient: Sildenafil 100mg 5 pills \\r\\nCialis 20mg 5 pills \\r\\nLevitra 20mg 5 pills \\r\\n \\r\\nhttps://true-pill.top/ \\r\\n \\r\\nFluox\\r\\nEquiflox\\r\\nNolarmin\\r\\nNoperten\\r\\nInteban\\r\\nOme-ppi\\r\\nDexamytrex\\r\\nDuokliman\\r\\nTacko-m\\r\\nDentron\\r\\nSecuron\\r\\nHerpin\\r\\nPhysma\\r\\nPelmec\\r\\nEpanutin\\r\\nAciclostad\\r\\nNorflox\\r\\nClopact\\r\\nAllertyn\\r\\nAnalept\\r\\nTegretard\\r\\nActebral\\r\\nRetigel\\r\\nZentavion\\r\\nBeglaryl\\r\\nKefungin\\r\\nTerbasil\\r\\nVibravenosa\\r\\nMepid\\r\\nMaxan\\r\\nHasitec\\r\\nAloperidin\\r\\nFluconamerck\\r\\nFlumazenil\\r\\nBetadur\\r\\nMelocalm\\r\\nRopinirole\\r\\nInfekor\\r\\nFruside\\r\\nLoosyn\"}', '2024-06-02 15:03:25.579435', '2024-06-02 15:03:25.580542'),
-(351, 1, '{\"date\": \"2024-06-03T11:42:24.386094Z\", \"nome\": \"Mike Fraser\", \"email\": \"petervemUselt@gmail.com\", \"_token\": \"FHdosEW3gUmby8BWuko7ZtEDW69ugu9xUIo0C20O\", \"submit\": null, \"contacto\": \"petervemUselt@gmail.com\", \"mensagem\": \"Good Day \\r\\n \\r\\nI have just checked  AMPDC.org for  the current search visibility and saw that your website could use a push. \\r\\n \\r\\nWe will increase your ranks organically and safely, using only state of the art AI and whitehat methods, while providing monthly reports and outstanding support. \\r\\n \\r\\nMore info: \\r\\nhttps://www.digital-x-press.com/unbeatable-seo/ \\r\\n \\r\\nRegards \\r\\nMike Fraser\\r\\n \\r\\nDigital X SEO Experts \\r\\nhttps://www.digital-x-press.com/whatsapp-us/\"}', '2024-06-03 09:42:24.386094', '2024-06-03 09:42:24.387369'),
-(352, 1, '{\"date\": \"2024-06-05T16:13:14.049179Z\", \"nome\": \"Bennie\", \"email\": \"hinton.bennie@hotmail.com\", \"_token\": \"apcvPE66MOFbLXj4PPjxU3PGsrkT5tG4KiEG9SyH\", \"contacto\": null, \"mensagem\": \"Dear Sir/Madam\\r\\n\\r\\nThis will substantially impact your page rank, the more directories your company is listed \\r\\n\\r\\nin, locally or globally, the greater your back links you have and the better you rank in Bing - Yahoo - \\r\\n\\r\\nGoogle.\\r\\n\\r\\nIt has never been simpler to promote your website\\r\\n\\r\\nJust a few inputs and our program willl do the rest. No more fretting about email verification - manual link building or CAPTCHAs.\\r\\n\\r\\nWe\'ve automed all that we possibly could to make submitting your online property a \\r\\n\\r\\nbreeze.\\r\\n\\r\\nSee your website on the first page.\\r\\n\\r\\nWe will submit your online property to numerous directories and give you a detailed \\r\\n\\r\\nreport on the status of each listing. Although we have automated the submission process to \\r\\n\\r\\na large extent, some of the listings may require manual action which could cause a slight \\r\\n\\r\\ndelay.\\r\\n\\r\\nMaking your life better\\r\\n\\r\\nCompanyRegistar.com\"}', '2024-06-05 14:13:14.049179', '2024-06-05 14:13:14.050272'),
-(353, 1, '{\"date\": \"2024-06-06T17:36:24.991308Z\", \"nome\": \"Elizabet\", \"email\": \"briones.elizabet@gmail.com\", \"_token\": \"h5OCplB3GKYitcOvDuCTRSnGEQghrOR5jWnqplhh\", \"contacto\": null, \"mensagem\": \"You can have Easy Access to UK, USA and Canada Business Loans Find out more\\r\\n\\r\\nhttps://www.goldminds.cloud/usa-and-canada-loans/\"}', '2024-06-06 15:36:24.991308', '2024-06-06 15:36:24.992205'),
-(354, 1, '{\"date\": \"2024-06-06T19:39:12.923056Z\", \"nome\": \"WilliamErrOk\", \"email\": \"marina-kovalyova-1997@bk.ru\", \"_token\": \"fyRbg41acNuxdcxrC92oh2jL6nmXUQ6BYOrE0dER\", \"submit\": null, \"contacto\": \"marina-kovalyova-1997@bk.ru\", \"mensagem\": \"Why a rare image of one of Malaysia’s last tigers is giving conservationists hope \\r\\n[url=https://m333ga.at]mega555net com[/url] \\r\\nEmmanuel Rondeau has photographed tigers across Asia for the past decade, from the remotest recesses of Siberia to the pristine valleys of Bhutan. But when he set out to photograph the tigers in the ancient rainforests of Malaysia, he had his doubts. \\r\\n \\r\\n“We were really not sure that this was going to work,” says the French wildlife photographer. That’s because the country has just 150 tigers left, hidden across tens of thousands of square kilometers of dense rainforest. \\r\\n \\r\\nhttps://m333ga.at \\r\\nmega555netX.com \\r\\n \\r\\n“Tiger numbers in Malaysia have been going down, down, down, at an alarming rate,” says Rondeau. In the 1950s, Malaysia had around 3,000 tigers, but a combination of habitat loss, a decline in prey, and poaching decimated the population. By 2010, there were just 500 left, according to WWF, and the number has continued to fall. \\r\\n \\r\\nThe Malayan tiger is a subspecies native to Peninsular Malaysia, and it’s the smallest of the tiger subspecies in Southeast Asia. \\r\\n \\r\\n“We are in this moment where, if things suddenly go bad, in five years the Malayan tiger could be a figure of the past, and it goes into the history books,” Rondeau adds. \\r\\n \\r\\nDetermined not to let that happen, Rondeau joined forces with WWF-Malaysia last year to profile the elusive big cat and put a face to the nation’s conservation work. \\r\\n \\r\\nIt took 12 weeks of preparations, eight cameras, 300 pounds of equipment, five months of patient photography and countless miles trekked through the 117,500-hectare Royal Belum State Park… but finally, in November, Rondeau got the shot that he hopes can inspire the next generation of conservationists. \\r\\n \\r\\nhttps://mega555m3ga.org \\r\\nmega555kf7lsmb54yd6etzginolhxxi4ytdoma2rf77ngq55fhfcnyid \\r\\n \\r\\n“This image is the last image of the Malayan tiger — or it’s the first image of the return of the Malayan tiger,” he says.\"}', '2024-06-06 17:39:12.923056', '2024-06-06 17:39:12.923880'),
-(355, 1, '{\"date\": \"2024-06-12T22:20:32.142125Z\", \"nome\": \"Mike Crossman\", \"email\": \"mikeChoobe@gmail.com\", \"_token\": \"8H1IJuZ0efw61kU95widBnHUXQg7Io7XKrXEEwCK\", \"submit\": null, \"contacto\": \"mikeChoobe@gmail.com\", \"mensagem\": \"Greetings \\r\\n \\r\\nThis is Mike Crossman\\r\\n \\r\\nLet me introduce to you our latest research results from our constant SEO feedbacks that we have from our plans: \\r\\n \\r\\nThe new Semrush Backlinks, which will make your AMPDC.org SEO trend have an immediate push. \\r\\nThe method is actually very simple, we are building links from domains that have a high number of keywords ranking for them.  \\r\\n \\r\\nForget about the SEO metrics or any other factors that so many tools try to teach you that is good. The most valuable link is the one that comes from a website that has a healthy trend and lots of ranking keywords. \\r\\nWe thought about that, so we have built this plan for you \\r\\n \\r\\nCheck in detail here: \\r\\nhttps://www.strictlydigital.co/semrush-backlinks/ \\r\\n \\r\\nCheap and effective \\r\\nTry it anytime soon \\r\\n \\r\\nRegards \\r\\nMike Crossman\\r\\n https://www.strictlydigital.co/whatsapp-us/\"}', '2024-06-12 20:20:32.142125', '2024-06-12 20:20:32.142893'),
-(356, 1, '{\"date\": \"2024-06-13T09:18:40.422321Z\", \"nome\": \"Mike Farrell\", \"email\": \"mikevemUselt@gmail.com\", \"_token\": \"tnyMZ6FfwvBzdp1w2AuKK88N3WrMDHlSvtnR5J31\", \"submit\": null, \"contacto\": \"mikevemUselt@gmail.com\", \"mensagem\": \"Hi there, \\r\\n \\r\\nMy name is Mike from Monkey Digital, \\r\\n \\r\\nAllow me to present to you a lifetime revenue opportunity of 35% \\r\\nThat\'s right, you can earn 35% of every order made by your affiliate for life. \\r\\n \\r\\nSimply register with us, generate your affiliate links, and incorporate them on your website, and you are done. It takes only 5 minutes to set up everything, and the payouts are sent each month. \\r\\n \\r\\nClick here to enroll with us today: \\r\\nhttps://www.monkeydigital.co/join-affiliates/ \\r\\n \\r\\nThink about it, \\r\\nEvery website owner requires the use of search engine optimization (SEO) for their website. This endeavor holds significant potential for both parties involved. \\r\\n \\r\\nThanks and regards \\r\\nMike Farrell\\r\\n \\r\\nMonkey Digital \\r\\nhttps://www.monkeydigital.co/whatsapp-affiliates/\"}', '2024-06-13 07:18:40.422321', '2024-06-13 07:18:40.423612'),
-(357, 1, '{\"date\": \"2024-06-16T05:58:54.981606Z\", \"nome\": \"Phil\", \"email\": \"noreplyhere@aol.com\", \"_token\": \"JAmAqYhP1Jvw7926Y45K0rrzcSZnmvgYyQLw2b4n\", \"contacto\": null, \"mensagem\": \"Hey, looking to boost your ad game? Picture your message hitting website contact forms worldwide, grabbing attention from potential customers everywhere! Starting at just under a hundred bucks my budget-friendly packages are designed to make an impact. Drop me an email now to discuss how you can get more leads and sales now!\\r\\n\\r\\nPhil Stewart\\r\\nEmail: qedadq@submitmaster.xyz\\r\\nSkype: form-blasting\"}', '2024-06-16 03:58:54.981606', '2024-06-16 03:58:54.983035'),
-(358, 1, '{\"date\": \"2024-06-16T15:57:40.209583Z\", \"nome\": \"Masonexili\", \"email\": \"yjdisantoyjdissemin@gmail.com\", \"_token\": \"J9Ef1mnkbZL1RJBlxI9k1P8c5xhiQhlFTzwX7Zfr\", \"submit\": null, \"contacto\": \"yjdisantoyjdissemin@gmail.com\", \"mensagem\": \"Hi, I wanted to know your price.\"}', '2024-06-16 13:57:40.209583', '2024-06-16 13:57:40.210647'),
-(359, 1, '{\"date\": \"2024-06-17T09:08:20.363309Z\", \"nome\": \"Masonexili\", \"email\": \"alden.provitt773@gmail.com\", \"_token\": \"vjZXjCcgVHcE1pRXqtXkEnc0iP6xuQiFkZ987698\", \"submit\": null, \"contacto\": \"alden.provitt773@gmail.com\", \"mensagem\": \"Прывітанне, я хацеў даведацца Ваш прайс.\"}', '2024-06-17 07:08:20.363309', '2024-06-17 07:08:20.364438'),
-(360, 1, '{\"date\": \"2024-06-17T09:57:53.803971Z\", \"nome\": \"Emily\", \"email\": \"emilyjones2250@gmail.com\", \"_token\": \"itP3TFzMEfoOunPF33swNJxHYXkyQ9TbzR1o0lnN\", \"contacto\": null, \"mensagem\": \"Hi there,\\r\\n\\r\\nWe run a YouTube growth service, which increases your number of subscribers both safely and practically. \\r\\n\\r\\n- We guarantee to gain you 700-1500+ subscribers per month.\\r\\n- People subscribe because they are interested in your channel/videos, increasing likes, comments and interaction.\\r\\n- All actions are made manually by our team. We do not use any \'bots\'.\\r\\n\\r\\nThe price is just $60 (USD) per month, and we can start immediately.\\r\\n\\r\\nIf you have any questions, let me know, and we can discuss further.\\r\\n\\r\\nKind Regards,\\r\\nEmily\"}', '2024-06-17 07:57:53.803971', '2024-06-17 07:57:53.805021'),
-(361, 1, '{\"date\": \"2024-06-18T00:00:41.740631Z\", \"nome\": \"Mike Stephen\", \"email\": \"mikevemUselt@gmail.com\", \"_token\": \"8NUC8yJHcJ3JJZPrtyrPJlfowcdIOvXI16kjjMcj\", \"submit\": null, \"contacto\": \"mikevemUselt@gmail.com\", \"mensagem\": \"Hi there, \\r\\n \\r\\nI have reviewed your domain in MOZ and have observed that you may benefit from an increase in authority. \\r\\n \\r\\nOur solution guarantees you a high-quality domain authority score within a period of three months. This will increase your organic visibility and strengthen your website authority, thus making it stronger against Google updates. \\r\\n \\r\\nCheck out our deals for more details. \\r\\nhttps://www.monkeydigital.co/domain-authority-plan/ \\r\\n \\r\\n \\r\\nThanks and regards \\r\\nMike Stephen\\r\\n \\r\\nMonkey Digital \\r\\nhttps://www.monkeydigital.co/whatsapp-us/\"}', '2024-06-17 22:00:41.740631', '2024-06-17 22:00:41.741569'),
-(362, 1, '{\"date\": \"2024-06-18T02:53:46.867075Z\", \"nome\": \"Mike Jackson\", \"email\": \"mikevemUselt@gmail.com\", \"_token\": \"fkUNLi0O0oTEo6JPsCsesgVRqBtvF9ibcqzpL6fq\", \"submit\": null, \"contacto\": \"mikevemUselt@gmail.com\", \"mensagem\": \"This service is perfect for boosting your local business\' visibility on the map in a specific location. \\r\\n \\r\\nWe provide Google Maps listing management, optimization, and promotion services that cover everything needed to rank in the Google 3-Pack. \\r\\n \\r\\nMore info: \\r\\nhttps://www.speed-seo.co/ranking-in-the-maps-means-sales/ \\r\\n \\r\\nThanks and Regards \\r\\nMike Jackson\\r\\n \\r\\nhttps://www.speed-seo.co/whatsapp-us/\"}', '2024-06-18 00:53:46.867075', '2024-06-18 00:53:46.868154'),
-(363, 1, '{\"date\": \"2024-06-18T07:13:24.376210Z\", \"nome\": \"Mike Larkins\", \"email\": \"mikevemUselt@gmail.com\", \"_token\": \"JeWoCwsp1Na38M8ixFkr0TtO749gIY5797hgav00\", \"submit\": null, \"contacto\": \"mikevemUselt@gmail.com\", \"mensagem\": \"Hi there, \\r\\n \\r\\nI have reviewed your domain in MOZ and have observed that you may benefit from an increase in authority. \\r\\n \\r\\nOur solution guarantees you a high-quality domain authority score within a period of three months. This will increase your organic visibility and strengthen your website authority, thus making it stronger against Google updates. \\r\\n \\r\\nCheck out our deals for more details. \\r\\nhttps://www.monkeydigital.co/domain-authority-plan/ \\r\\n \\r\\n \\r\\nThanks and regards \\r\\nMike Larkins\\r\\n \\r\\nMonkey Digital \\r\\nhttps://www.monkeydigital.co/whatsapp-us/\"}', '2024-06-18 05:13:24.376210', '2024-06-18 05:13:24.377599'),
-(364, 1, '{\"date\": \"2024-06-19T15:37:50.262478Z\", \"nome\": \"Luis Alves\", \"email\": \"intl.law7@aol.com\", \"_token\": \"X0BDpc6LtjIRdJHTnie7UDuoLM3DpyDzER21Kvky\", \"submit\": null, \"contacto\": \"intl.law7@aol.com\", \"mensagem\": \"Greeting. \\r\\nI hope this message will interest you, giving the unconventional opportunity it conveys. \\r\\nI’m a Private Investment Consultant sourcing and connecting business managers with Capitalists. \\r\\nI’m mandated by an Offshore Investment Company acting as proxy for Wealthy Oligarchs. \\r\\nIf you have a viable business seeking for quick Loan or Funding Partners, I have a rare opportunity for you. \\r\\nPlease reach out to me, through this following email  alveslus011@gmail.com if you need further details about the funding scheme. \\r\\nIgnore if not interested. \\r\\nRegards, \\r\\nLuis Alves \\r\\nLegal | Consultant | Contractor. \\r\\nE-mail: alveslus011@gmail.com\"}', '2024-06-19 13:37:50.262478', '2024-06-19 13:37:50.263726'),
-(365, 1, '{\"date\": \"2024-06-21T09:08:48.532202Z\", \"nome\": \"Joanna\", \"email\": \"joannariggs278@gmail.com\", \"_token\": \"Eo1IsNLaWbJgciilurRMdCv1rDytO1uujU70PBoJ\", \"contacto\": null, \"mensagem\": \"Hi,\\r\\n\\r\\nI just visited AMPDC.org and wondered if you\'d ever thought about having an engaging video to explain what you do?\\r\\n\\r\\nOur prices start from just $195.\\r\\n\\r\\nLet me know if you\'re interested in seeing samples of our previous work.\\r\\n\\r\\nRegards,\\r\\nJoanna\\r\\n\\r\\nUnsubscribe: https://removeme.click/ev/unsubscribe.php?d=AMPDC.org\"}', '2024-06-21 07:08:48.532202', '2024-06-21 07:08:48.533384'),
-(366, 1, '{\"date\": \"2024-06-22T23:48:27.007499Z\", \"nome\": \"Emily\", \"email\": \"emilyjones2250@gmail.com\", \"_token\": \"A0V3HsOSpv7Z4eLNvaIh2FIAOjTruyLfEvslnKB4\", \"contacto\": null, \"mensagem\": \"Hi there,\\r\\n\\r\\nWe run a YouTube growth service, which increases your number of subscribers both safely and practically. \\r\\n\\r\\n- We guarantee to gain you 700-1500+ subscribers per month.\\r\\n- People subscribe because they are interested in your channel/videos, increasing likes, comments and interaction.\\r\\n- All actions are made manually by our team. We do not use any \'bots\'.\\r\\n\\r\\nThe price is just $60 (USD) per month, and we can start immediately.\\r\\n\\r\\nIf you have any questions, let me know, and we can discuss further.\\r\\n\\r\\nKind Regards,\\r\\nEmily\\r\\n\\r\\nUnsubscribe: https://removeme.click/yt/unsubscribe.php?d=AMPDC.org\"}', '2024-06-22 21:48:27.007499', '2024-06-22 21:48:27.008749'),
-(367, 1, '{\"date\": \"2024-06-23T14:26:02.990154Z\", \"nome\": \"WilliamErrOk\", \"email\": \"marina-kovalyova-1997@bk.ru\", \"_token\": \"twVD8Kre8VOc37Ihb8rC5le4YWj5DczuYTLJROsJ\", \"submit\": null, \"contacto\": \"marina-kovalyova-1997@bk.ru\", \"mensagem\": \"Why a rare image of one of Malaysia’s last tigers is giving conservationists hope \\r\\n[url=https://mega555m3ga.net]mega555[/url] \\r\\nEmmanuel Rondeau has photographed tigers across Asia for the past decade, from the remotest recesses of Siberia to the pristine valleys of Bhutan. But when he set out to photograph the tigers in the ancient rainforests of Malaysia, he had his doubts. \\r\\n \\r\\n“We were really not sure that this was going to work,” says the French wildlife photographer. That’s because the country has just 150 tigers left, hidden across tens of thousands of square kilometers of dense rainforest. \\r\\n \\r\\nhttps://mega555darknet9.com \\r\\nmega555kf7lsmb54yd6etzginolhxxi4ytdoma2rf77ngq55fhfcnyid.onion \\r\\n \\r\\n“Tiger numbers in Malaysia have been going down, down, down, at an alarming rate,” says Rondeau. In the 1950s, Malaysia had around 3,000 tigers, but a combination of habitat loss, a decline in prey, and poaching decimated the population. By 2010, there were just 500 left, according to WWF, and the number has continued to fall. \\r\\n \\r\\nThe Malayan tiger is a subspecies native to Peninsular Malaysia, and it’s the smallest of the tiger subspecies in Southeast Asia. \\r\\n \\r\\n“We are in this moment where, if things suddenly go bad, in five years the Malayan tiger could be a figure of the past, and it goes into the history books,” Rondeau adds. \\r\\n \\r\\nDetermined not to let that happen, Rondeau joined forces with WWF-Malaysia last year to profile the elusive big cat and put a face to the nation’s conservation work. \\r\\n \\r\\nIt took 12 weeks of preparations, eight cameras, 300 pounds of equipment, five months of patient photography and countless miles trekked through the 117,500-hectare Royal Belum State Park… but finally, in November, Rondeau got the shot that he hopes can inspire the next generation of conservationists. \\r\\n \\r\\nhttps://mega555drknet.com \\r\\nMEGA onion \\r\\n \\r\\n“This image is the last image of the Malayan tiger — or it’s the first image of the return of the Malayan tiger,” he says.\"}', '2024-06-23 12:26:02.990154', '2024-06-23 12:26:02.991044'),
-(368, 1, '{\"date\": \"2024-06-24T06:14:18.527854Z\", \"nome\": \"Caren\", \"email\": \"carenarmstrong@foxmail.com\", \"_token\": \"lBvmEBI585pntUpi9aQKBgV8Tt50mAWaeSPvNXdj\", \"contacto\": null, \"mensagem\": \"World\'s Best Neck Massager Get it Now 50% OFF + Free Shipping!\\r\\n\\r\\nWellness Enthusiasts! There has never been a better time to take care of your neck pain! \\r\\nOur clinical-grade TENS technology will ensure you have neck relief in as little as 20 minutes.\\r\\n\\r\\nGet Yours: https://hineck.co\\r\\n\\r\\nThe Best,\\r\\n\\r\\nCaren\\r\\nContacte-nos\"}', '2024-06-24 04:14:18.527854', '2024-06-24 04:14:18.528843'),
-(369, 1, '{\"date\": \"2024-06-25T11:38:51.627419Z\", \"nome\": \"Masonexili\", \"email\": \"yjdisantoyjdissemin@gmail.com\", \"_token\": \"kk1BFB2P7NPTrmDh4nqmY47kAKHXE9XOvbqEMnEV\", \"submit\": null, \"contacto\": \"yjdisantoyjdissemin@gmail.com\", \"mensagem\": \"Hai, saya ingin tahu harga Anda.\"}', '2024-06-25 09:38:51.627419', '2024-06-25 09:38:51.628403'),
-(370, 1, '{\"date\": \"2024-06-25T18:10:20.730340Z\", \"nome\": \"Mike Finch\", \"email\": \"mikevemUselt@gmail.com\", \"_token\": \"DjSIzSUgGny797FIL7Vnu4mfFMVUg7fYQd9Nba69\", \"submit\": null, \"contacto\": \"mikevemUselt@gmail.com\", \"mensagem\": \"Hi there \\r\\n \\r\\nJust checked your AMPDC.org baclink profile, I noticed a moderate percentage of toxic links pointing to your website \\r\\n \\r\\nWe will investigate each link for its toxicity and perform a professional clean up for you free of charge. \\r\\n \\r\\nStart recovering your ranks today: \\r\\nhttps://www.badlinkscleanup.com/ \\r\\n \\r\\n \\r\\nRegards \\r\\nMike Finch\\r\\n \\r\\nDigital SEO Experts \\r\\nhttps://www.badlinkscleanup.com/whatsapp-us/\"}', '2024-06-25 16:10:20.730340', '2024-06-25 16:10:20.732183'),
-(371, 1, '{\"date\": \"2024-06-26T11:11:27.260251Z\", \"nome\": \"Gertie\", \"email\": \"hindley.gertie@gmail.com\", \"_token\": \"1Yxsr7Npvq8r5ZUjDeL36hSzVavC2EZmCRLvLD0H\", \"contacto\": null, \"mensagem\": \"Are you looking for a capable financial company to fund your business project?\\r\\n\\r\\nwe are here to provide you with the best solution for your business growth. we provide the  most suitable business loan package to meet your need.                           \\r\\nemail me here.                                                                                             \\r\\ninfo@financeworldwidehk.com                                                                                             \\r\\n                                                                                              \\r\\n                                                                                          \\r\\n                                      \\r\\n                                      \\r\\nBest regards,\\r\\nLaura Cha.\\r\\nCustomer Service Representative\"}', '2024-06-26 09:11:27.260251', '2024-06-26 09:11:27.261990'),
-(372, 1, '{\"date\": \"2024-06-27T02:10:13.806747Z\", \"nome\": \"Violet\", \"email\": \"violet.goderich@gmail.com\", \"_token\": \"El6Ot1590J5aQbxhjQ8Z1FgTaT0n8a5Fga1LAAXA\", \"contacto\": null, \"mensagem\": \"Work From Home With This...You Will Never Look Back\\r\\n$500+ per day, 100% Free Training, go here:\\r\\n\\r\\nezwayto1000aday.com\"}', '2024-06-27 00:10:13.806747', '2024-06-27 00:10:13.807691');
-INSERT INTO `form_submissions` (`id`, `form_id`, `data`, `created_at`, `updated_at`) VALUES
-(373, 1, '{\"date\": \"2024-06-28T18:43:56.979908Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"leBnsP2d6eRobiRMPmptZuGu8LvjKwEDEtT5r58Q\", \"contacto\": null, \"mensagem\": \"Hi AMPDC.org Administrator.\\r\\n\\r\\nMy name’s Eric and I just came across your website - AMPDC.org - in the search results.\\r\\n\\r\\nHere’s what that means to me…\\r\\n\\r\\nYour SEO’s working.\\r\\n\\r\\nYou’re getting eyeballs – mine at least.\\r\\n\\r\\nYour content’s pretty good, wouldn’t change a thing.\\r\\n\\r\\nBUT…\\r\\n\\r\\nEyeballs don’t pay the bills.\\r\\n\\r\\nCUSTOMERS do.\\r\\n\\r\\nAnd studies show that 7 out of 10 visitors to a site like AMPDC.org will drop by, take a gander, and then head for the hills without doing anything else.\\r\\n\\r\\nIt’s like they never were even there.\\r\\n\\r\\nYou can fix this.\\r\\n\\r\\nYou can make it super-simple for them to raise their hand, say, okay, let’s talk without requiring them to even pull their cell phone from their pocket… thanks to Web Visitors Into Leads.\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that sits on your site, ready and waiting to capture any visitor’s Name, Email address and Phone Number.  It lets you know immediately – so you can talk to that lead immediately… without delay… BEFORE they head for those hills.\\r\\n  \\r\\nCLICK HERE https://rushleadgeneration.com to try out a Live Demo with Web Visitors Into Leads now to see exactly how it works.\\r\\n\\r\\nNow it’s also true that when reaching out to hot leads, you MUST act fast – the difference between contacting someone within 5 minutes versus 30 minutes later is huge – like 100 times better!\\r\\n\\r\\nThat’s what makes our new SMS Text With Lead feature so powerful… you’ve got their phone number, so now you can start a text message (SMS) conversation with them… so even if they don’t take you up on your offer right away, you continue to text them new offers, new content, and new reasons to do business with you.\\r\\n\\r\\nThis could change everything for you and your business.\\r\\n\\r\\nCLICK HERE https://rushleadgeneration.com to learn more about everything Web Visitors Into Leads can do and start turing eyeballs into money.\\r\\n\\r\\nEric\\r\\nPS: Web Visitors Into Leads offers a FREE 14 days trial – you could be converting up to 100x more leads immediately!   \\r\\nIt even includes International Long Distance Calling. \\r\\nPaying customers are out there waiting. \\r\\nStarting connecting today by CLICKING HERE https://rushleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe click https://rushleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-06-28 16:43:56.979908', '2024-06-28 16:43:56.980940'),
-(374, 1, '{\"date\": \"2024-06-29T16:47:39.626076Z\", \"nome\": \"Felicitas\", \"email\": \"felicitas.venables@yahoo.com\", \"_token\": \"fPBkBS0whSGDlyFtHVmz5neywxH9V90YfDDJt79l\", \"contacto\": null, \"mensagem\": \"Looking for a Great Job? \\r\\n75% of resumes aren’t even seen by hiring managers!  \\r\\n \\r\\nIs your resume keyword rich and ATS ready? \\r\\n \\r\\nFind out with our FREE consultation with a certified, trained resume writing. \\r\\nSend your resume to resumes@razoredgeresumes.com to make sure you are not missing out!\\r\\n  \\r\\nSend your resume now and we will reach out to you to speak at your convenience.\\r\\n\\r\\nQuick and easy. Start today!\"}', '2024-06-29 14:47:39.626076', '2024-06-29 14:47:39.627331'),
-(375, 1, '{\"date\": \"2024-06-29T21:47:21.518376Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"u7EhQ6LQJC7wuIa6ehH9TrVpSLQ9iirMlEyHAIpB\", \"contacto\": null, \"mensagem\": \"Hello AMPDC.org Admin. my name is Eric and I’m betting you’d like your website AMPDC.org to generate more leads.\\r\\n\\r\\nHere’s how:\\r\\nWeb Visitors Into Leads is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  It signals you as soon as they say they’re interested – so that you can talk to that lead while they’re still there at AMPDC.org.\\r\\n\\r\\nWeb Visitors Into Leads – CLICK HERE https://blazeleadgeneration.com for a live demo now.\\r\\n\\r\\nAnd now that you’ve got their phone number, our new SMS Text With Lead feature enables you to start a text (SMS) conversation – answer questions, provide more info, and close a deal that way.\\r\\n\\r\\nIf they don’t take you up on your offer then, just follow up with text messages for new offers, content links, even just how you doing? notes to build a relationship.\\r\\n\\r\\nCLICK HERE https://blazeleadgeneration.com to discover what Web Visitors Into Leads can do for your business.\\r\\n\\r\\nThe difference between contacting someone within 5 minutes versus a half-hour means you could be converting up to 100X more leads today!\\r\\n\\r\\nTry Web Visitors Into Leads and get more leads now.\\r\\n\\r\\nEric\\r\\nPS: The studies show 7 out of 10 visitors don’t hang around – you can’t afford to lose them!\\r\\nWeb Visitors Into Leads offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://blazeleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://blazeleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-06-29 19:47:21.518376', '2024-06-29 19:47:21.519769'),
-(376, 1, '{\"date\": \"2024-06-30T11:05:01.503469Z\", \"nome\": \"Marita\", \"email\": \"leedom.marita@yahoo.com\", \"_token\": \"xFdqGRFiTKAlmqcvvRlUYPPqNtkOU43cYSCiHkOV\", \"contacto\": null, \"mensagem\": \"Dear AMPDC.org Manager.\\r\\n\\r\\nMy name is Marita and, unlike numerous emails you could get, I wish to rather provide you with a word of kudos – Congratulations!\\r\\n\\r\\nWhat for?\\r\\n\\r\\nPart of my job is to inspect websites and the work you’ve done with AMPDC.org definitely stands out. \\r\\n\\r\\nIt’s clear you took building a website seriously and made a genuine investment of energy into making it top quality.\\r\\n\\r\\nHowever, there is, indeed, a question… more accurately, a question…\\r\\n\\r\\nSo, when someone such as me stumbles upon your site – maybe at the top of the search results (great job by the way) or just through a random link, how do you know?\\r\\n\\r\\nMoreover, how do you make a bond with that person?\\r\\n\\r\\nStudies reveal that 7 out of 10 visitors depart – they’re there one second and then vanished.\\r\\n\\r\\nI have a way to create INSTANT engagement that you might not have known about…\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that’s operates on your site, prepared to capture any visitor’s Name, Email address, and Phone Number. It allows you know IMMEDIATELY that they’re interested – so that you can chat to that lead while they’re literally browsing AMPDC.org.\\r\\n\\r\\nCLICK HERE https://turboleadgeneration.com to experience a Live Demo with Lead Capture now to see specifically how it works.\\r\\n\\r\\nIt can be a revolutionary change for your business – and it gets even better… once you’ve captured their phone number, with our new SMS Text With Lead feature, you can automatically start a text (SMS) conversation – right away (and there’s actually a 100X difference between contacting someone within 5 minutes versus 30 minutes.)\\r\\n\\r\\nPlus then, even if you don’t close a deal right away, you can follow up later on with text messages for new offers, content links, even just follow-up notes to build a relationship.\\r\\n\\r\\nAll I’ve just described is straightforward, convenient, and productive.\\r\\n\\r\\nCLICK HERE https://turboleadgeneration.com to learn what Instant Engagement Tool can do for your business.\\r\\n\\r\\nYou can be converting up to 100X more leads today!\\r\\n\\r\\nMarita\\r\\nPS: Instant Engagement Tool offers a FREE 14 days trial – and it even includes International Long Distance Calling.\\r\\nYou have customers ready to talk with you right now… don’t keep them waiting.\\r\\nCLICK HERE https://turboleadgeneration.com to try Instant Engagement Tool now.\\r\\n\\r\\nIf you\'d choose to unsubscribe click here https://turboleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\\r\\n\\r\\nJust a rapid note - the identities and email address utilized in this note, Marita and Leedom, are stand-ins and not really authentic contact information. We cherish openness and aimed to ensure you are aware of this! If you wish to make contact with the real one behind this memo, do check out our website, and we’ll connect you with the appropriate entity.\"}', '2024-06-30 09:05:01.503469', '2024-06-30 09:05:01.506116'),
-(377, 1, '{\"date\": \"2024-06-30T14:06:40.132279Z\", \"nome\": \"Davidexili\", \"email\": \"kayleighbpsteamship@gmail.com\", \"_token\": \"QmBGZI4VdCHr5E6KPE61GyxPxf97s0GHrBBYSuyv\", \"submit\": null, \"contacto\": \"kayleighbpsteamship@gmail.com\", \"mensagem\": \"হাই, আমি আপনার মূল্য জানতে চেয়েছিলাম.\"}', '2024-06-30 12:06:40.132279', '2024-06-30 12:06:40.133110'),
-(378, 1, '{\"date\": \"2024-06-30T16:54:08.683401Z\", \"nome\": \"Meredith\", \"email\": \"meredith.emery@gmail.com\", \"_token\": \"1VXmalerRAmCFFgNbJ64rwqeblzUEOyJyOFHUBN5\", \"contacto\": null, \"mensagem\": \"Dear to AMPDC.org Owner! I have just discovered your website, brief inquiry…\\r\\n\\r\\nMy name is Meredith, I located AMPDC.org post conducting a brief searching – your site popped up close to the peak of the search rankings, so anything you’re working on for SEO, appears like it’s operating well.\\r\\n\\r\\nSo here is my query – what happens AFTER somebody lands on your website? Anything whatsoever?\\r\\n\\r\\nStudies informs us at least 70% of the individuals who discover your website, post a swift look-over, they vanish… for good.\\r\\n\\r\\nThis implies that all the work and attempt you put into getting them to show up, goes the tubes.\\r\\n\\r\\nWhy would you want all of that good work and effort – and the excellent site you’ve created – go to waste away?\\r\\n\\r\\nAs the probabilities are they’ll just skip calling up or even pulling out their phone, leaving you high and dry.\\r\\n\\r\\nHowever, here is a thought… what if you could make it very simple for someone to raise hand, say, “okay, let’s talk about it” without needing them to even pull out their phone from their pocket to innovative new software can literally make that first call happen NOW.\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that sits on your site, ready and waiting capture any visitor’s. It lets you know – so that you can talk to that lead while they’re still at your site, you know, strike the iron’s hot!\\r\\n\\r\\nCLICK HERE https://advanceleadgeneration.com to try a Live Demo with Web Visitors Into Leads now to see exactly how it works targeting leads, you HAVE to act – the difference contacting within minutes versus 30 minutes later is huge 100 times better!\\r\\n\\r\\nThat’s you should check our new SMS Text With Lead feature… once captured the phone number of the website visitor, you can automatically kick off a text message (SMS) conversation with them.\\r\\n\\r\\nImagine powerful this could be – even if they don’t you up on your offer, you can stay touch with them using messages to make offers, provide links to great content, and build credibility, just this alone be a game changer to make website even more effective, strike when the iron’s hot!\\r\\n\\r\\nCLICK HERE https://advanceleadgeneration.com to learn about everything Visitors Into Leads can do your business – you’ll be amazed, thanks and keep up the great work!\\r\\n\\r\\nMeredith\\r\\nPS: Web Visitors Into Leads offers FREE 14 days – you could converting up to 100x more leads immediately! It even includes Long Distance Calling wasting money chasing that don’t into paying. CLICK HERE https://advanceleadgeneration.com to try Web Visitors Into Leads.\\r\\n\\r\\nNow, if you\'d like to unsubscribe click here https://advanceleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\\r\\n\\r\\nJust quick note - the names used here, are placeholders real contact information. We value and wanted make you’re aware! If you wish get touch with the real behind message visit website we’ll connect with the right individual\"}', '2024-06-30 14:54:08.683401', '2024-06-30 14:54:08.684340'),
-(379, 1, '{\"date\": \"2024-07-01T00:38:11.549257Z\", \"nome\": \"Williebella\", \"email\": \"golubevaevelina19908114@list.ru\", \"_token\": \"yzdudWlrjVVuNFbbRiPMrdBZqmaVz4guZgudeaPe\", \"submit\": null, \"contacto\": \"golubevaevelina19908114@list.ru\", \"mensagem\": \"A fairly new player in the Russian darknet arena,  [url=https://bs-gl-darknet.com]blacksprut[/url] Blacksprut has quickly gained attention for its interesting features and growing popularity. While some aspects raise questions, it has the potential to become a prominent figure in the darknet scene. \\r\\nFeatures: \\r\\n \\r\\nBlacksprut https://bs-gl-darknet.com offers an \\\"Instant Transactions\\\" feature, inspired by the success of similar systems on other platforms like Hydra. Couriers hide goods within the city and provide buyers with coordinates, adding an adventurous element to the purchasing process.\"}', '2024-06-30 22:38:11.549257', '2024-06-30 22:38:11.550178'),
-(380, 1, '{\"date\": \"2024-07-01T04:49:44.800103Z\", \"nome\": \"Tobiastrofs\", \"email\": \"no.reply.EnzoNilsson@gmail.com\", \"_token\": \"OiRdjdssXfAgbxm70jOWDakGffgrDnWbZAu6yPm3\", \"submit\": null, \"contacto\": \"no.reply.EnzoNilsson@gmail.com\", \"mensagem\": \"Hi-ya! \\r\\n \\r\\nDid you know that it is possible to send letters legally? We suggest a legitimate new method of sending proposals through feedback forms. \\r\\nIt is improbable for Feedback Forms messages to be marked as junk, since they are taken into great consideration. \\r\\nWe are now offering you the chance to use our service for free. \\r\\nYou can trust us to send up to 50,000 messages. \\r\\n \\r\\nThe cost of sending one million messages is $59. \\r\\n \\r\\nThis offer is automatically generated. \\r\\nPlease use the contact details below to get in touch with us. \\r\\n \\r\\nContact us. \\r\\nTelegram - https://t.me/FeedbackFormEU \\r\\nSkype  live:feedbackform2019 \\r\\nWhatsApp  +375259112693 \\r\\nWhatsApp  https://wa.me/+375259112693 \\r\\n \\r\\nWe only use chat for communication.\"}', '2024-07-01 02:49:44.800103', '2024-07-01 02:49:44.801021'),
-(381, 1, '{\"date\": \"2024-07-01T14:50:33.264176Z\", \"nome\": \"Trena\", \"email\": \"trena.enright@outlook.com\", \"_token\": \"57JofsdfQT2WAYePJ2IaLBxlezcyty68EyyRxlYx\", \"contacto\": null, \"mensagem\": \"Hi to AMPDC.org Administrator.\\r\\n\\r\\nI am Trena, and I recently discovered your site, AMPDC.org.\\r\\n\\r\\nIt’s has plenty going for it, but I’ve got an idea to make it even MORE effective.\\r\\n\\r\\nCheck out Web Visitors Into Leads – CLICK HERE https://advanceleadgeneration.com for a live demo today.\\r\\n\\r\\nWeb Visitors Into Leads is a tool that’s works on your site, set to capture any visitor’s Name, Email address, and Phone Number. This tool alerts you the moment they let you know they’re interested – meaning that you can chat to that lead whilst they’re actually viewing your site.\\r\\n\\r\\nMoreover, once you’ve captured their phone number, with our new SMS Text With Lead function, you can automatically start a text (SMS) discussion… and if they don’t agree on your offer then, you can follow-up with text messages for fresh offers, content links, or even just “how you doing?” notes to forge a relationship.\\r\\n\\r\\nCLICK HERE https://advanceleadgeneration.com to discover what Web Visitors Into Leads can do for your business.\\r\\n\\r\\nThe distinction between reaching out to someone in 5 minutes compared to a half-hour could mean you could be converting up to 100X more leads right now!\\r\\n\\r\\nTrena\\r\\nPS: Research show that 70% of a site’s visitors vanish and are gone forever in just a moment. Don’t keep losing them. \\r\\nWeb Visitors Into Leads gives a FREE 14 days trial – and it includes International Long Distance Calls. \\r\\nThere are customers eager to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://advanceleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d prefer to unsubscribe click https://advanceleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\\r\\n\\r\\nMerely a quick note - the names and email used here, Trena and Enright, are placeholders and not real contact data. We appreciate transparency and want to make  you’re aware! If you wish to reach out with the real person responsible for this message, please visit our website, and we’ll connect you with the right individual.}\"}', '2024-07-01 12:50:33.264176', '2024-07-01 12:50:33.266000'),
-(382, 1, '{\"date\": \"2024-07-02T05:40:12.852479Z\", \"nome\": \"Vincentsnupt\", \"email\": \"wilhelminagriffith@hotmail.com\", \"_token\": \"zW7AyK5etKfUswBG6FXZhHTGS7n8JiRVPSH1wAyn\", \"submit\": null, \"contacto\": \"wilhelminagriffith@hotmail.com\", \"mensagem\": \"Are you a driven salesperson looking for your next big opportunity? Look no further! https://SellAccs.net is seeking passionate individuals to join our team. With our revolutionary platform for buying and selling online accounts, you\'ll have a cutting-edge product to pitch to a vast market. Enjoy lucrative commissions, ongoing training, and unparalleled support as you help reshape the digital commerce landscape. Join us today and embark on a rewarding sales journey with https://SellAccs.net! \\r\\n \\r\\n \\r\\nVISIT WEBSITE: https://SellAccs.net\"}', '2024-07-02 03:40:12.852479', '2024-07-02 03:40:12.853549'),
-(383, 1, '{\"date\": \"2024-07-02T15:51:26.199068Z\", \"nome\": \"Xiomara\", \"email\": \"heap.xiomara@gmail.com\", \"_token\": \"Vjy48E7EIc4ft4SNZLB96xiVHM6YhVcKpa9Y113R\", \"contacto\": null, \"mensagem\": \"Are you still looking at getting your website done/ completed? Contact e.solus@gmail.com\"}', '2024-07-02 13:51:26.199068', '2024-07-02 13:51:26.200310'),
-(384, 1, '{\"date\": \"2024-07-02T19:34:32.323177Z\", \"nome\": \"Fredrick\", \"email\": \"fredrick.foelsche@gmail.com\", \"_token\": \"Jd8F7keu9fX7c0FMjCRr17b86CtLWeT1nNk32oto\", \"contacto\": null, \"mensagem\": \"Greetings to AMPDC.org Webmaster!\\r\\n\\r\\nI am Fredrick and, contrary to a lot of emails you might get, I wish to instead provide you with a word of commendation – Kudos!\\r\\n\\r\\nWhat for?\\r\\n\\r\\nPart of my job is to inspect websites and the work you’ve done with AMPDC.org certainly is remarkable.\\r\\n\\r\\nIt is clear you took building a website seriously and invested a real commitment of time and resources into developing it top quality.\\r\\n\\r\\nNonetheless, there is, a catch… more accurately, a question…\\r\\n\\r\\nSo, when someone such as myself finds your site – maybe at the top of the search results (nice job BTW) or just through a random link, how do you find out?\\r\\n\\r\\nMore crucially, how do you make a connection with that person?\\r\\n\\r\\nResearch reveal that 7 out of 10 visitors leave – they’re there one second and then vanished.\\r\\n\\r\\nHere’s a way to create INSTANT engagement that might be new to you…\\r\\n\\r\\nWeb Visitors Into Leads is a tool widget that’s operates on your site, ready to grab every visitor’s Name, Email address and Phone Number. It allows you know IMMEDIATELY that they are interested – so that you can chat to that lead whilst they are really browsing AMPDC.org.\\r\\n\\r\\nCLICK HERE https://advanceleadgeneration.com to experience a Live Demo with Web Visitors Into Leads today to realize exactly how it operates.\\r\\n\\r\\nIt might be a revolutionary change for your business – and it gets even better… after you have collected their phone number, with our new SMS Text With Lead capability, you can automatically start a text (SMS) conversation – immediately (and there’s literally a 100X difference between connecting with someone within 5 minutes compared to 30 minutes.)\\r\\n\\r\\nMoreover then, even if you don’t finalize a deal right away, you can connect later on with text messages for new deals, content links, or even just follow up notes to establish a relationship.\\r\\n\\r\\nEverything I have just outlined is easy, simple, and effective.\\r\\n\\r\\nCLICK HERE https://advanceleadgeneration.com to find out what Web Visitors Into Leads can do for your business.\\r\\n\\r\\nYou could be converting up to 100X more leads as we speak!\\r\\n\\r\\nFredrick\\r\\nPS: Web Visitors Into Leads gives a FREE 14 days trial – and it features International Long Distance Calling. \\r\\nThere are customers eager to speak with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://advanceleadgeneration.com to experience Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://advanceleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\\r\\n\\r\\n\\r\\nJust a quick note - the names and email used here, Fredrick and Foelsche, are simulations and not real contact data. We appreciate transparency and want to make sure you’re aware! If you wish to reach out with the real person behind this message, please visit our website, and we’ll associate you with the correct individual.}\"}', '2024-07-02 17:34:32.323177', '2024-07-02 17:34:32.324202'),
-(385, 1, '{\"date\": \"2024-07-03T05:34:29.134032Z\", \"nome\": \"Gisele\", \"email\": \"gisele.mann@gmail.com\", \"_token\": \"Ah5SLhW5ekk20XgOuQPfH9M9CMtqw7fshfioVvQH\", \"contacto\": null, \"mensagem\": \"Are you looking for a capable financial company to fund your business project?\\r\\n\\r\\nwe are here to provide you with the best solution for your business growth. we provide the  most suitable business loan package to meet your need.                           \\r\\nemail me here.                                                                                             \\r\\ninfo@financeworldwidehk.com                                                                                             \\r\\n                                                                                              \\r\\n                                                                                          \\r\\n                                      \\r\\n                                      \\r\\nBest regards,\\r\\nLaura Cha.\\r\\nCustomer Service Representative\"}', '2024-07-03 03:34:29.134032', '2024-07-03 03:34:29.135145'),
-(386, 1, '{\"date\": \"2024-07-03T09:58:17.874924Z\", \"nome\": \"Masonexili\", \"email\": \"alden.provitt773@gmail.com\", \"_token\": \"xxuE7MUjvmNbF1AcVeUfBSRuTtb2oW2JKlQFFt09\", \"submit\": null, \"contacto\": \"alden.provitt773@gmail.com\", \"mensagem\": \"Hi, kam dashur të di çmimin tuaj\"}', '2024-07-03 07:58:17.874924', '2024-07-03 07:58:17.876274'),
-(387, 1, '{\"date\": \"2024-07-03T16:12:50.842954Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"4C3Ut0srpkMXKzbKr6ZOocL67qCF8dkgUJ91Mycz\", \"contacto\": null, \"mensagem\": \"Dear AMPDC.org Owner! my name’s Eric and I just ran across your website at AMPDC.org...\\r\\n\\r\\nI found it after a quick search, so your SEO’s working out…\\r\\n\\r\\nContent looks pretty good…\\r\\n\\r\\nOne thing’s missing though…\\r\\n\\r\\nA QUICK, EASY way to connect with you NOW.\\r\\n\\r\\nBecause studies show that a web lead like me will only hang out a few seconds – 7 out of 10 disappear almost instantly, Surf Surf Surf… then gone forever.\\r\\n\\r\\nI have the solution:\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  You’ll know immediately they’re interested and you can call them directly to TALK with them - literally while they’re still on the web looking at your site.\\r\\n\\r\\nCLICK HERE https://rushleadgeneration.com to try out a Live Demo with Web Visitors Into Leads now to see exactly how it works and even give it a try… it could be huge for your business.\\r\\n\\r\\nPlus, now that you’ve got that phone number, with our new SMS Text With Lead feature, you can automatically start a text (SMS) conversation pronto… which is so powerful, because connecting with someone within the first 5 minutes is 100 times more effective than waiting 30 minutes or more later.\\r\\n\\r\\nThe new text messaging feature lets you follow up regularly with new offers, content links, even just follow up notes to build a relationship.\\r\\n\\r\\nEverything I’ve just described is extremely simple to implement, cost-effective, and profitable.\\r\\n \\r\\nCLICK HERE https://rushleadgeneration.com to discover what Web Visitors Into Leads can do for your business, potentially converting up to 100X more eyeballs into leads today!\\r\\n\\r\\nEric\\r\\nPS: Web Visitors Into Leads offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://rushleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://rushleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-03 14:12:50.842954', '2024-07-03 14:12:50.843916'),
-(388, 1, '{\"date\": \"2024-07-03T18:19:27.963004Z\", \"nome\": \"Mike Coleman\", \"email\": \"petervemUselt@gmail.com\", \"_token\": \"8vxJXoC65lXXabAYmgObVoToMiptX4AIWfm2ZcXG\", \"submit\": null, \"contacto\": \"petervemUselt@gmail.com\", \"mensagem\": \"Hi there \\r\\n \\r\\nI have just took an in depth look on your  AMPDC.org for the ranking keywords and saw that your website could use a boost. \\r\\n \\r\\nWe will improve your ranks organically and safely, using only state of the art AI and whitehat methods, while providing monthly reports and outstanding support. \\r\\n \\r\\nMore info: \\r\\nhttps://www.digital-x-seo.com/monthly-seo/ \\r\\n \\r\\nRegards \\r\\nMike Coleman\\r\\n \\r\\nDigital X SEO Experts \\r\\nhttps://www.digital-x-seo.com/whatsapp-us/\"}', '2024-07-03 16:19:27.963004', '2024-07-03 16:19:27.963991'),
-(389, 1, '{\"date\": \"2024-07-04T17:22:40.086862Z\", \"nome\": \"Niamh\", \"email\": \"niamh.imhoff@outlook.com\", \"_token\": \"LfsD3W39FJhgA8q0k81hWQCxbTUaZA9xEV3CcVba\", \"contacto\": null, \"mensagem\": \"Hello to the AMPDC.org Administrator.\\r\\n\\r\\nMy name is Niamh and, unlike numerous emails you might get, I wanted to alternatively provide you with a word of encouragement – Well done!\\r\\n\\r\\nFor what?\\r\\n\\r\\nA portion of my job is to examine websites and the work you have done with AMPDC.org absolutely is notable.\\r\\n\\r\\nIt is clear you took building a website to heart and made a real investment of time and resources into creating it top quality.\\r\\n\\r\\nNonetheless, there is, a catch… more accurately, a question…\\r\\n\\r\\nSo, when someone such as myself finds your site – maybe on top of the search results (well done BTW) or just through a random link, how do you find out?\\r\\n\\r\\nMore crucially, how can you make a connection with that person?\\r\\n\\r\\nStudies show that 7 out of 10 visitors don’t stay – they’re there one second and then gone.\\r\\n\\r\\nHere’s a way to create IMMEDIATE engagement that you may not have known about…\\r\\n\\r\\nWeb Visitors Into Leads is a widget widget that’s functions on your site, set to collect any visitor’s Name, Email address and Phone Number. It allows you know IMMEDIATELY that they’re interested – so that you can chat to that lead while they are literally checking out AMPDC.org.\\r\\n\\r\\nCLICK HERE https://advanceleadgeneration.com to experience a Live Demo with Web Visitors Into Leads now to understand exactly how it functions.\\r\\n\\r\\nIt might be a transformative change for your business – and it gets even better… after you have collected their phone number, with our new SMS Text With Lead function, you can instantly start a text (SMS) conversation – immediately (& there’s literally a 100X difference between contacting someone within 5 minutes compared to 30 minutes.)\\r\\n\\r\\nPlus then, even if you don’t seal a deal instantly, you can connect later on with text messages for fresh promotions, content links, even just follow up notes to create a relationship.\\r\\n\\r\\nAll I have just outlined is simple, convenient, and effective.\\r\\n\\r\\nCLICK HERE https://advanceleadgeneration.com to find out what Web Visitors Into Leads can do for your business.\\r\\n\\r\\nYou might be converting up to 100X more leads as we speak!\\r\\n\\r\\nNiamh\\r\\nPS: Web Visitors Into Leads provides a FREE 14 days trial – and it features International Long Distance Calls. \\r\\nThere are customers waiting to chat with you at this moment… don’t leave them waiting. \\r\\nCLICK HERE https://advanceleadgeneration.com to experience Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d choose to unsubscribe click here https://advanceleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\\r\\n\\r\\n\\r\\nJust a quick note - the names and email used here, Niamh and Imhoff, are simulations and not actual contact information. We appreciate transparency and want to ensure  you’re aware! If you wish to reach out with the genuine person responsible for this message, please visit our website, and we’ll link you with the correct individual.}\"}', '2024-07-04 15:22:40.086862', '2024-07-04 15:22:40.088011'),
-(390, 1, '{\"date\": \"2024-07-04T17:50:09.033113Z\", \"nome\": \"Davidexili\", \"email\": \"kayleighbpsteamship@gmail.com\", \"_token\": \"xmTo7rAPCARDJPIHgnL6RlwInzqYOoiT6g9BF6nM\", \"submit\": null, \"contacto\": \"kayleighbpsteamship@gmail.com\", \"mensagem\": \"Zdravo, htio sam znati vašu cijenu.\"}', '2024-07-04 15:50:09.033113', '2024-07-04 15:50:09.033890'),
-(391, 1, '{\"date\": \"2024-07-04T19:00:55.526075Z\", \"nome\": \"Justina\", \"email\": \"justina.gonyea@yahoo.com\", \"_token\": \"B7byCtUi73zmZP6zORo7TNh11ILGx2Sj6WRVsCrw\", \"contacto\": null, \"mensagem\": \"Dear to AMPDC.org Owner. I\'ve just located your site, quick inquiry…\\r\\n\\r\\nMy name is Justina, I discovered AMPDC.org after performing a quick search – your site showed up close to the top of the rankings, so whatever you’re working on for SEO, looks like it’s working well.\\r\\n\\r\\nSo here’s my question – what happens AFTER someone arrives on your site? Anything at all?\\r\\n\\r\\nStudies shows us at least 70% of the persons who discover your site, post a swift look-over, they leave… for good.\\r\\n\\r\\nThis implies that all the effort and effort you put in into getting them to arrive, goes down the drain.\\r\\n\\r\\nWhy would you want all of that great work – and the great site you’ve built – go to waste away?\\r\\n\\r\\nAs the chances are they’ll just skip calling or even grabbing their mobile phone, leaving in the lurch.\\r\\n\\r\\nBut however, here is a thought for you… what you could make super-simple for someone raise their hand, “okay, let’s talk about it” without needing them to even pull their mobile phone from their pocket to revolutionary new software can literally that first call happen NOW.\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that sits your site, ready and waiting capture any visitor’s. It lets you know IMMEDIATELY – so that you can talk to that lead they’re still there at your site, you know, strike when the iron’s hot!\\r\\n\\r\\nCLICK HERE https://advanceleadgeneration.com to try a Live Demo with Web Visitors Into Leads now see how it works targeting leads, you HAVE to act – the difference between contacting someone within minutes 30 minutes is huge 100 times better!\\r\\n\\r\\nThat’s why you should check our new SMS Text With Lead feature as well… once captured phone number of the website, you can automatically kick off a text with them.\\r\\n\\r\\nImagine how powerful this could be – even if they don’t you up on your offer, you can stay touch them using text messages make offers links to great, and build credibility, just this alone be a game changer to make your website even more effective, strike when the iron’s hot!\\r\\n\\r\\nCLICK HERE https://advanceleadgeneration.com to learn about everything Visitors Into Leads can do for your business be amazed and keep the great!\\r\\n\\r\\nJustina\\r\\nPS: Web Visitors Into Leads offers FREE 14 days trial – you could converting to 100x more leads immediately! It even includes International Long Distance Calling, stop wasting chasing eyeballs that don’t into paying customers. CLICK HERE https://advanceleadgeneration.com to try Visitors Into Leads.\\r\\n\\r\\nNow, if you\'d like to unsubscribe click here https://advanceleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\\r\\n\\r\\nJust quick note - the names and email used here, Justina and Gonyea, are placeholders real contact information. We value transparency and wanted make you’re aware! If you wish get in touch the real person behind message visit our website we’ll connect with the right\"}', '2024-07-04 17:00:55.526075', '2024-07-04 17:00:55.527366'),
-(392, 1, '{\"date\": \"2024-07-05T05:19:38.611789Z\", \"nome\": \"Leoexili\", \"email\": \"yjdisantoyjdissemin@gmail.com\", \"_token\": \"BnpGsu0hYB0dQ8lKEwaXHtMgUdP8LYHlv5BPBVdf\", \"submit\": null, \"contacto\": \"yjdisantoyjdissemin@gmail.com\", \"mensagem\": \"Salam, qiymətinizi bilmək istədim.\"}', '2024-07-05 03:19:38.611789', '2024-07-05 03:19:38.612787'),
-(393, 1, '{\"date\": \"2024-07-05T21:18:18.215277Z\", \"nome\": \"LavillRum\", \"email\": \"revers10@1ti.ru\", \"_token\": \"pQHmGrT90m0pgl1F3wr36FvgdIPHIqeD7bAM9ML0\", \"submit\": null, \"contacto\": \"revers10@1ti.ru\", \"mensagem\": \"[url=https://chimmed.ru/products/methylhexanamine-d4-hcl-dmaa-d4-hcl-id=4255649]methylhexanamine-d4 hcl dmaa-d4 hcl - купить онлайн в интернет-магазине химмед [/url] \\r\\nTegs: [u]anti-sgef - купить онлайн в интернет-магазине химмед [/u] \\r\\n[i]prest antigen lamtor3 - купить онлайн в интернет-магазине химмед [/i] \\r\\n[b]titanium, foil, thickness 0.004mm, diam& - купить онлайн в интернет-магазине химмед [/b] \\r\\n \\r\\nesirna human axin1 esirna1 - купить онлайн в интернет-магазине химмед  https://chimmed.ru/products/esirna-human-axin1-esirna1-id=4255650\"}', '2024-07-05 19:18:18.215277', '2024-07-05 19:18:18.216328'),
-(394, 1, '{\"date\": \"2024-07-06T04:08:57.309417Z\", \"nome\": \"Sherry\", \"email\": \"whetsel.sherry81@yahoo.com\", \"_token\": \"HFgNlGfLgohAYLWSUYu8BkfErfuD7gimft15Ds4Y\", \"contacto\": null, \"mensagem\": \"WANTED: Partnerships & Agents for Global E-commerce Firm\\r\\n\\r\\n4U2 Inc., a premier E-commerce , Sourcing Brokerage firm, is actively seeking partnerships and collaboration with manufacturers and wholesalers for agricultural, commercial, and residential products. We offer a diverse marketplace for both new and used items, including vehicles and equipment.\\r\\n\\r\\nWhy Choose 4U2 Inc.? (see https.//www.4u2inc.com)\\r\\n\\r\\nGlobal reach for your products\\r\\nImmediate requirements for a wide range of items\\r\\nOpportunity to expand your business network\\r\\nJoin Our Team We’re also looking for Independent Contractor Agents (Account Executives) to help us discover new business opportunities. Whether you’re seeking a full-time or part-time role, you can earn up to $60,000 based on performance.\\r\\n\\r\\nGet in Touch Don’t miss out on this opportunity. Contact us at 4u2inc123@gmail.com to learn more or to start our partnership today!\\r\\n\\r\\nThis version is more direct and easier to read, highlighting the key points and call to action for potential partners and agents. If you need further refinements or have specific requirements, feel free to let me know!\"}', '2024-07-06 02:08:57.309417', '2024-07-06 02:08:57.310384'),
-(395, 1, '{\"date\": \"2024-07-06T16:32:16.576994Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"1VybL4mwDXYFoj9kqcAxDlkJdauyE5CE9SIUB0xB\", \"contacto\": null, \"mensagem\": \"To the AMPDC.org Administrator. I just found your site, quick question…\\r\\n\\r\\nMy name’s Eric, I found AMPDC.org after doing a quick search – you showed up near the top of the rankings, so whatever you’re doing for SEO, looks like it’s working well.\\r\\n\\r\\nSo here’s my question – what happens AFTER someone lands on your site?  Anything?\\r\\n\\r\\nResearch tells us at least 70% of the people who find your site, after a quick once-over, they disappear… forever.\\r\\n\\r\\nThat means that all the work and effort you put into getting them to show up, goes down the tubes.\\r\\n\\r\\nWhy would you want all that good work – and the great site you’ve built – go to waste?\\r\\n\\r\\nBecause the odds are they’ll just skip over calling or even grabbing their phone, leaving you high and dry.\\r\\n\\r\\nBut here’s a thought… what if you could make it super-simple for someone to raise their hand, say, okay, let’s talk without requiring them to even pull their cell phone from their pocket?\\r\\n  \\r\\nYou can – thanks to revolutionary new software that can literally make that first call happen NOW.\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that sits on your site, ready and waiting to capture any visitor’s Name, Email address and Phone Number.  It lets you know IMMEDIATELY – so that you can talk to that lead while they’re still there at your site.\\r\\n  \\r\\nYou know, strike when the iron’s hot!\\r\\n\\r\\nCLICK HERE https://rushleadgeneration.com to try out a Live Demo with Web Visitors Into Leads now to see exactly how it works.\\r\\n\\r\\nWhen targeting leads, you HAVE to act fast – the difference between contacting someone within 5 minutes versus 30 minutes later is huge – like 100 times better!\\r\\n\\r\\nThat’s why you should check out our new SMS Text With Lead feature as well… once you’ve captured the phone number of the website visitor, you can automatically kick off a text message (SMS) conversation with them. \\r\\n \\r\\nImagine how powerful this could be – even if they don’t take you up on your offer immediately, you can stay in touch with them using text messages to make new offers, provide links to great content, and build your credibility.\\r\\n\\r\\nJust this alone could be a game changer to make your website even more effective.\\r\\n\\r\\nStrike when  the iron’s hot!\\r\\n\\r\\nCLICK HERE https://rushleadgeneration.com to learn more about everything Web Visitors Into Leads can do for your business – you’ll be amazed.\\r\\n\\r\\nThanks and keep up the great work!\\r\\n\\r\\nEric\\r\\nPS: Web Visitors Into Leads offers a FREE 14 days trial – you could be converting up to 100x more leads immediately!   \\r\\nIt even includes International Long Distance Calling. \\r\\nStop wasting money chasing eyeballs that don’t turn into paying customers. \\r\\nCLICK HERE https://rushleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://rushleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-06 14:32:16.576994', '2024-07-06 14:32:16.578312'),
-(396, 1, '{\"date\": \"2024-07-07T18:47:47.335094Z\", \"nome\": \"Lyn\", \"email\": \"rowallan.lyn@gmail.com\", \"_token\": \"nKuANKrF1o5vLtJberl2ISBYYon2g2brvZa0QwYV\", \"contacto\": null, \"mensagem\": \"Hi there,\\r\\n\\r\\nAre you tired of paying monthly fees for website hosting, cloud storage, and funnels?\\r\\n\\r\\nWe offer a revolutionary solution: host unlimited websites, files, and videos for a single, low one-time fee. No more monthly payments.\\r\\n\\r\\nLearn more: https://furtherinfo.org/0wg3\\r\\n\\r\\nHere\'s what you get:\\r\\n\\r\\nUltra-fast hosting powered by Intel® Xeon® CPU technology\\r\\nUnlimited website hosting\\r\\nUnlimited cloud storage\\r\\nUnlimited video hosting\\r\\nUnlimited funnel creation\\r\\nFree SSL certificates for all domains and files\\r\\n99.999% uptime guarantee\\r\\n24/7 customer support\\r\\nEasy-to-use cPanel\\r\\n365-day money-back guarantee\\r\\n\\r\\nPlus, get these exclusive bonuses when you act now:\\r\\n\\r\\n60+ reseller licenses (sell hosting to your clients!)\\r\\n10 Fast-Action Bonuses worth over $19,997 (including AI tools, traffic generation, and more!)\\r\\n\\r\\nDon\'t miss out on this limited-time offer! The price is about to increase, and this one-time fee won\'t last forever.\\r\\n\\r\\nClick here to learn more: https://furtherinfo.org/0wg3\\r\\n\\r\\nLyn\\r\\n\\r\\n\\r\\nIf you do not wish to receive any further offers:\\r\\nhttps://removeme.click/wp/unsubscribe.php?d=AMPDC.org\"}', '2024-07-07 16:47:47.335094', '2024-07-07 16:47:47.336237'),
-(397, 1, '{\"date\": \"2024-07-07T21:28:22.964270Z\", \"nome\": \"Helena\", \"email\": \"gye.helena@gmail.com\", \"_token\": \"aJksUxjhRJ8LoHP4DPcZtiNmUT54DbFnFroRwxKg\", \"contacto\": null, \"mensagem\": \"Cool website!\\r\\n\\r\\nHello AMPDC.org Owner.\\r\\n\\r\\nMy name’s Helena, and I just discovered your site - AMPDC.org - while navigating the net. You surfaced at the top of the search results, so I looked you out. Seems like what you’re doing is very cool.  \\r\\n\\r\\nBut if you don’t mind me asking – after someone like me stumbles across AMPDC.org, what normally happens?\\r\\n\\r\\nIs your site creating leads for your enterprise? \\r\\n\\r\\nI’m assuming some, but I also gamble you’d like more… studies show that 7 out 10 who touch down on a site wind up leaving without a trace.\\r\\n\\r\\nNot good.\\r\\n\\r\\nHere’s a notion – what if there was an easy way for every visitor to “raise their hand” to get a phone call from you INSTANTLY… the moment they hit your site and declared, “call me now.”\\r\\n\\r\\nYou can –\\r\\n  \\r\\nWeb Visitor is a software widget that’s functions on your site, prepared to capture any visitor’s Name, Email address and Phone Number.  It lets you know IMMEDIATELY – so that you can chat to that lead while they’re actually examining your site.\\r\\n\\r\\nCLICK HERE https://turboleadgeneration.com to test a Live Demo with Web Visitor now to see specifically how it works.\\r\\n\\r\\nTime is money when it comes to linking with leads – the difference in between contacting someone within 5 minutes versus 30 minutes later can be huge – like 100 times better!\\r\\n\\r\\nThat’s why we built our new SMS Text With Lead feature because once you’ve caught the visitor’s phone number, you can automatically start a text message (SMS) conversation.\\r\\n  \\r\\nThink the possibilities – even if you don’t close a deal then and there, you can follow with text messages for new offers, content links, even just “how you doing?” notes to construct a relationship.\\r\\n\\r\\nWouldn’t that be cool?\\r\\n\\r\\nCLICK HERE https://turboleadgeneration.com to discover Web Visitor can do for your business.\\r\\n\\r\\nYou could be converting up to 100X more leads today!\\r\\nHelena\\r\\n\\r\\nPS: Web Visitor provides FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://turboleadgeneration.com to try Web Visitor now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://turboleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\\r\\n\\r\\nSimply a brief note - the identities and email address applied here, Helena and Gye, are stand-ins and not really actual contact information. We esteem transparency and wished to confirm you are conscious! In case you want to communicate with the actual one behind this note, do go to our site, and we’ll link you with the proper entity.\"}', '2024-07-07 19:28:22.964270', '2024-07-07 19:28:22.965409'),
-(398, 1, '{\"date\": \"2024-07-08T20:27:42.219039Z\", \"nome\": \"Louvenia\", \"email\": \"louvenia.getty@gmail.com\", \"_token\": \"bMV1Nvm7z4NzKXdVzzv9ajCxy2b53cNfBu0PWy99\", \"contacto\": null, \"mensagem\": \"Are you still looking at getting your website\'s SEO done? Contact Now intrug@gmail.com\"}', '2024-07-08 18:27:42.219039', '2024-07-08 18:27:42.219999'),
-(399, 1, '{\"date\": \"2024-07-09T20:26:13.404056Z\", \"nome\": \"Peggy\", \"email\": \"jordan.peggy@gmail.com\", \"_token\": \"Lo2ojURgLvHmbmD4NOYOkPgEpitoo9bOZtQuqQEU\", \"contacto\": null, \"mensagem\": \"Hey,\\r\\n\\r\\nCustomers want answers now. Don\'t lose leads with offline messages!\\r\\n\\r\\nLive chat boosts sales & loyalty. 44% of consumers love it!\\r\\n\\r\\nOpen247 provides:\\r\\n\\r\\n* Expert agents (24/7!)\\r\\n* Brand ambassadors\\r\\n* Cost-effective solution\\r\\n\\r\\nBenefits:\\r\\n\\r\\n* More conversions (capture hot leads!)\\r\\n* Happier customers (fast, friendly support)\\r\\n* Less work for you (focus on core business)\\r\\n\\r\\nGet a free quote! Email me now at open247chat@gmail.com \\r\\nWe\'ll customize a plan to fit your budget.\\r\\n\\r\\nP.S. Get 30 Days Free Trial Now!!\"}', '2024-07-09 18:26:13.404056', '2024-07-09 18:26:13.405056'),
-(400, 1, '{\"date\": \"2024-07-10T13:59:06.665947Z\", \"nome\": \"Rolando\", \"email\": \"chen.rolando@gmail.com\", \"_token\": \"1fd6pedX2MJoAPBqH9CMwmsQVeeX0Rz6Su00NwzF\", \"contacto\": null, \"mensagem\": \"AMPDC.org Owner, Greetings. I\'ve just located your site, quick question…\\r\\n\\r\\nMy name is Rolando, I discovered AMPDC.org after conducting a quick searching – you showed up near the peak of the search rankings, so whatsoever you’re working on for SEO, looks like it’s functioning well.\\r\\n\\r\\nSo here’s my query – what exactly happens AFTER somebody lands on your website? Anything?\\r\\n\\r\\nStudies shows us at least 70% of the individuals who locate your site, post a rapid once-over, they leave… forever.\\r\\n\\r\\nThat implies that all of the the hard work and effort you put in into making them to appear, goes down the drain.\\r\\n\\r\\nWhy would you wish all excellent work – and the great website you’ve built – go to waste away?\\r\\n\\r\\nSince the probabilities are they’ll just skip over calling or even grabbing their cell phone, leaving high and dry.\\r\\n\\r\\nBut, here’s a thought… what you could make it very simple for someone to raise their hand, say, “okay, let’s talk about it” without needing them to even pull their mobile phone from their pocket to groundbreaking new software can literally make that first call happen NOW.\\r\\n\\r\\nWeb Visitors Into Leads is a software that sits your site and waiting to capture visitor’s Name, Email address and Phone Number. It lets you know – so that you can talk to that lead they’re still at your site, you know, strike when the iron’s!\\r\\n\\r\\nCLICK HERE https://advanceleadgeneration.com to try a Live Demo with Web Visitors Into Leads now to see how it works targeting, you HAVE to act – the difference between contacting within 5 minutes versus 30 minutes later is huge 100 times!\\r\\n\\r\\nThat’s you should check out our new SMS Text With Lead feature… once you’ve captured the phone number of the website, you can automatically off a text with them.\\r\\n\\r\\nImagine powerful could be – even if they don’t you up on your offer, you can stay in touch them using text messages make new offers, provide links to great, and build credibility this alone be a game changer to make your website more effective, strike when the iron’s hot!\\r\\n\\r\\nCLICK HERE https://advanceleadgeneration.com to learn more about everything Visitors Into Leads can do for your business be amazed, thanks and keep the great work!\\r\\n\\r\\nRolando\\r\\nPS: Web Visitors Into Leads offers FREE 14 days trial – you could converting to 100x more leads! It even includes International Long Distance Calling wasting money chasing that don’t turn into paying. CLICK HERE https://advanceleadgeneration.com to try Web Visitors Into Leads.\\r\\n\\r\\nNow, if you\'d like unsubscribe click here https://advanceleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\\r\\n\\r\\nJust a quick note - the names and email used here, are placeholders and not real contact information. We value and wanted to make sure you’re aware! If you wish get in touch the real person behind this message visit our website, and we’ll connect you with the right\"}', '2024-07-10 11:59:06.665947', '2024-07-10 11:59:06.667571'),
-(401, 1, '{\"date\": \"2024-07-11T04:04:04.340371Z\", \"nome\": \"Mike Jacobson\", \"email\": \"mikemaync@gmail.com\", \"_token\": \"OJRIL4k64Hl7GW3S7a9hZ2g0kxsO8mSmEo9uU3m2\", \"submit\": null, \"contacto\": \"mikemaync@gmail.com\", \"mensagem\": \"Hello \\r\\nThis is Mike Jacobson\\r\\nfrom Strictly Digital \\r\\n \\r\\nLet me present to you our latest discovered from the SEO environment. \\r\\nWe have noticed that getting backlinks from websites that have high SEO metrics values doesn\'t always help, and in fact, what is more important is to have backlinks from sites that are actually ranking for many keywords. \\r\\n \\r\\nThus, we have built this service especially to meet these new discoveries and the results are astonishing. \\r\\n \\r\\nPlease check more details here: \\r\\nhttps://www.strictlydigital.net/product/semrush-backlinks/ \\r\\n \\r\\n \\r\\n \\r\\nRegards, \\r\\nStrictly Digital SEO Team \\r\\n \\r\\nWhatsapp us for more details: \\r\\nhttps://www.strictlydigital.net/whatsapp-us/\"}', '2024-07-11 02:04:04.340371', '2024-07-11 02:04:04.341502');
-INSERT INTO `form_submissions` (`id`, `form_id`, `data`, `created_at`, `updated_at`) VALUES
-(402, 1, '{\"date\": \"2024-07-11T17:01:44.992047Z\", \"nome\": \"Loyd\", \"email\": \"loyd.greco@gmail.com\", \"_token\": \"7dJcZWXNpZR6dojK4jfilEA1vC7dPhTGUEg2L6zH\", \"contacto\": null, \"mensagem\": \"To the AMPDC.org Manager, This is Loyd and I’m guessing you’d want your web site AMPDC.org to generate additional leads\\r\\n\\r\\nSo here’s how:\\r\\nWeb Visitors Into Leads is a software that’s works on your site, ready to seize any user’s Name, Email  and Phone Number. It you the moment  they’re interested so that you can speak to that lead while they’re still at AMPDC.org.\\r\\n\\r\\nWeb Visitors Into Leads – CLICK HERE https://leadgenmaximize.com for a live demo now.\\r\\n\\r\\nAnd now you have obtained their phone number, our new SMS Text With Lead feature enables lets you to begin a text (SMS) conversation –   close a deal\\r\\n\\r\\nIf they don’t don’t take  you up on your offer , follow-up with texts for offers, content links, just “how you doing?” notes to build a relationship a relationship.\\r\\n\\r\\nCLICK HERE https://leadgenmaximize.com to learn what Web Visitors Into Leads can do for your business\\r\\n\\r\\nThe difference between contacting someone 5 minutes a half-hour means you could be converting up to 100X more leads\\r\\n\\r\\nTry Web Web Visitors Into Leads and get more leads\\r\\n\\r\\nLoyd\\r\\nPS: The studies 7 out of 10 visitors don’t hang around – you afford to lose\\r\\nWeb Visitors Into Leads offers a FREE 14 days trial – and it even includes International International Long Distance Calling\\r\\nYou have customers waiting to talk to talk with you now… don’t them\\r\\nCLICK HERE https://leadgenmaximize.com to try Web Visitors Into Leads now.\\r\\n\\r\\nShould you prefer to unsubscribe click here https://leadgenmaximize.com/unsubscribe.aspx?d=AMPDC.org\\r\\n\\r\\nOnly a quick note note - the names and email here, Loyd and Greco, are placeholders and not real contact contact information\\r\\nWe appreciate transparency and want to make sure sure aware! If you want to get in touch with the real person person behind this message, kindly visit our website, and and we’ll connect you with the right individual individual.\"}', '2024-07-11 15:01:44.992047', '2024-07-11 15:01:44.993284'),
-(403, 1, '{\"date\": \"2024-07-11T21:13:26.970840Z\", \"nome\": \"Lynwood\", \"email\": \"sallee.lynwood@gmail.com\", \"_token\": \"VcfBuCMNqrpKllAZtn1wq7qZhlYOD90PcbakrTb0\", \"contacto\": null, \"mensagem\": \"Hi,\\r\\n\\r\\nBuilding a successful ecommerce website can be overwhelming. Are you struggling to get your online store off the ground?\\r\\nLow traffic, poor conversions, and complex platform choices can make it feel impossible to succeed. It’s frustrating when your hard work doesn’t translate into sales and growth.\\r\\nDownload our FREE eBook: \\\"100 Checkpoints for a Successful Ecommerce Website.\\\" This comprehensive guide is designed to help you overcome these challenges and transform your ecommerce site into a thriving business.\\r\\n\\r\\nHere\'s what you\'ll get:\\r\\n\\r\\n Target Audience,  UserFriendly Design, Compelling Product Descriptions, Simplified Checkout,  SEO Tips, Digital Marketing Strategies, Customer Service, Security Compliance &  Growth Planning.  \\r\\nReady to conquer your ecommerce challenges? Download Your Free eBook Now!  \\r\\n\\r\\nhttps://alwaysdigital.co/f1/?AMPDC.org\\r\\n\\r\\nWe’re here to support your journey to ecommerce success. If you have any questions or need further assistance, feel free to reach out.\\r\\n\\r\\nTo your success,\\r\\nSam Miller\\r\\n\\r\\nP.S. Limited time offer – grab your free eBook today!\"}', '2024-07-11 19:13:26.970840', '2024-07-11 19:13:26.971848'),
-(404, 1, '{\"date\": \"2024-07-12T08:47:00.493810Z\", \"nome\": \"Mike WifKinson\", \"email\": \"mikemaync@gmail.com\", \"_token\": \"Xzj0dxZ2KQS9aRfaBnc30TXsbrgHqr8nsGkfipSb\", \"submit\": null, \"contacto\": \"mikemaync@gmail.com\", \"mensagem\": \"Hi there, \\r\\n \\r\\nMy name is Mike from Monkey Digital, \\r\\n \\r\\nAllow me to present to you a lifetime revenue opportunity of 35% \\r\\nThat\'s right, you can earn 35% of every order made by your affiliate for life. \\r\\n \\r\\nSimply register with us, generate your affiliate links, and incorporate them on your website, and you are done. It takes only 5 minutes to set up everything, and the payouts are sent each month. \\r\\n \\r\\nClick here to enroll with us today: \\r\\nhttps://www.monkey-seo.org/affiliates/ \\r\\n \\r\\nThink about it, \\r\\nEvery website owner requires the use of search engine optimization (SEO) for their website. This endeavor holds significant potential for both parties involved. \\r\\n \\r\\nThanks and regards \\r\\nMike WifKinson\\r\\n \\r\\nMonkey Digital \\r\\nhttps://www.monkey-seo.org/whatsapp-affiliates/\"}', '2024-07-12 06:47:00.493810', '2024-07-12 06:47:00.494838'),
-(405, 1, '{\"date\": \"2024-07-13T03:50:08.279869Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"k9klY1ZsJBD2OoJWTUVdCqzLSNbUm6MJoFtjZ9AE\", \"contacto\": null, \"mensagem\": \"To the, this is Eric and I ran across AMPDC.org a few minutes ago.\\r\\n\\r\\nLooks great… but now what?\\r\\n\\r\\nBy that I mean, when someone like me finds your website – either through Search or just bouncing around – what happens next?  Do you get a lot of leads from your site, or at least enough to make you happy?\\r\\n\\r\\nHonestly, most business websites fall a bit short when it comes to generating paying customers. Studies show that 70% of a site’s visitors disappear and are gone forever after just a moment.\\r\\n\\r\\nHere’s an idea…\\r\\n \\r\\nHow about making it really EASY for every visitor who shows up to get a personal phone call you as soon as they hit your site…\\r\\n \\r\\nYou can –\\r\\n  \\r\\nTalk With Web Visitor is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  It signals you the moment they let you know they’re interested – so that you can talk to that lead while they’re literally looking over your site.\\r\\n\\r\\nCLICK HERE https://blazeleadgeneration.com to try out a Live Demo with Talk With Web Visitor now to see exactly how it works.\\r\\n\\r\\nYou’ll be amazed - the difference between contacting someone within 5 minutes versus a half-hour or more later could increase your results 100-fold.\\r\\n\\r\\nIt gets even better… once you’ve captured their phone number, with our new SMS Text With Lead feature, you can automatically start a text (SMS) conversation.\\r\\n  \\r\\nThat way, even if you don’t close a deal right away, you can follow up with text messages for new offers, content links, even just, how you doing? notes to build a relationship.\\r\\n\\r\\nPretty sweet – AND effective.\\r\\n\\r\\nCLICK HERE https://blazeleadgeneration.com to discover what Talk With Web Visitor can do for your business.\\r\\n\\r\\nYou could be converting up to 100X more leads today!\\r\\n\\r\\nEric\\r\\nPS: Talk With Web Visitor offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://blazeleadgeneration.com to try Talk With Web Visitor now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://blazeleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-13 01:50:08.279869', '2024-07-13 01:50:08.281331'),
-(406, 1, '{\"date\": \"2024-07-13T10:26:40.445381Z\", \"nome\": \"Randall\", \"email\": \"magicmat@AMPDC.org\", \"_token\": \"KKFStAQLtXVgWcOud72zZZpsbCODrneIEjfHnHyt\", \"contacto\": null, \"mensagem\": \"Get The Worlds Greatest Magic Sand Free Beach Mat!\\r\\n\\r\\nWatch sand, dirt & dust disappear right before your eyes! It\'s perfect for beach, picnic, camping or hiking.\\r\\n\\r\\nAct Now And Receive A Special Discount For Our Magic Mat!\\r\\n\\r\\nGet Yours Here:  https://magicmats.co\\r\\n\\r\\nAll the best, \\r\\n \\r\\nRandall\"}', '2024-07-13 08:26:40.445381', '2024-07-13 08:26:40.446371'),
-(407, 1, '{\"date\": \"2024-07-13T19:08:19.401901Z\", \"nome\": \"Derrick\", \"email\": \"derrick.sackett@gmail.com\", \"_token\": \"0pngoT1IokmXBMWdJcMzdl3V3BAcVty8hjOsqMoI\", \"contacto\": null, \"mensagem\": \"Dear to AMPDC.org Owner. This is Derrick, and just a second, think about this…\\r\\n\\r\\n- An individual does a lookup and winds up at AMPDC.org.\\r\\n\\r\\n- They linger for a moment to look it over.  “I am intrigued… but… possibly…”\\r\\n\\r\\n- And then they click the back button and look at the other search results instead.\\r\\n\\r\\n- Bottom line – you got an eyeball, but nothing more to prove for it.\\r\\n\\r\\n- There they go.\\r\\n\\r\\nThis isn’t truly your fault – it happens a LOT – studies reveal 7 out of 10 visitors to any site disappear without leaving a sign.\\r\\n\\r\\nBut you can actually fix that.\\r\\n\\r\\nWeb Visitors Into Leads is a widget that is functions on your site, set to capture any visitor’s Name, Email address, and Phone Number.  It lets you know instantly – permitting you to call that lead as they’re literally browsing your site.\\r\\n\\r\\nCLICK HERE https://leadgenmaximize.com to experience a Live Demo with Web Visitors Into Leads today to see exactly how it works.\\r\\n\\r\\nTime money when it comes to contacting leads – the difference in time between connecting with someone in 5 minutes compared to 30 minutes later can be enormous – like 100 times better!\\r\\n\\r\\nPlus, now that you have their phone number, with our new SMS Text With Lead function, you can instantly start a text (SMS) discussion… so even if you don’t make a sale then, you can follow up with text messages for fresh offers, content links, even just “how you doing?” notes to develop a relationship.\\r\\n\\r\\nStrong stuff.\\r\\n\\r\\nCLICK HERE https://leadgenmaximize.com to find out what Web Visitors Into Leads can offer for your business.\\r\\n\\r\\nYou could be converting up to 100X more leads now!\\r\\n\\r\\nDerrick\\r\\nPS: Web Visitors Into Leads offers a FREE 14 days trial – and it even features International Long Distance Calls. \\r\\nYou have customers eager to chat with you at this moment… don’t keep them waiting. \\r\\nCLICK HERE https://leadgenmaximize.com to try Web Visitors Into Leads today.\\r\\n\\r\\nShould you like to unsubscribe click here https://leadgenmaximize.com/unsubscribe.aspx?d=AMPDC.org\\r\\n\\r\\nMerely a quick note - the names and email used here, Derrick and Sackett, are simulations and not real contact data. We respect transparency and wish to ensure  you’re aware! If you desire to reach out with the actual person behind this message, please visit our website, and we’ll connect you with the appropriate individual.}\"}', '2024-07-13 17:08:19.401901', '2024-07-13 17:08:19.403176'),
-(408, 1, '{\"date\": \"2024-07-13T20:12:54.304233Z\", \"nome\": \"Carrol\", \"email\": \"carrol.dowling@gmail.com\", \"_token\": \"5e0ZHZ42fkgSVWbiIMWyo4Kj4EsFBHH1m7XrJVoC\", \"contacto\": null, \"mensagem\": \"Greetings AMPDC.org Owner.\\r\\n\\r\\nI\'m Carrol and I’m guessing you would love your website AMPDC.org to create more leads.\\r\\n\\r\\nThis is how:\\r\\nLead Conversion Software is a software tool that’s operates on your website, ready to seize any visitor’s Name, Email address, and Phone Number. It alerts you the moment they declare they’re engaged – so that you can converse with that prospect while they’re still there at AMPDC.org.\\r\\n\\r\\nLead Conversion Software – CLICK HERE https://turboleadgeneration.com for a live-action demo right now.\\r\\n\\r\\nAnd now that you’ve got their phone number, our new SMS Text With Lead feature enables you to start a text (SMS) conversation – answer questions, offer more info, and finalize a deal that way.\\r\\n\\r\\nIf they don’t take you up on your offer then, just follow up with text messages for new deals, content links, even just how you doing? notes to forge a rapport.\\r\\n\\r\\nCLICK HERE https://turboleadgeneration.com to uncover what Lead Conversion Software can do for your business.\\r\\n\\r\\nThe distinction between connecting with someone within 5 minutes compared to a half-hour means you might be changing up to 100X more leads today!\\r\\n\\r\\nUse Lead Conversion Software and secure more leads immediately.\\r\\n\\r\\nCarrol\\r\\nPS: The research show 7 out of 10 guests don’t linger – you can’t afford to miss them!\\r\\nLead Conversion Software offers a FREE 14 days trial – and it also includes International Long Distance Calling.\\r\\nYou have customers waiting to chat with you right now… do not keep them waiting.\\r\\nCLICK HERE https://turboleadgeneration.com to use Visitor to Lead Widget now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://turboleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\\r\\n\\r\\nOnly a swift note - the monikers and email used in this communication, Carrol and Dowling, are substitutes and not really authentic contact information. We appreciate openness and aimed to confirm you’re conscious! If you want to connect with the real one responsible for this note, do check out our website, and we’ll connect you with the correct person.\"}', '2024-07-13 18:12:54.304233', '2024-07-13 18:12:54.305714'),
-(409, 1, '{\"date\": \"2024-07-14T08:19:41.727720Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"wINOujsCAuFNp8bruYpxnsAlTe3DkQPKQAiep311\", \"contacto\": null, \"mensagem\": \"Hello AMPDC.org Owner. \\r\\n\\r\\nMy name is Eric and unlike a lot of emails you might get, I wanted to instead provide you with a word of encouragement – Congratulations\\r\\n\\r\\nWhat for?  \\r\\n\\r\\nPart of my job is to check out websites and the work you’ve done with AMPDC.org definitely stands out. \\r\\n\\r\\nIt’s clear you took building a website seriously and made a real investment of time and resources into making it top quality.\\r\\n\\r\\nThere is, however, a catch… more accurately, a question…\\r\\n\\r\\nSo when someone like me happens to find your site – maybe at the top of the search results (nice job BTW) or just through a random link, how do you know? \\r\\n\\r\\nMore importantly, how do you make a connection with that person?\\r\\n\\r\\nStudies show that 7 out of 10 visitors don’t stick around – they’re there one second and then gone with the wind.\\r\\n\\r\\nHere’s a way to create INSTANT engagement that you may not have known about… \\r\\n\\r\\nWeb Visitors Into Leads is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  It lets you know INSTANTLY that they’re interested – so that you can talk to that lead while they’re literally checking out AMPDC.org.\\r\\n\\r\\nCLICK HERE https://blazeleadgeneration.com to try out a Live Demo with Web Visitors Into Leads now to see exactly how it works.\\r\\n\\r\\nIt could be a game-changer for your business – and it gets even better… once you’ve captured their phone number, with our new SMS Text With Lead feature, you can automatically start a text (SMS) conversation – immediately (and there’s literally a 100X difference between contacting someone within 5 minutes versus 30 minutes.)\\r\\n\\r\\nPlus then, even if you don’t close a deal right away, you can connect later on with text messages for new offers, content links, even just follow up notes to build a relationship.\\r\\n\\r\\nEverything I’ve just described is simple, easy, and effective. \\r\\n\\r\\nCLICK HERE https://blazeleadgeneration.com to discover what Web Visitors Into Leads can do for your business.\\r\\n\\r\\nYou could be converting up to 100X more leads today!\\r\\n\\r\\nEric\\r\\nPS: Web Visitors Into Leads offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://blazeleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://blazeleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-14 06:19:41.727720', '2024-07-14 06:19:41.728770'),
-(410, 1, '{\"date\": \"2024-07-14T12:24:53.573459Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"h6oNB0I4jFYyjXPUn1aSts89TAfxBvb1POIZDmFE\", \"contacto\": null, \"mensagem\": \"To the\\r\\n\\r\\nMy name’s Eric and I just found your site AMPDC.org Webmaster!\\r\\n\\r\\nIt’s got a lot going for it, but here’s an idea to make it even MORE effective.\\r\\n\\r\\nVisit https://rushleadgeneration.com for a live demo now.\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  It signals you the moment they let you know they’re interested – so that you can talk to that lead while they’re literally looking over your site.\\r\\n\\r\\nAnd once you’ve captured their phone number, with our new SMS Text With Lead feature, you can automatically start a text (SMS) conversation… and if they don’t take you up on your offer then, you can follow up with text messages for new offers, content links, even just how you doing? notes to build a relationship.\\r\\n\\r\\nVisit https://rushleadgeneration.com to discover what Web Visitors Into Leads can do for your business.\\r\\n\\r\\nThe difference between contacting someone within 5 minutes versus a half-hour means you could be converting up to 100X more leads today!\\r\\n\\r\\nEric\\r\\nPS: Studies show that 70% of a site’s visitors disappear and are gone forever after just a moment. Don’t keep losing them. \\r\\nWeb Visitors Into Leads offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nVisit https://rushleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe visit https://rushleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-14 10:24:53.573459', '2024-07-14 10:24:53.574822'),
-(411, 1, '{\"date\": \"2024-07-15T09:43:08.671222Z\", \"nome\": \"Katelyn\", \"email\": \"katelynraiden@gmail.com\", \"_token\": \"jmF925pGy35r8vh9B5AQnnFhXH7QhyJdlVxHIJEZ\", \"contacto\": null, \"mensagem\": \"Hi there,\\r\\n\\r\\nWe run a YouTube growth service, which increases your number of subscribers both safely and practically. \\r\\n\\r\\n- We guarantee to gain you 700-1500+ subscribers per month.\\r\\n- People subscribe because they are interested in your channel/videos, increasing likes, comments and interaction.\\r\\n- All actions are made manually by our team. We do not use any \'bots\'.\\r\\n\\r\\nThe price is just $60 (USD) per month, and we can start immediately.\\r\\n\\r\\nIf you have any questions, let me know, and we can discuss further.\\r\\n\\r\\nKind Regards,\\r\\nKatelyn\\r\\n\\r\\nUnsubscribe: https://removeme.click/yt/unsubscribe.php?d=AMPDC.org\"}', '2024-07-15 07:43:08.671222', '2024-07-15 07:43:08.672819'),
-(412, 1, '{\"date\": \"2024-07-15T09:53:26.666279Z\", \"nome\": \"Rose\", \"email\": \"rose.keogh@msn.com\", \"_token\": \"okoA4xQFpyMIirEJdpZKLhO3Zy2aIGHQaQxd5bC3\", \"contacto\": null, \"mensagem\": \"Do you have a list of website updates that you want to deploy but hate having to pay the INSANE prices to get it done?\\r\\n\\r\\nWhy pay $50+ per hour for web development work, \\r\\nwhen you can get higher quality results AT LESS THAN HALF THE COST? \\r\\n\\r\\nWe are a FULL SERVICE, USA managed web development agency offering wholesale pricing.\\r\\n\\r\\nNo job too big or small. Test us out to see our value.\\r\\n\\r\\nUse the link in my signature, for a quick turn around quote.\\r\\n\\r\\n\\r\\n\\r\\nKristine Avocet\\r\\nSenior Web Specialist \\r\\nFusion Web Experts  \\r\\n186 Daniel Island Drive \\r\\nDaniel Island, SC 29492 \\r\\nwww.fusionwebexperts.tech\"}', '2024-07-15 07:53:26.666279', '2024-07-15 07:53:26.667547'),
-(413, 1, '{\"date\": \"2024-07-15T10:24:43.025562Z\", \"nome\": \"Phil\", \"email\": \"noreplyhere@aol.com\", \"_token\": \"zRqv9Ng3pZp2kc0p0Z9yqrfTRh7xKYnB0bHRofj0\", \"contacto\": null, \"mensagem\": \"Elevate Your Advertising: Ready to take your ad game to new heights? Imagine your message appearing in website contact forms worldwide, reaching heaps of potential customers! Starting at just under $100, our affordable packages pack a punch. Email me now to chat more about getting your brand out there!\\r\\n\\r\\nPhil Stewart\\r\\nEmail: n25kpu@submitmaster.xyz\\r\\nSkype: form-blasting\"}', '2024-07-15 08:24:43.025562', '2024-07-15 08:24:43.027069'),
-(414, 1, '{\"date\": \"2024-07-15T14:30:52.789035Z\", \"nome\": \"Masonexili\", \"email\": \"yjdisantoyjdissemin@gmail.com\", \"_token\": \"6PHTi8eFoiuCd3m3POqtCZGKv6dzRrbjQfKhSEcH\", \"submit\": null, \"contacto\": \"yjdisantoyjdissemin@gmail.com\", \"mensagem\": \"Ciao, volevo sapere il tuo prezzo.\"}', '2024-07-15 12:30:52.789035', '2024-07-15 12:30:52.789997'),
-(415, 1, '{\"date\": \"2024-07-16T01:52:04.049864Z\", \"nome\": \"Mike Vance\", \"email\": \"mikevemUselt@gmail.com\", \"_token\": \"gaBJOGImMgVpgmGZgVeKtqKrPsm1GhgXSF4sTMco\", \"submit\": null, \"contacto\": \"mikevemUselt@gmail.com\", \"mensagem\": \"Hello, \\r\\n \\r\\nHey, I\'m Mike from Monkey Digital. We offer a highly popular service that costs only 10$ per 5000 social ads visits. \\r\\n \\r\\nMore info:  \\r\\nhttps://www.monkeydigital.co/get-started/ \\r\\n \\r\\nTracking will be sent the same day, the advertisement goes live within a few hours, effective and cheap marketing, try it out, it will be worth every penny. \\r\\n \\r\\nRegards \\r\\nMonkey Digital \\r\\nhttps://www.monkeydigital.co/whatsapp-us/\"}', '2024-07-15 23:52:04.049864', '2024-07-15 23:52:04.051006'),
-(416, 1, '{\"date\": \"2024-07-16T09:27:10.237328Z\", \"nome\": \"Layne\", \"email\": \"berry.layne13@gmail.com\", \"_token\": \"UTUp245R9fCSdGjxjeEsWibF9qHAfo2WwGXojTxZ\", \"contacto\": null, \"mensagem\": \"Hello,\\r\\n\\r\\nIt is with sad regret that after 12 years, LeadsMax.biz is shutting down.\\r\\n\\r\\nWe have made all our databases available on our website.\\r\\n\\r\\n25 Million companies\\r\\n527 Million People\\r\\n\\r\\nLeadsMax.biz\"}', '2024-07-16 07:27:10.237328', '2024-07-16 07:27:10.238401'),
-(417, 1, '{\"date\": \"2024-07-16T22:37:49.533515Z\", \"nome\": \"Masonexili\", \"email\": \"alden.provitt773@gmail.com\", \"_token\": \"jBwSv2NU3X3IuiZApkfToC7JPthxAaKYq41vJsCW\", \"submit\": null, \"contacto\": \"alden.provitt773@gmail.com\", \"mensagem\": \"Hai, saya ingin tahu harga Anda.\"}', '2024-07-16 20:37:49.533515', '2024-07-16 20:37:49.535216'),
-(418, 1, '{\"date\": \"2024-07-17T17:28:43.119861Z\", \"nome\": \"Joanna\", \"email\": \"joannariggs278@gmail.com\", \"_token\": \"V59HysLEzYOCGniRRLqSve7BbimBcucAWMY7izUa\", \"contacto\": null, \"mensagem\": \"Hi,\\r\\n\\r\\nI just visited AMPDC.org and wondered if you\'d ever thought about having an engaging video to explain what you do?\\r\\n\\r\\nWe have produced over 500 videos to date and work with both non-animated and animated formats:\\r\\n\\r\\nNon-animated example:\\r\\nhttps://www.youtube.com/watch?v=bA2DyChM4Oc\\r\\n\\r\\nAnimated example:\\r\\nhttps://www.youtube.com/watch?v=JG33_MgGjfc\\r\\n\\r\\nOur videos cost just $195 for a 30 second video ($239 for 60 seconds) and include a full script, voice-over and video.\\r\\n\\r\\nRegards,\\r\\nJoanna\\r\\n\\r\\nUnsubscribe: https://removeme.click/ev/unsubscribe.php?d=AMPDC.org\"}', '2024-07-17 15:28:43.119861', '2024-07-17 15:28:43.120905'),
-(419, 1, '{\"date\": \"2024-07-17T21:00:10.448589Z\", \"nome\": \"Trey\", \"email\": \"scheid.trey@yahoo.com\", \"_token\": \"c16Ts8vYXGTrCap4T7SOZxIMCwu2x2MzWcu3gSbs\", \"contacto\": null, \"mensagem\": \"We are thrilled to introduce you to Minew, a leading provider of cutting-edge IoT hardware. At Minew, we excel in designing, developing, and delivering top-quality IoT devices that incorporate the latest technologies such as Bluetooth®LE, LoRa, LTE-M, NB-IoT, Wi-Fi, UWB, 4G, 5G, and more.\\r\\n\\r\\nOur extensive product line includes BLE sensors, personnel tags, asset trackers, Bluetooth® beacons, IoT gateways, and an array of upcoming innovations. These devices are designed to meet the needs of virtually any commercial and industrial setting.\\r\\n\\r\\nBeyond our exceptional hardware, we offer comprehensive customization services, including product engineering, rapid prototyping, flexible manufacturing, and regulatory compliance. Our commitment to quality and customer satisfaction sets us apart from other IoT manufacturers.\\r\\n\\r\\nFor more details about our products and services, please visit our website at www.minew.com. If you have any questions or need personalized support, don\'t hesitate to reach out to us at info@minew.com.\\r\\n\\r\\nWe look forward to the opportunity to work with you.\"}', '2024-07-17 19:00:10.448589', '2024-07-17 19:00:10.449492'),
-(420, 1, '{\"date\": \"2024-07-18T06:34:16.453190Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"4PrLjiET3oVy9xegyyC5Of3URnA0BCEAm9sHyzCq\", \"contacto\": null, \"mensagem\": \"To the\\r\\n\\r\\nMy name’s Eric and I just found your site AMPDC.org Webmaster.\\r\\n\\r\\nIt’s got a lot going for it, but here’s an idea to make it even MORE effective.\\r\\n\\r\\nVisit https://rushleadgeneration.com for a live demo now.\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  It signals you the moment they let you know they’re interested – so that you can talk to that lead while they’re literally looking over your site.\\r\\n\\r\\nAnd once you’ve captured their phone number, with our new SMS Text With Lead feature, you can automatically start a text (SMS) conversation… and if they don’t take you up on your offer then, you can follow up with text messages for new offers, content links, even just how you doing? notes to build a relationship.\\r\\n\\r\\nVisit https://rushleadgeneration.com to discover what Web Visitors Into Leads can do for your business.\\r\\n\\r\\nThe difference between contacting someone within 5 minutes versus a half-hour means you could be converting up to 100X more leads today!\\r\\n\\r\\nEric\\r\\nPS: Studies show that 70% of a site’s visitors disappear and are gone forever after just a moment. Don’t keep losing them. \\r\\nWeb Visitors Into Leads offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nVisit https://rushleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe visit https://rushleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-18 04:34:16.453190', '2024-07-18 04:34:16.454400'),
-(421, 1, '{\"date\": \"2024-07-18T08:54:34.306671Z\", \"nome\": \"Mike Coleman\", \"email\": \"mikevemUselt@gmail.com\", \"_token\": \"45s1BvysU0NagEVQCmHuEB2Z4tdotmfyaQAVT0Mw\", \"submit\": null, \"contacto\": \"mikevemUselt@gmail.com\", \"mensagem\": \"Hi there \\r\\nI just checked AMPDC.org ranks and am sorry to bring this up, but it lacks in many areas. \\r\\n \\r\\nUnfortunately, building a bunch of links won\'t solve the issue in this case, and a more comprehensive strategy is required. Google has undergone significant changes over the past year, making it nearly impossible to compete for favorable rankings without a well-designed website. \\r\\n \\r\\nWe recommend a search engine-friendly website layout to resolve all issues and propel your site to the top. \\r\\n \\r\\nYou can check more details here: https://www.speed-seo.net/product/seo-friendly-website-designs/ \\r\\n \\r\\nThanks for your consideration \\r\\nMike Coleman\\r\\nSpeed Designs \\r\\nhttps://www.speed-seo.net/whatsapp-us/\"}', '2024-07-18 06:54:34.306671', '2024-07-18 06:54:34.307673'),
-(422, 1, '{\"date\": \"2024-07-18T19:19:49.874650Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"v8ygdlwQ9cpstWgUn3MlfaZGBldXQ0js83QHRGSE\", \"contacto\": null, \"mensagem\": \"To the AMPDC.org Owner! my name’s Eric and I just ran across your website at AMPDC.org...\\r\\n\\r\\nI found it after a quick search, so your SEO’s working out…\\r\\n\\r\\nContent looks pretty good…\\r\\n\\r\\nOne thing’s missing though…\\r\\n\\r\\nA QUICK, EASY way to connect with you NOW.\\r\\n\\r\\nBecause studies show that a web lead like me will only hang out a few seconds – 7 out of 10 disappear almost instantly, Surf Surf Surf… then gone forever.\\r\\n\\r\\nI have the solution:\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  You’ll know immediately they’re interested and you can call them directly to TALK with them - literally while they’re still on the web looking at your site.\\r\\n\\r\\nCLICK HERE https://blazeleadgeneration.com to try out a Live Demo with Web Visitors Into Leads now to see exactly how it works and even give it a try… it could be huge for your business.\\r\\n\\r\\nPlus, now that you’ve got that phone number, with our new SMS Text With Lead feature, you can automatically start a text (SMS) conversation pronto… which is so powerful, because connecting with someone within the first 5 minutes is 100 times more effective than waiting 30 minutes or more later.\\r\\n\\r\\nThe new text messaging feature lets you follow up regularly with new offers, content links, even just follow up notes to build a relationship.\\r\\n\\r\\nEverything I’ve just described is extremely simple to implement, cost-effective, and profitable.\\r\\n \\r\\nCLICK HERE https://blazeleadgeneration.com to discover what Web Visitors Into Leads can do for your business, potentially converting up to 100X more eyeballs into leads today!\\r\\n\\r\\nEric\\r\\nPS: Web Visitors Into Leads offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://blazeleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://blazeleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-18 17:19:49.874650', '2024-07-18 17:19:49.875768'),
-(423, 1, '{\"date\": \"2024-07-18T23:59:41.714287Z\", \"nome\": \"Leonora\", \"email\": \"leonora.oconner13@gmail.com\", \"_token\": \"YuC0nRCcdLwwhaC3rx37IoqKIV2BSRbEFD1Gy0DF\", \"contacto\": null, \"mensagem\": \"If you are reading this message, That means my marketing is working. I can make your ad message reach 5 million sites in the same manner for just $50. It\'s the most affordable way to market your business or services. Contact me by email virgo.t3@gmail.com or skype me at live:.cid.dbb061d1dcb9127a\\r\\n\\r\\nP.S: Speical Offer - Only for 2 days - 10 Million Sites for the same money $50\"}', '2024-07-18 21:59:41.714287', '2024-07-18 21:59:41.715376'),
-(424, 1, '{\"date\": \"2024-07-19T15:47:23.061544Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"qGFY47aYlRT2PdcVvNwW7DM4wvAE0FnHAdulO4ZL\", \"contacto\": null, \"mensagem\": \"Hi AMPDC.org Owner.\\r\\n\\r\\nCool website!\\r\\n\\r\\nMy name’s Eric, and I just found your site - AMPDC.org - while surfing the net. You showed up at the top of the search results, so I checked you out. Looks like what you’re doing is pretty cool.\\r\\n \\r\\nBut if you don’t mind me asking – after someone like me stumbles across AMPDC.org, what usually happens?\\r\\n\\r\\nIs your site generating leads for your business? \\r\\n \\r\\nI’m guessing some, but I also bet you’d like more… studies show that 7 out 10 who land on a site wind up leaving without a trace.\\r\\n\\r\\nNot good.\\r\\n\\r\\nHere’s a thought – what if there was an easy way for every visitor to “raise their hand” to get a phone call from you INSTANTLY… the second they hit your site and said, call me now.\\r\\n\\r\\nYou can –\\r\\n  \\r\\nWeb Visitors Into Leads is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  It lets you know IMMEDIATELY – so that you can talk to that lead while they’re literally looking over your site.\\r\\n\\r\\nCLICK HERE https://rushleadgeneration.com to try out a Live Demo with Web Visitors Into Leads now to see exactly how it works.\\r\\n\\r\\nTime is money when it comes to connecting with leads – the difference between contacting someone within 5 minutes versus 30 minutes later can be huge – like 100 times better!\\r\\n\\r\\nThat’s why we built out our new SMS Text With Lead feature… because once you’ve captured the visitor’s phone number, you can automatically start a text message (SMS) conversation.\\r\\n  \\r\\nThink about the possibilities – even if you don’t close a deal then and there, you can follow up with text messages for new offers, content links, even just how you doing? notes to build a relationship.\\r\\n\\r\\nWouldn’t that be cool?\\r\\n\\r\\nCLICK HERE https://rushleadgeneration.com to discover what Web Visitors Into Leads can do for your business.\\r\\n\\r\\nYou could be converting up to 100X more leads today!\\r\\nEric\\r\\n\\r\\nPS: Web Visitors Into Leads offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://rushleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://rushleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-19 13:47:23.061544', '2024-07-19 13:47:23.062553'),
-(425, 1, '{\"date\": \"2024-07-20T01:33:51.394627Z\", \"nome\": \"Thomas B\", \"email\": \"simslife1984@gmail.com\", \"_token\": \"Zwwtvm8hOfXFi38tDUlXSnzGqhBkj7HNwKPF90eM\", \"submit\": null, \"contacto\": \"simslife1984@gmail.com\", \"mensagem\": \"Bonjour ! \\r\\n \\r\\nAchetez votre premiere carte SIM 100% anonyme ! Nous existons depuis 2015 et avons de tout en clients, dont des stars, cercle familial de stars, deputes, eurodeputes, professeurs emerites, maires, forces de l\'ordre, militaires, et bien plus encore, car notre activite est 100% legale et avantageuse ! \\r\\n \\r\\nPour plus de renseignements, jetez un coup d\'?il a notre site : \\r\\n \\r\\nhttp://www.simslife.fr/ \\r\\n \\r\\nAnonyme et joignable dans plus de 196 pays ! \\r\\n \\r\\nCordialement, \\r\\nThomas B.\"}', '2024-07-19 23:33:51.394627', '2024-07-19 23:33:51.395962'),
-(426, 1, '{\"date\": \"2024-07-20T10:52:58.300811Z\", \"nome\": \"Johnexili\", \"email\": \"kayleighbpsteamship@gmail.com\", \"_token\": \"nnMWwL8uEh7DOyISZ7ojEaMhSJElHAihHCke3Aap\", \"submit\": null, \"contacto\": \"kayleighbpsteamship@gmail.com\", \"mensagem\": \"Hi, ego volo scire vestri pretium.\"}', '2024-07-20 08:52:58.300811', '2024-07-20 08:52:58.301805'),
-(427, 1, '{\"date\": \"2024-07-20T11:48:49.721281Z\", \"nome\": \"Masonexili\", \"email\": \"yjdisantoyjdissemin@gmail.com\", \"_token\": \"YSBD4yn4gQkTJnhFZugEHsNdUs36iFld1Nrndq0J\", \"submit\": null, \"contacto\": \"yjdisantoyjdissemin@gmail.com\", \"mensagem\": \"Aloha, makemake wau eʻike i kāu kumukūʻai.\"}', '2024-07-20 09:48:49.721281', '2024-07-20 09:48:49.722075'),
-(428, 1, '{\"date\": \"2024-07-20T20:16:54.282969Z\", \"nome\": \"Debbra\", \"email\": \"debbra.monson@yahoo.com\", \"_token\": \"75sRC3jkP27zQITXje6cx8VuW4O1EvrT5rh1RlDs\", \"contacto\": null, \"mensagem\": \"Work From Home With This 100% FREE Training..., I Promise...You Will Never Look Back\\r\\n$500+ per day, TRUE -100% Free Training, go here:\\r\\n\\r\\nezwayto1000aday.com\"}', '2024-07-20 18:16:54.282969', '2024-07-20 18:16:54.283973'),
-(429, 1, '{\"date\": \"2024-07-23T02:32:19.776347Z\", \"nome\": \"Oman\", \"email\": \"selene.kwok@yahoo.com\", \"_token\": \"sTz70Violwdn10tCEdIIzQ6D7bnXWAykMdxHmIDm\", \"contacto\": null, \"mensagem\": \"Hello,\\r\\n\\r\\nSecuring the funding to drive growth and realize ideas is a major challenge for startups and established businesses alike. At Cateus Investment Company (CIC), we specialize in tailored financing solutions to meet these needs.\\r\\n\\r\\nWe offer:\\r\\n\\r\\nDebt Financing: Competitive 3% annual interest rate with no early repayment penalties.\\r\\nEquity Financing: Venture capital funding with a 10% equity stake, providing essential resources for expansion while maintaining control.\\r\\nWe are committed to providing flexible options to suit your specific requirements. Please share your pitch deck or executive summary so we can understand your business better and determine the best investment structure.\\r\\n\\r\\nLooking forward to discussing this further.\\r\\n\\r\\nBest regards,\\r\\nOman Rook\\r\\n\\r\\nExecutive Investment Consultant/Director\\r\\nCateus Investment Company (CIC)\\r\\n2401 AlMoayyed Tower, Seef District Manama,\\r\\nKingdom of Bahrain\\r\\nPhone: +973-17-585338\\r\\nEmail: oman.rook@cateusgroup.org, cateusgroup@gmail.com\\r\\nWebsite: https://cateusinvestmentgroup.com\"}', '2024-07-23 00:32:19.776347', '2024-07-23 00:32:19.777790'),
-(430, 1, '{\"date\": \"2024-07-23T07:58:09.650848Z\", \"nome\": \"AnthonykHal\", \"email\": \"kokain@kypit-kokain-moscow.online\", \"_token\": \"Z1qRvBqc2if2WvSGqr9bXow8rqZqgYQJEGu4r1KB\", \"submit\": null, \"contacto\": \"kokain@kypit-kokain-moscow.online\", \"mensagem\": \"Купить Кокаин в Москве? Самый чистый Кокаин в Москве Купить \\r\\nССЫЛКА НА САЙТ- https://mephedrone.top\"}', '2024-07-23 05:58:09.650848', '2024-07-23 05:58:09.651926'),
-(431, 1, '{\"date\": \"2024-07-24T06:42:45.334339Z\", \"nome\": \"RonaldakZeT\", \"email\": \"mephedrone@kypit-kokain-moscow.online\", \"_token\": \"ut18n4eReZ9Gq72yMNHeb1H6FemRMGfPeoANUjul\", \"submit\": null, \"contacto\": \"mephedrone@kypit-kokain-moscow.online\", \"mensagem\": \"Москва Купить Мефедрон? Кристаллы МЕФ? \\r\\nГде в Москве Купить Мефедрон? САЙТ - https://mephedrone.top/\"}', '2024-07-24 04:42:45.334339', '2024-07-24 04:42:45.335409'),
-(432, 1, '{\"date\": \"2024-07-24T12:15:41.076900Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"sSut0KPaLER2sV5G4halLg2lkPqiTnJsJruAnVhn\", \"contacto\": null, \"mensagem\": \"To the AMPDC.org Owner. Eric here with a quick thought about your website AMPDC.org...\\r\\n\\r\\nI’m on the internet a lot and I look at a lot of business websites.\\r\\n\\r\\nLike yours, many of them have great content. \\r\\n\\r\\nBut all too often, they come up short when it comes to engaging and connecting with anyone who visits.\\r\\n\\r\\nI get it – it’s hard.  Studies show 7 out of 10 people who land on a site, abandon it in moments without leaving even a trace.  You got the eyeball, but nothing else.\\r\\n\\r\\nHere’s a solution for you…\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  You’ll know immediately they’re interested and you can call them directly to talk with them literally while they’re still on the web looking at your site.\\r\\n\\r\\nCLICK HERE https://blazeleadgeneration.com to try out a Live Demo with Web Visitors Into Leads now to see exactly how it works.\\r\\n\\r\\nIt could be huge for your business – and because you’ve got that phone number, with our new SMS Text With Lead feature, you can automatically start a text (SMS) conversation – immediately… and contacting someone in that 5 minute window is 100 times more powerful than reaching out 30 minutes or more later.\\r\\n\\r\\nPlus, with text messaging you can follow up later with new offers, content links, even just follow up notes to keep the conversation going.\\r\\n\\r\\nEverything I’ve just described is extremely simple to implement, cost-effective, and profitable. \\r\\n \\r\\nCLICK HERE https://blazeleadgeneration.com to discover what Web Visitors Into Leads can do for your business.\\r\\n\\r\\nYou could be converting up to 100X more eyeballs into leads today!\\r\\n\\r\\nEric\\r\\nPS: Web Visitors Into Leads offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://blazeleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://blazeleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-24 10:15:41.076900', '2024-07-24 10:15:41.078218'),
-(433, 1, '{\"date\": \"2024-07-25T07:15:15.268357Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"ulJVkWh10k7HyCQC66Mj4blvuvwdHkk6cUhSTWC9\", \"contacto\": null, \"mensagem\": \"Hi AMPDC.org Webmaster!\\r\\n\\r\\nMy name’s Eric and I just came across your website - AMPDC.org - in the search results.\\r\\n\\r\\nHere’s what that means to me…\\r\\n\\r\\nYour SEO’s working.\\r\\n\\r\\nYou’re getting eyeballs – mine at least.\\r\\n\\r\\nYour content’s pretty good, wouldn’t change a thing.\\r\\n\\r\\nBUT…\\r\\n\\r\\nEyeballs don’t pay the bills.\\r\\n\\r\\nCUSTOMERS do.\\r\\n\\r\\nAnd studies show that 7 out of 10 visitors to a site like AMPDC.org will drop by, take a gander, and then head for the hills without doing anything else.\\r\\n\\r\\nIt’s like they never were even there.\\r\\n\\r\\nYou can fix this.\\r\\n\\r\\nYou can make it super-simple for them to raise their hand, say, okay, let’s talk without requiring them to even pull their cell phone from their pocket… thanks to Web Visitors Into Leads.\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that sits on your site, ready and waiting to capture any visitor’s Name, Email address and Phone Number.  It lets you know immediately – so you can talk to that lead immediately… without delay… BEFORE they head for those hills.\\r\\n  \\r\\nCLICK HERE https://rushleadgeneration.com to try out a Live Demo with Web Visitors Into Leads now to see exactly how it works.\\r\\n\\r\\nNow it’s also true that when reaching out to hot leads, you MUST act fast – the difference between contacting someone within 5 minutes versus 30 minutes later is huge – like 100 times better!\\r\\n\\r\\nThat’s what makes our new SMS Text With Lead feature so powerful… you’ve got their phone number, so now you can start a text message (SMS) conversation with them… so even if they don’t take you up on your offer right away, you continue to text them new offers, new content, and new reasons to do business with you.\\r\\n\\r\\nThis could change everything for you and your business.\\r\\n\\r\\nCLICK HERE https://rushleadgeneration.com to learn more about everything Web Visitors Into Leads can do and start turing eyeballs into money.\\r\\n\\r\\nEric\\r\\nPS: Web Visitors Into Leads offers a FREE 14 days trial – you could be converting up to 100x more leads immediately!   \\r\\nIt even includes International Long Distance Calling. \\r\\nPaying customers are out there waiting. \\r\\nStarting connecting today by CLICKING HERE https://rushleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe click https://rushleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-25 05:15:15.268357', '2024-07-25 05:15:15.269547'),
-(434, 1, '{\"date\": \"2024-07-25T21:07:41.656135Z\", \"nome\": \"Ethan\", \"email\": \"AMPDC.org@gmx.com\", \"_token\": \"ITdSQVFmoymldhbwPCdtsu7dBcIrXs0OgBoHcwLm\", \"contacto\": null, \"mensagem\": \"Hi there \\r\\n\\r\\nI wanted to reach out and let you know about our new dog harness. It\'s really easy to put on and take off - in just 2 seconds - and it\'s personalized for each dog. \\r\\nPlus, we offer a lifetime warranty so you can be sure your pet is always safe and stylish.\\r\\n\\r\\nWe\'ve had a lot of success with it so far and I think your dog would love it. \\r\\n\\r\\nGet yours today with 50% OFF:  https://caredogbest.com\\r\\n\\r\\nFREE Shipping - TODAY ONLY! \\r\\n\\r\\nKind Regards, \\r\\n\\r\\nEthan\"}', '2024-07-25 19:07:41.656135', '2024-07-25 19:07:41.657190'),
-(435, 1, '{\"date\": \"2024-07-26T05:12:44.805459Z\", \"nome\": \"Mike Charlson\", \"email\": \"mikevemUselt@gmail.com\", \"_token\": \"nLgXHR1yZEhEBdZDryQ3m84jkgOQSg4b0SSaODIW\", \"submit\": null, \"contacto\": \"mikevemUselt@gmail.com\", \"mensagem\": \"Hi there, \\r\\n \\r\\nWhile checking your AMPDC.org for its ranks, I have noticed that there are some toxic links pointing towards it. \\r\\n \\r\\nGrab your free clean up and improve ranks in no time \\r\\nhttps://www.hilkomseo.net/free-cleanup/ \\r\\n \\r\\nIt really works, get a free backlinks clean up with us today \\r\\n \\r\\n \\r\\nRegards \\r\\nMike Charlson\\r\\n \\r\\nWhatsapp: https://www.hilkomseo.net/whatapp-us/\"}', '2024-07-26 03:12:44.805459', '2024-07-26 03:12:44.806546'),
-(436, 1, '{\"date\": \"2024-07-26T17:00:11.605401Z\", \"nome\": \"Helen\", \"email\": \"doyne.helen@gmail.com\", \"_token\": \"tKxvYhq2a1yaQvuSX4GIiHgfU6MiJJfffgRp7q0K\", \"contacto\": null, \"mensagem\": \"Unlock the power of magic with Extreme Spells! Whether you\'re seeking true love, financial success, or happiness, our experienced Circle of Eight, led by Master Sam Taylor and Psychic Master Lennox, is here to transform your life. Since 1993, we\'ve been casting potent spells tailored to your unique needs, helping countless individuals achieve their dreams.\\r\\n\\r\\nDiscover spells to attract your perfect mate, rekindle lost love, draw wealth, and much more. Our spells are safe, effective, and backed by a 100% satisfaction guarantee. Plus, we offer free health spells to those in need because we believe in making positive changes accessible to everyone.\\r\\n\\r\\nDon\'t let life\'s challenges hold you back. Embrace the mystical power of Extreme Spells and take control of your destiny today. Visit https://extremespells.com/ to learn more and start your magical journey. Transform your life with the proven power of spell casting!\\r\\n\\r\\nAct Now! Click here to unlock love, wealth, and happiness with Extreme Spells. Your dream life is just a spell away!\"}', '2024-07-26 15:00:11.605401', '2024-07-26 15:00:11.606573'),
-(437, 1, '{\"date\": \"2024-07-27T03:24:30.099357Z\", \"nome\": \"Kayleigh\", \"email\": \"blanco.kayleigh@yahoo.com\", \"_token\": \"6TsgVxx5xH4s1BQJhXeSAqRmt1xnqvXtde7Nqgab\", \"contacto\": null, \"mensagem\": \"WANTED: Partnerships & Agents for Global E-commerce Firm\\r\\n\\r\\n4U2 Inc., a premier E-commerce , Sourcing Brokerage firm, is actively seeking partnerships and collaboration with manufacturers and wholesalers for agricultural, commercial, and residential products. We offer a diverse marketplace for both new and used items, including vehicles and equipment.\\r\\n\\r\\nWhy Choose 4U2 Inc.? (see https.//www.4u2inc.com)\\r\\n\\r\\nGlobal reach for your products\\r\\nImmediate requirements for a wide range of items\\r\\nOpportunity to expand your business network\\r\\nJoin Our Team We’re also looking for Independent Contractor Agents (Account Executives) to help us discover new business opportunities. Whether you’re seeking a full-time or part-time role, you can earn up to $60,000 based on performance.\\r\\n\\r\\nGet in Touch Don’t miss out on this opportunity. Contact us at 4u2inc123@gmail.com to learn more or to start our partnership today!\\r\\n\\r\\nThis version is more direct and easier to read, highlighting the key points and call to action for potential partners and agents. If you need further refinements or have specific requirements, feel free to let me know!\"}', '2024-07-27 01:24:30.099357', '2024-07-27 01:24:30.100350');
-INSERT INTO `form_submissions` (`id`, `form_id`, `data`, `created_at`, `updated_at`) VALUES
-(438, 1, '{\"date\": \"2024-07-27T04:01:41.414027Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"S2iVSOPxFrQJTYsKIGtBYFbLheJRaaTesI4x9WGT\", \"contacto\": null, \"mensagem\": \"Hi,\\r\\n\\r\\nMy name is Eric and unlike a lot of emails you might get, I wanted to instead provide you with a word of encouragement – Congratulations\\r\\n\\r\\nWhat for?  \\r\\n\\r\\nPart of my job is to check out websites and the work you’ve done with AMPDC.org Owner definitely stands out. \\r\\n\\r\\nIt’s clear you took building a website seriously and made a real investment of time and resources into making it top quality.\\r\\n\\r\\nThere is, however, a catch… more accurately, a question…\\r\\n\\r\\nSo when someone like me happens to find your site – maybe at the top of the search results (nice job BTW) or just through a random link, how do you know? \\r\\n\\r\\nMore importantly, how do you make a connection with that person?\\r\\n\\r\\nStudies show that 7 out of 10 visitors don’t stick around – they’re there one second and then gone with the wind.\\r\\n\\r\\nHere’s a way to create INSTANT engagement that you may not have known about… \\r\\n\\r\\nWeb Visitor is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  It lets you know INSTANTLY that they’re interested – so that you can talk to that lead while they’re literally checking out AMPDC.org.\\r\\n\\r\\nCLICK HERE http://rushleadgeneration.com to try out a Live Demo with Web Visitor now to see exactly how it works.\\r\\n\\r\\nIt could be a game-changer for your business – and it gets even better… once you’ve captured their phone number, with our new SMS Text With Lead feature, you can automatically start a text (SMS) conversation – immediately (and there’s literally a 100X difference between contacting someone within 5 minutes versus 30 minutes.)\\r\\n\\r\\nPlus then, even if you don’t close a deal right away, you can connect later on with text messages for new offers, content links, even just follow up notes to build a relationship.\\r\\n\\r\\nEverything I’ve just described is simple, easy, and effective. \\r\\n\\r\\nCLICK HERE http://rushleadgeneration.com to discover what Web Visitor can do for your business.\\r\\n\\r\\nYou could be converting up to 100X more leads today!\\r\\n\\r\\nEric\\r\\nPS: Web Visitor offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE http://rushleadgeneration.com to try Web Visitor now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here http://rushleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-27 02:01:41.414027', '2024-07-27 02:01:41.415194'),
-(439, 1, '{\"date\": \"2024-07-27T13:18:44.835154Z\", \"nome\": \"Amelia\", \"email\": \"ameliabrown12784@gmail.com\", \"_token\": \"d7XLHCYGlE1MaB3NjDked0NwOBbIDhAtOg6eyzNO\", \"contacto\": null, \"mensagem\": \"Hi there,\\r\\n\\r\\nWe run a Youtube growth service, where we can increase your subscriber count safely and practically. \\r\\n\\r\\n- Guaranteed: We guarantee to gain you 700-1500 new subscribers each month.\\r\\n- Real, human subscribers who subscribe because they are interested in your channel/videos.\\r\\n- Safe: All actions are done, without using any automated tasks / bots.\\r\\n\\r\\nOur price is just $60 (USD) per month and we can start immediately.\\r\\n\\r\\nIf you are interested then we can discuss further.\\r\\n\\r\\nKind Regards,\\r\\nAmelia\\r\\n\\r\\nUnsubscribe: https://removeme.click/yt/unsubscribe.php?d=AMPDC.org\"}', '2024-07-27 11:18:44.835154', '2024-07-27 11:18:44.837105'),
-(440, 1, '{\"date\": \"2024-07-27T21:29:34.185632Z\", \"nome\": \"Carloslit\", \"email\": \"inet4747@outlook.com\", \"_token\": \"3aSTZiWgUtXNKlB6g3hqnkvmEpA3TqfzldEQxABQ\", \"submit\": null, \"contacto\": \"inet4747@outlook.com\", \"mensagem\": \"[url=https://app.getgrass.io/register/?referralCode=ftQcOU_kA-dCl9V]You are sleeping - your PC is collecting crypto. The Grasse Network uses 1% of your PC to collect artificial intelligence data from the Internet. Join for free. You can now connect your Solana wallet to Grass[/url]\"}', '2024-07-27 19:29:34.185632', '2024-07-27 19:29:34.186596'),
-(441, 1, '{\"date\": \"2024-07-28T20:53:50.444993Z\", \"nome\": \"Hershel\", \"email\": \"skeen.hershel@hotmail.com\", \"_token\": \"MqcSUPUVZx8lZTQSvlZkFYQuogs0KAjqOiL7nTbW\", \"contacto\": null, \"mensagem\": \"Are you concerned that your current website that was built a few years back,is no longer a good representation of your company ?\\r\\n\\r\\nWhy pay $50+ per hour for web development work, \\r\\nwhen you can get higher quality results AT LESS THAN HALF THE COST? \\r\\n\\r\\nWe are a FULL SERVICE, USA managed web development agency offering wholesale pricing.\\r\\n\\r\\nNo job too big or small. Test us out to see our value.\\r\\n\\r\\nUse the link in my signature, for a quick turn around quote.\\r\\n\\r\\n\\r\\n\\r\\nKristine Avocet\\r\\nSenior Web Specialist \\r\\nFusion Web Experts  \\r\\n186 Daniel Island Drive \\r\\nDaniel Island, SC 29492 \\r\\nwww.fusionwebexperts.tech\"}', '2024-07-28 18:53:50.444993', '2024-07-28 18:53:50.446125'),
-(442, 1, '{\"date\": \"2024-07-29T02:45:49.040242Z\", \"nome\": \"Davidexili\", \"email\": \"kayleighbpsteamship@gmail.com\", \"_token\": \"SbtpNpqG9aEt7Ff1ttTAKvMWQs4GoT04H72FJc1a\", \"submit\": null, \"contacto\": \"kayleighbpsteamship@gmail.com\", \"mensagem\": \"Sawubona, bengifuna ukwazi intengo yakho.\"}', '2024-07-29 00:45:49.040242', '2024-07-29 00:45:49.041282'),
-(443, 1, '{\"date\": \"2024-07-29T06:15:54.010101Z\", \"nome\": \"Masonexili\", \"email\": \"alden.provitt773@gmail.com\", \"_token\": \"mwThSeWZOiGDWd8ZSj7uBM8zrDyLoZOVdVoGl5YZ\", \"submit\": null, \"contacto\": \"alden.provitt773@gmail.com\", \"mensagem\": \"Прывітанне, я хацеў даведацца Ваш прайс.\"}', '2024-07-29 04:15:54.010101', '2024-07-29 04:15:54.011129'),
-(444, 1, '{\"date\": \"2024-07-29T10:53:19.917362Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"cDWy562ZyPBAI3rhScmwdmjWmOuytTcHb4QBYTKu\", \"contacto\": null, \"mensagem\": \"To the, Eric here with a quick thought about your website AMPDC.org Webmaster!\\r\\n\\r\\nI’m on the internet a lot and I look at a lot of business websites.\\r\\n\\r\\nLike yours, many of them have great content. \\r\\n\\r\\nBut all too often, they come up short when it comes to engaging and connecting with anyone who visits.\\r\\n\\r\\nI get it – it’s hard.  Studies show 7 out of 10 people who land on a site, abandon it in moments without leaving even a trace.  You got the eyeball, but nothing else.\\r\\n\\r\\nHere’s a solution for you…\\r\\n\\r\\nWeb Visitor is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  You’ll know immediately they’re interested and you can call them directly to talk with them literally while they’re still on the web looking at your site.\\r\\n\\r\\nCLICK HERE https://rushleadgeneration.com to try out a Live Demo with Web Visitor now to see exactly how it works.\\r\\n\\r\\nIt could be huge for your business – and because you’ve got that phone number, with our new SMS Text With Lead feature, you can automatically start a text (SMS) conversation – immediately… and contacting someone in that 5 minute window is 100 times more powerful than reaching out 30 minutes or more later.\\r\\n\\r\\nPlus, with text messaging you can follow up later with new offers, content links, even just follow up notes to keep the conversation going.\\r\\n\\r\\nEverything I’ve just described is extremely simple to implement, cost-effective, and profitable. \\r\\n \\r\\nCLICK HERE https://rushleadgeneration.com to discover what Web Visitor can do for your business.\\r\\n\\r\\nYou could be converting up to 100X more eyeballs into leads today!\\r\\n\\r\\nEric\\r\\nPS: Web Visitor offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://rushleadgeneration.com to try Talk With Web Visitor now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://rushleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-29 08:53:19.917362', '2024-07-29 08:53:19.918456'),
-(445, 1, '{\"date\": \"2024-07-29T14:32:04.999777Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"keXI9Hysi9MMlOTn5XbCXoNbhnmaj0rPxPRbMi2r\", \"contacto\": null, \"mensagem\": \"Dear\\r\\n\\r\\nMy name’s Eric and I just found your site AMPDC.org Owner!\\r\\n\\r\\nIt’s got a lot going for it, but here’s an idea to make it even MORE effective.\\r\\n\\r\\nVisit https://rushleadgeneration.com for a live demo now.\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  It signals you the moment they let you know they’re interested – so that you can talk to that lead while they’re literally looking over your site.\\r\\n\\r\\nAnd once you’ve captured their phone number, with our new SMS Text With Lead feature, you can automatically start a text (SMS) conversation… and if they don’t take you up on your offer then, you can follow up with text messages for new offers, content links, even just how you doing? notes to build a relationship.\\r\\n\\r\\nVisit https://rushleadgeneration.com to discover what Web Visitors Into Leads can do for your business.\\r\\n\\r\\nThe difference between contacting someone within 5 minutes versus a half-hour means you could be converting up to 100X more leads today!\\r\\n\\r\\nEric\\r\\nPS: Studies show that 70% of a site’s visitors disappear and are gone forever after just a moment. Don’t keep losing them. \\r\\nWeb Visitors Into Leads offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nVisit https://rushleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe visit https://rushleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-29 12:32:04.999777', '2024-07-29 12:32:05.000761'),
-(446, 1, '{\"date\": \"2024-07-29T20:13:24.434849Z\", \"nome\": \"Eric\", \"email\": \"ericjonesmyemail@gmail.com\", \"_token\": \"nVa9PeWyfK9xCPkkinkGqHdOik4wW1DCQboD4VEc\", \"contacto\": null, \"mensagem\": \"To the AMPDC.org Webmaster. my name’s Eric and for just a second, imagine this…\\r\\n\\r\\n- Someone does a search and winds up at AMPDC.org.\\r\\n\\r\\n- They hang out for a minute to check it out.  I’m interested… but… maybe…\\r\\n\\r\\n- And then they hit the back button and check out the other search results instead. \\r\\n\\r\\n- Bottom line – you got an eyeball, but nothing else to show for it.\\r\\n\\r\\n- There they go.\\r\\n\\r\\nThis isn’t really your fault – it happens a LOT – studies show 7 out of 10 visitors to any site disappear without leaving a trace.\\r\\n\\r\\nBut you CAN fix that.\\r\\n\\r\\nWeb Visitors Into Leads is a software widget that’s works on your site, ready to capture any visitor’s Name, Email address and Phone Number.  It lets you know right then and there – enabling you to call that lead while they’re literally looking over your site.\\r\\n\\r\\nCLICK HERE https://rushleadgeneration.com to try out a Live Demo with Web Visitors Into Leads now to see exactly how it works.\\r\\n\\r\\nTime is money when it comes to connecting with leads – the difference between contacting someone within 5 minutes versus 30 minutes later can be huge – like 100 times better!\\r\\n\\r\\nPlus, now that you have their phone number, with our new SMS Text With Lead feature you can automatically start a text (SMS) conversation… so even if you don’t close a deal then, you can follow up with text messages for new offers, content links, even just how you doing? notes to build a relationship.\\r\\n\\r\\nStrong stuff.\\r\\n\\r\\nCLICK HERE https://rushleadgeneration.com to discover what Web Visitors Into Leads can do for your business.\\r\\n\\r\\nYou could be converting up to 100X more leads today!\\r\\n\\r\\nEric\\r\\nPS: Web Visitors Into Leads offers a FREE 14 days trial – and it even includes International Long Distance Calling. \\r\\nYou have customers waiting to talk with you right now… don’t keep them waiting. \\r\\nCLICK HERE https://rushleadgeneration.com to try Web Visitors Into Leads now.\\r\\n\\r\\nIf you\'d like to unsubscribe click here https://rushleadgeneration.com/unsubscribe.aspx?d=AMPDC.org\"}', '2024-07-29 18:13:24.434849', '2024-07-29 18:13:24.435889'),
-(447, 1, '{\"date\": \"2024-07-30T00:58:49.790356Z\", \"nome\": \"Mike Stephen\", \"email\": \"petervemUselt@gmail.com\", \"_token\": \"UkfrTMtTqnK4owFgIB5o3Pk459ibgF2yaOJMf5M7\", \"submit\": null, \"contacto\": \"petervemUselt@gmail.com\", \"mensagem\": \"Greetings \\r\\n \\r\\nI have just took an in depth look on your  AMPDC.org for its SEO metrics and saw that your website could use a push. \\r\\n \\r\\nWe will enhance your ranks organically and safely, using only state of the art AI and whitehat methods, while providing monthly reports and outstanding support. \\r\\n \\r\\nMore info: \\r\\nhttps://www.cyber-digitalx.net/monthly-seo/ \\r\\n \\r\\nRegards \\r\\nMike Stephen\\r\\n \\r\\nDigital X SEO Experts \\r\\nhttps://www.cyber-digitalx.net/whatsapp-us/\"}', '2024-07-29 22:58:49.790356', '2024-07-29 22:58:49.791584'),
-(448, 1, '{\"date\": \"2024-07-31T07:37:11.533378Z\", \"nome\": \"MarioZ\", \"email\": \"info@cit-hadley.com\", \"_token\": \"sdSQ52VwEbZ6MKZm5m6SeP6fJGGUR3HJmCiirxXK\", \"submit\": null, \"contacto\": \"info@cit-hadley.com\", \"mensagem\": \"Discover the future of gaming with Empire of Musk - an innovative Web3 experience! Grow your business realm free of in-app purchases. Upgrade your ventures to increase your earnings per hour. Engage, accumulate, and eventually exchange in-game currency for actual cash. Join the Musk Empire now and craft your digital fortune! URL https://tinyurl.com/muskempre\"}', '2024-07-31 05:37:11.533378', '2024-07-31 05:37:11.534476'),
-(449, 1, '{\"date\": \"2024-07-31T16:02:15.464438Z\", \"nome\": \"Spring Finance LTD\", \"email\": \"harissalome37@gmail.com\", \"_token\": \"rlVfIbI2HoxOUt7iP7WahOQG2yiKKdR5pRl4Q5ny\", \"submit\": null, \"contacto\": \"harissalome37@gmail.com\", \"mensagem\": \"Hi, \\r\\n \\r\\nIs your company looking for short-term or long-term finance or debt consolidation? Our company offers finance with reasonable interest rates as low as 2.5% on the loan-to-value ratio. Contact us now via email at loan@cgcredits.com or WhatsApp  +44 7404911756 for  more information. Our commitment to solving financial problems is our utmost priority. \\r\\n \\r\\nThank you, \\r\\nSpring Finance LTD\"}', '2024-07-31 14:02:15.464438', '2024-07-31 14:02:15.465684'),
-(450, 1, '{\"date\": \"2024-08-02T16:06:48.719434Z\", \"nome\": \"Fabien\", \"email\": \"morrismi1@outlook.com\", \"_token\": \"yaLvbRh771aJhVNwxPcguwHKH38LXWwRXyahH6y0\", \"contacto\": null, \"mensagem\": \"Hi there!\\r\\n\\r\\nAre you looking to maximize the impact of your YouTube videos? Introducing YTCopyCat, our innovative SaaS tool that converts your YouTube videos into various high-quality written content using advanced AI.\\r\\nWhat Can Our Tool Do for You?\\r\\n\\r\\n    Blog Articles: Turn your videos into blog posts.\\r\\n    Newsletters: Generate captivating newsletters effortlessly.\\r\\n    Video Summaries: Create concise summaries.\\r\\n    Tweets: Produce engaging tweets.\\r\\n    Custom Content: Use personalized prompts for specific needs.\\r\\n\\r\\nHow It Works:\\r\\n\\r\\n    Paste your YouTube video link.\\r\\n    Our AI analyzes and extracts key content.\\r\\n    Choose your desired format.\\r\\n\\r\\nIn just a few clicks, you’ll have top-notch content ready to publish or share. Save time and boost productivity with automated content creation.\\r\\nWhy Choose YTCopyCat?\\r\\n\\r\\n    Time-Saving: Automate your content creation.\\r\\n    Versatile: Generate multiple content types from one video.\\r\\n    High Quality: Enjoy superior content with advanced AI.\\r\\n\\r\\nSpecial Offer:\\r\\n\\r\\nTry YTCopyCat for free and revolutionize your content strategy. Visit https://ytcopycat.com to learn more and start your free trial today. Don’t miss this chance to enhance your content creation!\\r\\n\\r\\nCheers,\\r\\nFabien\\r\\ncontact@ytcopycat.com\"}', '2024-08-02 14:06:48.719434', '2024-08-02 14:06:48.720432'),
-(451, 1, '{\"date\": \"2024-08-02T22:03:03.753763Z\", \"nome\": \"Joanna\", \"email\": \"joannariggs278@gmail.com\", \"_token\": \"4ro7lVFkQ6EcMHQhJHgEZm2vDnip0nNuTa864r6T\", \"contacto\": null, \"mensagem\": \"Hi,\\r\\n\\r\\nI just visited AMPDC.org and wondered if you\'d ever thought about having an engaging video to explain what you do?\\r\\n\\r\\nOur prices start from just $195.\\r\\n\\r\\nLet me know if you\'re interested in seeing samples of our previous work.\\r\\n\\r\\nRegards,\\r\\nJoanna\"}', '2024-08-02 20:03:03.753763', '2024-08-02 20:03:03.754775'),
-(452, 1, '{\"date\": \"2024-08-03T22:58:18.654278Z\", \"nome\": \"RandyDok\", \"email\": \"mawardydarmawan@yahoo.co.id\", \"_token\": \"aIDwXKTYRPJxHFZXGKnBajhOr0NQ03kBVwm6ETGD\", \"submit\": null, \"contacto\": \"mawardydarmawan@yahoo.co.id\", \"mensagem\": \"CLAIM YOUR WIN: IPHONE 16 PRO MAX https://ampforwp.appspot.com/?api=https%3A%2F%2Ftelegra.ph%2Fiphone-07-06-5%3F8765\"}', '2024-08-03 20:58:18.654278', '2024-08-03 20:58:18.655205'),
-(453, 1, '{\"date\": \"2024-08-04T04:38:13.704989Z\", \"nome\": \"Demi\", \"email\": \"morrismi1@outlook.com\", \"_token\": \"B1bKDqKrbkq0UECr8VNbkuAGnJ7qXunhN5mLruqd\", \"contacto\": null, \"mensagem\": \"Dear AMPDC.org owner or manager, \\r\\n\\r\\nCut your business or personal credit cards and loan payments in half. eliminate interest and reduce your debt by 50%. 100% guaranteed. The average customer saves $56,228 in unnecessary interest plus principal and 15 years in payoff time through our consolidation loan and debt consolidation programs. \\r\\n\\r\\nContact us at usdebtrelief.biz or email me at usdebt12@gmail.com I look forward to hearing from you, \\r\\n\\r\\nRey\"}', '2024-08-04 02:38:13.704989', '2024-08-04 02:38:13.705935'),
-(454, 1, '{\"date\": \"2024-08-05T10:42:33.338161Z\", \"nome\": \"RandyDok\", \"email\": \"jrcastaneda516@yahoo.com\", \"_token\": \"L4SoHbLm8FjbQ9U9ThvGpLucChHuTX50xiHG8WIO\", \"submit\": null, \"contacto\": \"jrcastaneda516@yahoo.com\", \"mensagem\": \"Your Luck Has Changed: $77,000 Earned—Withdrawal Instructions Inside! https://script.google.com/macros/s/AKfycbwzsgjKRY_ojCAjMC4lTM_x_lY7vQ5aG3zQBg5dW8JbMcQoS8vt4O_wzev7L_1FkjqO/exec\"}', '2024-08-05 08:42:33.338161', '2024-08-05 08:42:33.340087'),
-(455, 1, '{\"date\": \"2024-08-05T11:30:14.374094Z\", \"nome\": \"Natajes\", \"email\": \"woodthighgire1988@gmail.com\", \"_token\": \"akTCGJGcAOSYzx6LFlVb7H7i5W8pLFGgfbaBJg5Q\", \"submit\": null, \"contacto\": \"woodthighgire1988@gmail.com\", \"mensagem\": \"Eu deixava-te foder-me se estivesses aqui. https://datingsmatches-meets.top/?u=41nkd08&o=8dhpkzk\"}', '2024-08-05 09:30:14.374094', '2024-08-05 09:30:14.375012'),
-(456, 1, '{\"date\": \"2024-08-06T23:35:19.362128Z\", \"nome\": \"Aisha Al-Gaddafi\", \"email\": \"sm3226520@gmail.com\", \"_token\": \"aDsN3vIm4aH0iNA6U2X0a9FCMbtT1ZTFbm7F4dEb\", \"submit\": null, \"contacto\": \"sm3226520@gmail.com\", \"mensagem\": \"I came across your email address before a private search and need your assistance. My name is Aisha Al-Gaddafi. I am a single Mother and a Widow with three Children. \\r\\n \\r\\nI am the only biological Daughter of the late Libyan President (Late Colonel Muammar Gaddafi). I have investment funds worth Seventy Five Million Seven Hundred Thousand United States Dollars ($75.700.000.00 ), and I need a trusted investment Manager/Partner because of my current refugee status. However, \\r\\n \\r\\nI am interested in you for investment project assistance in your country; maybe we can build a business relationship shortly. \\r\\n \\r\\nI would appreciate your urgent reply if you are interested in this transaction. For further discussion, please contact me at my private email address (albums_07science@icloud.com) or our family WhatsApp +447452176734. \\r\\n \\r\\nBest Regards \\r\\nMrs Aisha Al-Gaddafi\"}', '2024-08-06 21:35:19.362128', '2024-08-06 21:35:19.363371'),
-(457, 1, '{\"date\": \"2024-08-07T09:21:16.121680Z\", \"nome\": \"Ernie\", \"email\": \"info@golden.pawsafer.net\", \"_token\": \"1pr0P1YWuXb7M6ZQwbDLD3wH26lpqwXvk7oMlp5o\", \"contacto\": null, \"mensagem\": \"Is your dog\'s nails getting too long? If you\'re tired of going to the vet or groomer to get them trimmed, why not try PawSafer™? \\r\\nWith PawSafer™, you can trim your dog\'s nails from the comfort of your own home, and it only takes a few minutes!\\r\\n\\r\\nPawSafer™ is the safest and most convenient way to trim your dog\'s nails, and it\'s very affordable. \\r\\n\\r\\nGet it while it\'s still 50% OFF + FREE Shipping\\r\\n\\r\\nBuy here: https://pawsafer.net\\r\\n \\r\\nCheers, \\r\\n \\r\\nErnie\"}', '2024-08-07 07:21:16.121680', '2024-08-07 07:21:16.122786'),
-(458, 1, '{\"date\": \"2024-08-07T19:02:32.728758Z\", \"nome\": \"Faith\", \"email\": \"busch.faith@yahoo.com\", \"_token\": \"RWbbDUu517fU6bvNkvgnVcF0TnRNUo8H98KiqZVA\", \"contacto\": null, \"mensagem\": \"Hi there,\\r\\n\\r\\nWe would like to introduce to you Robin AI, the world\'s first app that replaces your entire team with an AI assistant. This powerful tool generates human-like content, creates stunning designs, drives unlimited traffic, and more.\\r\\n\\r\\nGenerate Human-Like Content\\r\\nBuilds Professional Funnels\\r\\nDrive Thousands Of Clicks\\r\\n\\r\\nOnly $17.00 (normally $180)\\r\\n\\r\\nCheck out the features of Robin AI here: https://furtherinfo.org/robinai\\r\\n\\r\\nThanks for your time,\\r\\nFaith\"}', '2024-08-07 17:02:32.728758', '2024-08-07 17:02:32.729699'),
-(459, 1, '{\"date\": \"2024-08-08T21:08:10.931902Z\", \"nome\": \"Masonexili\", \"email\": \"alden.provitt773@gmail.com\", \"_token\": \"AzN5s7d8lIh1QX8rTYCsaA5sCqtAHdx6i5oE4nvR\", \"submit\": null, \"contacto\": \"alden.provitt773@gmail.com\", \"mensagem\": \"Hai, saya ingin tahu harga Anda.\"}', '2024-08-08 19:08:10.931902', '2024-08-08 19:08:10.932901'),
-(460, 1, '{\"date\": \"2024-08-09T05:53:33.616217Z\", \"nome\": \"Louie\", \"email\": \"sebastian.louie50@gmail.com\", \"_token\": \"PHpdKv0Xq3jjdruV3MAm6b2pFMLOrwKrBewToBH8\", \"contacto\": null, \"mensagem\": \"Do you have big ideas and plans to update your website, but hate the outrageous fees that most agencies charge?\\r\\nWhy pay $50+ per hour for web development work, \\r\\nwhen you can get higher quality results AT LESS THAN HALF THE COST? \\r\\n\\r\\nWe are a FULL SERVICE, USA managed web development agency offering wholesale pricing.\\r\\n\\r\\nNo job too big or small. Test us out to see our value.\\r\\n\\r\\nUse the link in my signature, for a quick turn around quote.\\r\\n\\r\\n\\r\\n\\r\\nKristine Avocet\\r\\nSenior Web Specialist \\r\\nFusion Web Experts  \\r\\n186 Daniel Island Drive \\r\\nDaniel Island, SC 29492 \\r\\nwww.fusionwebexperts.tech\"}', '2024-08-09 03:53:33.616217', '2024-08-09 03:53:33.617990'),
-(461, 1, '{\"date\": \"2024-08-09T07:01:15.782558Z\", \"nome\": \"Francistounc\", \"email\": \"bel@symons.net.au\", \"_token\": \"pmUH9hldpfbjaCy2C8izKntc2jYNeJelA4WbXxHB\", \"submit\": null, \"contacto\": \"bel@symons.net.au\", \"mensagem\": \"HOW TO BUILD A $50,000 WEEKLY PASSIVE INCOME STREAM WITH CRYPTO NODES http://www.commaxtehran.ir/dailylink/?go=https%3A%2F%2Ftelegra.ph%2Fxlerty-06-04%3F5376&id=2\"}', '2024-08-09 05:01:15.782558', '2024-08-09 05:01:15.783823'),
-(462, 1, '{\"date\": \"2024-08-09T15:35:41.660788Z\", \"nome\": \"Masonexili\", \"email\": \"yjdisantoyjdissemin@gmail.com\", \"_token\": \"fyJIRHIJ6w05nLnLWP0mgOTz24l0pGiuBp8g6WK3\", \"submit\": null, \"contacto\": \"yjdisantoyjdissemin@gmail.com\", \"mensagem\": \"Hai, saya ingin tahu harga Anda.\"}', '2024-08-09 13:35:41.660788', '2024-08-09 13:35:41.662124'),
-(463, 1, '{\"date\": \"2024-08-09T22:08:58.482141Z\", \"nome\": \"Mike Osborne\", \"email\": \"mikemaync@gmail.com\", \"_token\": \"xh57QsA9OlB0Qr0zqn5yNlWUUZEQEtME51bNBu8V\", \"submit\": null, \"contacto\": \"mikemaync@gmail.com\", \"mensagem\": \"Hi there, \\r\\n \\r\\nMy name is Mike from Monkey Digital, \\r\\n \\r\\nAllow me to present to you a lifetime revenue opportunity of 35% \\r\\nThat\'s right, you can earn 35% of every order made by your affiliate for life. \\r\\n \\r\\nSimply register with us, generate your affiliate links, and incorporate them on your website, and you are done. It takes only 5 minutes to set up everything, and the payouts are sent each month. \\r\\n \\r\\nClick here to enroll with us today: \\r\\nhttps://www.monkey-seo.org/affiliates/ \\r\\n \\r\\nThink about it, \\r\\nEvery website owner requires the use of search engine optimization (SEO) for their website. This endeavor holds significant potential for both parties involved. \\r\\n \\r\\nThanks and regards \\r\\nMike Osborne\\r\\n \\r\\nMonkey Digital \\r\\nhttps://www.monkey-seo.org/whatsapp-affiliates/\"}', '2024-08-09 20:08:58.482141', '2024-08-09 20:08:58.483201');
-
--- --------------------------------------------------------
+LOCK TABLES `form_submissions` WRITE;
+/*!40000 ALTER TABLE `form_submissions` DISABLE KEYS */;
+INSERT INTO `form_submissions` VALUES (464,1,'{\"date\": \"2024-10-20T15:03:13.008815Z\", \"nome\": \"Cama casal\", \"email\": \"admin2@tecdiary.com\", \"_token\": \"cj8yBu1V87VshaTXA5InYQc6oPD2mmnnqIqrKXuB\", \"contacto\": \"847607095\", \"mensagem\": \"dewde\"}','2024-10-20 13:03:13.008815','2024-10-20 13:03:13.018985'),(465,1,'{\"date\": \"2024-10-21T08:39:53.241218Z\", \"nome\": \"Beira\", \"email\": \"nelsonmutane@gmail.com\", \"_token\": \"yE2wFB5Y8VHEvDnNbVOXHK4IqsbTjYk4LcbotTRG\", \"contacto\": \"847607095\", \"mensagem\": \"Short Description:\\r\\nO feminicídio em Moçambique representa uma grave violação dos direitos humanos, afetando milhares de mulheres e refletindo uma cultura enraizada de violência de gênero. Este artigo explora a realidade desse crime, suas causas e as medidas necessárias para combatê-lo.\"}','2024-10-21 06:39:53.241218','2024-10-21 06:39:53.244889');
+/*!40000 ALTER TABLE `form_submissions` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Table structure for table `global_sets`
+-- Table structure for table `forms`
 --
 
-CREATE TABLE `global_sets` (
-  `id` bigint UNSIGNED NOT NULL,
-  `handle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `settings` json NOT NULL,
+DROP TABLE IF EXISTS `forms`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `forms` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `handle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `settings` json DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `forms_handle_unique` (`handle`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `forms`
+--
+
+LOCK TABLES `forms` WRITE;
+/*!40000 ALTER TABLE `forms` DISABLE KEYS */;
+INSERT INTO `forms` VALUES (1,'contact_us','Contact us','{\"email\": [], \"store\": true, \"honeypot\": \"honeypot\"}','2023-09-17 21:49:42','2023-09-17 21:49:54');
+/*!40000 ALTER TABLE `forms` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `global_set_variables`
 --
 
+DROP TABLE IF EXISTS `global_set_variables`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `global_set_variables` (
-  `id` bigint UNSIGNED NOT NULL,
-  `handle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `locale` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `origin` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `handle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `locale` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `origin` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `data` json NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `global_set_variables_handle_index` (`handle`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `global_set_variables`
+--
+
+LOCK TABLES `global_set_variables` WRITE;
+/*!40000 ALTER TABLE `global_set_variables` DISABLE KEYS */;
+/*!40000 ALTER TABLE `global_set_variables` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `global_sets`
+--
+
+DROP TABLE IF EXISTS `global_sets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `global_sets` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `handle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `settings` json NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `global_sets_handle_unique` (`handle`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `global_sets`
+--
+
+LOCK TABLES `global_sets` WRITE;
+/*!40000 ALTER TABLE `global_sets` DISABLE KEYS */;
+/*!40000 ALTER TABLE `global_sets` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `group_user`
 --
 
+DROP TABLE IF EXISTS `group_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `group_user` (
-  `id` int UNSIGNED NOT NULL,
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
-  `group_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `group_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `group_user`
+--
+
+LOCK TABLES `group_user` WRITE;
+/*!40000 ALTER TABLE `group_user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `group_user` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `migrations`
 --
 
+DROP TABLE IF EXISTS `migrations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `migrations` (
-  `id` int UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `migrations`
 --
 
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_reset_tokens_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2023_09_14_205919_create_taxonomies_table', 1),
-(6, '2023_09_14_205920_create_terms_table', 1),
-(7, '2023_09_14_205921_create_globals_table', 1),
-(8, '2023_09_14_205922_create_global_variables_table', 1),
-(9, '2023_09_14_205923_create_navigations_table', 1),
-(10, '2023_09_14_205924_create_navigation_trees_table', 1),
-(11, '2023_09_14_205925_create_collections_table', 1),
-(12, '2023_09_14_205926_create_blueprints_table', 1),
-(13, '2023_09_14_205927_create_fieldsets_table', 1),
-(14, '2023_09_14_205928_create_forms_table', 1),
-(15, '2023_09_14_205929_create_form_submissions_table', 1),
-(16, '2023_09_14_205930_create_asset_containers_table', 1),
-(17, '2023_09_14_205931_create_asset_table', 1),
-(18, '2023_09_14_205932_create_revisions_table', 1),
-(19, '2023_09_14_205948_create_entries_table', 1),
-(20, '2023_09_14_210910_statamic_auth_tables', 1);
-
--- --------------------------------------------------------
+LOCK TABLES `migrations` WRITE;
+/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
+INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_reset_tokens_table',1),(3,'2019_08_19_000000_create_failed_jobs_table',1),(4,'2019_12_14_000001_create_personal_access_tokens_table',1),(5,'2023_09_14_205919_create_taxonomies_table',1),(6,'2023_09_14_205920_create_terms_table',1),(7,'2023_09_14_205921_create_globals_table',1),(8,'2023_09_14_205922_create_global_variables_table',1),(9,'2023_09_14_205923_create_navigations_table',1),(10,'2023_09_14_205924_create_navigation_trees_table',1),(11,'2023_09_14_205925_create_collections_table',1),(12,'2023_09_14_205926_create_blueprints_table',1),(13,'2023_09_14_205927_create_fieldsets_table',1),(14,'2023_09_14_205928_create_forms_table',1),(15,'2023_09_14_205929_create_form_submissions_table',1),(16,'2023_09_14_205930_create_asset_containers_table',1),(17,'2023_09_14_205931_create_asset_table',1),(18,'2023_09_14_205932_create_revisions_table',1),(19,'2023_09_14_205948_create_entries_table',1),(20,'2023_09_14_210910_statamic_auth_tables',1),(21,'2023_09_19_221232_create_seo_table',2);
+/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `navigations`
 --
 
+DROP TABLE IF EXISTS `navigations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigations` (
-  `id` bigint UNSIGNED NOT NULL,
-  `handle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `handle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `settings` json DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `navigations_handle_unique` (`handle`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `navigations`
+--
+
+LOCK TABLES `navigations` WRITE;
+/*!40000 ALTER TABLE `navigations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `navigations` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `password_activation_tokens`
 --
 
+DROP TABLE IF EXISTS `password_activation_tokens`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `password_activation_tokens` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  KEY `password_activation_tokens_email_index` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `password_activation_tokens`
+--
+
+LOCK TABLES `password_activation_tokens` WRITE;
+/*!40000 ALTER TABLE `password_activation_tokens` DISABLE KEYS */;
+/*!40000 ALTER TABLE `password_activation_tokens` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `password_reset_tokens`
 --
 
+DROP TABLE IF EXISTS `password_reset_tokens`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `password_reset_tokens`
+--
+
+LOCK TABLES `password_reset_tokens` WRITE;
+/*!40000 ALTER TABLE `password_reset_tokens` DISABLE KEYS */;
+/*!40000 ALTER TABLE `password_reset_tokens` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `personal_access_tokens`
 --
 
+DROP TABLE IF EXISTS `personal_access_tokens`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `personal_access_tokens` (
-  `id` bigint UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tokenable_id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `abilities` text COLLATE utf8mb4_unicode_ci,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `tokenable_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tokenable_id` bigint unsigned NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `abilities` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `expires_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
+  KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `personal_access_tokens`
+--
+
+LOCK TABLES `personal_access_tokens` WRITE;
+/*!40000 ALTER TABLE `personal_access_tokens` DISABLE KEYS */;
+/*!40000 ALTER TABLE `personal_access_tokens` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `revisions`
 --
 
+DROP TABLE IF EXISTS `revisions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `revisions` (
-  `id` bigint UNSIGNED NOT NULL,
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `action` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `message` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `action` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `attributes` json DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `revisions_key_created_at_unique` (`key`,`created_at`),
+  KEY `revisions_action_index` (`action`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `revisions`
+--
+
+LOCK TABLES `revisions` WRITE;
+/*!40000 ALTER TABLE `revisions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `revisions` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `role_user`
 --
 
+DROP TABLE IF EXISTS `role_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `role_user` (
-  `id` int UNSIGNED NOT NULL,
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
-  `role_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `role_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `role_user`
+--
+
+LOCK TABLES `role_user` WRITE;
+/*!40000 ALTER TABLE `role_user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `role_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `seo`
+--
+
+DROP TABLE IF EXISTS `seo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `seo` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `model_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `model_id` bigint unsigned NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `author` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `robots` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `canonical_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `seo_model_type_model_id_index` (`model_type`,`model_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `seo`
+--
+
+LOCK TABLES `seo` WRITE;
+/*!40000 ALTER TABLE `seo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `seo` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `taxonomies`
 --
 
+DROP TABLE IF EXISTS `taxonomies`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `taxonomies` (
-  `id` bigint UNSIGNED NOT NULL,
-  `handle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `handle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `sites` json DEFAULT NULL,
   `settings` json DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `taxonomies_handle_unique` (`handle`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `taxonomies`
 --
 
-INSERT INTO `taxonomies` (`id`, `handle`, `title`, `sites`, `settings`, `created_at`, `updated_at`) VALUES
-(2, 'categories', 'Categories', '[\"default\"]', '{\"revisions\": false, \"preview_targets\": [{\"label\": \"Term\", \"format\": \"{permalink}\", \"refresh\": true}]}', '2023-09-17 12:43:04', '2023-09-17 12:43:04');
-
--- --------------------------------------------------------
+LOCK TABLES `taxonomies` WRITE;
+/*!40000 ALTER TABLE `taxonomies` DISABLE KEYS */;
+INSERT INTO `taxonomies` VALUES (2,'categories','Categories','[\"default\"]','{\"revisions\": false, \"preview_targets\": [{\"label\": \"Term\", \"format\": \"{permalink}\", \"refresh\": true}]}','2023-09-17 12:43:04','2023-09-17 12:43:04');
+/*!40000 ALTER TABLE `taxonomies` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `taxonomy_terms`
 --
 
+DROP TABLE IF EXISTS `taxonomy_terms`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `taxonomy_terms` (
-  `id` bigint UNSIGNED NOT NULL,
-  `site` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `uri` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `taxonomy` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `site` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uri` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `taxonomy` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `data` json NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `taxonomy_terms_slug_taxonomy_site_unique` (`slug`,`taxonomy`,`site`),
+  KEY `taxonomy_terms_site_index` (`site`),
+  KEY `taxonomy_terms_uri_index` (`uri`),
+  KEY `taxonomy_terms_taxonomy_index` (`taxonomy`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `taxonomy_terms`
 --
 
-INSERT INTO `taxonomy_terms` (`id`, `site`, `slug`, `uri`, `taxonomy`, `data`, `created_at`, `updated_at`) VALUES
-(1, 'default', 'evento', '/categories/evento', 'categories', '{\"title\": \"Evento\", \"content\": \"Actividade relacionada a um evento realizado ou que AMPDC participou.\", \"blueprint\": \"category\", \"updated_at\": 1694954639, \"updated_by\": 1}', '2023-09-17 12:43:59', '2023-09-17 12:43:59'),
-(2, 'default', 'actividade', '/categories/actividade', 'categories', '{\"title\": \"Actividade\", \"content\": \"Actividade\", \"blueprint\": \"category\", \"updated_at\": 1694954655, \"updated_by\": 1}', '2023-09-17 12:44:15', '2023-09-17 12:44:15');
-
--- --------------------------------------------------------
+LOCK TABLES `taxonomy_terms` WRITE;
+/*!40000 ALTER TABLE `taxonomy_terms` DISABLE KEYS */;
+INSERT INTO `taxonomy_terms` VALUES (1,'default','evento','/categories/evento','categories','{\"title\": \"Evento\", \"content\": \"Actividade relacionada a um evento realizado ou que sumburero participou.\", \"blueprint\": \"category\", \"updated_at\": 1694954639, \"updated_by\": 1}','2023-09-17 12:43:59','2023-09-17 12:43:59'),(2,'default','actividade','/categories/actividade','categories','{\"title\": \"Actividade\", \"content\": \"Actividade\", \"blueprint\": \"category\", \"updated_at\": 1694954655, \"updated_by\": 1}','2023-09-17 12:44:15','2023-09-17 12:44:15'),(4,'default','projecto','/categories/projecto','categories','{\"title\": \"Projecto\", \"content\": \"Projecto\", \"blueprint\": \"category\", \"updated_at\": 1729449286, \"updated_by\": 1}','2024-10-20 16:34:46','2024-10-20 16:34:46');
+/*!40000 ALTER TABLE `taxonomy_terms` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `trees`
 --
 
+DROP TABLE IF EXISTS `trees`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `trees` (
-  `id` bigint UNSIGNED NOT NULL,
-  `handle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `locale` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `handle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `locale` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tree` json DEFAULT NULL,
   `settings` json DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `trees_handle_type_locale_unique` (`handle`,`type`,`locale`),
+  KEY `trees_type_index` (`type`),
+  KEY `trees_locale_index` (`locale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `trees`
+--
+
+LOCK TABLES `trees` WRITE;
+/*!40000 ALTER TABLE `trees` DISABLE KEYS */;
+/*!40000 ALTER TABLE `trees` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `super` tinyint(1) NOT NULL DEFAULT '0',
-  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `preferences` json DEFAULT NULL,
-  `last_login` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `last_login` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_email_unique` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `super`, `avatar`, `preferences`, `last_login`) VALUES
-(1, 'AMPDC administrador', 'administrator@AMPDC.org', NULL, '$2y$10$xbm/6uMzXCohT2SyISKGqujLQghGWzL8EAf8mtpClHoblu1R1m07y', 'RXl1mGSyRuLuq8aMHYZlP8lwdZc5zVgwaDWn4wKxzrUjyVRkS2ApMgVUTnSb', '2023-09-14 21:09:56', '2024-07-09 09:36:33', 1, NULL, '{\"nav\": {\"tools\": {\"tools::addons\": \"@hide\", \"tools::updates\": \"@hide\", \"tools::utilities\": \"@hide\"}, \"fields\": \"@hide\", \"content\": {\"items\": {\"content::globals\": \"@hide\", \"content::navigation\": \"@hide\", \"content::taxonomies\": \"@hide\", \"content::collections\": \"@inherit\", \"content::collections::events\": \"@move\", \"content::collections::articles\": \"@move\", \"content::taxonomies::categories\": \"@move\", \"content::collections::success_histories\": \"@move\"}, \"reorder\": true}, \"top_level\": {\"top_level::dashboard\": \"@hide\"}}, \"forms\": {\"contact_us\": {\"columns\": [\"nome\", \"email\", \"contacto\", \"datestamp\", \"mensagem\"], \"per_page\": 100}}, \"start_page\": \"collections/articles\", \"collections\": {\"events\": {\"columns\": [\"cover\", \"title\", \"location\", \"event_description\", \"slug\", \"status\"]}, \"articles\": {\"columns\": [\"title\", \"slug\", \"category\", \"status\", \"post_date\"], \"after_save\": \"continue_editing\"}, \"success_histories\": {\"columns\": [\"image\", \"title\", \"history_date\", \"status\"]}}}', '2024-07-15 10:20:46');
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Sumburero administrador','administrator@sumburero.org',NULL,'$2y$10$xbm/6uMzXCohT2SyISKGqujLQghGWzL8EAf8mtpClHoblu1R1m07y','RXl1mGSyRuLuq8aMHYZlP8lwdZc5zVgwaDWn4wKxzrUjyVRkS2ApMgVUTnSb','2023-09-14 21:09:56','2024-10-20 14:55:27',1,NULL,'{\"nav\": {\"tools\": {\"tools::addons\": \"@hide\", \"tools::updates\": \"@hide\", \"tools::utilities\": \"@hide\"}, \"content\": {\"items\": {\"content::globals\": \"@hide\", \"content::navigation\": \"@hide\", \"content::taxonomies\": \"@hide\", \"content::collections\": \"@inherit\", \"content::collections::events\": \"@move\", \"content::collections::articles\": \"@move\", \"content::taxonomies::categories\": \"@move\", \"content::collections::interventions\": \"@move\", \"content::collections::success_histories\": \"@move\"}, \"reorder\": true}, \"top_level\": {\"top_level::dashboard\": \"@hide\"}}, \"forms\": {\"contact_us\": {\"columns\": [\"nome\", \"email\", \"contacto\", \"datestamp\", \"mensagem\"], \"per_page\": 100}}, \"start_page\": \"collections/articles\", \"collections\": {\"events\": {\"columns\": [\"cover\", \"title\", \"location\", \"event_description\", \"slug\", \"status\"]}, \"articles\": {\"columns\": [\"title\", \"slug\", \"category\", \"status\", \"post_date\"]}, \"intervention\": {\"after_save\": \"continue_editing\"}, \"success_histories\": {\"columns\": [\"image\", \"title\", \"history_date\", \"status\"]}}}','2024-10-21 19:10:08');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `assets_meta`
---
-ALTER TABLE `assets_meta`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `assets_meta_handle_index` (`handle`);
-
---
--- Indexes for table `asset_containers`
---
-ALTER TABLE `asset_containers`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `asset_containers_handle_unique` (`handle`);
-
---
--- Indexes for table `blueprints`
---
-ALTER TABLE `blueprints`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `blueprints_handle_namespace_unique` (`handle`,`namespace`),
-  ADD KEY `blueprints_namespace_index` (`namespace`);
-
---
--- Indexes for table `collections`
---
-ALTER TABLE `collections`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `collections_handle_unique` (`handle`);
-
---
--- Indexes for table `entries`
---
-ALTER TABLE `entries`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `entries_site_index` (`site`),
-  ADD KEY `entries_origin_id_index` (`origin_id`),
-  ADD KEY `entries_uri_index` (`uri`),
-  ADD KEY `entries_order_index` (`order`),
-  ADD KEY `entries_collection_index` (`collection`),
-  ADD KEY `entries_blueprint_index` (`blueprint`);
-
---
--- Indexes for table `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
-
---
--- Indexes for table `fieldsets`
---
-ALTER TABLE `fieldsets`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `fieldsets_handle_unique` (`handle`);
-
---
--- Indexes for table `forms`
---
-ALTER TABLE `forms`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `forms_handle_unique` (`handle`);
-
---
--- Indexes for table `form_submissions`
---
-ALTER TABLE `form_submissions`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `form_submissions_form_id_created_at_unique` (`form_id`,`created_at`),
-  ADD KEY `form_submissions_form_id_index` (`form_id`);
-
---
--- Indexes for table `global_sets`
---
-ALTER TABLE `global_sets`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `global_sets_handle_unique` (`handle`);
-
---
--- Indexes for table `global_set_variables`
---
-ALTER TABLE `global_set_variables`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `global_set_variables_handle_index` (`handle`);
-
---
--- Indexes for table `group_user`
---
-ALTER TABLE `group_user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `migrations`
---
-ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `navigations`
---
-ALTER TABLE `navigations`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `navigations_handle_unique` (`handle`);
-
---
--- Indexes for table `password_activation_tokens`
---
-ALTER TABLE `password_activation_tokens`
-  ADD KEY `password_activation_tokens_email_index` (`email`);
-
---
--- Indexes for table `password_reset_tokens`
---
-ALTER TABLE `password_reset_tokens`
-  ADD PRIMARY KEY (`email`);
-
---
--- Indexes for table `personal_access_tokens`
---
-ALTER TABLE `personal_access_tokens`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
-  ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
-
---
--- Indexes for table `revisions`
---
-ALTER TABLE `revisions`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `revisions_key_created_at_unique` (`key`,`created_at`),
-  ADD KEY `revisions_action_index` (`action`);
-
---
--- Indexes for table `role_user`
---
-ALTER TABLE `role_user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `taxonomies`
---
-ALTER TABLE `taxonomies`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `taxonomies_handle_unique` (`handle`);
-
---
--- Indexes for table `taxonomy_terms`
---
-ALTER TABLE `taxonomy_terms`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `taxonomy_terms_slug_taxonomy_site_unique` (`slug`,`taxonomy`,`site`),
-  ADD KEY `taxonomy_terms_site_index` (`site`),
-  ADD KEY `taxonomy_terms_uri_index` (`uri`),
-  ADD KEY `taxonomy_terms_taxonomy_index` (`taxonomy`);
-
---
--- Indexes for table `trees`
---
-ALTER TABLE `trees`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `trees_handle_type_locale_unique` (`handle`,`type`,`locale`),
-  ADD KEY `trees_type_index` (`type`),
-  ADD KEY `trees_locale_index` (`locale`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `assets_meta`
---
-ALTER TABLE `assets_meta`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
--- AUTO_INCREMENT for table `asset_containers`
---
-ALTER TABLE `asset_containers`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `blueprints`
---
-ALTER TABLE `blueprints`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `collections`
---
-ALTER TABLE `collections`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `entries`
---
-ALTER TABLE `entries`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
---
--- AUTO_INCREMENT for table `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `fieldsets`
---
-ALTER TABLE `fieldsets`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `forms`
---
-ALTER TABLE `forms`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `form_submissions`
---
-ALTER TABLE `form_submissions`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=464;
-
---
--- AUTO_INCREMENT for table `global_sets`
---
-ALTER TABLE `global_sets`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `global_set_variables`
---
-ALTER TABLE `global_set_variables`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `group_user`
---
-ALTER TABLE `group_user`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `migrations`
---
-ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT for table `navigations`
---
-ALTER TABLE `navigations`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `personal_access_tokens`
---
-ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `revisions`
---
-ALTER TABLE `revisions`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `role_user`
---
-ALTER TABLE `role_user`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `taxonomies`
---
-ALTER TABLE `taxonomies`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `taxonomy_terms`
---
-ALTER TABLE `taxonomy_terms`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `trees`
---
-ALTER TABLE `trees`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
-
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-10-24 14:29:25
