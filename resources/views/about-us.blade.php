@@ -9,16 +9,18 @@
             <div class="grid  gap-4 w-full " data-aos="fade-up">
                 <div class="grid w-full h-fit relative">
                     <article class="relative min-h-[280px] sm:min-h-[350px] lg:min-h-[420px] flex  items-end text-white">
-                        <img class="absolute inset-0 w-full h-full object-cover object-top" src="{{ Vite::asset('resources/images/ampdc.jpg') }}" alt="AMPDC">
+                        <img class="absolute inset-0 w-full h-full object-cover object-top"
+                             src="{{ asset('storage') }}/{{ $event->cover_about_us ?? '' }}"
+
+                             alt="AMPDC">
                         <div class="absolute   inset-0 bg-gradient-to-t from-black/90 to-black/10"></div>
                         <div class="relative  p-6 w-full">
                             <div class="group flex flex-row justify-start rounded-t w-full
                            " data-aos="fade-up">
                                 <div class="w-fit  p-4 px-6 bg-amber-400 flex flex-col text-black justify-center items-center ">
                                     <span class="text-sm font-bold capitalize">
-                                        AMPDC
+                                        {{ $about->title_about_us ?? '' }}
                                     </span>
-
                                 </div>
                             </div>
                             <div class="grid content-center mr-3 w-full space-y-1">
@@ -31,15 +33,10 @@
                             </div>
                         </div>
                     </article>
-                    <div class="text-base my-6 p-6  text-justify bg-white  tracking-normal space-y-4">
-                        <strong>AMPDC</strong>
-                        <p>
-                            Organização humanitária sem fins lucrativos que tem como missão de prestar serviços as comunidades carenciadas tendo em atenção as necessidades imediatas com particular destaque a mulheres e crianças órfãs.
-                        </p>
-
+                    <div class="text-base my-6 p-6  text-justify bg-white  tracking-normal space-y-4 prose max-w-none">
+                        {!! $about->content_about_us ?? '' !!}
                     </div>
-
-
+            
                 </div>
             </div>
         </div>

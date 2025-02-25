@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\EventController;
@@ -29,22 +30,5 @@ Route::get('/news/{slug}', NewsPageController::class)->name('news.page');
 Route::get('/event/{slug}', EventController::class)->name('event');
 Route::get('/contact', ContactController::class)->name('contact');
 Route::post('/contact/message', ContactMessageController::class)->name('contact.message');
-Route::get('/about-us', fn () => view('about-us', [
-    'SEOData' => new SEOData(
-        title: 'Sobre nós',
-        description: 'Somos uma organização sem fins lucrativos com 4 anos de existência,
-         comprometida em promover a protecção social da criança na província de Sofala,
-         Moçambique. Nossas actividades são baseadas na vasta experiência e aprendizado
-         adquiridos por meio de parcerias com renomadas Organizações da Sociedade Civil e Públicas,
-          como ESSOR, CCM, OASIS, PNDH, e a Universidade Zambeze.',
-        author: 'Nelson Alexandre Mutane',
-        image: Vite::asset('resources/images/logo.webp'),
-        published_time: Carbon::createFromDate(2023, 9, 20),
-        modified_time: Carbon::createFromDate(2023, 9, 20),
-        section: 'Grupo técnico de protecção social.',
-        schema: SchemaCollection::initialize()->addArticle(),
-        type: 'article',
-        site_name: 'Sobre nós',
-    ),
-]))->name('about.us');
+Route::get('/about-us', AboutUsController::class)->name('about.us');
 Route::get('/area/{slug}',[InterventionArea::class,'single'])->name('area.single');
