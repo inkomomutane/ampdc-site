@@ -4,6 +4,7 @@ namespace App\helpers;
 
 use Illuminate\Support\Carbon;
 use Statamic\Eloquent\Entries\Entry;
+use Statamic\Eloquent\Globals\VariablesModel;
 
 
 class EventEntries
@@ -46,5 +47,11 @@ class EventEntries
             $finalEntry['published'] = $entry->published;
             return (object) $finalEntry;
         })->where('published', true)->where('start_date', '>=', now());
+    }
+
+    public static function OrgInfo (): object
+    {
+        $global = VariablesModel::query()->where('handle', 'org_info')->first();
+        return (object) ($global?->data ?? []);
     }
 }

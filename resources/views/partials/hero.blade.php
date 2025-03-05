@@ -2,23 +2,24 @@
     <div class="splide__track">
         <ul class="splide__list">
             <section class="splide__slide relative bg-gradient-to-b to-amber-100 from-white dark:bg-gray-900">
-                <img class="absolute inset-0 w-full h-full object-cover object-top" src="{{ Vite::asset('resources/images/ampdc.jpg') }}" alt="Associação de Mulheres para o Desenvolvimento Comunitário">
+                <img class="absolute inset-0 w-full h-full object-cover object-top"
+                     src="{{ asset('storage') }}/{{ $org_info->org_image ?? '' }}"
+                     alt="{{ $org_info?->org_name ?? '' }}"
+                >
                 <div class="absolute   inset-0 bg-black opacity-70"></div>
                 <div class="relative py-8 px-4 mx-auto max-w-screen-xxl sm:py-16 lg:px-32 ">
 
                     <div class="grid max-w-screen-xxl px-4 py-8 mx-auto lg:gap-8 xxl:gap-0 lg:py-16 lg:px-8 ">
                         <div class="mr-auto place-self-center tracking-tight p-8">
                             <h2 class="max-w-2xl mb-4 text-2xl text-white font-extrabold tracking-tight leading-none md:text-3xl xl:text-4xl dark:text-white first-letter:uppercase aos-init aos-animate" data-aos="fade-down">
-                                Associação de Mulheres para o Desenvolvimento Comunitário
+                                {{ $org_info?->org_name ?? '' }}
                             </h2>
                             <h1 class="max-w-2xl mb-4 text-primary-500 text-sm font-bold tracking-tight leading-none dark:text-white first-letter:uppercase aos-init aos-animate" data-aos="fade-down">
-                                — Unidos pela segurança e justiça
+                                — {{ $org_info?->org_slogan ?? '' }}
                             </h1>
 
                             <p class="max-w-2xl mb-6 font-light text-primary-50 lg:mb-8 md:text-lg lg:text-lg dark:text-gray-400 line-clamp-5 aos-init aos-animate" data-aos="fade-down">
-                                Organização humanitária sem fins lucrativos que tem como missão de prestar
-                                serviços as comunidades carenciadas tendo em atenção as necessidades imediatas
-                                com particular destaque a mulheres e crianças órfãs.
+                                {{ $org_info?->org_info ?? '' }}
                             </p>
                             <a href="{{ route('about.us') }}" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-sm font-medium text-center bg-primary-100 text-primary-600
                                      hover:bg-primary-600 hover:text-white focus:ring-4 focus:ring-primary-300 transition-transform transform-gpu duration-300 ease-in-out aos-init aos-animate" data-aos="fade-down">

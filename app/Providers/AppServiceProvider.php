@@ -49,6 +49,11 @@ class AppServiceProvider extends ServiceProvider
             throw $e;
         }
 
-        View::share('events',EventEntries::events(),);
+        View::share([
+            'events' => EventEntries::events(),
+            'org_info' => EventEntries::OrgInfo()
+        ]);
     }
 }
+
+

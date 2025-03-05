@@ -18,10 +18,10 @@ class AboutUsController
            'SEOData' => new SEOData(
                title: 'Sobre nós',
                description: 'Somos uma organização sem fins lucrativos com 4 anos de existência,
-         comprometida em promover a protecção social da criança na província de Sofala,
-         Moçambique. Nossas actividades são baseadas na vasta experiência e aprendizado
-         adquiridos por meio de parcerias com renomadas Organizações da Sociedade Civil e Públicas,
-          como ESSOR, CCM, OASIS, PNDH, e a Universidade Zambeze.',
+                 comprometida em promover a protecção social da criança na província de Sofala,
+                 Moçambique. Nossas actividades são baseadas na vasta experiência e aprendizado
+                 adquiridos por meio de parcerias com renomadas Organizações da Sociedade Civil e Públicas,
+                  como ESSOR, CCM, OASIS, PNDH, e a Universidade Zambeze.',
                author: 'Nelson Alexandre Mutane',
                image: Vite::asset('resources/images/logo.webp'),
                published_time: Carbon::createFromDate(2023, 9, 20),
