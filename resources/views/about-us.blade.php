@@ -10,7 +10,7 @@
                 <div class="grid w-full h-fit relative">
                     <article class="relative min-h-[280px] sm:min-h-[350px] lg:min-h-[420px] flex  items-end text-white">
                         <img class="absolute inset-0 w-full h-full object-cover object-top"
-                             src="{{ asset('storage') }}/{{ $event->cover_about_us ?? '' }}"
+                             src="{{ asset('storage') }}/{{ $about->cover_about_us ?? '' }}"
 
                              alt="AMPDC">
                         <div class="absolute   inset-0 bg-gradient-to-t from-black/90 to-black/10"></div>
