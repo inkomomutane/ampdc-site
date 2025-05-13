@@ -11,7 +11,7 @@ class SuccessHistoriesEntries
     {
         return  Entry::query()->whereCollection('success_histories')->get()->map(function ($entry) {
             $finalEntry = $entry->fileData();
-            $historyDate = Carbon::parse($finalEntry['history_date']);
+            $historyDate = Carbon::parse($finalEntry['history_date'] ?? null);
             $finalEntry['history_date'] = $historyDate;
             $finalEntry['published'] = $entry->published;
             return (object) $finalEntry;
