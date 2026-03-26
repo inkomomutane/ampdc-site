@@ -2,19 +2,43 @@
 
 namespace App\Http\Controllers;
 
-use App\helpers\Intervention;
 use Illuminate\Support\Carbon;
 use RalphJSmit\Laravel\SEO\SchemaCollection;
 use RalphJSmit\Laravel\SEO\Support\SEOData;
+use App\Services\InterventionService;
 
 class InterventionArea extends Controller
 {
+    public function __construct(
+        protected InterventionService $interventions
+    ) {}
 
     public function single($slug)
     {
-        $area = Intervention::single($slug);
-       return view('areas-single', [
-           'area' => $area,
+        $area = $this->interventions->single($slug);
+
+        if (!$area) {
+            abort(404);
+        }
+
+        return view('areas-single', compact('area'));
+    }
+}
+
+class InterventionArea extends Controller
+{
+     public function __construct(
+        protected InterventionService $interventions
+    ) {}
+    public function single($slug)
+    {
+        $area = $this->interventions->single($slug);
+
+        if (!$area) {
+            abort(404);
+        }
+
+       return view('areas-single', compact('area') + [
            'SEOData' => new SEOData(
                title: 'Area - ' .  $area?->title ?? '',
                description: $area?->description ?? '',

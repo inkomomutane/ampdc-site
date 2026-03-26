@@ -23,11 +23,11 @@
                                         <div
                                             class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
                                             <img class=" h-full w-full object-cover mb-2 rounded-full"
-                                            src="{{ asset('storage') }}/{{ $history?->image ?? '' }}" alt="mockup">
+                                            src="{{ config('services.strapi.url').$history['image'] }}"> alt="mockup">
                                         </div>
                                         <div class="flex flex-col items-center text-center justify-center">
                                             <h2 class="font-medium title-font mt-4 text-primary-900 text-lg capitalize">
-                                                {{ $history->title }}
+                                                {{ $history['title'] }}
                                             </h2>
                                             <div class="w-12 h-1 bg-primary-500 rounded mt-2 mb-4"></div>
 
@@ -36,7 +36,7 @@
                                     <div
                                         class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                                         <div class="prose leading-relaxed max-w-none mb-4">
-                                            {!!  $history->content  !!}
+                                            {!!  $history['content']  !!}
                                         </div>
                                     </div>
                                 </div>

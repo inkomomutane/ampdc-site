@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\helpers\EventEntries;
+use App\Services\EventService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Statamic\Eloquent\Entries\Entry;
@@ -11,15 +11,16 @@ use RalphJSmit\Laravel\SEO\Support\SEOData;
 
 class EventController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
     public function __invoke(String $slug)
     {
+         $event = $this->events->findBySlug($slug);
+        if (!$event) {
+            abort(404);
+        }
         $event = EventEntries::event($slug);
         return view('event', [
             'event' => $event,
-            'events' => EventEntries::events()->where('slug','<>',$slug),
+            'events' => $this->events->list(),
             'SEOData' => new SEOData(
                 title: 'Evento - ' .  $event?->title ?? '',
                 description: $event?->event_description ?? '',

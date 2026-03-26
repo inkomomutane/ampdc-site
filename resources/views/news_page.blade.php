@@ -10,7 +10,7 @@
                     <div class="grid w-full h-fit relative">
                         <article class="relative min-h-[280px] sm:min-h-[350px] lg:min-h-[420px] flex  items-end text-white">
                             <img class="absolute inset-0 w-full h-full object-cover object-top"
-                                src="{{ asset('storage') }}/{{ $article->cover ?? '' }}"
+                                src="{{ $article->cover_image ?? asset('images/default.jpg') }}"
                                 alt="{{ $article->title ?? 'AMPDC event' }}">
                             <div class="absolute   inset-0 bg-gradient-to-t from-black/90 to-black/10"></div>
                             <div class="relative  p-6 w-full">
@@ -45,7 +45,7 @@
                                         </div>
                                         <div class="flex justify-between w-full">
                                             <h2 class=" text-base font-semibold   capitalize tracking-wide">
-                                                {{ $article->title }}
+                                                {{ $article['title'] }}
                                             </h2>
                                         </div>
                                         <div
@@ -61,7 +61,7 @@
                         </div>
                     </div>
 
-                    @if (!is_null($article?->sections) && is_array($article?->sections))
+                    @if (!empty($article?->sections))
                         @foreach ($article?->sections as $section)
                             <div class="grid sm:grid-cols-12 pb-8 sm:pb-16 ">
                                 @if (($loop->index + 1) % 2 == 0)
@@ -134,7 +134,7 @@
 
                         @foreach ($article?->gallery as $image)
                             <img class="w-full h-full  object-cover object-top rounded"
-                                src="{{ asset('storage') }}/{{ $image }}"
+                                src="{{ $image }}"
                                 alt="{{ $article?->title ?? '' }} - galleria" data-aos="fade-up">
                         @endforeach
                     </div>

@@ -47,7 +47,7 @@
                                                 </div>
                                                 <div class="flex justify-between w-full">
                                                     <h2 class=" text-base font-semibold   capitalize tracking-wide">
-                                                        {{ $article->title }}
+                                                        {{ $article['title'] }}
                                                     </h2>
                                                 </div>
                                                 <div

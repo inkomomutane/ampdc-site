@@ -3,7 +3,7 @@
         <ul class="splide__list">
             <section class="splide__slide relative bg-gradient-to-b to-amber-100 from-white dark:bg-gray-900">
                 <img class="absolute inset-0 w-full h-full object-cover object-top"
-                     src="{{ asset('storage') }}/{{ $org_info->org_image ?? '' }}"
+                     src="{{ $org_info->org_image ?? '' }}"
                      alt="{{ $org_info?->org_name ?? '' }}"
                 >
                 <div class="absolute   inset-0 bg-black opacity-70"></div>
@@ -34,7 +34,7 @@
             </section>
             @foreach ($articles as $article)
                 <section class="splide__slide relative bg-gradient-to-b to-amber-100 from-white dark:bg-gray-900">
-                    <img class="absolute inset-0 w-full h-full object-cover object-top" src="{{ asset('storage') }}/{{ $article->cover }}" alt="{{ $article->title   }}">
+                    <img class="absolute inset-0 w-full h-full object-cover object-top" src="   {{ $article->cover_image }}" alt="{{ $article->title   }}">
                     <div class="absolute   inset-0 bg-black opacity-70"></div>
                     <div class="relative py-8 px-4 mx-auto max-w-screen-xxl sm:py-16 lg:px-32 ">
                         <div class="grid max-w-screen-xxl px-4 py-8 mx-auto lg:gap-8 xxl:gap-0 lg:py-16 lg:px-8">

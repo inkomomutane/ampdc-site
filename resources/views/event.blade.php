@@ -13,7 +13,7 @@
                             class="relative min-h-[280px] sm:min-h-[350px] lg:min-h-[420px] flex  items-end text-white">
                             <img class="absolute inset-0 w-full h-full object-cover object-top"
                                 src="{{ asset('storage') }}/{{ $event->cover ?? '' }}"
-                                alt="{{ $event->title ?? 'AMPDC event' }}">
+                                alt="{{ $event['title'] ?? 'AMPDC event' }}">
                             <div class="absolute   inset-0 bg-gradient-to-t from-black/90 to-black/10"></div>
                             <div class="relative  p-6 w-full">
                                 <div class="group flex flex-row justify-start rounded-t w-full
@@ -63,7 +63,7 @@
                                         </div>
                                         <div class="flex justify-between w-full">
                                             <h2 class=" text-base font-semibold   capitalize tracking-wide">
-                                                {{ $event->title }}
+                                                {{ $event['title'] }}
                                             </h2>
                                         </div>
                                     </div>
@@ -136,7 +136,7 @@
                                         </div>
                                         <div class="flex  justify-between r my-1 w-full">
                                             <h2 class=" text-lg font-medium  line-clamp-1 capitalize mr-8 tracking-wide">
-                                                {{ $event->title }} </h2>
+                                                {{ $event['title'] }} </h2>
                                             <span
                                                 class="group-hover:text-primary-500 flex min-w-fit flex-row self-center items-center  font-medium text-center right-0 pr-4 text-sm ">
                                                 Ler mais

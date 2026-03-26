@@ -8,7 +8,7 @@
             " data-aos="fade-up"
                >Próximos eventos.</h2>
 
-            @if ($events->count() > 0)
+            @if (!empty($events) && count($events) > 0)
                 <div class=" grid  gap-4 py-6 w-full">
                     @foreach ($events as $event)
                         <a href="{{ route('event', ['slug' => $event->slug]) }}">
@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="flex  justify-between r my-1 w-full">
                                         <h2 class=" text-lg font-medium  line-clamp-1 capitalize mr-8 tracking-wide">
-                                            {{ $event->title }} </h2>
+                                            {{ $event['title'] }} </h2>
                                         <span
                                             class="group-hover:text-amber-500 flex min-w-fit flex-row self-center items-center  font-medium text-center right-0 pr-4 text-sm ">
                                             Ler mais

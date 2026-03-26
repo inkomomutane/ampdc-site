@@ -22,7 +22,7 @@
                                 <article class="group bg-white flex h-full flex-col justify-start rounded-t" data-aos="fade-up"
                                     >
                                     <img class=" !h-[14rem] !sm:h-[12rem] object-cover mb-2 rounded-t"
-                                        src="{{ asset('storage') }}/{{ $article->cover }}" alt="mockup">
+                                        src="{{ $article->cover_image }}" alt="mockup">
                                     <header class="text-white px-4 ">
 
                                         <div class="text-xs font-bold capitalize bg-primary-500 p-1 px-2 mb-2 w-fit">

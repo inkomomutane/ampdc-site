@@ -14,25 +14,30 @@ use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Statamic\Eloquent\Entries\Entry;
 use Statamic\Statamic;
 use Vite;
+use App\Services\ArticleService;
+use App\Services\InterventionService;
+use App\Services\EventService;
+use App\Services\SuccessHistoriesService;
+
 
 class HomePageController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
-    public function __invoke(Request $request)
-    {
+    public function __construct(
+        protected ArticleService $noticia,
+        protected InterventionService $area,
+        protected EventService $eventos,
+        protected SuccessHistoriesService $historias
+    ) {}
 
-        return view(
-            'welcome',
-            [
-                'articles' => ArticleEntries::articles()->take(8)
-                    ->sortByDesc('post_date')
-                    ->take(10),
-                'histories' => SuccessHistoriesEntries::successHistories(),
-                'SEOData' => BaseSeoApp::data(),
-                'interventions' => Intervention::all()
-            ]
-        );
+public function __invoke()
+{
+    return view('welcome', [
+            'articles' => $this->noticia->list(8),
+            'events' => $this->eventos->list(6),
+            'histories' => $this->historias->list(),
+            'interventions' => $this->area->all(),
+
+            'SEOData' => BaseSeoApp::data(),
+        ]);
     }
 }

@@ -1,49 +1,127 @@
 <?php
-
 namespace App\helpers;
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Collection;
-use Statamic\Eloquent\Entries\Entry;
-use Statamic\Entries\Entry as EntriesEntry;
 
 class ArticleEntries
 {
-    public static function article(String $slug)
+    public static function articles($limit = 8)
     {
-        $event =   Entry::query()->whereCollection('articles')->get()->map(function (EntriesEntry $entry) {
-            $finalEntry = $entry->fileData();
-            $startDate = Carbon::parse($finalEntry['post_date']);
-            $finalEntry['day'] = $startDate->day;
-            $finalEntry['month'] = $startDate->shortMonthName;
-            $finalEntry['year'] = $startDate->year;
-            $finalEntry['slug'] = $entry->slug;
-            $finalEntry['sections'] = $entry->sections;
-            $finalEntry['published'] = $entry->published;
-            return (object) $finalEntry;
-        })->where('published', true)
-            ->where('slug', $slug)?->first();
-        abort_if(is_null($event), 404);
-        return $event;
+        $response = Http::get(config('services.strapi.url') . '/api/noticias', [
+            'populate' => '*',
+            'pagination[pageSize]' => $limit,
+            'sort' => 'post_date:desc',
+        ]);
+
+        $data = $response->json();
+
+        if (!isset($data['data'])) {
+            return collect();
+        }
+
+        return collect($data['data'])
+        ->map(fn ($item) => self::transform($item))
+        ->filter();
     }
 
-    /**
-     *@return Collection<EntriesEntry>
-     */
-    public static function articles(): Collection
+    public static function article($slug)
+{
+    $response = Http::get(config('services.strapi.url') . '/api/noticias', [
+        'filters[slug][$eq]' => $slug,
+        'populate' => '*',
+    ]);
+
+    $data = $response->json();
+
+    if (!isset($data['data'][0])) {
+        return null;
+    }
+
+    return self::transform($data['data'][0]);
+}
+
+    private static function transform($item)
     {
-        return  Entry::query()->whereCollection('articles')->get()->map(function (EntriesEntry $entry) {
-            $finalEntry = $entry->fileData();
-            $startDate = Carbon::parse($finalEntry['post_date']);
-            $finalEntry['day'] = $startDate->day;
-            $finalEntry['month'] = $startDate->shortMonthName;
-            $finalEntry['year'] = $startDate->year;
-            $finalEntry['slug'] = $entry->slug;
-            $finalEntry['post_date'] =  $startDate;
-            $finalEntry['sections'] = $entry->sections;
-            $finalEntry['published'] = $entry->published;
-            return (object) $finalEntry;
-        })->where('published', true)
-            ->sortByDesc('post_date');
+        $date = isset($item['post_date'])
+            ? Carbon::parse($item['post_date'])
+            : now();
+
+        return (object)[
+            'id' => $item['id'] ?? null,
+            'title' => $item['title'] ?? '',
+            'slug' => $item['slug'] ?? '',
+            'excerpt' => $item['excerpt'] ?? '',
+            // 🔹 descrição
+            'short_description' => self::parseRichText($item['content'] ?? ''),
+            'location' => $item['location'] ?? '',
+            'category' => 'Noticia',
+            // 🔹 imagem principal
+            'cover_image' => self::getImage($item['cover_image'] ?? null),
+            // 🔹 galeria
+            'gallery' => self::getGallery($item['gallery'] ?? []),
+            // 🔹 datas
+            'date' => $item['post_date'] ?? null,
+            'day' => $date->format('d'),
+            'month' => $date->translatedFormat('M'),
+            'year' => $date->format('Y'),
+        ];
+    }
+
+    // 🔹 imagem principal
+    private static function getImage($image)
+    {
+        if (!$image || !isset($image['url'])) {
+            return null;
+        }
+
+        return config('services.strapi.url') . $image['url'];
+    }
+
+    // 🔹 galeria
+    private static function getGallery($gallery)
+    {
+        if (!is_array($gallery)) {
+            return [];
+        }
+
+        return collect($gallery)->map(function ($img) {
+            return isset($img['url'])
+                ? config('services.strapi.url') . $img['url']
+                : null;
+        })->filter()->values()->toArray();
+    }
+
+    // 🔹 secções
+    private static function getSections($sections)
+    {
+        if (!is_array($sections)) {
+            return [];
+        }
+
+        return collect($sections)->map(function ($section) {
+            return [
+                'title' => $section['title'] ?? '',
+                'content' => self::parseRichText($section['content'] ?? ''),
+                'image' => isset($section['image']['url'])
+                    ? config('services.strapi.url') . $section['image']['url']
+                    : null,
+            ];
+        })->toArray();
+    }
+
+    // 🔹 rich text
+    private static function parseRichText($content)
+    {
+        if (!is_array($content)) {
+            return $content ?? '';
+        }
+
+        return collect($content)
+            ->pluck('children')
+            ->flatten(1)
+            ->pluck('text')
+            ->filter()
+            ->implode(' ');
     }
 }
